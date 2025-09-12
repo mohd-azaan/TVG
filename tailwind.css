@@ -1,0 +1,389 @@
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #009444;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #007a3a;
+}
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  /* Fallback fonts for custom typography */
+  --font-gilroy: "Inter", "Helvetica", sans-serif;
+  --font-morganite: "Inter", "Helvetica", sans-serif;
+  
+  --TVG-typography-button-font-family: "Gilroy-SemiBold", Helvetica;
+  --TVG-typography-button-font-size: 18px;
+  --TVG-typography-button-font-style: normal;
+  --TVG-typography-button-font-weight: 600;
+  --TVG-typography-button-letter-spacing: 0px;
+  --TVG-typography-button-line-height: 40px;
+  --TVG-typography-button-lowercase-font-family: "Gilroy-SemiBold", Helvetica;
+  --TVG-typography-button-lowercase-font-size: 18px;
+  --TVG-typography-button-lowercase-font-style: normal;
+  --TVG-typography-button-lowercase-font-weight: 600;
+  --TVG-typography-button-lowercase-letter-spacing: 0px;
+  --TVG-typography-button-lowercase-line-height: 40px;
+  --TVG-typography-counter-number-font-family: "Morganite", Helvetica;
+  --TVG-typography-counter-number-font-size: 100px;
+  --TVG-typography-counter-number-font-style: normal;
+  --TVG-typography-counter-number-font-weight: 900;
+  --TVG-typography-counter-number-letter-spacing: 2px;
+  --TVG-typography-counter-number-line-height: 100px;
+  --TVG-typography-counter-text-font-family: "Gilroy-Bold", Helvetica;
+  --TVG-typography-counter-text-font-size: 20px;
+  --TVG-typography-counter-text-font-style: normal;
+  --TVG-typography-counter-text-font-weight: 700;
+  --TVG-typography-counter-text-letter-spacing: 0px;
+  --TVG-typography-counter-text-line-height: 28px;
+  --TVG-typography-default-font-family: "Gilroy-Medium", Helvetica;
+  --TVG-typography-default-font-size: 20px;
+  --TVG-typography-default-font-style: normal;
+  --TVG-typography-default-font-weight: 500;
+  --TVG-typography-default-letter-spacing: 0px;
+  --TVG-typography-default-line-height: 28px;
+  --TVG-typography-footer-default-font-family: "Gilroy-Medium", Helvetica;
+  --TVG-typography-footer-default-font-size: 18px;
+  --TVG-typography-footer-default-font-style: normal;
+  --TVG-typography-footer-default-font-weight: 500;
+  --TVG-typography-footer-default-letter-spacing: 0px;
+  --TVG-typography-footer-default-line-height: 26px;
+  --TVG-typography-footer-menu-font-family: "Gilroy-Medium", Helvetica;
+  --TVG-typography-footer-menu-font-size: 18px;
+  --TVG-typography-footer-menu-font-style: normal;
+  --TVG-typography-footer-menu-font-weight: 500;
+  --TVG-typography-footer-menu-letter-spacing: 0px;
+  --TVG-typography-footer-menu-line-height: 40px;
+  --TVG-typography-footer-title-font-family: "Gilroy-Bold", Helvetica;
+  --TVG-typography-footer-title-font-size: 18px;
+  --TVG-typography-footer-title-font-style: normal;
+  --TVG-typography-footer-title-font-weight: 700;
+  --TVG-typography-footer-title-letter-spacing: 0px;
+  --TVG-typography-footer-title-line-height: normal;
+  --TVG-typography-h2-font-family: "Morganite", Helvetica;
+  --TVG-typography-h2-font-size: 96px;
+  --TVG-typography-h2-font-style: normal;
+  --TVG-typography-h2-font-weight: 800;
+  --TVG-typography-h2-letter-spacing: 1.92px;
+  --TVG-typography-h2-line-height: 90px;
+  --TVG-typography-h5-font-family: "Gilroy-Bold", Helvetica;
+  --TVG-typography-h5-font-size: 24px;
+  --TVG-typography-h5-font-style: normal;
+  --TVG-typography-h5-font-weight: 700;
+  --TVG-typography-h5-letter-spacing: 0px;
+  --TVG-typography-h5-line-height: normal;
+  --TVG-typography-hero-text-font-family: "Gilroy-Medium", Helvetica;
+  --TVG-typography-hero-text-font-size: 24px;
+  --TVG-typography-hero-text-font-style: normal;
+  --TVG-typography-hero-text-font-weight: 500;
+  --TVG-typography-hero-text-letter-spacing: 0px;
+  --TVG-typography-hero-text-line-height: normal;
+  --TVG-typography-hero-title-font-family: "Morganite", Helvetica;
+  --TVG-typography-hero-title-font-size: 148px;
+  --TVG-typography-hero-title-font-style: normal;
+  --TVG-typography-hero-title-font-weight: 900;
+  --TVG-typography-hero-title-letter-spacing: 2.96px;
+  --TVG-typography-hero-title-line-height: 130px;
+  --TVG-typography-side-menu-item-font-family: "Gilroy-Bold", Helvetica;
+  --TVG-typography-side-menu-item-font-size: 17px;
+  --TVG-typography-side-menu-item-font-style: normal;
+  --TVG-typography-side-menu-item-font-weight: 700;
+  --TVG-typography-side-menu-item-letter-spacing: 0px;
+  --TVG-typography-side-menu-item-line-height: 20px;
+  --TVG-typography-tagline-font-family: "Gilroy-Bold", Helvetica;
+  --TVG-typography-tagline-font-size: 22px;
+  --TVG-typography-tagline-font-style: normal;
+  --TVG-typography-tagline-font-weight: 700;
+  --TVG-typography-tagline-letter-spacing: 0.44px;
+  --TVG-typography-tagline-line-height: 26px;
+  --TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-family: "Gilroy-Bold",
+    Helvetica;
+  --TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-size: 16px;
+  --TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-style: normal;
+  --TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-weight: 700;
+  --TVG-typography-TVG-typography-TVG-typography-top-menu-item-letter-spacing: 0.8px;
+  --TVG-typography-TVG-typography-TVG-typography-top-menu-item-line-height: 60px;
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: "Inter", system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  /* Ensure images load properly */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Fix for custom font families */
+  .font-TVG-typography-button,
+  .font-TVG-typography-h2,
+  .font-TVG-typography-hero-title,
+  .font-TVG-typography-counter-number {
+    font-family: "Inter", system-ui, sans-serif;
+  }
+  
+  /* Responsive text utilities */
+  .text-responsive-xs {
+    @apply text-xs sm:text-sm lg:text-base;
+  }
+  
+  .text-responsive-sm {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+  
+  .text-responsive-base {
+    @apply text-base sm:text-lg lg:text-xl;
+  }
+  
+  .text-responsive-lg {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+  
+  .text-responsive-xl {
+    @apply text-xl sm:text-2xl lg:text-3xl;
+  }
+  
+  .text-responsive-2xl {
+    @apply text-2xl sm:text-3xl lg:text-4xl;
+  }
+  
+  .text-responsive-3xl {
+    @apply text-3xl sm:text-4xl lg:text-5xl;
+  }
+  
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

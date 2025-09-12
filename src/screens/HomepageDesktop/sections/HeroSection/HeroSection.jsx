@@ -13,7 +13,7 @@ export const HeroSection = () => {
 			<div className='absolute inset-0 bg-gradient-to-r from-transparent via-black/40 to-black/85' />
 
 			{/* Content */}
-			<div className='relative z-10 flex flex-col justify-center h-full px-4 sm:px-6 lg:px-8 xl:pl-[280px] pt-20 sm:pt-24 lg:pt-32'>
+			<div className='relative z-10 flex flex-col justify-center h-full px-4 sm:px-6 lg:px-8 xl:pl-[280px] pt-32 sm:pt-36 lg:pt-40'>
 				<div className='max-w-4xl'>
 					{/* Welcome Text */}
 					<div className='mb-4 sm:mb-6 lg:mb-8'>

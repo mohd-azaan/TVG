@@ -1,18 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Gilroy-Bold:ital,wght@0,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gilroy-SemiBold:ital,wght@0,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Morganite:ital,wght@0,700;0,800;0,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gilroy-Medium:ital,wght@0,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gilroy-Black:ital,wght@0,400&display=swap');
+/* Import proper Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
+/* Custom Gilroy fonts - these should be hosted locally */
+@font-face {
+	font-family: 'Gilroy';
+	src: url('/fonts/Gilroy-Medium.woff2') format('woff2'),
+		url('/fonts/Gilroy-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('/fonts/Gilroy-SemiBold.woff2') format('woff2'),
+		url('/fonts/Gilroy-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('/fonts/Gilroy-Bold.woff2') format('woff2'),
+		url('/fonts/Gilroy-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('/fonts/Gilroy-Black.woff2') format('woff2'),
+		url('/fonts/Gilroy-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Morganite';
+	src: url('/fonts/Morganite-Bold.woff2') format('woff2'),
+		url('/fonts/Morganite-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Morganite';
+	src: url('/fonts/Morganite-ExtraBold.woff2') format('woff2'),
+		url('/fonts/Morganite-ExtraBold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Morganite';
+	src: url('/fonts/Morganite-Black.woff2') format('woff2'),
+		url('/fonts/Morganite-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
 
 :root {
-	/* Named font stacks that other styles reference */
-	--font-gilroy: 'Gilroy-Medium', 'Gilroy-SemiBold', 'Gilroy-Bold', 'Gilroy-Black', Helvetica, sans-serif;
-	--font-morganite: 'Morganite', Helvetica, sans-serif;
-	--font-open-sans: 'Open Sans', Helvetica, sans-serif;
+	/* Named font stacks with proper fallbacks */
+	--font-gilroy: 'Gilroy', 'Inter', system-ui, -apple-system, 'Segoe UI',
+		sans-serif;
+	--font-morganite: 'Morganite', 'Inter', system-ui, -apple-system, 'Segoe UI',
+		sans-serif;
+	--font-open-sans: 'Open Sans', 'Inter', system-ui, -apple-system, 'Segoe UI',
+		sans-serif;
+	--font-inter: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
 	/* App default alias used throughout the app and in Tailwind variables */
 	--TVG-font-default: var(--font-gilroy);
+
+	/* Navigation specific fonts */
+	--TVG-nav-menu-font: var(--font-gilroy);
+	--TVG-nav-button-font: var(--font-open-sans);
 }
 
 /* Base page styles */
@@ -25,12 +94,20 @@ body {
 }
 
 /* Headings (hero titles) use Morganite by default */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: var(--font-morganite);
 }
 
 /* Provide sensible defaults for interactive text */
-button, input, textarea, select { 
+button,
+input,
+textarea,
+select {
 	font-family: var(--TVG-font-default);
 }
 

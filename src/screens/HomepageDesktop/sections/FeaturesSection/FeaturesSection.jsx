@@ -224,7 +224,7 @@ export const FeaturesSection = () => {
 									alt='Play swing'
 									src={card.image}
 								/>
-								<div className="absolute bottom-[77px] left-[41px] w-[362px] font-bold text-black text-[28px] tracking-[0] leading-[normal]">
+								<div className='absolute bottom-[77px] left-[41px] w-[362px] font-bold text-black text-[28px] tracking-[0] leading-[normal]'>
 									{card.title}
 								</div>
 								<div className='absolute bottom-[18px] left-[43px] w-[322px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] tracking-[var(--TVG-typography-default-letter-spacing)] leading-[var(--TVG-typography-default-line-height)] [font-style:var(--TVG-typography-default-font-style)] text-black'>

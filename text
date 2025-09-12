@@ -1,0 +1,75 @@
+<div className="w-[1700px] h-24 relative bg-gray-900 rounded-[50px] backdrop-blur-[10px]">
+  <div className="w-[1039px] h-24 left-[630px] top-0 absolute inline-flex justify-end items-center gap-7">
+    <div data-status="Default" className="relative inline-flex flex-col justify-center items-center gap-2.5">
+      <div className="justify-center text-white text-base font-normal font-['Gilroy-Bold'] leading-[60px] tracking-wide">ABOUT</div>
+      <div className="w-7 h-0.5 left-[13px] top-[73px] absolute bg-emerald-400/0" />
+    </div>
+    <div data-status="Default" className="relative inline-flex flex-col justify-center items-center gap-2.5">
+      <div className="justify-center text-white text-base font-normal font-['Gilroy-Bold'] leading-[60px] tracking-wide">PLAY</div>
+      <div className="w-7 h-0.5 left-[5px] top-[73px] absolute bg-emerald-400/0" />
+    </div>
+    <div data-status="Default" className="w-20 h-14 relative">
+      <div data-size="20" className="w-4 h-4 left-[58.67px] top-[20px] absolute overflow-hidden">
+        <div className="w-2 h-1 left-[4.44px] top-[6.67px] absolute outline outline-2 outline-offset-[-1px] outline-emerald-400" />
+      </div>
+      <div className="left-0 top-0 absolute justify-center text-white text-base font-normal font-['Gilroy-Bold'] leading-[60px] tracking-wide">LEARN</div>
+      <div className="w-72 h-36 left-0 top-[82px] absolute bg-gray-200/0 rounded-bl-[30px] rounded-br-[30px] border-t-[5px] border-green-600/0 overflow-hidden">
+        <div className="left-[38px] top-[80px] absolute justify-center text-black/0 text-base font-normal font-['Gilroy-Bold'] leading-[60px] tracking-wide">Corporate Programs</div>
+        <div className="left-[38px] top-[42px] absolute justify-center text-black/0 text-base font-normal font-['Gilroy-Bold'] leading-[60px] tracking-wide">Meet the Coach</div>
+        <div className="left-[38px] top-[4px] absolute justify-center text-black/0 text-base font-normal font-['Gilroy-Bold'] leading-[60px] tracking-wide">Coaching Levels</div>
+      </div>
+    </div>
+    <div data-status="Default" className="relative inline-flex flex-col justify-center items-center gap-2.5">
+      <div className="justify-center text-white text-base font-normal font-['Gilroy-Bold'] leading-[60px] tracking-wide">MEMBERSHIP</div>
+      <div className="w-7 h-0.5 left-[37px] top-[73px] absolute bg-emerald-400/0" />
+    </div>
+    <div data-status="Default" className="relative inline-flex flex-col justify-center items-center gap-2.5">
+      <div className="justify-center text-white text-base font-normal font-['Gilroy-Bold'] leading-[60px] tracking-wide">LEAGUES</div>
+      <div className="w-7 h-0.5 left-[22px] top-[73px] absolute bg-emerald-400/0" />
+    </div>
+    <div data-status="Default" className="relative inline-flex flex-col justify-center items-center gap-2.5">
+      <div className="justify-center text-white text-base font-normal font-['Gilroy-Bold'] leading-[60px] tracking-wide">EVENTS</div>
+      <div className="w-7 h-0.5 left-[15px] top-[73px] absolute bg-emerald-400/0" />
+    </div>
+    <div data-status="Default" className="relative inline-flex flex-col justify-center items-center gap-2.5">
+      <div className="justify-center text-white text-base font-normal font-['Gilroy-Bold'] leading-[60px] tracking-wide">SIMULATOR</div>
+      <div className="w-7 h-0.5 left-[31px] top-[73px] absolute bg-emerald-400/0" />
+    </div>
+    <div data-status="Default" className="relative inline-flex flex-col justify-center items-center gap-2.5">
+      <div className="justify-center text-white text-base font-normal font-['Gilroy-Bold'] leading-[60px] tracking-wide">OWN THE BUSINESS</div>
+      <div className="w-7 h-0.5 left-[64px] top-[73px] absolute bg-emerald-400/0" />
+    </div>
+    <div className="w-36 h-10 relative bg-green-600 rounded-[50px] overflow-hidden">
+      <div className="left-[23px] top-0 absolute text-center justify-start text-white text-base font-semibold font-['Open_Sans'] leading-10">BOOK NOW</div>
+    </div>
+  </div>
+  <div className="w-36 h-14 left-[18px] top-[15px] absolute">
+    <div className="w-3.5 h-4 left-[73.94px] top-[1.99px] absolute bg-green-600" />
+    <div className="w-3 h-4 left-[88.94px] top-[1.98px] absolute bg-green-600" />
+    <div className="w-3 h-3.5 left-[102.35px] top-[6.06px] absolute bg-green-600" />
+    <div className="w-4 h-4 left-[73.72px] top-[21.43px] absolute bg-green-600" />
+    <div className="w-1 h-4 left-[90.46px] top-[20.59px] absolute bg-green-600" />
+    <div className="w-2 h-3 left-[96.26px] top-[25.50px] absolute bg-green-600" />
+    <div className="w-2 h-4 left-[104.56px] top-[22.70px] absolute bg-green-600" />
+    <div className="w-3 h-3 left-[113.84px] top-[25.76px] absolute bg-green-600" />
+    <div className="w-3 h-3 left-[127.17px] top-[25.50px] absolute bg-green-600" />
+    <div className="w-[3.40px] h-4 left-[140.80px] top-[21.43px] absolute bg-green-600" />
+    <div className="w-4 h-4 left-[74.26px] top-[40.57px] absolute bg-green-600" />
+    <div className="w-2 h-3 left-[91.86px] top-[44.94px] absolute bg-green-600" />
+    <div className="w-3 h-3.5 left-[99.67px] top-[44.94px] absolute bg-green-600" />
+    <div className="w-3 h-3.5 left-[112.92px] top-[44.94px] absolute bg-green-600" />
+    <div className="w-3 h-3 left-[126.64px] top-[44.94px] absolute bg-green-600" />
+    <div className="w-3 h-3.5 left-[139.87px] top-[44.94px] absolute bg-green-600" />
+    <div className="w-16 h-5 left-0 top-[27.84px] absolute bg-green-600" />
+    <div className="w-12 h-9 left-[19.72px] top-0 absolute bg-green-600" />
+    <div className="w-5 h-7 left-[30.65px] top-[8.51px] absolute bg-green-600" />
+    <div className="w-14 h-3 left-[5.23px] top-[40.76px] absolute bg-green-600" />
+    <div className="w-7 h-3 left-[28.91px] top-[48.57px] absolute bg-green-600" />
+    <div className="w-3 h-5 left-[34.26px] top-[20.47px] absolute bg-green-600" />
+    <div className="w-2 h-2 left-[41.97px] top-[4.95px] absolute bg-green-600" />
+    <div className="w-1.5 h-4 left-[62.11px] top-[18.65px] absolute bg-green-600" />
+    <div className="w-2 h-3 left-[33.96px] top-[26.03px] absolute bg-green-600" />
+    <div className="w-5 h-2.5 left-[49.41px] top-[12.25px] absolute bg-green-600" />
+    <div className="w-[3.22px] h-0.5 left-[37.98px] top-[8.52px] absolute bg-green-600" />
+  </div>
+</div>

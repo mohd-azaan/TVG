@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilroy-Bold:ital,wght@0,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gilroy-SemiBold:ital,wght@0,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Morganite:ital,wght@0,700;0,800;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gilroy-Medium:ital,wght@0,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gilroy-Black:ital,wght@0,400&display=swap');
+
+:root {
+	/* Named font stacks that other styles reference */
+	--font-gilroy: 'Gilroy-Medium', 'Gilroy-SemiBold', 'Gilroy-Bold', 'Gilroy-Black', Helvetica, sans-serif;
+	--font-morganite: 'Morganite', Helvetica, sans-serif;
+	--font-open-sans: 'Open Sans', Helvetica, sans-serif;
+
+	/* App default alias used throughout the app and in Tailwind variables */
+	--TVG-font-default: var(--font-gilroy);
+}
+
+/* Base page styles */
+body {
+	margin: 0;
+	line-height: normal;
+	font-family: var(--TVG-font-default);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings (hero titles) use Morganite by default */
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-morganite);
+}
+
+/* Provide sensible defaults for interactive text */
+button, input, textarea, select { 
+	font-family: var(--TVG-font-default);
+}
+
+/* End of global.css */

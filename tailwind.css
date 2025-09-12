@@ -26,9 +26,9 @@
 }
 
 :root {
-  /* Fallback fonts for custom typography */
-  --font-gilroy: "Inter", "Helvetica", sans-serif;
-  --font-morganite: "Inter", "Helvetica", sans-serif;
+  /* Fallback fonts for custom typography (will be overridden by global.css when loaded) */
+  --font-gilroy: "Gilroy-Medium", "Gilroy-SemiBold", "Gilroy-Bold", "Gilroy-Black", Helvetica, sans-serif;
+  --font-morganite: "Morganite", Helvetica, sans-serif;
   
   --TVG-typography-button-font-family: "Gilroy-SemiBold", Helvetica;
   --TVG-typography-button-font-size: 18px;
@@ -311,7 +311,8 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
-    font-family: "Inter", system-ui, sans-serif;
+    /* Use the app-level font variable so Tailwind classes inherit the same family */
+    font-family: var(--TVG-font-default, "Inter", system-ui, sans-serif);
     overflow-x: hidden;
   }
   

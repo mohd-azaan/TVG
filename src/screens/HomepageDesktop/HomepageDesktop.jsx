@@ -18,11 +18,13 @@ export const HomepageDesktop = () => {
 		<div className='bg-white w-full min-h-screen relative'>
 			<div className='w-full flex flex-col'>
 				<HeroSection />
-				<ServicesSection />
-				<StatisticsSection />
-				<PlayYourWaySection />
-				<HowItWorksSection />
-				<MeetGolfzonSection />
+				<div className='pt-24'>
+					<ServicesSection />
+					<StatisticsSection />
+					<PlayYourWaySection />
+					<HowItWorksSection />
+					<MeetGolfzonSection />
+				</div>
 			</div>
 
 			{/* Membership Promo Card */}

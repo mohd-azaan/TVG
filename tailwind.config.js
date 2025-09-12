@@ -32,12 +32,22 @@ module.exports = {
 					'var(--TVG-typography-footer-menu-font-family)',
 				'TVG-typography-footer-title':
 					'var(--TVG-typography-footer-title-font-family)',
+				'TVG-typography-form-label':
+					'var(--TVG-typography-form-label-font-family)',
+				'TVG-typography-h1': 'var(--TVG-typography-h1-font-family)',
 				'TVG-typography-h2': 'var(--TVG-typography-h2-font-family)',
+				'TVG-typography-h3': 'var(--TVG-typography-h3-font-family)',
+				'TVG-typography-h4': 'var(--TVG-typography-h4-font-family)',
 				'TVG-typography-h5': 'var(--TVG-typography-h5-font-family)',
+				'TVG-typography-h6': 'var(--TVG-typography-h6-font-family)',
 				'TVG-typography-hero-text':
 					'var(--TVG-typography-hero-text-font-family)',
 				'TVG-typography-hero-title':
 					'var(--TVG-typography-hero-title-font-family)',
+				'TVG-typography-hero-title2':
+					'var(--TVG-typography-hero-title2-font-family)',
+				'TVG-typography-counter-symbol':
+					'var(--TVG-typography-counter-symbol-font-family)',
 				'TVG-typography-side-menu-item':
 					'var(--TVG-typography-side-menu-item-font-family)',
 				'TVG-typography-tagline': 'var(--TVG-typography-tagline-font-family)',

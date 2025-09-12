@@ -9,7 +9,7 @@ export const MainLayout = ({ children }) => {
 			<div className='fixed top-0 left-0 right-0 z-50 px-4'>
 				<Navbar />
 			</div>
-			<main className='w-full pt-24'>{children}</main>
+			<main className='w-full'>{children}</main>
 			<TestimonialsSection />
 			<FooterSection />
 		</div>

@@ -1,6 +1,5 @@
 import React from 'react';
-import freepikBackground817021 from 'img395.jpg';
-import shape142 from './shape14-2.svg';
+import freepikBackground817021 from './img395.jpg';
 
 export const Hero = () => {
 	return (
@@ -11,7 +10,7 @@ export const Hero = () => {
 				<img
 					className='absolute w-[1578px] h-[592px] top-[126px] left-[342px]'
 					alt='Decorative shape element'
-					src={shape142}
+					src={'/shape14-2.svg'}
 				/>
 
 				<div

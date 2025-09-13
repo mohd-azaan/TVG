@@ -17,12 +17,12 @@ function TopNavItem({ children, to = '#', status = 'Default' }) {
 			className='content-stretch flex flex-col gap-2.5 items-center justify-center relative size-full group cursor-pointer'
 		>
 			<div className="flex flex-col font-['Gilroy-Bold',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[12px] font-bold text-nowrap text-white tracking-[0.4px] group-hover:text-[#009444] transition-colors duration-200">
-						<p className='leading-[52px] whitespace-pre'>{children}</p>
+				<p className='leading-[52px] whitespace-pre'>{children}</p>
 			</div>
-					<div
-						className='absolute bg-transparent group-hover:bg-[#009444] h-0.5 top-[61px] translate-x-[-50%] w-[30px] transition-colors duration-200'
-						style={{ left: 'calc(50% + 0.5px)' }}
-					/>
+			<div
+				className='absolute bg-transparent group-hover:bg-[#009444] h-0.5 top-[61px] translate-x-[-50%] w-[30px] transition-colors duration-200'
+				style={{ left: 'calc(50% + 0.5px)' }}
+			/>
 		</Link>
 	);
 }
@@ -98,7 +98,7 @@ export const Navbar = () => {
 					{menuItems.map((item, index) => {
 						if (item.hasDropdown) {
 							return (
-									<div
+								<div
 									key={item.label}
 									className='h-[48px] relative shrink-0 group'
 									ref={dropdownRef}
@@ -113,7 +113,9 @@ export const Navbar = () => {
 										aria-haspopup='true'
 										aria-label={`${item.label} menu`}
 									>
-										<span className='leading-[52px] whitespace-pre block'>{item.label}</span>
+										<span className='leading-[52px] whitespace-pre block'>
+											{item.label}
+										</span>
 										<span className='inline-flex w-4 h-4 items-center justify-center'>
 											<ChevronDown size='24' />
 										</span>

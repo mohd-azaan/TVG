@@ -105,3 +105,23 @@ The main homepage (`HomepageDesktop`) includes these sections:
 - Shadcn UI color scheme with HSL CSS variables
 - Component styling with className composition using `cn()` utility
 - Responsive design with Tailwind breakpoint classes
+
+## Mobile Responsiveness Best Practices
+
+### Hero Section Mobile Optimizations (Implemented)
+
+**Container & Layout**:
+- Use responsive padding: `px-4 sm:px-6 lg:px-10` instead of fixed `px-10`
+- Remove left margins on mobile: `lg:ml-[15vw] md:ml-[10vw]` (no `sm:ml-[5vw]`)
+- Content aligns to left edge on mobile with proper padding
+
+**Typography Scaling**:
+- Welcome text: `text-[32px] sm:text-[42px] lg:text-[55px]` with `leading-[1.1]`
+- Main headline: `text-[clamp(110px,12vw,160px)]` - maintains readability with 110px minimum
+- Description text: Responsive max-width `lg:max-w-[535px] md:max-w-[500px] sm:max-w-[400px]`
+
+**Key Principles**:
+- Avoid aggressive font scaling that makes text unreadable on mobile
+- Use progressive enhancement: mobile-first, then enhance for larger screens
+- Maintain text hierarchy and readability across all device sizes
+- Remove excessive margins/padding that waste mobile screen real estate

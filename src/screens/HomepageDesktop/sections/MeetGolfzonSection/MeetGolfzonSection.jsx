@@ -19,14 +19,14 @@ export const MeetGolfzonSection = () => {
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center'>
 					<div className='order-2 lg:order-1'>
 						<img
-							className='w-full h-auto object-cover rounded-[30px] shadow-lg hover:shadow-xl transition-shadow duration-300'
+							className='w-full h-auto object-cover duration-300'
 							alt='Indoor golf'
 							src='/indoor-golf-1.png'
 						/>
 					</div>
 
 					<div className='order-1 lg:order-2 space-y-6 sm:space-y-8'>
-						<div className='space-y-4 sm:space-y-6'>
+						<div className='space-y-4 sm:space-y-2'>
 							<div className='text-lg sm:text-xl lg:text-[22px] font-bold text-[#009444] leading-relaxed tracking-wide'>
 								BUILT WITH THE BEST GOLF TECH IN THE WORLD
 							</div>
@@ -41,7 +41,7 @@ export const MeetGolfzonSection = () => {
 							professional tours across Asia, our setup offers:
 						</div>
 
-						<div className='space-y-4 sm:space-y-6'>
+						<div className='space-y-4 sm:space-y-2'>
 							{features.map((feature, index) => (
 								<div key={index} className='flex items-start gap-4'>
 									<img

@@ -1,0 +1,584 @@
+/* src/screens/AboutPage/AboutPage.css */
+/* Complete About page styles using TVG design system */
+/* Imports styleguide variables and applies them to About page layout */
+/* RELEVANT FILES: styleguide.css, colors.txt, AboutPage.jsx */
+
+/* Styleguide variables will be imported in JS file */
+
+/* Main container */
+.about-desktop {
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	width: 100%;
+}
+
+.about-desktop .div {
+	background-color: #FFFFFF;
+	width: 100%;
+	position: relative;
+}
+
+.about-desktop .overlap {
+	position: relative;
+	width: 100%;
+}
+
+/* Content wrap */
+.content-wrap {
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+.boxed-container {
+	background-color: transparent;
+	height: 100%;
+	width: 100%;
+}
+
+/* Hero section */
+.hero {
+	background: linear-gradient(180deg, #006B4F 0%, #004A37 100%);
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero .overlap-8 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+}
+
+.hero .rectangle {
+	background: linear-gradient(180deg, #006B4F 0%, #004A37 100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.hero .where-golf-people {
+	color: #FFFFFF;
+	font-family: var(--TVG-typography-hero-title-font-family);
+	font-size: var(--TVG-typography-hero-title-font-size);
+	font-style: var(--TVG-typography-hero-title-font-style);
+	font-weight: var(--TVG-typography-hero-title-font-weight);
+	letter-spacing: var(--TVG-typography-hero-title-letter-spacing);
+	line-height: var(--TVG-typography-hero-title-line-height);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	z-index: 10;
+	white-space: nowrap;
+}
+
+/* Vision and Mission */
+.vision-mission {
+	background-color: #F6F6F6;
+	padding: 80px 40px;
+	display: flex;
+	flex-direction: row;
+	gap: 60px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.text-box-2 {
+	flex: 2;
+}
+
+.what-we-believe {
+	color: #009444;
+	font-family: var(--TVG-typography-h5-font-family);
+	font-size: var(--TVG-typography-h5-font-size);
+	font-weight: var(--TVG-typography-h5-font-weight);
+	margin-bottom: 24px;
+	letter-spacing: 2px;
+}
+
+.golf-should-be-easy {
+	color: #1E1E21;
+	font-family: var(--TVG-typography-default-font-family);
+	font-size: var(--TVG-typography-default-font-size);
+	line-height: var(--TVG-typography-default-line-height);
+	margin: 0;
+}
+
+.mission, .vision-3 {
+	flex: 1;
+	background-color: #FFFFFF;
+	padding: 40px 30px;
+	border-radius: 8px;
+}
+
+.text-wrapper-15 {
+	color: #009444;
+	font-family: var(--TVG-typography-h5-font-family);
+	font-size: var(--TVG-typography-h5-font-size);
+	font-weight: var(--TVG-typography-h5-font-weight);
+	margin-bottom: 20px;
+	letter-spacing: 2px;
+}
+
+.text-wrapper-16 {
+	color: #1E1E21;
+	font-family: var(--TVG-typography-default-font-family);
+	font-size: var(--TVG-typography-default-font-size);
+	line-height: var(--TVG-typography-default-line-height);
+	margin: 0;
+}
+
+/* World-class tech section */
+.world-class-tech {
+	background-color: #1E1E21;
+	color: #FFFFFF;
+	padding: 80px 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.overlap-7 {
+	margin-bottom: 40px;
+}
+
+.world-class-tech-2 {
+	color: #FFFFFF;
+	font-family: var(--TVG-typography-h2-font-family);
+	font-size: var(--TVG-typography-h2-font-size);
+	font-weight: var(--TVG-typography-h2-font-weight);
+	letter-spacing: var(--TVG-typography-h2-letter-spacing);
+	line-height: var(--TVG-typography-h2-line-height);
+}
+
+.powered-by {
+	color: #7DDB8A;
+	font-family: var(--TVG-typography-tagline-font-family);
+	font-size: var(--TVG-typography-tagline-font-size);
+	font-weight: var(--TVG-typography-tagline-font-weight);
+	margin-top: 10px;
+}
+
+.we-use-the-most-wrapper {
+	max-width: 800px;
+	margin: 40px 0;
+}
+
+.we-use-the-most {
+	color: #FFFFFF;
+	font-family: var(--TVG-typography-default-font-family);
+	font-size: var(--TVG-typography-default-font-size);
+	line-height: var(--TVG-typography-default-line-height);
+}
+
+/* Vision 2030 section */
+.vision {
+	background-color: #009444;
+	color: #FFFFFF;
+	padding: 80px 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.overlap-5 {
+	margin-bottom: 40px;
+}
+
+.in-line-with {
+	color: #FFFFFF;
+	font-family: var(--TVG-typography-tagline-font-family);
+	font-size: var(--TVG-typography-tagline-font-size);
+	margin-bottom: 10px;
+}
+
+.vision-2 {
+	color: #FFFFFF;
+	font-family: var(--TVG-typography-h2-font-family);
+	font-size: var(--TVG-typography-h2-font-size);
+	font-weight: var(--TVG-typography-h2-font-weight);
+}
+
+.text-wrapper-14 {
+	color: #FFFFFF;
+	font-family: var(--TVG-typography-default-font-family);
+	font-size: var(--TVG-typography-default-font-size);
+	line-height: var(--TVG-typography-default-line-height);
+	max-width: 800px;
+	margin: 40px 0;
+}
+
+/* Features section */
+.features {
+	background-color: #F6F6F6;
+	padding: 80px 40px;
+}
+
+.features-and {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.features-and .span {
+	color: #1E1E21;
+	font-family: var(--TVG-typography-h2-font-family);
+	font-size: var(--TVG-typography-h2-font-size);
+	font-weight: var(--TVG-typography-h2-font-weight);
+}
+
+.features-and .text-wrapper-12 {
+	color: #009444;
+	font-family: var(--TVG-typography-h2-font-family);
+	font-size: var(--TVG-typography-h2-font-size);
+	font-weight: var(--TVG-typography-h2-font-weight);
+}
+
+.features-2 {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 30px;
+	margin-bottom: 80px;
+}
+
+.feature, .feature-2 {
+	background-color: #FFFFFF;
+	padding: 30px 20px;
+	border-radius: 8px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.text-wrapper-7 {
+	color: #1E1E21;
+	font-family: var(--TVG-typography-default-font-family);
+	font-size: 18px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.vector-wrapper {
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.vector-placeholder {
+	width: 32px;
+	height: 32px;
+	background-color: #009444;
+	border-radius: 4px;
+}
+
+/* For you section */
+.for-you {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 40px;
+	margin-bottom: 80px;
+}
+
+.feature-16, .feature-17 {
+	background-color: #FFFFFF;
+	padding: 40px 30px;
+	border-radius: 8px;
+	text-align: center;
+}
+
+.text-wrapper-13 {
+	color: #1E1E21;
+	font-family: var(--TVG-typography-default-font-family);
+	font-size: var(--TVG-typography-default-font-size);
+	line-height: var(--TVG-typography-default-line-height);
+	margin-bottom: 20px;
+}
+
+.sports-golf {
+	display: flex;
+	justify-content: center;
+}
+
+.overlap-4 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.we-built-the-virtual {
+	color: #009444;
+	font-family: var(--TVG-typography-h3-font-family);
+	font-size: var(--TVG-typography-h3-font-size);
+	font-weight: var(--TVG-typography-h3-font-weight);
+	margin-bottom: 20px;
+}
+
+.not-a-golfer-yet {
+	color: #1E1E21;
+	font-family: var(--TVG-typography-h3-font-family);
+	font-size: var(--TVG-typography-h3-font-size);
+	font-weight: var(--TVG-typography-h3-font-weight);
+}
+
+.not-a-golfer-yet .text-wrapper-12 {
+	color: #009444;
+}
+
+/* Testimonials section */
+.testimonials {
+	background-color: #1E1E21;
+	color: #FFFFFF;
+	padding: 80px 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.overlap-3 {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+	margin-bottom: 60px;
+	max-width: 1000px;
+}
+
+.quote {
+	flex: 2;
+}
+
+.text-wrapper-5 {
+	color: #7DDB8A;
+	font-family: var(--TVG-typography-tagline-font-family);
+	font-size: var(--TVG-typography-tagline-font-size);
+	margin-bottom: 20px;
+}
+
+.lorem-ipsum-dolor {
+	color: #FFFFFF;
+	font-family: var(--TVG-typography-default-font-family);
+	font-size: var(--TVG-typography-default-font-size);
+	line-height: var(--TVG-typography-default-line-height);
+	margin-bottom: 20px;
+}
+
+.text-wrapper-6 {
+	color: #7DDB8A;
+	font-family: var(--TVG-typography-h1-font-family);
+	font-size: 120px;
+	font-weight: 900;
+}
+
+.ambassador {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.ambassador-image-placeholder {
+	width: 200px;
+	height: 200px;
+	background-color: #AFACAD;
+	border-radius: 50%;
+}
+
+.ready {
+	text-align: center;
+}
+
+.ready-to-visit {
+	color: #FFFFFF;
+	font-family: var(--TVG-typography-h3-font-family);
+	font-size: var(--TVG-typography-h3-font-size);
+	font-weight: var(--TVG-typography-h3-font-weight);
+	margin-bottom: 30px;
+}
+
+/* Footer */
+.footer {
+	background-color: #014421;
+	color: #FFFFFF;
+	padding: 80px 40px 40px;
+}
+
+.overlap-2 {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+
+.column, .column-2 {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.text-wrapper-2 {
+	color: #7DDB8A;
+	font-family: var(--TVG-typography-footer-title-font-family);
+	font-size: var(--TVG-typography-footer-title-font-size);
+	font-weight: var(--TVG-typography-footer-title-font-weight);
+	margin-bottom: 10px;
+}
+
+.footer-menu-item-instance,
+.design-component-instance-node,
+.footer-menu-item-2,
+.footer-menu-item-3,
+.footer-menu-item-4,
+.footer-menu-item-5,
+.footer-menu-item-6,
+.footer-menu-item-7,
+.footer-menu-item-8 {
+	color: #FFFFFF;
+	font-family: var(--TVG-typography-footer-menu-font-family);
+	font-size: var(--TVG-typography-footer-menu-font-size);
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+
+.footer-menu-item-instance:hover,
+.design-component-instance-node:hover,
+.footer-menu-item-2:hover,
+.footer-menu-item-3:hover,
+.footer-menu-item-4:hover,
+.footer-menu-item-5:hover,
+.footer-menu-item-6:hover,
+.footer-menu-item-7:hover,
+.footer-menu-item-8:hover {
+	color: #7DDB8A;
+}
+
+.text-wrapper-3 {
+	color: #FFFFFF;
+	font-family: var(--TVG-typography-footer-default-font-family);
+	font-size: var(--TVG-typography-footer-default-font-size);
+	margin-bottom: 20px;
+}
+
+.text-wrapper-4 {
+	color: #7DDB8A;
+	font-family: var(--TVG-typography-footer-title-font-family);
+	font-size: var(--TVG-typography-footer-title-font-size);
+	font-weight: var(--TVG-typography-footer-title-font-weight);
+	margin-bottom: 30px;
+}
+
+.the-virtual-greens {
+	color: #FFFFFF;
+	font-family: var(--TVG-typography-footer-default-font-family);
+	font-size: var(--TVG-typography-footer-default-font-size);
+	line-height: var(--TVG-typography-footer-default-line-height);
+	max-width: 400px;
+	margin-bottom: 40px;
+}
+
+.copyrights {
+	text-align: center;
+	border-top: 1px solid #AFACAD;
+	padding-top: 20px;
+}
+
+.copyrights .p {
+	color: #AFACAD;
+	font-family: var(--TVG-typography-footer-default-font-family);
+	font-size: 14px;
+	margin: 0;
+}
+
+/* Buttons */
+.cta-button, .cta-btn-outline {
+	padding: 15px 30px;
+	border-radius: 8px;
+	font-family: var(--TVG-typography-button-font-family);
+	font-size: var(--TVG-typography-button-font-size);
+	font-weight: var(--TVG-typography-button-font-weight);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	border: none;
+}
+
+.cta-button {
+	background-color: #7DDB8A;
+	color: #014421;
+}
+
+.cta-button:hover {
+	background-color: #5AAC4C;
+}
+
+.cta-btn-outline {
+	background-color: transparent;
+	color: #FFFFFF;
+	border: 2px solid #FFFFFF;
+}
+
+.cta-btn-outline:hover {
+	background-color: #FFFFFF;
+	color: #014421;
+}
+
+/* Placeholder styles */
+.social-icons-placeholder,
+.TVG-logo-placeholder,
+.shape-placeholder,
+.shape-hero-placeholder,
+.step-into-a-place-placeholder,
+.freepik-background-placeholder,
+.saudi-vision-logo-placeholder,
+.shape-placeholder-2,
+.indoor-golf-image-placeholder,
+.indoor-golf-placeholder {
+	background-color: #AFACAD;
+	border-radius: 4px;
+	min-height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #FFFFFF;
+	font-size: 12px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.hero .where-golf-people {
+		font-size: 80px;
+		line-height: 70px;
+		white-space: normal;
+		text-align: center;
+		padding: 0 20px;
+	}
+
+	.vision-mission {
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.overlap-3 {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.overlap-2 {
+		flex-direction: column;
+		gap: 30px;
+	}
+}

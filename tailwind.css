@@ -27,17 +27,16 @@
 
 :root {
 	/* Fallback fonts for custom typography (will be overridden by global.css when loaded) */
-	--font-gilroy: 'Gilroy-Medium', 'Gilroy-SemiBold', 'Gilroy-Bold',
-		'Gilroy-Black', Helvetica, sans-serif;
+	--font-gilroy: 'Gilroy', Helvetica, sans-serif;
 	--font-morganite: 'Morganite', Helvetica, sans-serif;
 
-	--TVG-typography-button-font-family: 'Gilroy-SemiBold', Helvetica;
+	--TVG-typography-button-font-family: 'Gilroy', Helvetica;
 	--TVG-typography-button-font-size: 18px;
 	--TVG-typography-button-font-style: normal;
 	--TVG-typography-button-font-weight: 600;
 	--TVG-typography-button-letter-spacing: 0px;
 	--TVG-typography-button-line-height: 40px;
-	--TVG-typography-button-lowercase-font-family: 'Gilroy-SemiBold', Helvetica;
+	--TVG-typography-button-lowercase-font-family: 'Gilroy', Helvetica;
 	--TVG-typography-button-lowercase-font-size: 18px;
 	--TVG-typography-button-lowercase-font-style: normal;
 	--TVG-typography-button-lowercase-font-weight: 600;
@@ -49,31 +48,31 @@
 	--TVG-typography-counter-number-font-weight: 900;
 	--TVG-typography-counter-number-letter-spacing: 2px;
 	--TVG-typography-counter-number-line-height: 100px;
-	--TVG-typography-counter-text-font-family: 'Gilroy-Bold', Helvetica;
+	--TVG-typography-counter-text-font-family: 'Gilroy', Helvetica;
 	--TVG-typography-counter-text-font-size: 20px;
 	--TVG-typography-counter-text-font-style: normal;
 	--TVG-typography-counter-text-font-weight: 700;
 	--TVG-typography-counter-text-letter-spacing: 0px;
 	--TVG-typography-counter-text-line-height: 28px;
-	--TVG-typography-default-font-family: 'Gilroy-Medium', Helvetica;
+	--TVG-typography-default-font-family: 'Gilroy', Helvetica;
 	--TVG-typography-default-font-size: 20px;
 	--TVG-typography-default-font-style: normal;
 	--TVG-typography-default-font-weight: 500;
 	--TVG-typography-default-letter-spacing: 0px;
 	--TVG-typography-default-line-height: 28px;
-	--TVG-typography-footer-default-font-family: 'Gilroy-Medium', Helvetica;
+	--TVG-typography-footer-default-font-family: 'Gilroy', Helvetica;
 	--TVG-typography-footer-default-font-size: 18px;
 	--TVG-typography-footer-default-font-style: normal;
 	--TVG-typography-footer-default-font-weight: 500;
 	--TVG-typography-footer-default-letter-spacing: 0px;
 	--TVG-typography-footer-default-line-height: 26px;
-	--TVG-typography-footer-menu-font-family: 'Gilroy-Medium', Helvetica;
+	--TVG-typography-footer-menu-font-family: 'Gilroy', Helvetica;
 	--TVG-typography-footer-menu-font-size: 18px;
 	--TVG-typography-footer-menu-font-style: normal;
 	--TVG-typography-footer-menu-font-weight: 500;
 	--TVG-typography-footer-menu-letter-spacing: 0px;
 	--TVG-typography-footer-menu-line-height: 40px;
-	--TVG-typography-footer-title-font-family: 'Gilroy-Bold', Helvetica;
+	--TVG-typography-footer-title-font-family: 'Gilroy', Helvetica;
 	--TVG-typography-footer-title-font-size: 18px;
 	--TVG-typography-footer-title-font-style: normal;
 	--TVG-typography-footer-title-font-weight: 700;
@@ -85,20 +84,20 @@
 	--TVG-typography-h2-font-weight: 800;
 	--TVG-typography-h2-letter-spacing: 1.92px;
 	--TVG-typography-h2-line-height: 90px;
-	--TVG-typography-h5-font-family: 'Gilroy-Bold', Helvetica;
+	--TVG-typography-h5-font-family: 'Gilroy', Helvetica;
 	--TVG-typography-h5-font-size: 24px;
 	--TVG-typography-h5-font-style: normal;
 	--TVG-typography-h5-font-weight: 700;
 	--TVG-typography-h5-letter-spacing: 0px;
 	--TVG-typography-h5-line-height: normal;
-	--TVG-typography-hero-text-font-family: 'Gilroy-Medium', Helvetica;
+	--TVG-typography-hero-text-font-family: 'Morganite', Helvetica;
 	--TVG-typography-hero-text-font-size: 24px;
 	--TVG-typography-hero-text-font-style: normal;
 	--TVG-typography-hero-text-font-weight: 500;
 	--TVG-typography-hero-text-letter-spacing: 0px;
 	--TVG-typography-hero-text-line-height: normal;
 	--TVG-typography-hero-title-font-family: 'Morganite', Helvetica;
-	--TVG-typography-hero-title-font-size: 148px;
+	--TVG-typography-hero-title-font-size: 48px;
 	--TVG-typography-hero-title-font-style: normal;
 	--TVG-typography-hero-title-font-weight: 900;
 	--TVG-typography-hero-title-letter-spacing: 2.96px;
@@ -115,14 +114,14 @@
 	--TVG-typography-counter-symbol-font-weight: 900;
 	--TVG-typography-counter-symbol-letter-spacing: 1.4px;
 	--TVG-typography-counter-symbol-line-height: 70px;
-	--TVG-typography-form-label-font-family: 'Gilroy-SemiBold', Helvetica;
+	--TVG-typography-form-label-font-family: 'Gilroy', Helvetica;
 	--TVG-typography-form-label-font-size: 16px;
 	--TVG-typography-form-label-font-style: normal;
 	--TVG-typography-form-label-font-weight: 400;
 	--TVG-typography-form-label-letter-spacing: 0.32px;
 	--TVG-typography-form-label-line-height: 26px;
 	--TVG-typography-h1-font-family: 'Morganite', Helvetica;
-	--TVG-typography-h1-font-size: 148px;
+	--TVG-typography-h1-font-size: 48px;
 	--TVG-typography-h1-font-style: normal;
 	--TVG-typography-h1-font-weight: 900;
 	--TVG-typography-h1-letter-spacing: 2.96px;
@@ -145,19 +144,19 @@
 	--TVG-typography-h6-font-weight: 700;
 	--TVG-typography-h6-letter-spacing: 0px;
 	--TVG-typography-h6-line-height: normal;
-	--TVG-typography-side-menu-item-font-family: 'Gilroy-Bold', Helvetica;
+	--TVG-typography-side-menu-item-font-family: 'Gilroy', Helvetica;
 	--TVG-typography-side-menu-item-font-size: 17px;
 	--TVG-typography-side-menu-item-font-style: normal;
 	--TVG-typography-side-menu-item-font-weight: 700;
 	--TVG-typography-side-menu-item-letter-spacing: 0px;
 	--TVG-typography-side-menu-item-line-height: 20px;
-	--TVG-typography-tagline-font-family: 'Gilroy-Bold', Helvetica;
+	--TVG-typography-tagline-font-family: 'Gilroy', Helvetica;
 	--TVG-typography-tagline-font-size: 22px;
 	--TVG-typography-tagline-font-style: normal;
 	--TVG-typography-tagline-font-weight: 700;
 	--TVG-typography-tagline-letter-spacing: 0.44px;
 	--TVG-typography-tagline-line-height: 26px;
-	--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-family: 'Gilroy-Bold',
+	--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-family: 'Gilroy',
 		Helvetica;
 	--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-size: 16px;
 	--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-style: normal;
@@ -365,10 +364,41 @@
 		height: auto;
 	}
 
-	/* Fix for custom font families */
+	/* Hero section typography using CSS variables */
+	.label {
+		height: 260px;
+		width: 655px;
+	}
+
+	.label .where-golf-people {
+		color: #ffffff;
+		font-family: var(--TVG-typography-hero-title-font-family);
+		font-size: var(--TVG-typography-hero-title-font-size);
+		font-style: var(--TVG-typography-hero-title-font-style);
+		font-weight: var(--TVG-typography-hero-title-font-weight);
+		letter-spacing: var(--TVG-typography-hero-title-letter-spacing);
+		line-height: var(--TVG-typography-hero-title-line-height);
+		text-transform: uppercase;
+	}
+
+	.text-box {
+		width: 655px;
+		height: 351px;
+	}
+
+	.text-box .hero-text-content {
+		color: #dedede;
+		font-family: var(--TVG-typography-hero-text-font-family);
+		font-size: var(--TVG-typography-hero-text-font-size);
+		font-style: var(--TVG-typography-hero-text-font-style);
+		font-weight: var(--TVG-typography-hero-text-font-weight);
+		letter-spacing: var(--TVG-typography-hero-text-letter-spacing);
+		line-height: var(--TVG-typography-hero-text-line-height);
+	}
+
+	/* Fix for custom font families (removed hero-title override) */
 	.font-TVG-typography-button,
 	.font-TVG-typography-h2,
-	.font-TVG-typography-hero-title,
 	.font-TVG-typography-counter-number {
 		font-family: 'Inter', system-ui, sans-serif;
 	}

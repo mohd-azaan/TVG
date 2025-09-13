@@ -8,7 +8,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 2. Use simple & easy-to-understand language. Write in short sentences.
 3. DO NOT BE LAZY! Always read files IN FULL!!
 4. Don't Update the services or endpoints which are already confirmed and working! But your written if just optimizing then it's fine
-5. When Working with features please create a feature/** branch and then implement it in that branch and ask for MERGE!, if Okay then merge it in 'develop' branch
+5. When Working with features please create a feature/\*\* branch and then implement it in that branch and ask for MERGE!, if Okay then merge it in 'develop' branch
+6. Before generating anything from scratch, check if exists and try to reuse properly
 
 ## COMMENTS
 
@@ -34,7 +35,7 @@ Do What has be asked; nothing more, nothing less
   1. Exact file Location in codebase
   2. clear description of what this file does
   3. clear description of why this file exists
-  4. RELVANT FILES:  comma-seperated list of 2-4 most relevant files
+  4. RELVANT FILES: comma-seperated list of 2-4 most relevant files
 - NEVER delete these "header comments" from the files you're editing.
 
 ## Standard Workflow

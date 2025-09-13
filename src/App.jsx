@@ -8,7 +8,14 @@ export const App = () => {
 	return (
 		<Router>
 			<Routes>
-				<Route path='/about' element={<AboutPage />} />
+				<Route
+					path='/about'
+					element={
+						<MainLayout>
+							<AboutPage />
+						</MainLayout>
+					}
+				/>
 				<Route
 					path='/*'
 					element={

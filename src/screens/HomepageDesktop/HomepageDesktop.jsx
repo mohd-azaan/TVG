@@ -29,12 +29,12 @@ export const HomepageDesktop = () => {
 
 			{/* Membership Promo Card */}
 			{showPromoCard && (
-				<Card className='fixed w-[320px] sm:w-[380px] h-auto top-32 sm:top-[125px] right-4 sm:right-8 lg:right-[50px] xl:right-[100px] bg-white rounded-[30px] border border-solid border-[#9d9d9d] shadow-xl opacity-95 z-40 hover:opacity-100 transition-opacity duration-200'>
+				<Card className='fixed w-[320px] sm:w-[380px] h-auto top-32 sm:top-[125px] right-4 sm:right-8 lg:right-[50px] xl:right-[100px] bg-white/75 rounded-[30px] border border-solid border-[#9d9d9d] shadow-xl backdrop-blur-sm z-40 hover:bg-white/85 transition-all duration-200'>
 					<CardContent className='p-6 sm:p-8 relative'>
 						<Button
 							variant='ghost'
 							size='sm'
-							className='absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full border border-solid border-black p-0 hover:bg-gray-50 shadow-md'
+							className='absolute -top-2 -right-2 w-8 h-8 bg-white/75 rounded-full border border-solid border-[#666] p-0 hover:bg-white shadow-md transition-all duration-200'
 							onClick={() => setShowPromoCard(false)}
 						>
 							<XIcon className='w-5 h-5' />

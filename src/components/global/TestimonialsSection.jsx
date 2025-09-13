@@ -6,8 +6,8 @@ export const TestimonialsSection = () => {
 		<section className='relative w-full bg-[#102121] border-b-[70px] border-[#009444] overflow-hidden'>
 			{/* Header Bar */}
 			<header className='relative w-full h-20 bg-[#0c1a1a]'>
-				<div className='flex items-center justify-center h-full px-8 max-w-7xl mx-auto'>
-					<h2 className='font-TVG-typography-h5 m-8 font-[number:var(--TVG-typography-h5-font-weight)] text-white text-[length:var(--TVG-typography-h5-font-size)] tracking-[var(--TVG-typography-h5-letter-spacing)] leading-[var(--TVG-typography-h5-line-height)] [font-style:var(--TVG-typography-h5-font-style)]'>
+				<div className='flex items-center justify-between h-full px-8 max-w-7xl mx-auto'>
+					<h2 className='font-TVG-typography-h5 font-[number:var(--TVG-typography-h5-font-weight)] text-white text-[length:var(--TVG-typography-h5-font-size)] tracking-[var(--TVG-typography-h5-letter-spacing)] leading-[var(--TVG-typography-h5-line-height)] [font-style:var(--TVG-typography-h5-font-style)]'>
 						READY TO VISIT?
 					</h2>
 					<div className='flex items-center justify-center gap-3 px-8 py-3 bg-[#009444] rounded-full hover:bg-[#007a3a] transition-colors duration-200 cursor-pointer'>

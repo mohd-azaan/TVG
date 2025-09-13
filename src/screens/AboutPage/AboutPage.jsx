@@ -6,6 +6,7 @@
 import React from 'react';
 import '../../styleguide.css';
 import './AboutPage.css';
+import { Hero } from './Sections/Hero';
 
 // Temporary placeholder components - will be created as separate files
 const FooterMenuItem = ({ className, text }) => (
@@ -352,27 +353,7 @@ export const AboutPage = () => {
 						</div>
 					</div>
 
-					<div className='hero'>
-						<div className='overlap-8'>
-							<div className='rectangle' />
-
-							<div className='shape-hero-placeholder'>
-								{/* Hero shape placeholder */}
-							</div>
-
-							<div className='step-into-a-place-wrapper'>
-								<div className='step-into-a-place-placeholder'>
-									{/* Step into a place image placeholder */}
-								</div>
-							</div>
-
-							<div className='where-golf-people'>WHERE GOLF PEOPLE BELONG</div>
-
-							<div className='freepik-background-placeholder'>
-								{/* Freepik background image placeholder */}
-							</div>
-						</div>
-					</div>
+					<Hero />
 				</div>
 
 				{/* Header will be handled by MainLayout in the actual implementation */}

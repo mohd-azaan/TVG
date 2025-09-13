@@ -41,7 +41,7 @@ export const MeetGolfzonSection = () => {
 							professional tours across Asia, our setup offers:
 						</div>
 
-						<div className='space-y-4 sm:space-y-2'>
+						<div className='space-y-4 sm:space-y-1'>
 							{features.map((feature, index) => (
 								<div key={index} className='flex items-start gap-4'>
 									<img

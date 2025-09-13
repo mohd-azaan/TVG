@@ -1,6 +1,6 @@
 import React from 'react';
 import freepikBackground817021 from 'img395.jpg';
-import shape142 from './shape14-2.svg';
+import shape142 from 'shape14-2.svg';
 
 export const Hero = () => {
 	return (

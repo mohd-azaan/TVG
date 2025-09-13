@@ -1,191 +1,176 @@
+// C:\Users\Syeds\Desktop\TVG\src\components\global\Navbar.jsx
+// Main navigation header component for TVG website
+// Top-level navigation with dropdown functionality and CTA button
+// RELEVANT FILES: HomepageDesktop.jsx, AboutPage.jsx, App.jsx, tailwind.config.js
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+
+// Asset constants for logos and icons
+const imgIcon = '/chevron-down.svg';
+const tvgLogo = '/tvg-logo-green.svg';
+
+function TopNavItem({ children, to = '#', status = 'Default' }) {
+	return (
+		<Link
+			to={to}
+			className='content-stretch flex flex-col gap-2.5 items-center justify-center relative size-full group cursor-pointer'
+		>
+			<div className="flex flex-col font-['Gilroy-Bold',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[12px] font-bold text-nowrap text-white tracking-[0.4px] group-hover:text-[#009444] transition-colors duration-200">
+						<p className='leading-[52px] whitespace-pre'>{children}</p>
+			</div>
+					<div
+						className='absolute bg-transparent group-hover:bg-[#009444] h-0.5 top-[61px] translate-x-[-50%] w-[30px] transition-colors duration-200'
+						style={{ left: 'calc(50% + 0.5px)' }}
+					/>
+		</Link>
+	);
+}
+
+function ChevronDown({ size = '48' }) {
+	// Render a compact chevron that visually matches the nav text height
+	if (size === '24') {
+		return (
+			<div
+				className='inline-flex items-center justify-center'
+				style={{ width: 16, height: 16 }}
+			>
+				<img alt='' src={imgIcon} className='w-4 h-4 block' />
+			</div>
+		);
+	}
+
+	return null;
+}
 
 export const Navbar = () => {
 	const [isLearnDropdownOpen, setIsLearnDropdownOpen] = useState(false);
 	const dropdownRef = useRef(null);
 
 	const menuItems = [
-		{ label: 'ABOUT', hasDropdown: false },
-		{ label: 'PLAY', hasDropdown: false },
+		{ label: 'ABOUT', hasDropdown: false, to: '/about' },
+		{ label: 'PLAY', hasDropdown: false, to: '/play' },
 		{
 			label: 'LEARN',
 			hasDropdown: true,
+			to: '/learn',
 			dropdownItems: [
-				'Coaching Levels',
-				'Meet the Coach',
-				'Corporate Programs',
+				{ label: 'Coaching Levels', to: '/coaching-levels' },
+				{ label: 'Meet the Coach', to: '/meet-coach' },
+				{ label: 'Corporate Programs', to: '/corporate-programs' },
 			],
 		},
-		{ label: 'MEMBERSHIP', hasDropdown: false },
-		{ label: 'LEAGUES', hasDropdown: false },
-		{ label: 'EVENTS', hasDropdown: false },
-		{ label: 'SIMULATOR', hasDropdown: false },
-		{ label: 'OWN THE BUSINESS', hasDropdown: false },
+		{ label: 'MEMBERSHIP', hasDropdown: false, to: '/membership' },
+		{ label: 'LEAGUES', hasDropdown: false, to: '/leagues' },
+		{ label: 'EVENTS', hasDropdown: false, to: '/events' },
+		{ label: 'SIMULATOR', hasDropdown: false, to: '/simulator' },
+		{ label: 'OWN THE BUSINESS', hasDropdown: false, to: '/own-business' },
 	];
 
-	const handleLearnClick = () => setIsLearnDropdownOpen((s) => !s);
+	const handleMouseEnter = () => setIsLearnDropdownOpen(true);
+	const handleMouseLeave = () => setIsLearnDropdownOpen(false);
 
-	// Close dropdown when clicking outside
-	useEffect(() => {
-		const handleClickOutside = (event) => {
-			if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-				setIsLearnDropdownOpen(false);
-			}
-		};
-
-		if (isLearnDropdownOpen) {
-			document.addEventListener('mousedown', handleClickOutside);
-		}
-
-		return () => {
-			document.removeEventListener('mousedown', handleClickOutside);
-		};
-	}, [isLearnDropdownOpen]);
-
-	const handleKeyDown = (event, action) => {
+	const handleKeyDown = (event) => {
 		if (event.key === 'Enter' || event.key === ' ') {
 			event.preventDefault();
-			action();
+			setIsLearnDropdownOpen(!isLearnDropdownOpen);
 		} else if (event.key === 'Escape') {
 			setIsLearnDropdownOpen(false);
 		}
 	};
 
-	const getUnderlinePosition = (index) => {
-		const positions = [
-			'left-[13px]', // ABOUT
-			'left-[5px]', // PLAY
-			'', // LEARN (handled separately)
-			'left-[37px]', // MEMBERSHIP
-			'left-[22px]', // LEAGUES
-			'left-[15px]', // EVENTS
-			'left-[31px]', // SIMULATOR
-			'left-16', // OWN THE BUSINESS
-		];
-		return positions[index] || '';
-	};
-
 	return (
-		<div className='w-full max-w-[1700px] mx-auto relative z-50'>
-			<header className='relative w-full top-5 bg-[#102121] rounded-[50px] backdrop-blur-[10px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(10px)_brightness(100%)]'>
-				<nav
-					className='flex w-full h-[90px] items-center justify-between px-6 gap-[30px] relative'
-					role='navigation'
-					aria-label='Main navigation'
-				>
-					{/* Logo */}
-					<div className='flex-shrink-0 flex items-center gap-2'>
-						<img
-							className='w-[77px] h-14'
-							alt='Virtual Greens Golf logo text'
-							src='/tvg-logo-green.svg'
-						/>
-					</div>
+		<div className='backdrop-blur-[10px] backdrop-filter bg-[#102121]/95 relative rounded-[40px] w-full h-[70px] max-w-[1700px] mx-auto mt-5 shadow-lg border border-white/10'>
+			{/* TVG Logo */}
+			<div className='absolute h-[44px] left-[18px] top-1/2 -translate-y-1/2 w-[120px] flex items-center'>
+				<Link to='/' aria-label='Home' className='flex items-center'>
+					<img
+						alt='The Virtual Greens logo'
+						className='block max-w-none w-[110px] max-h-[38px] object-contain'
+						src={tvgLogo}
+					/>
+				</Link>
+			</div>
 
-					{/* Menu Items and Book Now Button */}
-					<div className='flex items-center gap-[30px]'>
-						{menuItems.map((item, index) => {
-							if (item.hasDropdown) {
-								return (
+			{/* Navigation Container */}
+			<div className='absolute flex items-center justify-end right-[20px] top-0 h-[70px] left-[300px]'>
+				<div className='flex gap-8 items-center justify-end'>
+					{menuItems.map((item, index) => {
+						if (item.hasDropdown) {
+							return (
 									<div
-										key={item.label}
-										className='relative w-20 h-[60px]'
-										ref={dropdownRef}
+									key={item.label}
+									className='h-[48px] relative shrink-0 group'
+									ref={dropdownRef}
+									onMouseEnter={handleMouseEnter}
+									onMouseLeave={handleMouseLeave}
+								>
+									<Link
+										to={item.to}
+										className="flex items-center gap-1 h-full px-2 font-['Gilroy-Bold',sans-serif] justify-center not-italic text-[12px] font-bold text-nowrap text-white tracking-[0.4px] group-hover:text-[#009444] transition-colors duration-200 z-10"
+										onKeyDown={handleKeyDown}
+										aria-expanded={isLearnDropdownOpen}
+										aria-haspopup='true'
+										aria-label={`${item.label} menu`}
 									>
-										<button
-											className='flex items-center justify-center gap-2 w-full h-full'
-											onClick={handleLearnClick}
-											onKeyDown={(e) => handleKeyDown(e, handleLearnClick)}
-											aria-expanded={isLearnDropdownOpen}
-											aria-haspopup='true'
-											aria-label={`${item.label} menu`}
-										>
-											<span className='font-TVG-typography-TVG-typography-TVG-typography-top-menu-item font-[number:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-weight)] text-white text-[length:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-size)] tracking-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-letter-spacing)] leading-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-line-height)] whitespace-nowrap [font-style:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-style)]'>
-												{item.label}
-											</span>
-											<img
-												src='/chevron-down.svg'
-												alt='dropdown'
-												className='!w-[18px] !h-[18px] !aspect-[1] transition-transform duration-200'
-												style={{
-													transform: isLearnDropdownOpen
-														? 'rotate(180deg)'
-														: 'rotate(0deg)',
-												}}
-											/>
-										</button>
-
-										{isLearnDropdownOpen && (
-											<div className='absolute w-[280px] top-full mt-2 left-0 bg-[#102121] rounded-[0px_0px_30px_30px] overflow-hidden border-t-[5px] [border-top-style:solid] border-transparent shadow-lg z-50'>
-												<ul className='flex flex-col py-4 px-8' role='menu'>
+										<span className='leading-[52px] whitespace-pre block'>{item.label}</span>
+										<span className='inline-flex w-4 h-4 items-center justify-center'>
+											<ChevronDown size='24' />
+										</span>
+									</Link>
+									{/* underline centered under this menu item */}
+									{!isLearnDropdownOpen && (
+										<div
+											className='absolute bg-transparent group-hover:bg-[#009444] h-0.5 top-[61px] translate-x-[-50%] w-[30px] transition-colors duration-200'
+											style={{ left: '50%' }}
+										/>
+									)}
+									{isLearnDropdownOpen && (
+										<div className='absolute left-1/2 -translate-x-1/2 top-[68px] w-[280px] z-50'>
+											{/* green top border to match design */}
+											<div className='h-1 bg-[#009444] rounded-t-[20px] w-full' />
+											<div
+												className='bg-white rounded-b-[20px] shadow-xl border border-gray-100 overflow-hidden'
+												style={{ marginTop: '-1px' }}
+											>
+												<div className="font-['Gilroy-Bold',sans-serif] h-[160px] leading-[0] not-italic overflow-clip relative text-[14px] font-bold text-black text-nowrap tracking-[0.2px] w-[280px] py-4 px-6">
 													{item.dropdownItems.map(
 														(dropdownItem, dropdownIndex) => (
-															<li key={dropdownItem} role='none'>
-																<a
-																	href='#'
-																	className='block py-3 font-TVG-typography-TVG-typography-TVG-typography-top-menu-item font-[number:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-weight)] text-white text-[length:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-size)] tracking-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-letter-spacing)] leading-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-line-height)] whitespace-nowrap [font-style:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-style)] hover:text-[#009444] transition-colors duration-200'
-																	role='menuitem'
-																	tabIndex='0'
-																>
-																	{dropdownItem}
-																</a>
-															</li>
+															<Link
+																key={dropdownItem.label}
+																to={dropdownItem.to}
+																className='absolute flex flex-col justify-center left-[24px] translate-y-[-50%] hover:text-[#009444] transition-colors duration-200 cursor-pointer py-3 text-left'
+																style={{ top: `${35 + dropdownIndex * 40}px` }}
+															>
+																<p className='leading-[40px] text-nowrap whitespace-pre font-bold'>
+																	{dropdownItem.label}
+																</p>
+															</Link>
 														)
 													)}
-												</ul>
+												</div>
 											</div>
-										)}
-									</div>
-								);
-							}
-
-							return (
-								<div
-									key={item.label}
-									className='inline-flex flex-col items-center justify-center gap-2.5 relative flex-[0_0_auto]'
-								>
-									{item.label === 'ABOUT' ? (
-										<Link
-											to='/about'
-											className='relative w-fit mt-[-1.00px] font-TVG-typography-TVG-typography-TVG-typography-top-menu-item font-[number:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-weight)] text-white text-[length:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-size)] tracking-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-letter-spacing)] leading-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-line-height)] whitespace-nowrap [font-style:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-style)] hover:text-[#009444] transition-colors duration-200'
-											role='menuitem'
-											tabIndex='0'
-										>
-											{item.label}
-										</Link>
-									) : (
-										<a
-											href='#'
-											className='relative w-fit mt-[-1.00px] font-TVG-typography-TVG-typography-TVG-typography-top-menu-item font-[number:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-weight)] text-white text-[length:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-size)] tracking-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-letter-spacing)] leading-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-line-height)] whitespace-nowrap [font-style:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-style)] hover:text-[#009444] transition-colors duration-200'
-											role='menuitem'
-											tabIndex='0'
-										>
-											{item.label}
-										</a>
+										</div>
 									)}
-									<div
-										className={`absolute w-[30px] h-0.5 top-[73px] ${getUnderlinePosition(
-											index
-										)}`}
-									/>
 								</div>
 							);
-						})}
+						}
 
-						<a
-							href='#'
-							className='relative w-[137px] h-10 bg-[#009444] rounded-[50px] overflow-hidden flex items-center justify-center hover:bg-[#007a3a] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#009444] focus:ring-offset-2 focus:ring-offset-[#102121]'
-							role='button'
-							tabIndex='0'
-						>
-							<span className="[font-family:'Open_Sans-SemiBold',Helvetica] font-semibold text-white text-base text-center tracking-[0] leading-10 whitespace-nowrap">
-								BOOK NOW
-							</span>
-						</a>
+						return (
+							<TopNavItem key={item.label} to={item.to}>
+								{item.label}
+							</TopNavItem>
+						);
+					})}
+
+					{/* Book Now Button */}
+					<div className='bg-[#009444] h-10 overflow-clip relative rounded-[50px] shrink-0 w-[137px] hover:bg-[#007a3a] transition-colors duration-200 cursor-pointer'>
+						<div className="absolute font-['Open_Sans',sans-serif] font-semibold leading-[0] left-[68.5px] not-italic text-[16px] text-center text-nowrap text-white top-0 translate-x-[-50%]">
+							<p className='leading-[40px] whitespace-pre'>BOOK NOW</p>
+						</div>
 					</div>
-				</nav>
-			</header>
+				</div>
+			</div>
 		</div>
 	);
 };

@@ -100,7 +100,7 @@ export const ServicesSection = () => {
 									src={service.image}
 								/>
 								<CardContent className='absolute bottom-0 left-0 right-0 p-6 sm:p-8 lg:p-10 space-y-3 sm:space-y-4 bg-gradient-to-t from-white via-white/95 to-transparent'>
-									<h3 className='text-xl sm:text-2xl lg:text-[28px] font-bold text-black leading-tight'>
+									<h3 className='text-xl sm:text-2xl lg:text-[28px] font-gilroy font-bold text-black leading-tight'>
 										{service.title}
 									</h3>
 									<p className='text-sm sm:text-base lg:text-lg font-medium text-[#757575] leading-relaxed'>
@@ -126,7 +126,7 @@ export const ServicesSection = () => {
 									src={service.image}
 								/>
 								<CardContent className='absolute bottom-0 left-0 right-0 p-6 sm:p-8 lg:p-10 space-y-3 sm:space-y-4 bg-gradient-to-t from-white via-white/95 to-transparent'>
-									<h3 className='text-xl sm:text-2xl lg:text-[28px] font-bold text-black leading-tight'>
+									<h3 className='text-xl sm:text-2xl lg:text-[28px] font-gilroy font-bold text-black leading-tight'>
 										{service.title}
 									</h3>
 									<p className='text-sm sm:text-base lg:text-lg font-medium text-[#757575] leading-relaxed'>

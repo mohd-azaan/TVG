@@ -100,7 +100,7 @@ export const PlayYourWaySection = () => {
 									src={card.image}
 								/>
 								<div className='absolute bottom-0 left-0 right-0 p-6 sm:p-8 lg:p-10 bg-gradient-to-t from-white via-white/95 to-transparent'>
-									<h3 className='text-xl sm:text-2xl lg:text-[28px] font-bold text-black leading-tight mb-3 sm:mb-4'>
+									<h3 className='text-xl sm:text-2xl lg:text-[28px] font-gilroy font-bold text-black leading-tight mb-3 sm:mb-4'>
 										{card.title}
 									</h3>
 									<p
@@ -134,7 +134,7 @@ export const PlayYourWaySection = () => {
 									alt={category.alt}
 									src={category.icon}
 								/>
-								<h4 className='text-lg sm:text-xl lg:text-2xl font-bold text-black leading-tight text-center px-2'>
+								<h4 className='text-lg sm:text-xl lg:text-2xl font-gilroy font-bold text-black leading-tight text-center px-2'>
 									{category.title}
 								</h4>
 							</CardContent>

@@ -179,7 +179,7 @@ export const Navbar = () => {
 							role='button'
 							tabIndex='0'
 						>
-							<span className="[font-family:'Open_Sans-SemiBold',Helvetica] font-semibold text-white text-base text-center tracking-[0] leading-10 whitespace-nowrap">
+							<span className='font-open-sans font-semibold text-white text-base text-center tracking-[0] leading-10 whitespace-nowrap'>
 								BOOK NOW
 							</span>
 						</a>

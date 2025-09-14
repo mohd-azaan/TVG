@@ -1,0 +1,8 @@
+/* src/screens/EventsPage/EventsPage.css */
+/* Events page specific styles */
+/* Custom styling for Events page components and sections */
+/* RELEVANT FILES: EventsPage.jsx, styleguide.css, tailwind.config.js */
+
+.events-page {
+	@apply w-full min-h-screen;
+}

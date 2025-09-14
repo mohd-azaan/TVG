@@ -16,9 +16,21 @@ export const VisionMissionSection = () => {
 						What We Believe
 					</h2>
 					<div className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-white [font-style:var(--TVG-typography-default-font-style)] space-y-4'>
-						<p>Golf should be easy to access, hard to leave, and always worth showing up for.</p>
-						<p>We're inspired by what golf represents. Focus, fun, discipline and a bit of friendly competition. But we've swapped the dress codes and country clubs for a more inclusive, welcoming vibe.</p>
-						<p>Our team is made up of golfers, tech-heads, hospitality experts, and community builders. We are different, but we are all connected by one mission. Making golf more fun, more flexible, and more social.</p>
+						<p>
+							Golf should be easy to access, hard to leave, and always worth
+							showing up for.
+						</p>
+						<p>
+							We're inspired by what golf represents. Focus, fun, discipline and
+							a bit of friendly competition. But we've swapped the dress codes
+							and country clubs for a more inclusive, welcoming vibe.
+						</p>
+						<p>
+							Our team is made up of golfers, tech-heads, hospitality experts,
+							and community builders. We are different, but we are all connected
+							by one mission. Making golf more fun, more flexible, and more
+							social.
+						</p>
 					</div>
 				</div>
 
@@ -28,7 +40,11 @@ export const VisionMissionSection = () => {
 						Our Vision
 					</h2>
 					<div className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[#757575] [font-style:var(--TVG-typography-default-font-style)]'>
-						<p>To lead the evolution of indoor golf in Saudi Arabia and become the go-to destination for those who play hard, relax better, and love the game, whatever their level.</p>
+						<p>
+							To lead the evolution of indoor golf in Saudi Arabia and become
+							the go-to destination for those who play hard, relax better, and
+							love the game, whatever their level.
+						</p>
 					</div>
 				</div>
 
@@ -38,7 +54,10 @@ export const VisionMissionSection = () => {
 						Our Mission
 					</h2>
 					<div className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[#757575] [font-style:var(--TVG-typography-default-font-style)]'>
-						<p>To lower the barriers, upgrade the experience, and create a community where everyone feels right at home.</p>
+						<p>
+							To lower the barriers, upgrade the experience, and create a
+							community where everyone feels right at home.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -52,7 +71,11 @@ export const VisionMissionSection = () => {
 							Our Vision
 						</h2>
 						<div className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[#757575] [font-style:var(--TVG-typography-default-font-style)]'>
-							<p>To lead the evolution of indoor golf in Saudi Arabia and become the go-to destination for those who play hard, relax better, and love the game, whatever their level.</p>
+							<p>
+								To lead the evolution of indoor golf in Saudi Arabia and become
+								the go-to destination for those who play hard, relax better, and
+								love the game, whatever their level.
+							</p>
 						</div>
 					</div>
 
@@ -62,7 +85,10 @@ export const VisionMissionSection = () => {
 							Our Mission
 						</h2>
 						<div className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[#757575] [font-style:var(--TVG-typography-default-font-style)]'>
-							<p>To lower the barriers, upgrade the experience, and create a community where everyone feels right at home.</p>
+							<p>
+								To lower the barriers, upgrade the experience, and create a
+								community where everyone feels right at home.
+							</p>
 						</div>
 					</div>
 
@@ -72,9 +98,21 @@ export const VisionMissionSection = () => {
 							What We Believe
 						</h2>
 						<div className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-white [font-style:var(--TVG-typography-default-font-style)] space-y-4'>
-							<p>Golf should be easy to access, hard to leave, and always worth showing up for.</p>
-							<p>We're inspired by what golf represents. Focus, fun, discipline and a bit of friendly competition. But we've swapped the dress codes and country clubs for a more inclusive, welcoming vibe.</p>
-							<p>Our team is made up of golfers, tech-heads, hospitality experts, and community builders. We are different, but we are all connected by one mission. Making golf more fun, more flexible, and more social.</p>
+							<p>
+								Golf should be easy to access, hard to leave, and always worth
+								showing up for.
+							</p>
+							<p>
+								We're inspired by what golf represents. Focus, fun, discipline
+								and a bit of friendly competition. But we've swapped the dress
+								codes and country clubs for a more inclusive, welcoming vibe.
+							</p>
+							<p>
+								Our team is made up of golfers, tech-heads, hospitality experts,
+								and community builders. We are different, but we are all
+								connected by one mission. Making golf more fun, more flexible,
+								and more social.
+							</p>
 						</div>
 					</div>
 				</div>

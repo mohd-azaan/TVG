@@ -91,16 +91,21 @@ export const PlayYourWaySection = () => {
 					{featureCards.map((card, index) => (
 						<Card
 							key={index}
-							className={`${card.bgColor} rounded-[30px] border-0 overflow-hidden h-[350px] sm:h-[380px] lg:h-[400px] relative hover:shadow-xl transition-all duration-300 hover:scale-105 group`}
+							className={`${card.bgColor} rounded-[30px] border-0 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 group`}
 						>
-							<CardContent className='p-0 h-full'>
-								<img
-									className='w-full h-[280px] sm:h-[320px] lg:h-[350px] object-cover rounded-[30px] absolute top-[-150px] sm:top-[-180px] lg:top-[-200px] left-0 group-hover:scale-110 transition-transform duration-500'
-									alt='Play swing'
-									src={card.image}
-								/>
-								<div className='absolute bottom-0 left-0 right-0 p-6 sm:p-8 lg:p-10 bg-gradient-to-t from-white via-white/95 to-transparent'>
-									<h3 className='text-xl sm:text-2xl lg:text-[28px] font-gilroy font-bold text-black leading-tight mb-3 sm:mb-4'>
+							<div className='flex flex-col'>
+								{/* Square Image Section */}
+								<div className='w-full h-[250px] sm:h-[250px] lg:h-[250px] rounded-t-[30px] overflow-hidden'>
+									<img
+										className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+										alt='Play swing'
+										src={card.image}
+									/>
+								</div>
+
+								{/* Content Section */}
+								<CardContent className='p-4 sm:p-5 lg:p-6 space-y-2 sm:space-y-3'>
+									<h3 className='text-xl sm:text-2xl lg:text-[28px] font-gilroy font-bold text-black leading-tight'>
 										{card.title}
 									</h3>
 									<p
@@ -108,8 +113,8 @@ export const PlayYourWaySection = () => {
 									>
 										{card.description}
 									</p>
-								</div>
-							</CardContent>
+								</CardContent>
+							</div>
 						</Card>
 					))}
 				</div>

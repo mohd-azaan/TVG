@@ -1,0 +1,93 @@
+/* MembershipPage.css */
+/* Styling for the membership page and its sections */
+/* This file contains component-specific styles for the membership page */
+/* RELEVANT FILES: styleguide.css, tailwind.config.js, MembershipPage.jsx */
+
+.membership-page {
+	/* Ensure smooth scrolling and proper layout */
+	scroll-behavior: smooth;
+}
+
+/* Hero Section Specific Styles */
+.membership-hero {
+	background: linear-gradient(135deg, #1a5f3e 0%, #0d3c2b 100%);
+	min-height: 100vh;
+}
+
+/* Product Showcase Cards */
+.product-showcase {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 16px;
+	transition: all 0.3s ease;
+}
+
+.product-showcase:hover {
+	background: rgba(255, 255, 255, 0.15);
+	transform: translateY(-4px);
+}
+
+/* Comparison Table Styles */
+.comparison-table {
+	background: #f8f9fa;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.comparison-table th {
+	background: #00a14a;
+	color: white;
+	font-family: var(--TVG-typography-h5-font-family);
+	font-weight: var(--TVG-typography-h5-font-weight);
+}
+
+.comparison-table tr:nth-child(even) {
+	background: rgba(0, 161, 74, 0.05);
+}
+
+.comparison-table tr:nth-child(odd) {
+	background: white;
+}
+
+/* Benefits Card Styles */
+.benefits-card {
+	background: linear-gradient(135deg, #00a14a 0%, #008a3e 100%);
+	border-radius: 16px;
+	color: white;
+}
+
+/* Member Benefits Section */
+.member-benefits-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.membership-hero {
+		min-height: 80vh;
+	}
+
+	.member-benefits-grid {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	.product-showcase {
+		margin-bottom: 1.5rem;
+	}
+}
+
+/* Animation for scroll-triggered elements */
+.fade-in-up {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: all 0.6s ease;
+}
+
+.fade-in-up.visible {
+	opacity: 1;
+	transform: translateY(0);
+}

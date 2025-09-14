@@ -1,0 +1,220 @@
+/* Contact Page Specific Styles */
+.contact-page {
+	min-height: 100vh;
+	font-family: var(--TVG-typography-default-font-family);
+}
+
+/* Hero Section Styles */
+.contact-hero {
+	background-color: #272727;
+	position: relative;
+	overflow: hidden;
+	height: 591px;
+}
+
+.contact-hero-title {
+	font-family: var(--TVG-typography-hero-title2-font-family);
+	font-size: 110px;
+	font-weight: 900;
+	line-height: 100px;
+	letter-spacing: 2.2px;
+	color: white;
+	text-transform: uppercase;
+}
+
+.contact-hero-text {
+	font-family: var(--TVG-typography-hero-text-font-family);
+	font-size: 24px;
+	font-weight: 400;
+	line-height: normal;
+	color: #dedede;
+}
+
+/* Contact Main Section Styles */
+.contact-main-section {
+	height: 1457px;
+	position: relative;
+}
+
+/* Contact Info Styles */
+.contact-section-title {
+	font-family: var(--TVG-typography-tagline-font-family);
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 26px;
+	letter-spacing: 0.44px;
+	color: #009444;
+	text-transform: uppercase;
+}
+
+.contact-details-text {
+	font-family: var(--TVG-typography-default-font-family);
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
+	color: #757575;
+}
+
+.contact-phone {
+	font-family: var(--TVG-typography-h5-font-family);
+	font-size: 24px;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 0.48px;
+	color: #757575;
+	text-transform: uppercase;
+}
+
+.contact-hours-day {
+	font-family: var(--TVG-typography-default-font-family);
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
+	color: #757575;
+}
+
+.contact-hours-time {
+	font-family: var(--TVG-typography-h5-font-family);
+	font-size: 24px;
+	font-weight: 400;
+	line-height: normal;
+	color: #757575;
+	text-transform: uppercase;
+}
+
+/* Contact Form Styles */
+.contact-form {
+	height: 667px;
+	overflow: hidden;
+}
+
+.contact-form-title {
+	font-family: var(--TVG-typography-tagline-font-family);
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 26px;
+	letter-spacing: 0.44px;
+	color: #009444;
+	text-transform: uppercase;
+}
+
+.contact-form-input {
+	background-color: #f6f6f6;
+	border: 1px solid lightgrey;
+	border-radius: 30px;
+	height: 60px;
+	width: 610px;
+	padding: 0 34px;
+	font-family: var(--TVG-typography-default-font-family);
+	font-size: 20px;
+	color: #757575;
+	outline: none;
+}
+
+.contact-form-textarea {
+	background-color: #f6f6f6;
+	border: 1px solid lightgrey;
+	border-radius: 30px;
+	height: 194px;
+	width: 610px;
+	padding: 19px 34px;
+	font-family: var(--TVG-typography-default-font-family);
+	font-size: 20px;
+	color: #757575;
+	outline: none;
+	resize: none;
+}
+
+.contact-form-submit {
+	background-color: #009444;
+	border: none;
+	border-radius: 30px;
+	padding: 7px 30px;
+	font-family: var(--TVG-typography-button-font-family);
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 40px;
+	color: white;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.contact-form-submit:hover {
+	background-color: #007a3a;
+}
+
+/* Chat Button Styles */
+.chat-button {
+	border: 1px solid black;
+	border-radius: 50px;
+	padding: 7px 30px;
+	background: transparent;
+	display: inline-flex;
+	align-items: center;
+	gap: 15px;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.chat-button:hover {
+	background-color: #f0f0f0;
+}
+
+.chat-button-text {
+	font-family: var(--TVG-typography-button-font-family);
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 40px;
+	color: black;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/* Google Maps Styles */
+.google-map-section {
+	height: 426px;
+	border-radius: 30px;
+	overflow: hidden;
+}
+
+/* Ready to Visit Styles */
+.ready-to-visit-section {
+	background-color: #102121;
+	position: relative;
+	overflow: hidden;
+}
+
+.ready-title {
+	font-family: var(--TVG-typography-h5-font-family);
+	font-size: 28px;
+	font-weight: 400;
+	line-height: normal;
+	color: white;
+	text-transform: uppercase;
+}
+
+.ready-cta-button {
+	background-color: #009444;
+	border: none;
+	border-radius: 50px;
+	padding: 7px 30px;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.ready-cta-button:hover {
+	background-color: #007a3a;
+}
+
+.ready-cta-text {
+	font-family: var(--TVG-typography-button-font-family);
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 40px;
+	color: white;
+	text-transform: uppercase;
+}

@@ -64,7 +64,7 @@ export const Navbar = () => {
 		{ label: 'LEAGUES', hasDropdown: false, to: '/leagues' },
 		{ label: 'EVENTS', hasDropdown: false, to: '/events' },
 		{ label: 'SIMULATOR', hasDropdown: false, to: '/simulator' },
-		{ label: 'OWN THE BUSINESS', hasDropdown: false, to: '/own-business' },
+		{ label: 'OWN THE BUSINESS', hasDropdown: false, to: '/partnership' },
 	];
 
 	const handleMouseEnter = () => setIsLearnDropdownOpen(true);

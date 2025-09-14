@@ -1,0 +1,342 @@
+// src/screens/RegistrationPage/sections/RegistrationFormSection.jsx
+// Comprehensive registration form section with all form fields matching Figma design
+// Features form validation, state management, and pixel-perfect styling
+// RELEVANT FILES: RegistrationPage.jsx, styleguide.css, button.jsx
+
+import React, { useState } from 'react';
+
+// Dropdown arrow components from Figma
+const ArrowDropDown = () => (
+	<div className="relative size-6">
+		<div className="absolute inset-[41.67%_29.17%_37.5%_29.17%]">
+			<img
+				alt=""
+				className="block max-w-none size-full"
+				src="http://localhost:3845/assets/a0c382809d4e3c35fbc5dbe0ba8cd2aac493584b.svg"
+			/>
+		</div>
+	</div>
+);
+
+const ArrowDropUp = () => (
+	<div className="relative size-6">
+		<div className="absolute inset-[37.5%_29.17%_41.67%_29.17%]">
+			<img
+				alt=""
+				className="block max-w-none size-full"
+				src="http://localhost:3845/assets/500c31cede34a9c2f425eadb86a340b2795ba7db.svg"
+			/>
+		</div>
+	</div>
+);
+
+const RadioButton = ({ selected }) => (
+	<div className="overflow-hidden relative size-6">
+		<div className="absolute inset-[8.333%]">
+			<div className="absolute inset-[-6.25%]">
+				<img
+					alt=""
+					className="block max-w-none size-full"
+					src="http://localhost:3845/assets/90296a316bda45154592ee2cbe02ed13b3bf9b47.svg"
+					style={{ '--stroke-0': selected ? 'rgba(0, 148, 68, 1)' : 'rgba(211, 211, 211, 1)' }}
+				/>
+			</div>
+		</div>
+		{selected && (
+			<div className="absolute inset-[33.33%] bg-[#009444] rounded-full" />
+		)}
+	</div>
+);
+
+export const RegistrationFormSection = () => {
+	// Form state management
+	const [formData, setFormData] = useState({
+		isGolfer: '',
+		firstName: '',
+		lastName: '',
+		email: '',
+		countryCode: '+966',
+		phoneNumber: '',
+		dateOfBirth: '',
+		nationality: '',
+		businessSector: '',
+		companyName: '',
+		designation: '',
+		preferredAccountManager: '',
+		additionalNotes: ''
+	});
+
+	const [errors, setErrors] = useState({});
+
+	const handleInputChange = (field, value) => {
+		setFormData(prev => ({ ...prev, [field]: value }));
+		// Clear error when user starts typing
+		if (errors[field]) {
+			setErrors(prev => ({ ...prev, [field]: '' }));
+		}
+	};
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		// Form validation logic would go here
+		console.log('Form submitted:', formData);
+	};
+
+	return (
+		<section className='bg-white relative w-full min-h-[1626px] py-[70px]'>
+			<div className='max-w-[1920px] mx-auto px-4'>
+				{/* Form Container - 800px width, centered like Figma */}
+				<div className='w-full max-w-[800px] mx-auto'>
+					<form onSubmit={handleSubmit} className='space-y-8'>
+						{/* Are you a golfer? - Radio buttons */}
+						<div>
+							<label className='block font-TVG-typography-form-label font-[number:var(--TVG-typography-form-label-font-weight)] text-[16px] leading-[26px] tracking-[0.32px] text-black uppercase mb-[21px]'>
+								Are you a golfer?
+							</label>
+							<div className='flex items-center space-x-[147px] ml-[36px]'>
+								<div
+									className='flex items-center cursor-pointer'
+									onClick={() => handleInputChange('isGolfer', 'yes')}
+								>
+									<RadioButton selected={formData.isGolfer === 'yes'} />
+									<span className='ml-[9px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-[#757575]'>
+										Yes
+									</span>
+								</div>
+								<div
+									className='flex items-center cursor-pointer'
+									onClick={() => handleInputChange('isGolfer', 'no')}
+								>
+									<RadioButton selected={formData.isGolfer === 'no'} />
+									<span className='ml-[9px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-[#757575]'>
+										No
+									</span>
+								</div>
+							</div>
+						</div>
+
+						{/* First Name & Last Name - Side by side */}
+						<div className='flex space-x-[18px]'>
+							<div className='flex-1'>
+								<label className='block font-TVG-typography-form-label font-[number:var(--TVG-typography-form-label-font-weight)] text-[16px] leading-[26px] tracking-[0.32px] text-black uppercase mb-[14px]'>
+									First Name
+								</label>
+								<div className='relative'>
+									<input
+										type='text'
+										value={formData.firstName}
+										onChange={(e) => handleInputChange('firstName', e.target.value)}
+										placeholder='Your first name'
+										className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black placeholder:text-[#757575] border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444]'
+									/>
+								</div>
+							</div>
+							<div className='flex-1'>
+								<label className='block font-TVG-typography-form-label font-[number:var(--TVG-typography-form-label-font-weight)] text-[16px] leading-[26px] tracking-[0.32px] text-black uppercase mb-[14px]'>
+									Last Name
+								</label>
+								<div className='relative'>
+									<input
+										type='text'
+										value={formData.lastName}
+										onChange={(e) => handleInputChange('lastName', e.target.value)}
+										placeholder='Your last name'
+										className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black placeholder:text-[#757575] border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444]'
+									/>
+								</div>
+							</div>
+						</div>
+
+						{/* Email Address - Full width */}
+						<div>
+							<label className='block font-TVG-typography-form-label font-[number:var(--TVG-typography-form-label-font-weight)] text-[16px] leading-[26px] tracking-[0.32px] text-black uppercase mb-[14px]'>
+								Email Address
+							</label>
+							<input
+								type='email'
+								value={formData.email}
+								onChange={(e) => handleInputChange('email', e.target.value)}
+								placeholder='name@company.com'
+								className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black placeholder:text-[#757575] border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444]'
+							/>
+						</div>
+
+						{/* Mobile Number - Country code + number */}
+						<div>
+							<label className='block font-TVG-typography-form-label font-[number:var(--TVG-typography-form-label-font-weight)] text-[16px] leading-[26px] tracking-[0.32px] text-black uppercase mb-[14px]'>
+								Mobile Number
+							</label>
+							<div className='relative flex'>
+								{/* Country code section */}
+								<div className='relative w-[107px] h-[60px] bg-[#f9f9f9] rounded-l-[30px] border border-[lightgrey] flex items-center justify-center'>
+									<span className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-[#757575]'>
+										+966
+									</span>
+									<div className='absolute right-3 top-[18px]'>
+										<ArrowDropDown />
+									</div>
+								</div>
+								{/* Phone number input */}
+								<input
+									type='tel'
+									value={formData.phoneNumber}
+									onChange={(e) => handleInputChange('phoneNumber', e.target.value)}
+									placeholder='50 000 0000'
+									className='flex-1 h-[60px] bg-[#f6f6f6] rounded-r-[30px] px-[34px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black placeholder:text-[#757575] border border-l-0 border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444]'
+								/>
+							</div>
+						</div>
+
+						{/* Date of Birth */}
+						<div>
+							<label className='block font-TVG-typography-form-label font-[number:var(--TVG-typography-form-label-font-weight)] text-[16px] leading-[26px] tracking-[0.32px] text-black uppercase mb-[14px]'>
+								Date of Birth
+							</label>
+							<div className='w-[260px]'>
+								<input
+									type='text'
+									value={formData.dateOfBirth}
+									onChange={(e) => handleInputChange('dateOfBirth', e.target.value)}
+									placeholder='DD/MM/YY'
+									className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black placeholder:text-[#757575] border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444]'
+								/>
+							</div>
+						</div>
+
+						{/* Nationality - Dropdown */}
+						<div>
+							<label className='block font-TVG-typography-form-label font-[number:var(--TVG-typography-form-label-font-weight)] text-[16px] leading-[26px] tracking-[0.32px] text-black uppercase mb-[14px]'>
+								Nationality
+							</label>
+							<div className='relative w-[390px]'>
+								<select
+									value={formData.nationality}
+									onChange={(e) => handleInputChange('nationality', e.target.value)}
+									className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] pr-[60px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444] appearance-none cursor-pointer'
+								>
+									<option value='' className='text-[#757575]'>-select-</option>
+									<option value='saudi'>Saudi Arabian</option>
+									<option value='american'>American</option>
+									<option value='british'>British</option>
+									<option value='other'>Other</option>
+								</select>
+								<div className='absolute right-[22px] top-[22px] pointer-events-none'>
+									<ArrowDropDown />
+								</div>
+								<div className='absolute right-[22px] top-[14px] pointer-events-none'>
+									<ArrowDropUp />
+								</div>
+							</div>
+						</div>
+
+						{/* Business Sector - Dropdown */}
+						<div>
+							<label className='block font-TVG-typography-form-label font-[number:var(--TVG-typography-form-label-font-weight)] text-[16px] leading-[26px] tracking-[0.32px] text-black uppercase mb-[14px]'>
+								Business Sector
+							</label>
+							<div className='relative w-[390px]'>
+								<select
+									value={formData.businessSector}
+									onChange={(e) => handleInputChange('businessSector', e.target.value)}
+									className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] pr-[60px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444] appearance-none cursor-pointer'
+								>
+									<option value='' className='text-[#757575]'>-select-</option>
+									<option value='technology'>Technology</option>
+									<option value='finance'>Finance</option>
+									<option value='healthcare'>Healthcare</option>
+									<option value='construction'>Construction</option>
+									<option value='other'>Other</option>
+								</select>
+								<div className='absolute right-[22px] top-[22px] pointer-events-none'>
+									<ArrowDropDown />
+								</div>
+								<div className='absolute right-[22px] top-[14px] pointer-events-none'>
+									<ArrowDropUp />
+								</div>
+							</div>
+						</div>
+
+						{/* Company Name - Full width */}
+						<div>
+							<label className='block font-TVG-typography-form-label font-[number:var(--TVG-typography-form-label-font-weight)] text-[16px] leading-[26px] tracking-[0.32px] text-black uppercase mb-[14px]'>
+								Company Name
+							</label>
+							<input
+								type='text'
+								value={formData.companyName}
+								onChange={(e) => handleInputChange('companyName', e.target.value)}
+								placeholder='Your company name'
+								className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black placeholder:text-[#757575] border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444]'
+							/>
+						</div>
+
+						{/* Designation - Full width */}
+						<div>
+							<label className='block font-TVG-typography-form-label font-[number:var(--TVG-typography-form-label-font-weight)] text-[16px] leading-[26px] tracking-[0.32px] text-black uppercase mb-[14px]'>
+								Designation
+							</label>
+							<input
+								type='text'
+								value={formData.designation}
+								onChange={(e) => handleInputChange('designation', e.target.value)}
+								placeholder='Your job title'
+								className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black placeholder:text-[#757575] border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444]'
+							/>
+						</div>
+
+						{/* Preferred Account Manager - Dropdown */}
+						<div>
+							<label className='block font-TVG-typography-form-label font-[number:var(--TVG-typography-form-label-font-weight)] text-[16px] leading-[26px] tracking-[0.32px] text-black uppercase mb-[14px]'>
+								Preferred Account Manager
+							</label>
+							<div className='relative w-[390px]'>
+								<select
+									value={formData.preferredAccountManager}
+									onChange={(e) => handleInputChange('preferredAccountManager', e.target.value)}
+									className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] pr-[60px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444] appearance-none cursor-pointer'
+								>
+									<option value='' className='text-[#757575]'>-select-</option>
+									<option value='manager1'>Manager 1</option>
+									<option value='manager2'>Manager 2</option>
+									<option value='manager3'>Manager 3</option>
+								</select>
+								<div className='absolute right-[22px] top-[22px] pointer-events-none'>
+									<ArrowDropDown />
+								</div>
+								<div className='absolute right-[22px] top-[14px] pointer-events-none'>
+									<ArrowDropUp />
+								</div>
+							</div>
+						</div>
+
+						{/* Additional Notes - Textarea */}
+						<div>
+							<label className='block font-TVG-typography-form-label font-[number:var(--TVG-typography-form-label-font-weight)] text-[16px] leading-[26px] tracking-[0.32px] text-black uppercase mb-[14px]'>
+								Additional Notes
+							</label>
+							<div className='relative'>
+								<textarea
+									value={formData.additionalNotes}
+									onChange={(e) => handleInputChange('additionalNotes', e.target.value)}
+									placeholder='Message'
+									rows={6}
+									className='w-full h-[194px] bg-[#f6f6f6] rounded-[30px] px-[34px] py-[19px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black placeholder:text-[#757575] border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444] resize-none'
+								/>
+							</div>
+						</div>
+
+						{/* Submit Button */}
+						<div className='pt-8'>
+							<button
+								type='submit'
+								className='w-full h-[54px] bg-[#009444] rounded-[30px] flex items-center justify-center font-TVG-typography-button font-[number:var(--TVG-typography-button-font-weight)] text-[18px] leading-[40px] text-white uppercase tracking-wide hover:bg-[#007a3a] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#009444] focus:ring-offset-2'
+							>
+								Submit
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	);
+};

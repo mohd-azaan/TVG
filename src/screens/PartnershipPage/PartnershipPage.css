@@ -1,0 +1,165 @@
+/* Partnership Page Specific Styles */
+.partnership-page {
+	min-height: 100vh;
+	font-family: var(--TVG-typography-default-font-family);
+}
+
+/* Hero Section Styles */
+.partnership-hero {
+	background-color: #272727;
+	position: relative;
+	overflow: hidden;
+}
+
+.partnership-hero-content {
+	max-width: 1360px;
+	margin: 0 auto;
+	padding: 0 110px;
+}
+
+.partnership-hero-title {
+	font-family: var(--TVG-typography-hero-title-font-family);
+	font-size: 148px;
+	font-weight: 900;
+	line-height: 130px;
+	letter-spacing: 2.96px;
+	color: white;
+	text-transform: uppercase;
+}
+
+.partnership-hero-text {
+	font-family: var(--TVG-typography-hero-text-font-family);
+	font-size: 24px;
+	font-weight: 400;
+	line-height: normal;
+	color: #dedede;
+}
+
+.partnership-tagline {
+	font-family: var(--TVG-typography-tagline-font-family);
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 26px;
+	letter-spacing: 0.44px;
+	color: #7ddb8a;
+	text-transform: uppercase;
+}
+
+/* Why Partner Section Styles */
+.why-partner-section {
+	background-color: white;
+	padding: 100px 0;
+}
+
+.why-partner-title {
+	font-family: var(--TVG-typography-h2-font-family);
+	font-size: 96px;
+	font-weight: 800;
+	line-height: 90px;
+	letter-spacing: 1.92px;
+	color: black;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.why-partner-title .highlight {
+	color: #009444;
+}
+
+.feature-card {
+	background: linear-gradient(90deg, #f6f6f6 0%, #f6f6f6 100%), linear-gradient(90deg, #ededed 0%, #ededed 100%);
+	border-radius: 30px;
+	padding: 40px;
+	height: 450px;
+}
+
+.feature-card-title {
+	font-family: var(--TVG-typography-h5-font-family);
+	font-size: 28px;
+	font-weight: 400;
+	line-height: normal;
+	color: black;
+	text-transform: uppercase;
+}
+
+.feature-card-text {
+	font-family: var(--TVG-typography-default-font-family);
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
+	color: #757575;
+}
+
+/* Indoor Movement Section Styles */
+.indoor-movement-section {
+	background-color: #009444;
+	padding: 40px 0;
+}
+
+.indoor-movement-title {
+	font-family: var(--TVG-typography-h2-font-family);
+	font-size: 96px;
+	font-weight: 800;
+	line-height: 90px;
+	letter-spacing: 1.92px;
+	color: white;
+	text-transform: uppercase;
+}
+
+.indoor-movement-text {
+	font-family: var(--TVG-typography-default-font-family);
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
+	color: white;
+}
+
+/* Growth Section Styles */
+.growth-section {
+	background-color: #102121;
+	padding: 100px 0;
+}
+
+.growth-title {
+	font-family: var(--TVG-typography-h2-font-family);
+	font-size: 96px;
+	font-weight: 800;
+	line-height: 90px;
+	letter-spacing: 1.92px;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.growth-title .highlight {
+	color: #009444;
+	font-size: 120px;
+	letter-spacing: 2.4px;
+}
+
+.growth-text {
+	font-family: var(--TVG-typography-default-font-family);
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
+	color: #lightgrey;
+	text-align: center;
+}
+
+.cta-button {
+	background-color: #009444;
+	border-radius: 50px;
+	padding: 7px 30px;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.cta-button-text {
+	font-family: var(--TVG-typography-button-font-family);
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 40px;
+	color: white;
+	text-transform: uppercase;
+}

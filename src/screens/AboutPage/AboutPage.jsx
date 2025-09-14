@@ -33,12 +33,6 @@ export const AboutPage = () => {
 
 			{/* Features Section - "Not a Golfer Yet? That's the Point" with amenities grid */}
 			<FeaturesSection />
-
-			{/* Testimonials Section - Reuse from homepage */}
-			<TestimonialsSection />
-
-			{/* Footer Section - Reuse from homepage */}
-			<FooterSection />
 		</div>
 	);
 };

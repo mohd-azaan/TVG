@@ -3,7 +3,15 @@
     "allow": [
       "WebFetch(domain:www.figma.com)",
       "mcp__figma--mcp-server__get_code",
-      "mcp__figma--mcp-server__get_screenshot"
+      "mcp__figma--mcp-server__get_screenshot",
+      "mcp__figma--mcp-server__get_metadata",
+      "Bash(npm run build:*)",
+      "Bash(find:*)",
+      "Bash(sed -i \"s/font-\\[\\''Gilroy-Bold\\''\\]/font-TVG-typography-tagline/g\" \"src/screens/LearnPage/sections/LessonTypesSection/LessonTypesSection.jsx\")",
+      "Bash(sed:*)",
+      "Bash(curl:*)",
+      "Bash(dir)",
+      "Bash(dir public)"
     ],
     "deny": [],
     "ask": []

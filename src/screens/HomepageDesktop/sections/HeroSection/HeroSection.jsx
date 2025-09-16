@@ -19,7 +19,7 @@ export const HeroSection = () => {
 
 				{/* Left column: stacked headline + paragraph */}
 				<div className='relative z-40 mt-[10vh] lg:ml-[15vw] md:ml-[10vw] max-w-[560px]'>
-					<p className="[font-family:'Morganite',Helvetica] font-bold text-[28px] sm:text-[42px] lg:text-[55px] tracking-[1.10px] leading-[0.5] text-white">
+					<p className="[font-family:'Morganite',Helvetica] font-bold text-[28px] sm:text-[42px] lg:text-[54px] tracking-[1.10px] leading-[0.5] text-white">
 						<span className='text-white tracking-[0.61px]'>WELCOME TO </span>
 						<span className='text-[#00a14a] tracking-[0.61px]'>
 							THE VIRTUAL GREENS

@@ -43,20 +43,20 @@ const additionalServices = [
 
 export const ServicesSection = () => {
 	return (
-		<section className='w-full py-16 sm:py-20 lg:py-24 xl:py-32 bg-white'>
+		<section className='w-full py-6 sm:py-10 lg:py-12 xl:py-18 bg-white'>
 			<div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl'>
 				{/* Header Section */}
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16 sm:mb-20 lg:mb-24'>
 					<div className='space-y-6 sm:space-y-8'>
-						<div className='space-y-4 sm:space-y-6'>
-							<h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] font-black leading-tight sm:leading-[0.9] lg:leading-[90px] tracking-wide'>
+						<div className='space-y-2 sm:space-y-4'>
+							<h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[92px] font-black leading-tight sm:leading-[0.9] lg:leading-[85px] tracking-wide'>
 								<span className='text-black'>
 									WE'RE NOT JUST ABOUT GOLF
 									<br />
 								</span>
 								<span className='text-[#006f33]'>WE'RE ABOUT GOOD TIMES</span>
 							</h2>
-							<p className='text-lg sm:text-xl lg:text-[22px] font-bold text-[#009444] leading-relaxed tracking-wide'>
+							<p className='text-lg sm:text-xl lg:text-[22px] font-bold text-[#009444] leading-relaxed tracking-wide -mt-2'>
 								A PLACE FOR THE GAME. A SPACE FOR EVERYONE
 							</p>
 						</div>
@@ -91,20 +91,15 @@ export const ServicesSection = () => {
 					{serviceCards.map((service, index) => (
 						<Card
 							key={`service-${index}`}
-							className='rounded-[30px] bg-white border-0 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 group'
+							className='h-[350px] sm:h-[400px] lg:h-[450px] rounded-[30px] bg-gradient-to-b from-gray-100 to-gray-200 border-0 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 group'
 						>
-							<div className='flex flex-col'>
-								{/* Image Section */}
-								<div className='w-full h-[250px] sm:h-[280px] lg:h-[300px] rounded-t-[30px] overflow-hidden bg-gray-300'>
-									<img
-										className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
-										alt={service.title}
-										src={service.image}
-									/>
-								</div>
-
-								{/* Content Section */}
-								<CardContent className='p-6 sm:p-8 lg:p-10 bg-white space-y-3 sm:space-y-4'>
+							<div className='relative h-full'>
+								<img
+									className='absolute w-full h-[300px] sm:h-[350px] lg:h-[400px] top-[-150px] sm:top-[-180px] lg:top-[-200px] left-0 rounded-[30px] object-cover group-hover:scale-110 transition-transform duration-500'
+									alt={service.title}
+									src={service.image}
+								/>
+								<CardContent className='absolute bottom-0 left-0 right-0 p-6 sm:p-8 lg:p-10 space-y-3 sm:space-y-4 bg-gradient-to-t from-white via-white/95 to-transparent'>
 									<h3 className='text-xl sm:text-2xl lg:text-[28px] font-gilroy font-bold text-black leading-tight'>
 										{service.title}
 									</h3>
@@ -122,21 +117,16 @@ export const ServicesSection = () => {
 					{additionalServices.map((service, index) => (
 						<Card
 							key={`additional-service-${index}`}
-							className='rounded-[30px] bg-white border-0 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 group'
+							className='h-[350px] sm:h-[400px] lg:h-[450px] rounded-[30px] bg-gradient-to-b from-gray-100 to-gray-200 border-0 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 group'
 						>
-							<div className='flex flex-col'>
-								{/* Image Section */}
-								<div className='w-full h-[250px] sm:h-[280px] lg:h-[300px] rounded-t-[30px] overflow-hidden bg-gray-300'>
-									<img
-										className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
-										alt={service.title}
-										src={service.image}
-									/>
-								</div>
-
-								{/* Content Section */}
-								<CardContent className='p-6 sm:p-8 lg:p-10 bg-white space-y-3 sm:space-y-4'>
-									<h3 className='text-xl sm:text-2xl lg:text-[28px] font-gilroy font-bold text-black leading-tight'>
+							<div className='relative h-full'>
+								<img
+									className='relative w-full h-[300px] sm:h-[350px] lg:h-[300px] lg:w-[400px] rounded-[30px] object-cover group-hover:scale-110 transition-transform duration-500'
+									alt={service.title}
+									src={service.image}
+								/>
+								<CardContent className='relative p-6 sm:p-8 lg:p-10 space-y-3 sm:space-y-4 bg-gradient-to-t from-white via-white/95 to-transparent'>
+									<h3 className='text-xl sm:text-2xl lg:text-[28px] font-gilroy font-bold text-black leading-tight h-[60px]'>
 										{service.title}
 									</h3>
 									<p className='text-sm sm:text-base lg:text-md font-medium text-[#757575] leading-relaxed'>

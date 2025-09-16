@@ -19,6 +19,15 @@
 	font-display: swap;
 }
 
+/* Alias for legacy component usage that references 'Gilroy-Medium' as family name */
+@font-face {
+	font-family: 'Gilroy-Medium';
+	src: url('/fonts/Gilroy-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
 @font-face {
 	font-family: 'Gilroy';
 	src: url('/fonts/Gilroy-Semibold.woff2') format('woff2');

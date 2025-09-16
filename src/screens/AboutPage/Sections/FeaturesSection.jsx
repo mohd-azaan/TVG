@@ -120,7 +120,7 @@ export const FeaturesSection = () => {
 				<img
 					className='w-full h-full object-cover'
 					alt='Indoor golf facility overview'
-					src='/indoor-golf-1.png'
+					src='/assets/figma/features-image.png'
 				/>
 			</div>
 
@@ -208,7 +208,7 @@ export const FeaturesSection = () => {
 						<img
 							className='w-full h-auto object-cover rounded-[20px]'
 							alt='Indoor golf facility overview'
-							src='/indoor-golf-1.png'
+							src='/assets/figma/features-image.png'
 						/>
 					</div>
 

@@ -1,81 +1,165 @@
 // src/screens/LearnPage/sections/HeroSection/HeroSection.jsx
-// Hero section for Learn page featuring "Train at TVG Academy" title with background graphics
-// This component displays the main hero area with title, description text, and background image
-// RELEVANT FILES: LearnPage.jsx, styleguide.css, Button.jsx, tailwind.config.js
+// Hero section for Learn page featuring "Train at TVG Academy" with fully responsive layout
+// Now uses enhanced ResponsiveHeroSection with adaptive typography and fluid containers
+// RELEVANT FILES: LearnPage.jsx, ResponsiveHeroSection.jsx, ResponsiveTypography.jsx, tailwind.config.js
 
 import React from 'react';
+import { ResponsiveHeroSection } from '../../../../components/shared/ResponsiveHeroSection';
+import { HeroTitle, HeroTagline, HeroDescription, useResponsiveSpacing } from '../../../../components/shared/ResponsiveTypography';
 
 export const HeroSection = () => {
-	return (
-		<div className='relative w-full h-[1024px] bg-[#272727] overflow-hidden'>
-			{/* Green accent rectangle at bottom */}
-			<div className='absolute bottom-0 left-0 w-full h-[435px] bg-[#006f33]' />
+	const spacing = useResponsiveSpacing();
 
-			{/* Complex background graphics */}
-			<div className='absolute top-[431.9px] left-[341.98px] w-0 h-0 flex items-center justify-center'>
-				<div className='rotate-[348.049deg]'>
-					<div className='w-[1920px] h-[1080px] relative overflow-hidden'>
-						{/* Background decorative elements */}
-						<div className='absolute inset-0 mix-blend-screen opacity-30'>
-							{/* Placeholder for complex SVG background - simplified for now */}
-							<div className='absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent' />
-						</div>
-					</div>
+	// Desktop content with improved responsive layout
+	const desktopContent = (
+		<div className='flex items-center justify-between h-full w-full max-w-[1600px] mx-auto'>
+			{/* Left content column */}
+			<div className='flex-1 max-w-[655px] space-y-8'>
+				<HeroTitle className='mb-6'>
+					Train at<br />TVG Academy
+				</HeroTitle>
+
+				<HeroTagline className='mb-8'>
+					The beginning of a better game
+				</HeroTagline>
+
+				<div className='space-y-6 max-w-[600px]'>
+					<HeroDescription large>
+						It doesn't matter if you're a complete beginner or chasing a lower handicap; this is your space to grow.
+					</HeroDescription>
+					<HeroDescription large>
+						At The Virtual Greens Academy, you won't just swing for fun. You'll train with purpose (while having fun, of course).
+					</HeroDescription>
+					<HeroDescription large>
+						Our coaching is built around your goals, powered by the same world-class Golfzon tech used by professional tours.
+					</HeroDescription>
+					<HeroDescription large>
+						We make learning the game easy, enjoyable, and tailored to you.
+					</HeroDescription>
 				</div>
 			</div>
 
-			{/* Content wrapper */}
-			<div className='absolute left-[110px] top-0 w-[1700px] h-full'>
-				<div className='absolute left-[170px] top-0 w-[1360px] h-full'>
-					{/* Main content text */}
-					<div className='absolute left-[110px] top-[619px] w-[655px]'>
-						<div className='font-TVG-typography-hero-text text-[24px] leading-normal text-[#dedede] space-y-6'>
-							<p className='mb-4'>
-								It doesn't matter if you're a complete beginner or chasing a lower handicap; this is your space to grow.
-							</p>
-							<p className='mb-4'>
-								At The Virtual Greens Academy, you won't just swing for fun. You'll train with purpose (while having fun, of course).
-							</p>
-							<p className='mb-4'>
-								Our coaching is built around your goals, powered by the same world-class Golfzon tech used by professional tours.
-							</p>
-							<p>
-								We make learning the game easy, enjoyable, and tailored to you.
-							</p>
-						</div>
-					</div>
-
-					{/* Tagline */}
-					<div className='absolute left-[110px] top-[529px] w-[521px]'>
-						<p className='font-TVG-typography-tagline text-[22px] leading-[26px] text-[#7ddb8a] uppercase tracking-[0.44px]'>
-							The beginning of a better game
-						</p>
-					</div>
-
-					{/* Main title */}
-					<div className='absolute left-[110px] top-[278px] w-[655px]'>
-						<h1 className='font-morganite font-black text-[148px] leading-[130px] text-white uppercase tracking-[2.96px]'>
-							<div>Train at</div>
-							<div>TVG Academy</div>
-						</h1>
-					</div>
-
-					{/* Hero background image */}
-					<div className='absolute right-[170px] top-[278px] w-[650px] h-[536px] bg-center bg-cover bg-no-repeat rounded-[30px] bg-gray-600'>
-						{/* Placeholder for hero image - will be replaced with actual image */}
-						<div className='w-full h-full bg-gradient-to-br from-green-600 to-green-800 rounded-[30px] flex items-center justify-center'>
-							<div className='text-white text-xl font-bold opacity-50'>
-								Hero Image Placeholder
-							</div>
-						</div>
+			{/* Right image column */}
+			<div className='flex-1 max-w-[650px] ml-12'>
+				<div className='aspect-[650/536] w-full bg-gradient-to-br from-green-600 to-green-800 rounded-[30px] flex items-center justify-center shadow-2xl overflow-hidden'>
+					<div className='text-center text-white space-y-4'>
+						<div className='text-6xl'>🏌️</div>
+						<div className='text-2xl font-bold'>TVG Academy</div>
+						<div className='text-lg opacity-75'>Training Excellence</div>
 					</div>
 				</div>
-			</div>
-
-			{/* Header space reservation */}
-			<div className='absolute left-[110px] top-0 w-[1700px] h-[110px]'>
-				{/* Header will be rendered by MainLayout */}
 			</div>
 		</div>
+	);
+
+	// Tablet content with optimized layout
+	const tabletContent = (
+		<div className={`${spacing.heroElementSpacing} text-center max-w-4xl mx-auto`}>
+			<HeroTitle className='mb-6'>
+				Train at TVG Academy
+			</HeroTitle>
+
+			<HeroTagline className='mb-8'>
+				The beginning of a better game
+			</HeroTagline>
+
+			<div className='aspect-[4/3] w-full max-w-[600px] mx-auto mb-8 bg-gradient-to-br from-green-600 to-green-800 rounded-[25px] flex items-center justify-center shadow-xl'>
+				<div className='text-center text-white space-y-3'>
+					<div className='text-5xl'>🏌️</div>
+					<div className='text-xl font-bold'>TVG Academy</div>
+					<div className='text-base opacity-75'>Training Excellence</div>
+				</div>
+			</div>
+
+			<div className='space-y-6 max-w-[700px] mx-auto text-left'>
+				<HeroDescription large>
+					It doesn't matter if you're a complete beginner or chasing a lower handicap; this is your space to grow.
+				</HeroDescription>
+				<HeroDescription large>
+					At The Virtual Greens Academy, you won't just swing for fun. You'll train with purpose (while having fun, of course).
+				</HeroDescription>
+				<HeroDescription large>
+					Our coaching is built around your goals, powered by the same world-class Golfzon tech used by professional tours.
+				</HeroDescription>
+				<HeroDescription large>
+					We make learning the game easy, enjoyable, and tailored to you.
+				</HeroDescription>
+			</div>
+		</div>
+	);
+
+	// Mobile content with stacked layout
+	const mobileContent = (
+		<div className={`${spacing.heroElementSpacing} text-center`}>
+			<HeroTitle className='mb-4'>
+				Train at<br />TVG Academy
+			</HeroTitle>
+
+			<HeroTagline className='mb-6'>
+				The beginning of a better game
+			</HeroTagline>
+
+			<div className='aspect-[4/3] w-full max-w-[400px] mx-auto mb-6 bg-gradient-to-br from-green-600 to-green-800 rounded-[20px] flex items-center justify-center shadow-lg'>
+				<div className='text-center text-white space-y-2'>
+					<div className='text-4xl'>🏌️</div>
+					<div className='text-lg font-bold'>TVG Academy</div>
+					<div className='text-sm opacity-75'>Training Excellence</div>
+				</div>
+			</div>
+
+			<div className='space-y-4 max-w-[500px] mx-auto text-left'>
+				<HeroDescription>
+					It doesn't matter if you're a complete beginner or chasing a lower handicap; this is your space to grow.
+				</HeroDescription>
+				<HeroDescription>
+					At The Virtual Greens Academy, you won't just swing for fun. You'll train with purpose (while having fun, of course).
+				</HeroDescription>
+				<HeroDescription>
+					Our coaching is built around your goals, powered by the same world-class Golfzon tech used by professional tours.
+				</HeroDescription>
+				<HeroDescription>
+					We make learning the game easy, enjoyable, and tailored to you.
+				</HeroDescription>
+			</div>
+		</div>
+	);
+
+	// Enhanced decorative elements with responsive positioning
+	const decorativeElements = (
+		<div className='absolute inset-0 overflow-hidden'>
+			{/* Main decorative background - responsive positioning */}
+			<div
+				className='absolute opacity-20 transition-all duration-500'
+				style={{
+					top: 'clamp(200px, 30vh, 432px)',
+					left: 'clamp(100px, 15vw, 342px)',
+					transform: 'rotate(348deg)',
+				}}
+			>
+				<div className='w-[clamp(800px, 100vw, 1920px)] h-[clamp(600px, 75vh, 1080px)] relative overflow-hidden'>
+					<div className='absolute inset-0 mix-blend-screen'>
+						<div className='absolute inset-0 bg-gradient-to-br from-green-400/30 via-green-500/20 to-transparent' />
+						<div className='absolute inset-0 bg-gradient-to-tl from-emerald-400/20 via-transparent to-green-300/10' />
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+
+	return (
+		<ResponsiveHeroSection
+			backgroundColor='#272727'
+			greenSection={true}
+			greenSectionHeight='clamp(300px, 25vh, 435px)'
+			minHeight='min-h-[100svh]'
+			decorativeElements={decorativeElements}
+			enableFluidLayout={true}
+		>
+			{{
+				desktop: desktopContent,
+				tablet: tabletContent,
+				mobile: mobileContent
+			}}
+		</ResponsiveHeroSection>
 	);
 };

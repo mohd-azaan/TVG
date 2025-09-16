@@ -15,7 +15,7 @@ export const WorldClassTechSection = () => {
 					<img
 						className='w-full h-full object-cover'
 						alt='Indoor golf simulator technology setup'
-						src='/indoor-golf-1.png'
+						src='/assets/figma/tech-section-image.png'
 					/>
 				</div>
 
@@ -83,7 +83,7 @@ export const WorldClassTechSection = () => {
 						<img
 							className='w-full h-auto object-cover rounded-[20px]'
 							alt='Indoor golf simulator technology setup'
-							src='/indoor-golf-1.png'
+							src='/assets/figma/tech-section-image.png'
 						/>
 					</div>
 

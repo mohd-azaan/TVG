@@ -23,7 +23,7 @@ export const Vision2030Section = () => {
 					<img
 						className='w-full h-full object-contain'
 						alt='Saudi Vision 2030 Logo'
-						src='/saudi-vision-2030-logo.svg'
+						src='/assets/figma/vision-2030-logo.svg'
 					/>
 				</div>
 
@@ -50,7 +50,7 @@ export const Vision2030Section = () => {
 						<img
 							className='w-full h-auto object-contain'
 							alt='Saudi Vision 2030 Logo'
-							src='/saudi-vision-2030-logo.svg'
+							src='/assets/figma/vision-2030-logo.svg'
 						/>
 					</div>
 

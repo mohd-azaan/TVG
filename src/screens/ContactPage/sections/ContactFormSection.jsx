@@ -4,6 +4,7 @@
 // RELEVANT FILES: ContactPage.jsx, ContactPage.css, arrow-drop-down-icon.svg, arrow-drop-up-icon.svg
 
 import React, { useState } from 'react';
+import { sendContactEmail } from '../../../services/emailService';
 
 export const ContactFormSection = () => {
 	const [formData, setFormData] = useState({
@@ -15,6 +16,8 @@ export const ContactFormSection = () => {
 	});
 
 	const [isSubjectOpen, setIsSubjectOpen] = useState(false);
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [submitMessage, setSubmitMessage] = useState({ type: '', text: '' });
 
 	const subjectOptions = [
 		'General Inquiry',
@@ -41,10 +44,36 @@ export const ContactFormSection = () => {
 		setIsSubjectOpen(false);
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		console.log('Form submitted:', formData);
-		// Handle form submission here
+		setIsSubmitting(true);
+		setSubmitMessage({ type: '', text: '' });
+
+		try {
+			const result = await sendContactEmail(formData);
+
+			if (result.success) {
+				setSubmitMessage({ type: 'success', text: result.message });
+				// Reset form on successful submission
+				setFormData({
+					name: '',
+					email: '',
+					phone: '',
+					subject: '',
+					message: ''
+				});
+				setIsSubjectOpen(false);
+			} else {
+				setSubmitMessage({ type: 'error', text: result.message });
+			}
+		} catch (error) {
+			setSubmitMessage({
+				type: 'error',
+				text: 'An unexpected error occurred. Please try again later.'
+			});
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	return (
@@ -140,13 +169,31 @@ export const ContactFormSection = () => {
 					/>
 				</div>
 
+				{/* Submit Message */}
+				{submitMessage.text && (
+					<div className={`relative p-4 rounded-[20px] text-center ${
+						submitMessage.type === 'success'
+							? 'bg-green-50 border border-green-200 text-green-800'
+							: 'bg-red-50 border border-red-200 text-red-800'
+					}`}>
+						<p className="font-['Gilroy-Medium',sans-serif] text-[16px]">
+							{submitMessage.text}
+						</p>
+					</div>
+				)}
+
 				{/* Submit Button */}
 				<div className="relative pt-[30px]">
 					<button
 						type="submit"
-						className="contact-form-submit bg-[#009444] border-none rounded-[30px] px-[30px] py-[7px] font-['Gilroy-SemiBold',sans-serif] text-[18px] font-semibold leading-[40px] text-white uppercase cursor-pointer hover:bg-[#007a3a] transition-colors"
+						disabled={isSubmitting}
+						className={`contact-form-submit border-none rounded-[30px] px-[30px] py-[7px] font-['Gilroy-SemiBold',sans-serif] text-[18px] font-semibold leading-[40px] text-white uppercase transition-colors ${
+							isSubmitting
+								? 'bg-gray-400 cursor-not-allowed'
+								: 'bg-[#009444] cursor-pointer hover:bg-[#007a3a]'
+						}`}
 					>
-						Submit
+						{isSubmitting ? 'Sending...' : 'Submit'}
 					</button>
 				</div>
 			</form>

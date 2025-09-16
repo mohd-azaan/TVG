@@ -11,7 +11,8 @@
       "Bash(sed:*)",
       "Bash(curl:*)",
       "Bash(dir)",
-      "Bash(dir public)"
+      "Bash(dir public)",
+      "Bash(npm install)"
     ],
     "deny": [],
     "ask": []

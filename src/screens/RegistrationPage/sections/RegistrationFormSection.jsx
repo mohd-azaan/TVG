@@ -4,6 +4,7 @@
 // RELEVANT FILES: RegistrationPage.jsx, styleguide.css, button.jsx
 
 import React, { useState } from 'react';
+import { sendRegistrationEmail } from '../../../services/emailService';
 
 // Dropdown arrow components from Figma
 const ArrowDropDown = () => (
@@ -67,6 +68,8 @@ export const RegistrationFormSection = () => {
 	});
 
 	const [errors, setErrors] = useState({});
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [submitMessage, setSubmitMessage] = useState({ type: '', text: '' });
 
 	const handleInputChange = (field, value) => {
 		setFormData(prev => ({ ...prev, [field]: value }));
@@ -76,10 +79,49 @@ export const RegistrationFormSection = () => {
 		}
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		// Form validation logic would go here
-		console.log('Form submitted:', formData);
+		setIsSubmitting(true);
+		setSubmitMessage({ type: '', text: '' });
+		setErrors({});
+
+		try {
+			const result = await sendRegistrationEmail(formData);
+
+			if (result.success) {
+				setSubmitMessage({ type: 'success', text: result.message });
+				// Reset form on successful submission
+				setFormData({
+					isGolfer: '',
+					firstName: '',
+					lastName: '',
+					email: '',
+					phoneNumber: '',
+					dateOfBirth: '',
+					residentialAddress: '',
+					postalCode: '',
+					emergencyContactName: '',
+					emergencyContactPhone: '',
+					emergencyContactRelationship: '',
+					membership: '',
+					membershipBenefit: '',
+					howDidYouHear: '',
+					company: '',
+					designation: '',
+					preferredAccountManager: '',
+					additionalNotes: ''
+				});
+			} else {
+				setSubmitMessage({ type: 'error', text: result.message });
+			}
+		} catch (error) {
+			setSubmitMessage({
+				type: 'error',
+				text: 'An unexpected error occurred. Please try again later.'
+			});
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	return (
@@ -325,13 +367,31 @@ export const RegistrationFormSection = () => {
 							</div>
 						</div>
 
+						{/* Submit Message */}
+						{submitMessage.text && (
+							<div className={`p-4 rounded-[20px] text-center ${
+								submitMessage.type === 'success'
+									? 'bg-green-50 border border-green-200 text-green-800'
+									: 'bg-red-50 border border-red-200 text-red-800'
+							}`}>
+								<p className="font-TVG-typography-form-label text-[16px]">
+									{submitMessage.text}
+								</p>
+							</div>
+						)}
+
 						{/* Submit Button */}
 						<div className='pt-8'>
 							<button
 								type='submit'
-								className='w-full h-[54px] bg-[#009444] rounded-[30px] flex items-center justify-center font-TVG-typography-button font-[number:var(--TVG-typography-button-font-weight)] text-[18px] leading-[40px] text-white uppercase tracking-wide hover:bg-[#007a3a] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#009444] focus:ring-offset-2'
+								disabled={isSubmitting}
+								className={`w-full h-[54px] rounded-[30px] flex items-center justify-center font-TVG-typography-button font-[number:var(--TVG-typography-button-font-weight)] text-[18px] leading-[40px] text-white uppercase tracking-wide transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
+									isSubmitting
+										? 'bg-gray-400 cursor-not-allowed focus:ring-gray-400'
+										: 'bg-[#009444] hover:bg-[#007a3a] focus:ring-[#009444]'
+								}`}
 							>
-								Submit
+								{isSubmitting ? 'Submitting...' : 'Submit'}
 							</button>
 						</div>
 					</form>

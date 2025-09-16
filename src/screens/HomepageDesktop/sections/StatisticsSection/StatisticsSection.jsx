@@ -6,39 +6,32 @@ export const StatisticsSection = () => {
 			number: '98',
 			text: 'Active Members',
 			hasPlus: false,
-			isLarge: false,
 		},
 		{
 			number: '200',
 			text: 'Clients Served',
 			hasPlus: true,
-			isLarge: true,
 		},
 		{
 			number: '800',
 			text: 'Rounds Played',
 			hasPlus: true,
-			isLarge: true,
 		},
 		{
 			number: '3500',
 			text: 'Simulator Hours Logged',
 			hasPlus: true,
-			isLarge: true,
 		},
 		{
 			number: '27',
 			text: 'Tournaments Hosted',
 			hasPlus: false,
-			isLarge: false,
 		},
 		{
 			number: '150',
 			text: 'In Prizes Distributed',
 			hasPlus: false,
-			isLarge: true,
 			hasSuffix: 'K',
-			hasSpacing: true,
 		},
 	];
 
@@ -47,7 +40,7 @@ export const StatisticsSection = () => {
 			<div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative'>
 				{/* Background Shape */}
 				<img
-					className='absolute w-full  h-[426px] top-80 left-[-850px] opacity-100 z-0'
+					className='absolute w-full  h-[426px] top-60 left-[-860px] opacity-100 z-0'
 					alt='Background shape'
 					src='/shape14-2.svg'
 				/>
@@ -63,43 +56,41 @@ export const StatisticsSection = () => {
 				</div>
 
 				{/* Statistics Grid */}
-				<div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-10 lg:gap-16 relative z-10'>
+				<div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 relative z-10 justify-items-center'>
 					{statisticsData.map((stat, index) => (
 						<div
 							key={index}
-							className='flex flex-col items-center justify-center gap-3 text-center'
+							className='flex flex-col items-center justify-center gap-4 text-center w-full'
 						>
-							<div className='relative'>
-								{stat.isLarge ? (
-									<div className='font-TVG-typography-counter-number font-[number:var(--TVG-typography-counter-number-font-weight)] text-[#8df0a0] text-[length:var(--TVG-typography-counter-number-font-size)] tracking-[var(--TVG-typography-counter-number-letter-spacing)] leading-[var(--TVG-typography-counter-number-line-height)] [font-style:var(--TVG-typography-counter-number-font-style)]'>
-										{stat.hasSpacing && (
-											<span className='tracking-[2.00px]'>
-												&nbsp;&nbsp;&nbsp;&nbsp;
-											</span>
-										)}
-										<span className='tracking-[0] leading-[0.1px]'>
-											{stat.number}
-											{stat.hasSuffix ? ' ' : ''}
-										</span>
-										{stat.hasPlus && (
-											<span className='font-TVG-typography-counter-symbol font-[number:var(--TVG-typography-counter-symbol-font-weight)] text-[length:var(--TVG-typography-counter-symbol-font-size)] tracking-[var(--TVG-typography-counter-symbol-letter-spacing)] leading-[var(--TVG-typography-counter-symbol-line-height)] [font-style:var(--TVG-typography-counter-symbol-font-style)]'>
-												+
-											</span>
-										)}
-										{stat.hasSuffix && (
-											<span className='font-TVG-typography-counter-symbol font-[number:var(--TVG-typography-counter-symbol-font-weight)] text-[length:var(--TVG-typography-counter-symbol-font-size)] tracking-[var(--TVG-typography-counter-symbol-letter-spacing)] leading-[var(--TVG-typography-counter-symbol-line-height)] [font-style:var(--TVG-typography-counter-symbol-font-style)]'>
-												{stat.hasSuffix}
-											</span>
-										)}
-									</div>
-								) : (
-									<div className='font-TVG-typography-counter-number font-[number:var(--TVG-typography-counter-number-font-weight)] text-[#8df0a0] text-[length:var(--TVG-typography-counter-number-font-size)] tracking-[var(--TVG-typography-counter-number-letter-spacing)] leading-[var(--TVG-typography-counter-number-line-height)] [font-style:var(--TVG-typography-counter-number-font-style)]'>
-										{stat.number}
-									</div>
+							{/* Number with symbols */}
+							<div className='flex items-center justify-center font-TVG-typography-counter-number font-[number:var(--TVG-typography-counter-number-font-weight)] text-[#8df0a0] text-[length:var(--TVG-typography-counter-number-font-size)] tracking-[var(--TVG-typography-counter-number-letter-spacing)] leading-[var(--TVG-typography-counter-number-line-height)] [font-style:var(--TVG-typography-counter-number-font-style)]'>
+								{/* Prefix symbol (≈) */}
+								{stat.hasPrefix && (
+									<span className='font-TVG-typography-counter-symbol font-[number:var(--TVG-typography-counter-symbol-font-weight)] text-[length:var(--TVG-typography-counter-symbol-font-size)] tracking-[var(--TVG-typography-counter-symbol-letter-spacing)] leading-[var(--TVG-typography-counter-symbol-line-height)] [font-style:var(--TVG-typography-counter-symbol-font-style)]'>
+										{stat.hasPrefix}
+									</span>
+								)}
+
+								{/* Main number */}
+								<span>{stat.number}</span>
+
+								{/* Plus symbol */}
+								{stat.hasPlus && (
+									<span className='font-TVG-typography-counter-symbol font-[number:var(--TVG-typography-counter-symbol-font-weight)] text-[length:var(--TVG-typography-counter-symbol-font-size)] tracking-[var(--TVG-typography-counter-symbol-letter-spacing)] leading-[var(--TVG-typography-counter-symbol-line-height)] [font-style:var(--TVG-typography-counter-symbol-font-style)]'>
+										+
+									</span>
+								)}
+
+								{/* Suffix (K) */}
+								{stat.hasSuffix && (
+									<span className='font-TVG-typography-counter-symbol font-[number:var(--TVG-typography-counter-symbol-font-weight)] text-[length:var(--TVG-typography-counter-symbol-font-size)] tracking-[var(--TVG-typography-counter-symbol-letter-spacing)] leading-[var(--TVG-typography-counter-symbol-line-height)] [font-style:var(--TVG-typography-counter-symbol-font-style)]'>
+										{stat.hasSuffix}
+									</span>
 								)}
 							</div>
 
-							<div className='font-TVG-typography-counter-text font-[number:var(--TVG-typography-counter-text-font-weight)] text-white text-[length:var(--TVG-typography-counter-text-font-size)] text-center tracking-[var(--TVG-typography-counter-text-letter-spacing)] leading-[var(--TVG-typography-counter-text-line-height)] [font-style:var(--TVG-typography-counter-text-font-style)] max-w-[150px]'>
+							{/* Description text */}
+							<div className='font-["Gilroy",_Helvetica] font-bold text-white text-[17px] text-center leading-tight whitespace-nowrap'>
 								{stat.text}
 							</div>
 						</div>
@@ -108,7 +99,7 @@ export const StatisticsSection = () => {
 
 				{/* Saudi Riyal Symbol */}
 				<img
-					className='absolute w-12 h-12 top-[248px] right-[150px] z-10'
+					className='absolute w-12 h-12 top-[248px] right-[155px] z-10'
 					alt='Saudi riyal symbol'
 					src='/saudi-riyal-symbol-2-1-1.svg'
 				/>

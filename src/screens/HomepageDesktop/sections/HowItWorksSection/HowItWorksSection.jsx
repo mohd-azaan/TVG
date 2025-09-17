@@ -51,7 +51,7 @@ export const HowItWorksSection = () => {
 			<div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative'>
 				{/* Background Shape - positioned bottom right (smaller, behind content) */}
 				<img
-					className='absolute pointer-events-none right-[-200px] md:right-[-300px] lg:right-[-400px] xl:right-[-400px] bottom-[-300px] md:bottom-[-400px] lg:bottom-[-500px] z-0 opacity-100 w-[300px] sm:w-[420px] md:w-[560px] lg:w-[800px] xl:w-[1080px] translate-x-3 md:translate-x-6 translate-y-4 md:translate-y-8'
+					className='absolute pointer-events-none right-[-200px] md:right-[-300px] lg:right-[-400px] xl:right-[-600px] bottom-[-300px] md:bottom-[-600px] lg:bottom-[-700px] z-0 opacity-100 w-[400px] sm:w-[520px] md:w-[660px] lg:w-[1200px] xl:w-[1280px] h-[400px] sm:h-[520px] md:h-[660px] lg:h-[1200px] xl:h-[1280px] translate-x-3 md:translate-x-6 translate-y-4 md:translate-y-8'
 					alt='Background shape'
 					src='/shape14-3.svg'
 					aria-hidden='true'
@@ -73,7 +73,17 @@ export const HowItWorksSection = () => {
 									</h2>
 								</div>
 
-								<div className='flex justify-center xl:justify-start mb-6 sm:mb-8'>
+								<div className='max-w-4xl xl:max-w-none mx-auto xl:mx-0 text-center xl:text-left'>
+									<p className='text-base sm:text-lg lg:text-xl font-medium text-[#d3d3d3] leading-relaxed'>
+										We're here to make indoor golf your new favorite thing. No
+										gear? No clue? No problem. We're beginner-friendly and
+										tech-savvy, so that anyone can jump right in.
+									</p>
+									<p className='text-base sm:text-lg lg:text-xl font-medium text-[#d3d3d3] leading-relaxed mt-3'>
+										Ready to roll? Here's the game plan:
+									</p>
+								</div>
+								<div className='flex justify-center xl:justify-start mt-6 sm:mb-8'>
 									<Button className='inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#009444] rounded-full h-auto hover:bg-[#007a3a] transition-colors duration-200 text-lg font-semibold tracking-wide'>
 										<span className='text-white'>BOOK A BAY</span>
 										<img
@@ -82,17 +92,6 @@ export const HowItWorksSection = () => {
 											src='/arrow-right.svg'
 										/>
 									</Button>
-								</div>
-
-								<div className='max-w-4xl xl:max-w-none mx-auto xl:mx-0 text-center xl:text-left'>
-									<p className='text-base sm:text-lg lg:text-xl font-medium text-[#d3d3d3] leading-relaxed'>
-										We're here to make indoor golf your new favorite thing. No
-										gear? No clue? No problem. We're beginner-friendly and
-										tech-savvy, so that anyone can jump right in.
-										<br />
-										<br />
-										Ready to roll? Here's the game plan:
-									</p>
 								</div>
 							</div>
 

@@ -43,9 +43,9 @@ export const MeetGolfzonSection = () => {
 
 						<div className='space-y-4 sm:space-y-1'>
 							{features.map((feature, index) => (
-								<div key={index} className='flex items-start gap-4'>
+								<div key={index} className='flex items-center gap-4'>
 									<img
-										className='w-6 sm:w-7 lg:w-8 h-6 sm:h-7 lg:h-8 flex-shrink-0 mt-1'
+										className='w-6 sm:w-7 lg:w-8 h-6 sm:h-7 lg:h-8 flex-shrink-0'
 										alt='Sports golf'
 										src='/smash-it.svg'
 									/>

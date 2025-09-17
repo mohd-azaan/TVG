@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from 'lucide-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const TestimonialsSection = () => {
 	return (
@@ -7,15 +8,19 @@ export const TestimonialsSection = () => {
 			{/* Header Bar */}
 			<header className='relative w-full h-20 bg-[#0c1a1a]'>
 				<div className='flex items-center justify-between h-full px-8 max-w-7xl mx-auto'>
-					<h2 className='font-TVG-typography-h5 font-[number:var(--TVG-typography-h5-font-weight)] text-white text-[length:var(--TVG-typography-h5-font-size)] tracking-[var(--TVG-typography-h5-letter-spacing)] leading-[var(--TVG-typography-h5-line-height)] [font-style:var(--TVG-typography-h5-font-style)]'>
+					<h2 className='text-xl font-bold text-white tracking-wide leading-tight'>
 						READY TO VISIT?
 					</h2>
-					<div className='flex items-center justify-center gap-3 px-8 py-3 bg-[#009444] rounded-full hover:bg-[#007a3a] transition-colors duration-200 cursor-pointer'>
-						<span className='font-TVG-typography-button font-[number:var(--TVG-typography-button-font-weight)] text-white text-[length:var(--TVG-typography-button-font-size)] tracking-[var(--TVG-typography-button-letter-spacing)] leading-[var(--TVG-typography-button-line-height)] [font-style:var(--TVG-typography-button-font-style)] whitespace-nowrap'>
+					<Link
+						to='/contact'
+						aria-label='Plan your visit - Contact page'
+						className='gap-3 px-6 py-3 bg-[#009444] hover:bg-[#007a3a] rounded-full text-white inline-flex items-center'
+					>
+						<span className='text-base font-semibold tracking-wide leading-tight whitespace-nowrap'>
 							PLAN YOUR VISIT
 						</span>
-						<ArrowRightIcon className='w-5 h-5 text-white' />
-					</div>
+						<ArrowRightIcon className='w-5 h-5' />
+					</Link>
 				</div>
 			</header>
 
@@ -49,7 +54,13 @@ export const TestimonialsSection = () => {
 									</div>
 
 									<blockquote className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-white text-[length:var(--TVG-typography-default-font-size)] tracking-[var(--TVG-typography-default-letter-spacing)] leading-[var(--TVG-typography-default-line-height)] [font-style:var(--TVG-typography-default-font-style)] relative z-10 pl-12'>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tortor erat, pretium et mattis quis, ultrices eget velit. Vivamus sit amet egestas justo. Nam sagittis, justo vitae sagittis auctor, mi diam laoreet elit, aliquet dignissim orci turpis vitae eros. Nulla eget pretium diam, vel egestas dui. Ut arcu eros, fermentum sit amet dolor a, elementum vehicula purus.
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Suspendisse tortor erat, pretium et mattis quis, ultrices
+										eget velit. Vivamus sit amet egestas justo. Nam sagittis,
+										justo vitae sagittis auctor, mi diam laoreet elit, aliquet
+										dignissim orci turpis vitae eros. Nulla eget pretium diam,
+										vel egestas dui. Ut arcu eros, fermentum sit amet dolor a,
+										elementum vehicula purus.
 									</blockquote>
 								</div>
 

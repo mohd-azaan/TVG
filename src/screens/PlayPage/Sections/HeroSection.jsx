@@ -1,211 +1,61 @@
-// src/screens/PlayPage/Sections/HeroSection.jsx
-// Hero section for Play page with fully responsive layout and enhanced mobile optimization
-// Now uses enhanced ResponsiveHeroSection with adaptive typography and fluid CTA placement
-// RELEVANT FILES: PlayPage.jsx, ResponsiveHeroSection.jsx, ResponsiveTypography.jsx, tailwind.config.js
-
 import React from 'react';
-import { ResponsiveHeroSection } from '../../../components/shared/ResponsiveHeroSection';
-import {
-	HeroTitle,
-	HeroTagline,
-	HeroDescription,
-	useResponsiveSpacing,
-} from '../../../components/shared/ResponsiveTypography';
 
 export const HeroSection = () => {
-	const spacing = useResponsiveSpacing();
+	return (
+		<div className="w-full relative bg-gradient-to-b from-[#102121] to-[#102121] h-[1024px] overflow-hidden text-left text-lg text-white font-['Gilroy-SemiBold']">
+			{/* Green bottom section */}
+			<div className='absolute top-[589px] left-0 bg-[#006f33] w-[2030px] h-[435px]' />
 
-	// Responsive CTA Button component
-	const CTAButton = ({ className = '', size = 'default' }) => {
-		const sizeClasses = {
-			default: 'px-8 py-3 text-base',
-			large: 'px-10 py-4 text-lg',
-			small: 'px-6 py-2 text-sm',
-		};
+			{/* Shape/decorative element */}
+			<img
+				className='absolute top-[431.91px] left-[341.98px] w-[2102px] h-[1454.2px] object-contain'
+				alt=''
+			/>
 
-		return (
-			<button
-				className={`bg-[#009444] hover:bg-[#007a38] transition-all duration-300 rounded-[50px] flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 ${sizeClasses[size]} ${className}`}
-			>
-				<span className='font-TVG-typography-button text-white uppercase font-bold whitespace-nowrap'>
-					Book Your Bay
-				</span>
-				<div className='w-5 h-5'>
-					<svg
-						className='w-full h-full transition-transform group-hover:translate-x-1'
-						viewBox='0 0 24 24'
-						fill='none'
-						xmlns='http://www.w3.org/2000/svg'
-					>
-						<path
-							d='M5 12H19M19 12L12 5M19 12L12 19'
-							stroke='white'
-							strokeWidth='2'
-							strokeLinecap='round'
-							strokeLinejoin='round'
-						/>
-					</svg>
+			{/* CTA Button */}
+			<div className='absolute top-[891px] left-[calc(50%-680px)] rounded-[50px] bg-[#009444] overflow-hidden flex items-center justify-center py-[7px] px-[30px] gap-[10px] text-center'>
+				<div className='relative leading-[40px] uppercase'>Book You Bay</div>
+				<div className='w-6 relative h-6 overflow-hidden flex-shrink-0'>
+					<img
+						className='absolute h-[58.33%] w-[58.33%] top-[20.83%] right-[20.83%] bottom-[20.83%] left-[20.83%] max-w-full overflow-hidden max-h-full'
+						alt=''
+					/>
 				</div>
-			</button>
-		);
-	};
+			</div>
 
-	// Desktop content with improved responsive layout
-	const desktopContent = (
-		<div className='flex items-center justify-between h-full w-full max-w-[1600px] mx-auto'>
-			{/* Left content column */}
-			<div className='flex-1 max-w-[655px] space-y-8'>
-				<HeroTitle className='mb-6'>
-					Your Game, Your Pace, Your Greens
-				</HeroTitle>
-
-				<HeroTagline className='mb-8'>The New Era of Indoor Golf</HeroTagline>
-
-				<div className='space-y-6 max-w-[600px]'>
-					<HeroDescription large>
+			{/* Text Box */}
+			<div className="absolute top-[619px] left-[280px] flex items-center text-2xl text-[#dedede] font-['Gilroy-Medium']">
+				<div className='w-[655px] relative inline-block flex-shrink-0'>
+					<p className='m-0'>
 						The ultimate golf and social experience, only in Riyadh.
-					</HeroDescription>
-					<HeroDescription large>
+					</p>
+					<p className='m-0'>&nbsp;</p>
+					<p className='m-0'>
 						At The Virtual Greens, playing golf doesn't mean dressing up or
 						heading out of town. It means stepping into a sleek, air-conditioned
 						space where you can tee off on the world's most iconic course, day
 						or night, rain or shine. Unwind after work, celebrate with friends,
 						or host an event with a twist. This is golf on your terms.
-					</HeroDescription>
-				</div>
-
-				<div className='pt-4'>
-					<CTAButton size='large' />
+					</p>
 				</div>
 			</div>
 
-			{/* Right image column */}
-			<div className='flex-1 max-w-[650px] ml-12'>
-				<div className='aspect-[650/480] w-full bg-gradient-to-br from-[#009444] to-[#006f33] rounded-[30px] flex items-center justify-center shadow-2xl overflow-hidden'>
-					<div className='text-center text-white space-y-4'>
-						<div className='text-6xl'>⛳</div>
-						<div className='text-2xl font-bold'>Golf Simulator</div>
-						<div className='text-lg opacity-75'>Premium Experience</div>
-					</div>
-				</div>
+			{/* The New Era text */}
+			<div className='absolute top-[540px] left-[280px] text-[22px] tracking-[0.02em] leading-[26px] uppercase font-gilroy font-medium text-[#7ddb8a] inline-block w-[521.3px]'>
+				THE NEW ERA OF INDOOR GOLF
 			</div>
+
+			{/* Main heading */}
+			<div className="absolute top-[278px] left-[280px] text-[148px] tracking-[0.02em] leading-[130px] uppercase font-black font-['Morganite'] inline-block w-[655px]">
+				Your Game, Your Pace, Your Greens
+			</div>
+
+			{/* Main image */}
+			<img
+				className='absolute top-[278px] left-[990px] rounded-[30px] w-[650px] h-[480px] object-cover'
+				src='/freepik-background.png'
+				alt='Golf simulator background'
+			/>
 		</div>
-	);
-
-	// Tablet content with optimized layout
-	const tabletContent = (
-		<div
-			className={`${spacing.heroElementSpacing} text-center max-w-4xl mx-auto`}
-		>
-			<HeroTitle className='mb-6'>Your Game, Your Pace, Your Greens</HeroTitle>
-
-			<HeroTagline className='mb-8'>The New Era of Indoor Golf</HeroTagline>
-
-			<div className='aspect-[4/3] w-full max-w-[600px] mx-auto mb-8 bg-gradient-to-br from-[#009444] to-[#006f33] rounded-[25px] flex items-center justify-center shadow-xl'>
-				<div className='text-center text-white space-y-3'>
-					<div className='text-5xl'>⛳</div>
-					<div className='text-xl font-bold'>Golf Simulator</div>
-					<div className='text-base opacity-75'>Premium Experience</div>
-				</div>
-			</div>
-
-			<div className='space-y-6 max-w-[700px] mx-auto text-left mb-8'>
-				<HeroDescription large>
-					The ultimate golf and social experience, only in Riyadh.
-				</HeroDescription>
-				<HeroDescription large>
-					At The Virtual Greens, playing golf doesn't mean dressing up or
-					heading out of town. It means stepping into a sleek, air-conditioned
-					space where you can tee off on the world's most iconic course, day or
-					night, rain or shine. Unwind after work, celebrate with friends, or
-					host an event with a twist. This is golf on your terms.
-				</HeroDescription>
-			</div>
-
-			<div className='flex justify-center'>
-				<CTAButton size='default' />
-			</div>
-		</div>
-	);
-
-	// Mobile content with stacked layout
-	const mobileContent = (
-		<div className={`${spacing.heroElementSpacing} text-center`}>
-			<HeroTitle className='mb-4'>
-				Your Game,
-				<br />
-				Your Pace,
-				<br />
-				Your Greens
-			</HeroTitle>
-
-			<HeroTagline className='mb-6'>The New Era of Indoor Golf</HeroTagline>
-
-			<div className='aspect-[4/3] w-full max-w-[400px] mx-auto mb-6 bg-gradient-to-br from-[#009444] to-[#006f33] rounded-[20px] flex items-center justify-center shadow-lg'>
-				<div className='text-center text-white space-y-2'>
-					<div className='text-4xl'>⛳</div>
-					<div className='text-lg font-bold'>Golf Simulator</div>
-					<div className='text-sm opacity-75'>Premium Experience</div>
-				</div>
-			</div>
-
-			<div className='space-y-4 max-w-[500px] mx-auto text-left mb-6'>
-				<HeroDescription>
-					The ultimate golf and social experience, only in Riyadh.
-				</HeroDescription>
-				<HeroDescription>
-					At The Virtual Greens, playing golf doesn't mean dressing up or
-					heading out of town. It means stepping into a sleek, air-conditioned
-					space where you can tee off on the world's most iconic course, day or
-					night, rain or shine. Unwind after work, celebrate with friends, or
-					host an event with a twist. This is golf on your terms.
-				</HeroDescription>
-			</div>
-
-			<div className='flex justify-center'>
-				<CTAButton size='small' />
-			</div>
-		</div>
-	);
-
-	// Enhanced decorative elements with responsive positioning
-	const decorativeElements = (
-		<div className='absolute inset-0 overflow-hidden'>
-			{/* Main decorative background - responsive positioning */}
-			<div
-				className='absolute opacity-30 transition-all duration-500'
-				style={{
-					top: 'clamp(200px, 30vh, 432px)',
-					left: 'clamp(100px, 15vw, 342px)',
-					transform: 'rotate(348deg)',
-				}}
-			>
-				<div className='w-[clamp(1000px, 120vw, 2102px)] h-[clamp(800px, 90vh, 1454px)] relative overflow-hidden'>
-					<div className='absolute inset-0 mix-blend-screen'>
-						{/* Enhanced gradient backgrounds for better visual appeal */}
-						<div className='absolute inset-0 bg-gradient-to-br from-green-400/25 via-emerald-500/15 to-transparent' />
-						<div className='absolute inset-0 bg-gradient-to-tl from-green-300/20 via-transparent to-emerald-400/10' />
-						<div className='absolute inset-0 bg-gradient-to-tr from-transparent via-green-500/10 to-green-400/15' />
-					</div>
-				</div>
-			</div>
-		</div>
-	);
-
-	return (
-		<ResponsiveHeroSection
-			backgroundColor='#102121'
-			greenSection={true}
-			greenSectionHeight='clamp(300px, 25vh, 435px)'
-			minHeight='min-h-[100svh]'
-			decorativeElements={decorativeElements}
-			enableFluidLayout={true}
-		>
-			{{
-				desktop: desktopContent,
-				tablet: tabletContent,
-				mobile: mobileContent,
-			}}
-		</ResponsiveHeroSection>
 	);
 };

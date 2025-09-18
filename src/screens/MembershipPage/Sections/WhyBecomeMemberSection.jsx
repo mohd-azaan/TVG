@@ -18,14 +18,13 @@ export const WhyBecomeMemberSection = () => {
 			<div className='max-w-[1700px] mx-auto px-4'>
 				<div className='flex items-center justify-center gap-16'>
 					{/* Left side - image */}
-					<div className='w-[655px] h-[400px] bg-gradient-to-br from-[#009444] via-[#00b851] to-[#004a22] rounded-[30px] relative overflow-hidden flex items-center justify-center'>
-						<div className='absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,148,68,0.3)_0%,rgba(0,74,34,0.8)_100%)]'></div>
-						<div className='relative text-white text-xl font-bold z-10 opacity-70'>
-							Golf Team Members
-						</div>
+					<div className='w-[655px] h-[400px] rounded-[30px] relative overflow-hidden flex items-center justify-center'>
+						<img
+							src='/freepik__background__81702-1.png'
+							alt='Golf team members'
+							className='w-full h-full object-cover object-center rounded-[30px]'
+						/>
 					</div>
-
-					{/* Right side - content */}
 					<div className='flex-1 max-w-[655px]'>
 						{/* Section title */}
 						<h2 className='font-morganite font-extrabold text-[96px] leading-[90px] text-white uppercase tracking-[1.92px] mb-8'>

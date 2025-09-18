@@ -1,40 +1,27 @@
-// src/screens/ContactPage/sections/ReadyToVisitSection.jsx
-// Ready to Visit section with CTA button matching standard design pattern
-// Features dark background with centered content and call-to-action
-// RELEVANT FILES: ContactPage.jsx, ContactPage.css, arrow-right.svg
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const ArrowRight = ({ size = "24" }) => {
-	if (size === "24") {
-		return (
-			<div className="relative w-6 h-6">
-				<img src="/arrow-right.svg" alt="" className="w-full h-full" />
-			</div>
-		);
-	}
-	return null;
-};
+const ArrowIcon = () => (
+	<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+		<path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+	</svg>
+);
 
 export const ReadyToVisitSection = () => {
-	return (
-		<section className="ready-to-visit-section bg-[#102121] h-20 w-full relative">
-			{/* Title positioned as in Figma */}
-			<div className="absolute left-[724px] top-1/2 transform -translate-y-1/2">
-				<h2 className="ready-title font-['Gilroy-Bold',sans-serif] text-[28px] font-bold leading-[normal] text-white uppercase text-nowrap">
-					Ready to Visit?
-				</h2>
-			</div>
-
-			{/* CTA Button positioned as in Figma */}
-			<div className="absolute left-[980px] top-1/2 transform -translate-y-1/2">
-				<button className="ready-cta-button bg-[#009444] border-none rounded-[50px] px-[30px] py-[7px] flex items-center gap-[10px] hover:bg-[#007a3a] transition-colors duration-200">
-					<span className="ready-cta-text font-['Gilroy-SemiBold',sans-serif] text-[18px] font-semibold leading-[40px] text-white uppercase text-center">
-						Plan Your Visit
-					</span>
-					<ArrowRight size="24" />
-				</button>
-			</div>
-		</section>
-	);
+  return (
+    <section className="bg-[#102121] py-12">
+      <div className="max-w-screen-xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-center text-center lg:text-left gap-8">
+        <h2 className="font-gilroy font-bold text-3xl text-white uppercase">
+          Ready to Visit?
+        </h2>
+        <Link 
+          to="/contact" // Assuming this links to the contact page or a booking page
+          className="bg-[#009444] text-white font-gilroy font-semibold text-lg uppercase py-3 px-8 rounded-full flex items-center gap-3 hover:bg-opacity-90 transition-colors"
+        >
+          <span>Plan Your Visit</span>
+          <ArrowIcon />
+        </Link>
+      </div>
+    </section>
+  );
 };

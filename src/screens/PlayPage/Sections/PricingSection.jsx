@@ -11,12 +11,12 @@ export const PricingSection = () => {
 	const pricing = {
 		weekdays: [
 			{ type: 'Standard Bay', location: 'Mezzanine Floor', price: 180 },
-			{ type: 'Semi-Private Bay', location: 'Ground Floor', price: 180 },
+			{ type: 'Semi-Private Bay', location: 'Ground Floor', price: 250 },
 			{ type: 'VIP Bay', location: 'Ground Floor', price: 500 },
 		],
 		weekends: [
 			{ type: 'Standard Bay', location: 'Mezzanine Floor', price: 220 },
-			{ type: 'Semi-Private Bay', location: 'Ground Floor', price: 220 },
+			{ type: 'Semi-Private Bay', location: 'Ground Floor', price: 250 },
 			{ type: 'VIP Bay', location: 'Ground Floor', price: 600 },
 		],
 	};
@@ -26,15 +26,15 @@ export const PricingSection = () => {
 			{/* Container positioned according to Figma */}
 			<div className='relative max-w-[1920px] mx-auto'>
 				{/* Section title */}
-				<div className='absolute top-[130px] left-1/2 transform -translate-x-1/2 w-[655px] text-center'>
-					<h2 className='font-TVG-typography-h2 font-[number:var(--TVG-typography-h2-font-weight)] text-[length:var(--TVG-typography-h2-font-size)] leading-[var(--TVG-typography-h2-line-height)] tracking-[var(--TVG-typography-h2-letter-spacing)] text-black [font-style:var(--TVG-typography-h2-font-style)] uppercase'>
+				<div className='absolute top-[120px] left-1/2 transform -translate-x-1/2 text-center'>
+					<h2 className='font-TVG-typography-h2 font-[number:var(--TVG-typography-h2-font-weight)] text-[96px] leading-[100px] tracking-[2px] text-black [font-style:var(--TVG-typography-h2-font-style)] uppercase'>
 						Pricing
 					</h2>
 				</div>
 
 				{/* Description text */}
-				<div className='absolute top-[220px] left-[632px] w-[655px] text-center'>
-					<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[#757575] [font-style:var(--TVG-typography-default-font-style)]'>
+				<div className='absolute top-[200px] left-1/2 transform -translate-x-1/2 w-[655px] text-center'>
+					<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[18px] leading-[28px] tracking-[0.1px] text-[#757575] [font-style:var(--TVG-typography-default-font-style)]'>
 						Prices are per hour, per bay, and per person. Each bay can
 						accommodate a maximum of 6 players, and you can hit unlimited golf
 						balls during your time with us.
@@ -42,51 +42,51 @@ export const PricingSection = () => {
 				</div>
 
 				{/* Tab system */}
-				<div className='absolute top-[373px] left-1/2 transform -translate-x-1/2 flex gap-4'>
+				<div className='absolute top-[310px] left-1/2 transform -translate-x-1/2 flex gap-6'>
 					<button
 						onClick={() => setActiveTab('weekdays')}
-						className={`px-[30px] py-2.5 rounded-[50px] border border-solid transition-colors ${
+						className={`px-[24px] py-[8px] rounded-[25px] border border-solid transition-colors ${
 							activeTab === 'weekdays'
 								? 'bg-[#cceada] border-[#cceada] text-black'
-								: 'bg-transparent border-[lightgrey] text-[#757575] hover:bg-gray-50'
+								: 'bg-transparent border-[#d1d1d1] text-[#757575] hover:bg-gray-50'
 						}`}
 					>
-						<span className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] [font-style:var(--TVG-typography-default-font-style)] text-center whitespace-nowrap'>
+						<span className='font-TVG-typography-default font-[500] text-[16px] leading-[20px] tracking-[0.3px] text-center whitespace-nowrap'>
 							WEEK DAYS, Sun – Thu (until 4pm)
 						</span>
 					</button>
 					<button
 						onClick={() => setActiveTab('weekends')}
-						className={`px-[30px] py-2.5 rounded-[50px] border border-solid transition-colors ${
+						className={`px-[24px] py-[8px] rounded-[25px] border border-solid transition-colors ${
 							activeTab === 'weekends'
 								? 'bg-[#cceada] border-[#cceada] text-black'
-								: 'bg-transparent border-[lightgrey] text-[#757575] hover:bg-gray-50'
+								: 'bg-transparent border-[#d1d1d1] text-[#757575] hover:bg-gray-50'
 						}`}
 					>
-						<span className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] [font-style:var(--TVG-typography-default-font-style)] text-center whitespace-nowrap'>
+						<span className='font-TVG-typography-default font-[500] text-[16px] leading-[20px] tracking-[0.3px] text-center whitespace-nowrap'>
 							WEEKEND, Thu (after 4pm) - Sat
 						</span>
 					</button>
 				</div>
 
 				{/* Pricing cards */}
-				<div className='absolute top-[449px] left-[281px] flex gap-[35px]'>
+				<div className='absolute top-[390px] left-1/2 transform -translate-x-1/2 flex gap-[30px]'>
 					{pricing[activeTab].map((bay, index) => (
 						<div
 							key={index}
-							className='w-[430px] h-[450px] relative bg-white rounded-[30px] shadow-lg overflow-hidden'
+							className='w-[398px] h-[450px] relative bg-white rounded-[30px] shadow-[0_4px_20px_rgba(0,0,0,0.1)] overflow-hidden'
 						>
 							{/* Header */}
 							<div
 								className={`${
 									index === 1 ? 'bg-[#0b5b2f]' : 'bg-[#009444]'
-								} w-full h-[120px] rounded-tl-[30px] rounded-tr-[30px] flex items-center justify-center px-[30px] pb-[10px] pt-[20px]`}
+								} w-full h-[120px] rounded-tl-[30px] rounded-tr-[30px] flex items-center justify-center px-[20px]`}
 							>
-								<div className='text-center text-white space-y-1'>
-									<h3 className='font-TVG-typography-footer-title font-[700] text-[30px] leading-normal tracking-[var(--TVG-typography-footer-title-letter-spacing)] [font-style:var(--TVG-typography-footer-title-font-style)] uppercase'>
+								<div className='text-center text-white'>
+									<h3 className='font-TVG-typography-footer-title font-[700] text-[28px] leading-[34px] tracking-[0.5px] uppercase mb-1'>
 										{bay.type}
 									</h3>
-									<p className='font-TVG-typography-footer-menu font-[number:var(--TVG-typography-footer-menu-font-weight)] text-[18px] leading-[26px] tracking-[var(--TVG-typography-footer-menu-letter-spacing)] [font-style:var(--TVG-typography-footer-menu-font-style)] capitalize'>
+									<p className='font-TVG-typography-footer-menu font-[400] text-[16px] leading-[20px] tracking-[0.2px] opacity-90'>
 										({bay.location})
 									</p>
 								</div>
@@ -95,35 +95,35 @@ export const PricingSection = () => {
 							{/* Pricing content */}
 							<div className='bg-[#f6f6f6] w-full h-[330px] rounded-bl-[30px] rounded-br-[30px] relative'>
 								{/* Price display - centered, symbol left of number */}
-								<div className='absolute top-[60px] left-1/2 transform -translate-x-1/2 flex items-baseline justify-center'>
-									<div className='flex items-baseline gap-1'>
-										<div className='w-[35px] h-[35px] mb-1'>
+								<div className='absolute top-[50px] left-1/2 transform -translate-x-1/2 flex items-baseline justify-center'>
+									<div className='flex items-baseline gap-2'>
+										<div className='w-[32px] h-[32px] mb-2'>
 											<img
 												src={'/saudi-riyal.svg'}
 												alt='SAR'
 												className='w-full h-full object-contain'
 											/>
 										</div>
-										<div className='font-TVG-typography-counter-number font-[number:var(--TVG-typography-counter-number-font-weight)] text-[140px] leading-[120px] tracking-[2.4px] text-black [font-style:var(--TVG-typography-counter-number-font-style)] uppercase'>
+										<div className='font-TVG-typography-counter-number font-[number:var(--TVG-typography-counter-number-font-weight)] text-[120px] leading-[100px] tracking-[1.8px] text-black [font-style:var(--TVG-typography-counter-number-font-style)] uppercase'>
 											{bay.price}
 										</div>
 									</div>
 								</div>
 
 								{/* Per hour text */}
-								<div className='absolute top-[200px] left-1/2 transform -translate-x-1/2 text-center'>
-									<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-black [font-style:var(--TVG-typography-default-font-style)] whitespace-nowrap'>
+								<div className='absolute top-[180px] left-1/2 transform -translate-x-1/2 text-center'>
+									<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[16px] leading-[24px] tracking-[0.2px] text-black [font-style:var(--TVG-typography-default-font-style)] whitespace-nowrap'>
 										/hour/bay/person
 									</p>
 								</div>
 
 								{/* CTA Button */}
-								<div className='absolute top-[250px] left-1/2 transform -translate-x-1/2'>
-									<button className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-[30px] py-[7px] flex items-center gap-2.5'>
-										<span className='font-TVG-typography-button font-[number:var(--TVG-typography-button-font-weight)] text-[length:var(--TVG-typography-button-font-size)] leading-[var(--TVG-typography-button-line-height)] tracking-[var(--TVG-typography-button-letter-spacing)] text-white [font-style:var(--TVG-typography-button-font-style)] uppercase text-center whitespace-nowrap'>
+								<div className='absolute top-[230px] left-1/2 transform -translate-x-1/2'>
+									<button className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-[28px] py-[10px] flex items-center gap-2'>
+										<span className='font-TVG-typography-button font-[600] text-[14px] leading-[18px] tracking-[0.8px] text-white uppercase text-center whitespace-nowrap'>
 											Book a Bay
 										</span>
-										<div className='w-6 h-6'>
+										<div className='w-5 h-5'>
 											<svg
 												className='w-full h-full'
 												viewBox='0 0 24 24'
@@ -147,43 +147,43 @@ export const PricingSection = () => {
 				</div>
 
 				{/* Registration fee note */}
-				<div className='absolute top-[962px] left-1/2 transform -translate-x-1/2 bg-[#f6f6f6] rounded-[30px] w-[677px] h-[91px] flex items-center justify-center'>
-					<div className='flex items-center gap-6'>
+				<div className='absolute top-[900px] left-1/2 transform -translate-x-1/2 bg-[#f6f6f6] rounded-[30px] w-[677px] h-[80px] flex items-center justify-center'>
+					<div className='flex items-center gap-5'>
 						{/* Plus icon */}
-						<div className='bg-[#009444] w-14 h-14 rounded-[30px] flex items-center justify-center'>
-							<span className='font-TVG-typography-h2 font-[number:var(--TVG-typography-h2-font-weight)] text-[80px] leading-normal tracking-[var(--TVG-typography-h2-letter-spacing)] text-white [font-style:var(--TVG-typography-h2-font-style)] uppercase'>
+						<div className='bg-[#009444] w-12 h-12 rounded-full flex items-center justify-center'>
+							<span className='font-bold text-[28px] leading-none text-white'>
 								+
 							</span>
 						</div>
 
 						{/* Price */}
-						<div className='flex items-center gap-2'>
-							<div className='w-7 h-[31px]'>
+						<div className='flex items-center gap-1'>
+							<div className='w-6 h-7'>
 								<img
 									src={'/saudi-riyal.svg'}
 									alt='SAR'
 									className='w-full h-full object-contain'
 								/>
 							</div>
-							<span className='font-TVG-typography-footer-title font-[number:var(--TVG-typography-footer-title-font-weight)] text-[49px] leading-normal tracking-[var(--TVG-typography-footer-title-letter-spacing)] text-black [font-style:var(--TVG-typography-footer-title-font-style)] uppercase'>
+							<span className='font-TVG-typography-footer-title font-[700] text-[42px] leading-[48px] tracking-[0.5px] text-black uppercase'>
 								25
 							</span>
 						</div>
 
 						{/* Text */}
-						<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[#757575] [font-style:var(--TVG-typography-default-font-style)]'>
+						<p className='font-TVG-typography-default font-[400] text-[16px] leading-[24px] tracking-[0.1px] text-[#757575]'>
 							One-time registration fee for first-time players
 						</p>
 					</div>
 				</div>
 
 				{/* VAT disclaimer */}
-				<div className='absolute top-[1073px] left-1/2 transform -translate-x-1/2 text-center'>
+				<div className='absolute top-[1010px] left-1/2 transform -translate-x-1/2 text-center'>
 					<div className='flex items-center gap-2'>
-						<span className='font-TVG-typography-footer-title font-[number:var(--TVG-typography-footer-title-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-footer-title-letter-spacing)] text-black [font-style:var(--TVG-typography-footer-title-font-style)]'>
+						<span className='font-TVG-typography-footer-title font-[700] text-[16px] leading-[20px] tracking-[0.5px] text-black uppercase'>
 							NOTE
 						</span>
-						<span className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[#757575] [font-style:var(--TVG-typography-default-font-style)]'>
+						<span className='font-TVG-typography-default font-[400] text-[16px] leading-[20px] tracking-[0.1px] text-[#757575]'>
 							The prices are exclusive of 15% VAT + 3% transaction surcharge
 						</span>
 					</div>

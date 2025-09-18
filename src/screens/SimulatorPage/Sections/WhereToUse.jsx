@@ -49,8 +49,8 @@ const cards = [
 
 const WhereToUse = () => {
 	return (
-		<section className='w-full bg-[#102121] text-center py-20 text-[#d1d3d4]'>
-			<div className='max-w-6xl mx-auto px-6'>
+		<section className='w-full relative bg-[#102121] text-center py-20 text-[#d1d3d4]'>
+			<div className='max-w-6xl mx-auto px-6 z-10 relative'>
 				{/* Main heading (large Morganite) */}
 				<h2 className='text-[clamp(40px,6.5vw,80px)] tracking-[0.02em] leading-[0.95] uppercase font-bold font-morganite text-white'>
 					Where You Can Use It
@@ -85,6 +85,14 @@ const WhereToUse = () => {
 						</article>
 					))}
 				</div>
+
+				{/* Decorative shape in the bottom-right (non-interactive) */}
+				<img
+					src={'shape14-2-2.svg'}
+					alt=''
+					aria-hidden='true'
+					className='pointer-events-none absolute -z-10 right-[-300px] bottom-[-290px] w-[520px] lg:w-[900px] opacity-90 translate-y-6'
+				/>
 			</div>
 		</section>
 	);

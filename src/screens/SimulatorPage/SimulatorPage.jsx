@@ -19,9 +19,9 @@ export const SimulatorPage = () => {
 		<div className='simulator-page w-full'>
 			{/* Hero Section - "BRING THE COURSE TO YOUR SPACE" */}
 			<HeroSection />
+			<FeaturesSection />
 			<WhereToUse />
 			{/* Features Section - "THE MOST CONVENIENT FORMS AND LOCATION" with benefit boxes */}
-			<FeaturesSection />
 
 			{/* Equipment Section - "MAKE YOUR FIRST ROUND COUNT" with simulator details */}
 			<EquipmentSection />

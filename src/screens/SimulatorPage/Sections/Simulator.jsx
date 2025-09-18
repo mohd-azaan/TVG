@@ -17,7 +17,7 @@ const Simulator = () => {
 	];
 
 	return (
-		<div className='w-full relative bg-white h-[900px] overflow-hidden text-center text-xl text-black font-gilroy-medium'>
+		<div className='w-full relative bg-white h-[750px] overflow-hidden text-center text-xl text-black font-gilroy-medium'>
 			{/* pills moved below heading */}
 
 			{/* Heading and subheading (kept) */}

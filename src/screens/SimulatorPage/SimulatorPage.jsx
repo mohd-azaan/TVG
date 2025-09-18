@@ -9,6 +9,7 @@ import { HeroSection } from './Sections/HeroSection';
 import Simulator from './Sections/Simulator';
 import Simulators from './Sections/Simulator';
 import WhereToUse from './Sections/WhereToUse';
+import SpecSection from './Sections/SpecSection';
 
 export const SimulatorPage = () => {
 	return (
@@ -18,6 +19,8 @@ export const SimulatorPage = () => {
 			<FeaturesSection />
 			<WhereToUse />
 			<Simulator />
+			{/* Specifications Table Section */}
+			<SpecSection />
 		</div>
 	);
 };

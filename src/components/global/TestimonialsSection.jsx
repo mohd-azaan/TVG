@@ -62,7 +62,7 @@ export const TestimonialsSection = () => {
         </div>
 
         {/* Testimonial content area - positioned exactly like Figma */}
-        <div className='absolute right-[120px] top-[80px] w-[900px] h-[540px] z-30'>
+        <div className='absolute right-[20px] top-[80px] w-[900px] h-[540px] z-30'>
           {/* Large quotation mark - positioned exactly like Figma */}
           <div 
             className='absolute top-[-100px] left-0 text-white text-[220px] leading-none font-black select-none z-40 rotate-180'
@@ -70,7 +70,7 @@ export const TestimonialsSection = () => {
               fontFamily: 'var(--TVG-typography-h1-font-family)',
               fontWeight: '900'
             }}
-          >
+          > 
             "
           </div>
 

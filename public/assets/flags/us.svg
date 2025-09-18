@@ -1,121 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 100">
-  <!-- Flag dimensions: 190 units wide, 100 units high (aspect ratio 1.9:1) -->
-  <!-- Stripe height: 100 / 13 = 7.6923 units -->
-  <!-- Canton (Union) dimensions: 76 units wide, 700/13 = 53.846 units high -->
-
-  <!-- Colors based on US Department of State specifications -->
-  <defs>
-    <style>
-      .red-stripe { fill: #B31942; }
-      .white-stripe { fill: #FFFFFF; }
-      .union-blue { fill: #0A3161; }
-      .star-white { fill: #FFFFFF; }
-    </style>
-
-    <!-- Define a 5-pointed star shape -->
-    <!-- Outer radius R = 3.08, Inner radius r = 1.176 (approx R * sin(18)/sin(54)) -->
-    <polygon id="star" class="star-white"
-      points="0,3.08 0.725,1.176 2.93,1.176 1.108,-0.448 1.81,-2.64 -0,-1.5 -1.81,-2.64 -1.108,-0.448 -2.93,1.176 -0.725,1.176"
-      transform="scale(0.8)" /> <!-- Scale down slightly for better fit -->
-  </defs>
-
-  <!-- Stripes -->
-  <rect x="0" y="0" width="190" height="7.6923" class="red-stripe" />
-  <rect x="0" y="7.6923" width="190" height="7.6923" class="white-stripe" />
-  <rect x="0" y="15.3846" width="190" height="7.6923" class="red-stripe" />
-  <rect x="0" y="23.0769" width="190" height="7.6923" class="white-stripe" />
-  <rect x="0" y="30.7692" width="190" height="7.6923" class="red-stripe" />
-  <rect x="0" y="38.4615" width="190" height="7.6923" class="white-stripe" />
-  <rect x="0" y="46.1538" width="190" height="7.6923" class="red-stripe" />
-  <rect x="0" y="53.8461" width="190" height="7.6923" class="white-stripe" />
-  <rect x="0" y="61.5384" width="190" height="7.6923" class="red-stripe" />
-  <rect x="0" y="69.2307" width="190" height="7.6923" class="white-stripe" />
-  <rect x="0" y="76.9230" width="190" height="7.6923" class="red-stripe" />
-  <rect x="0" y="84.6153" width="190" height="7.6923" class="white-stripe" />
-  <rect x="0" y="92.3076" width="190" height="7.6923" class="red-stripe" />
-
-  <!-- Blue Canton (Union) -->
-  <rect x="0" y="0" width="76" height="53.846" class="union-blue" />
-
-  <!-- Stars -->
-  <!-- Star diameter G = 6.16, Vertical spacing E = 5.38, Horizontal spacing F = 6.33 (based on A=100) -->
-  <!-- Canton width D = 76, Canton height C = 53.846 -->
-
-  <!-- Rows with 6 stars -->
-  <!-- Y-coordinates: (C / 10) * 1, (C / 10) * 3, ..., (C / 10) * 9 -->
-  <!-- X-coordinates: (D / 12) * 1, (D / 12) * 3, ..., (D / 12) * 11 -->
-  <g>
-    <!-- Row 1 (6 stars) -->
-    <use href="#star" x="6.333" y="5.3846" />
-    <use href="#star" x="19.0" y="5.3846" />
-    <use href="#star" x="31.666" y="5.3846" />
-    <use href="#star" x="44.333" y="5.3846" />
-    <use href="#star" x="57.0" y="5.3846" />
-    <use href="#star" x="69.666" y="5.3846" />
-
-    <!-- Row 3 (6 stars) -->
-    <use href="#star" x="6.333" y="16.1538" />
-    <use href="#star" x="19.0" y="16.1538" />
-    <use href="#star" x="31.666" y="16.1538" />
-    <use href="#star" x="44.333" y="16.1538" />
-    <use href="#star" x="57.0" y="16.1538" />
-    <use href="#star" x="69.666" y="16.1538" />
-
-    <!-- Row 5 (6 stars) -->
-    <use href="#star" x="6.333" y="26.923" />
-    <use href="#star" x="19.0" y="26.923" />
-    <use href="#star" x="31.666" y="26.923" />
-    <use href="#star" x="44.333" y="26.923" />
-    <use href="#star" x="57.0" y="26.923" />
-    <use href="#star" x="69.666" y="26.923" />
-
-    <!-- Row 7 (6 stars) -->
-    <use href="#star" x="6.333" y="37.6922" />
-    <use href="#star" x="19.0" y="37.6922" />
-    <use href="#star" x="31.666" y="37.6922" />
-    <use href="#star" x="44.333" y="37.6922" />
-    <use href="#star" x="57.0" y="37.6922" />
-    <use href="#star" x="69.666" y="37.6922" />
-
-    <!-- Row 9 (6 stars) -->
-    <use href="#star" x="6.333" y="48.4614" />
-    <use href="#star" x="19.0" y="48.4614" />
-    <use href="#star" x="31.666" y="48.4614" />
-    <use href="#star" x="44.333" y="48.4614" />
-    <use href="#star" x="57.0" y="48.4614" />
-    <use href="#star" x="69.666" y="48.4614" />
-  </g>
-
-  <!-- Rows with 5 stars -->
-  <!-- Y-coordinates: (C / 10) * 2, (C / 10) * 4, ..., (C / 10) * 8 -->
-  <!-- X-coordinates: (D / 12) * 2, (D / 12) * 4, ..., (D / 12) * 10 -->
-  <g>
-    <!-- Row 2 (5 stars) -->
-    <use href="#star" x="12.666" y="10.7692" />
-    <use href="#star" x="25.333" y="10.7692" />
-    <use href="#star" x="38.0" y="10.7692" />
-    <use href="#star" x="50.666" y="10.7692" />
-    <use href="#star" x="63.333" y="10.7692" />
-
-    <!-- Row 4 (5 stars) -->
-    <use href="#star" x="12.666" y="21.5384" />
-    <use href="#star" x="25.333" y="21.5384" />
-    <use href="#star" x="38.0" y="21.5384" />
-    <use href="#star" x="50.666" y="21.5384" />
-    <use href="#star" x="63.333" y="21.5384" />
-
-    <!-- Row 6 (5 stars) -->
-    <use href="#star" x="12.666" y="32.3076" />
-    <use href="#star" x="25.333" y="32.3076" />
-    <use href="#star" x="38.0" y="32.3076" />
-    <use href="#star" x="50.666" y="32.3076" />
-    <use href="#star" x="63.333" y="32.3076" />
-
-    <!-- Row 8 (5 stars) -->
-    <use href="#star" x="12.666" y="43.0768" />
-    <use href="#star" x="25.333" y="43.0768" />
-    <use href="#star" x="38.0" y="43.0768" />
-    <use href="#star" x="50.666" y="43.0768" />
-    <use href="#star" x="63.333" y="43.0768" />
-  </g>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2937_2935)">
+<path d="M0 0H24V24H0" fill="#BD3D44"/>
+<path d="M0 2.71875H24H0ZM0 6.42188H24H0ZM0 10.125H24H0ZM0 13.8281H24H0ZM0 17.5312H24H0ZM0 21.2344H24H0Z" fill="black"/>
+<path d="M24 20.2969V22.1719H0V20.2969H24ZM24 16.5938V18.4688H0V16.5938H24ZM24 12.8906V14.7656H0V12.8906H24ZM24 9.1875V11.0625H0V9.1875H24ZM24 5.48438V7.35938H0V5.48438H24ZM24 1.78125V3.65625H0V1.78125H24Z" fill="white"/>
+<path d="M0 0H18.2812V12.8906H0V0Z" fill="#192F5D"/>
+</g>
+<defs>
+<clipPath id="clip0_2937_2935">
+<rect width="24" height="24" rx="12" fill="white"/>
+</clipPath>
+</defs>
 </svg>

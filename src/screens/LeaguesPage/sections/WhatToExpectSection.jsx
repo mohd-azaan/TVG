@@ -24,12 +24,12 @@ export const WhatToExpectSection = () => {
         <section className="bg-[#f6f6f6] py-24">
             <div className="max-w-[1360px] mx-auto px-4 flex items-center gap-16">
                 <div className="w-1/2">
-                    <img src="/indoor-golf-1.png" alt="Indoor golf setup" className="rounded-3xl" />
+                    <img src="/indoor-golf 1.png" alt="Indoor golf setup" className="rounded-3xl" />
                 </div>
                 <div className="w-1/2">
                     <h2 className="font-TVG-typography-h2 font-[800] text-[96px] text-black uppercase leading-none mb-4">What to Expect</h2>
                     <p className="font-TVG-typography-tagline font-bold text-2xl text-green-700 uppercase mb-8">Stay Tuned...</p>
-                    <div className="space-y-4">
+                    <div className="space-y-2">
                         {features.map((feature, index) => (
                             <div key={index} className="flex items-start gap-4">
                                 <GolfIcon />

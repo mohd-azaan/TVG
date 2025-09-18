@@ -111,7 +111,7 @@ export const HeroSection = ({
 			<img
 				alt='decorative green waves'
 				src='/shape14-2.svg'
-				className='pointer-events-none absolute right-[-420px] bottom-[-220px] w-[1100px] opacity-95 lg:right-[-620px] lg:bottom-[-520px] lg:w-[1800px] mix-blend-screen'
+				className='pointer-events-none absolute right-[-420px] bottom-[-220px] w-[1100px] opacity-95 lg:right-[-620px] lg:bottom-[-520px] lg:w-[1800px] mix-blend-screen z-0'
 			/>
 		</div>
 	);

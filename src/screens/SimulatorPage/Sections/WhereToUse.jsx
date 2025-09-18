@@ -11,7 +11,7 @@ const homeIcon = '/home_24dp.svg';
 const officeIcon = '/office.svg';
 const hotelIcon = '/hotelsvg.svg';
 const schoolIcon = '/school.svg';
-const golfIcon = '/sports_golf.svg';
+const golfIcon = 'sports_golf_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg';
 const eventsIcon = '/celebration.svg';
 
 const cards = [
@@ -87,13 +87,11 @@ const WhereToUse = () => {
 				</div>
 
 				{/* Decorative shape in the bottom-right (non-interactive) */}
-				<img
-					src={'shape14-2-2.svg'}
-					alt=''
-					aria-hidden='true'
-					className='pointer-events-none absolute -z-10 right-[-300px] bottom-[-290px] w-[520px] lg:w-[900px] opacity-90 translate-y-6'
-				/>
+				{/* small decorative shape (kept for source but moved behind the large arc) */}
+				{/* NOTE: moved this element outside the main z-10 container so it won't overlap the larger decorative arc. */}
 			</div>
+
+			{/* small decorative shape has been moved to the page-level SimulatorPage so it's positioned consistently */}
 		</section>
 	);
 };

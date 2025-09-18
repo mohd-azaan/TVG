@@ -3,15 +3,11 @@
 // This component displays the full Simulator page layout with all sections based on Figma design
 // RELEVANT FILES: App.jsx, MainLayout.jsx, styleguide.css, tailwind.config.js
 
-import React from 'react';
 import '../../styleguide.css';
-import { HeroSection } from './Sections/HeroSection';
 import { FeaturesSection } from './Sections/FeaturesSection';
-import { EquipmentSection } from './Sections/EquipmentSection';
-import { SpecificationsSection } from './Sections/SpecificationsSection';
-import { CoursesSection } from './Sections/CoursesSection';
-import { GallerySection } from './Sections/GallerySection';
-import { PlanningSection } from './Sections/PlanningSection';
+import { HeroSection } from './Sections/HeroSection';
+import Simulator from './Sections/Simulator';
+import Simulators from './Sections/Simulator';
 import WhereToUse from './Sections/WhereToUse';
 
 export const SimulatorPage = () => {
@@ -21,22 +17,7 @@ export const SimulatorPage = () => {
 			<HeroSection />
 			<FeaturesSection />
 			<WhereToUse />
-			{/* Features Section - "THE MOST CONVENIENT FORMS AND LOCATION" with benefit boxes */}
-
-			{/* Equipment Section - "MAKE YOUR FIRST ROUND COUNT" with simulator details */}
-			<EquipmentSection />
-
-			{/* Specifications Section - Equipment specifications table */}
-			<SpecificationsSection />
-
-			{/* Courses Section - "WHO CHOSE OUR COURSES" with course images */}
-			<CoursesSection />
-
-			{/* Gallery Section - "SEE OUR SELECTION" with course previews */}
-			<GallerySection />
-
-			{/* Planning Section - "PLAN YOUR GAME" bottom section */}
-			<PlanningSection />
+			<Simulator />
 		</div>
 	);
 };

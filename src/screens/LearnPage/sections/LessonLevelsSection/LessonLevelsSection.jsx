@@ -5,14 +5,11 @@
 
 import React, { useState } from 'react';
 
-// Golf icon component - uses public SVG asset so it loads from public/ at runtime
 const GolfIcon = ({ className = 'w-8 h-8' }) => {
-	// URL encode the filename (spaces) and reference it from the public folder
-	const src = '/sports_golf_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24%201.svg';
+	const src = '/sports_golf_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg';
 	return <img src={src} className={className} alt='golf icon' />;
 };
 
-// Chevron down icon
 const ChevronDown = ({ className = 'w-6 h-6' }) => (
 	<svg className={className} viewBox='0 0 24 24' fill='none'>
 		<path
@@ -25,7 +22,6 @@ const ChevronDown = ({ className = 'w-6 h-6' }) => (
 	</svg>
 );
 
-// Chevron up icon
 const ChevronUp = ({ className = 'w-6 h-6' }) => (
 	<svg className={className} viewBox='0 0 24 24' fill='none'>
 		<path
@@ -38,175 +34,109 @@ const ChevronUp = ({ className = 'w-6 h-6' }) => (
 	</svg>
 );
 
-// Reusable Level Component
-const LevelComponent = ({
-	levelId,
-	title,
-	levelNumber,
-	description,
-	bulletPoints,
-	conclusion,
-	imagePlaceholder,
-	isExpanded,
-	onToggle,
-}) => {
-	return (
-		<div className='mb-0'>
-			<div
-				className={`rounded-t-[30px] h-20 flex items-center justify-between px-8 cursor-pointer ${
-					isExpanded ? 'bg-[#009444]' : 'bg-[#f6f6f6]'
-				}`}
-				onClick={onToggle}
-			>
-				<div className='flex items-center gap-4'>
-					<h3
-						className={`font-TVG-typography-tagline font-bold text-[28px] uppercase ${
-							isExpanded ? 'text-white' : 'text-black'
-						}`}
-					>
-						{title}
-					</h3>
-					<div
-						className={`${isExpanded ? 'text-[#cceada]' : 'text-[#009444]'}`}
-					>
-						{isExpanded ? (
-							<ChevronUp className='w-6 h-6' />
-						) : (
-							<ChevronDown className='w-6 h-6 text-[#757575]' />
-						)}
-					</div>
-				</div>
-				<span
-					className={`font-TVG-typography-tagline font-bold text-[22px] tracking-[0.44px] uppercase ${
-						isExpanded ? 'text-[#cceada]' : 'text-[#009444]'
-					}`}
-				>
-					{levelNumber}
-				</span>
-			</div>
-
-			{isExpanded && (
-				<div className='bg-[#f6f6f6] rounded-b-[30px] p-8'>
-					<div className='flex gap-8'>
-						{/* Left side - image placeholder */}
-						<div className='w-[420px] h-[356px] bg-gray-400 rounded-[30px] bg-center bg-cover flex items-center justify-center'>
-							<div className='text-white text-lg font-bold opacity-50'>
-								{imagePlaceholder}
-							</div>
-						</div>
-
-						{/* Right side - content */}
-						<div className='flex-1'>
-							<p className='font-TVG-typography-default text-[20px] leading-[28px] text-[#757575] mb-8'>
-								{description}
-							</p>
-
-							<div className='space-y-4 mb-6'>
-								{bulletPoints.map((point, index) => (
-									<div key={index} className='flex items-center gap-4'>
-										<GolfIcon className='text-[#757575] w-8 h-8' />
-										<p className='font-TVG-typography-default text-[20px] leading-[28px] text-[#757575]'>
-											{point}
-										</p>
-									</div>
-								))}
-							</div>
-
-							<p className='font-TVG-typography-default text-[20px] leading-[28px] text-[#757575]'>
-								{conclusion}
-							</p>
-						</div>
-					</div>
-				</div>
-			)}
-		</div>
-	);
+const Level = ({ level, isOpen, onToggle }) => {
+    return (
+        <div className="mb-4">
+            <button
+                className={`w-full text-left p-6 rounded-t-3xl flex justify-between items-center ${isOpen ? 'bg-[#009444]' : 'bg-[#f6f6f6] rounded-b-3xl'}`}
+                onClick={onToggle}
+            >
+                <div className="flex items-center">
+                    <h3 className={`font-['Gilroy-Bold',_sans-serif] text-2xl uppercase ${isOpen ? 'text-white' : 'text-black'}`}>{level.title}</h3>
+                    <div className={`ml-4 ${isOpen ? 'text-white' : 'text-gray-500'}`}>
+                        {isOpen ? <ChevronUp /> : <ChevronDown />}
+                    </div>
+                </div>
+                <span className={`font-['Gilroy-Bold',_sans-serif] text-xl uppercase ${isOpen ? 'text-white' : 'text-[#009444]'}`}>{level.levelNumber}</span>
+            </button>
+            {isOpen && (
+                <div className="bg-[#f6f6f6] p-8 rounded-b-3xl">
+                    <div className="flex gap-8 items-start">
+                        <div className="w-1/3">
+                            <img src={level.image} alt={level.title} className="rounded-3xl" />
+                        </div>
+                        <div className="w-2/3">
+                            <p className="font-['Gilroy-Medium',_sans-serif] text-lg text-[#757575] mb-6">{level.description}</p>
+                            <ul className="space-y-4">
+                                {level.features.map((feature, index) => (
+                                    <li key={index} className="flex items-start">
+                                        <div className="w-8 h-8 mr-4">
+                                            <GolfIcon />
+                                        </div>
+                                        <span className="font-['Gilroy-Medium',_sans-serif] text-lg text-[#757575]">{feature}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <p className="font-['Gilroy-Medium',_sans-serif] text-lg text-[#757575] mt-6">{level.conclusion}</p>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </div>
+    );
 };
 
+
 export const LessonLevelsSection = () => {
-	const [expandedLevel, setExpandedLevel] = useState('level01');
+    const [openLevel, setOpenLevel] = useState('Beginner to Bogey');
 
-	const toggleLevel = (levelId) => {
-		setExpandedLevel(expandedLevel === levelId ? null : levelId);
-	};
+    const levels = [
+        {
+            title: 'Beginner to Bogey',
+            levelNumber: 'Level 01',
+            image: '/play-swing-2-1-10.png',
+            description: 'Perfect for first-timers or those getting back into the swing of things. Over 4 structured sessions, you’ll build a solid foundation:',
+            features: [
+                'Understand the basics of grip, posture, stance, and alignment.',
+                'Learn golf rules, scoring, and course etiquette.',
+                'Get hands-on with putting, chipping, and full-swing techniques.',
+                'Build comfort with the simulator and learn how to track your progress.',
+            ],
+            conclusion: 'By the end, you’ll feel confident stepping up to any tee.',
+        },
+        {
+            title: 'Beyond Bogey',
+            levelNumber: 'Level 02',
+            image: '/play-swing-2-1-3.png',
+            description: 'Ready to take your game to the next level? This intermediate program focuses on consistency and course management over 6 sessions:',
+            features: [
+                'Refine your swing mechanics for better ball striking.',
+                'Learn advanced short game techniques and shot selection.',
+                'Develop course strategy and mental game skills.',
+                'Practice advanced putting techniques and green reading.',
+            ],
+            conclusion: 'You’ll gain the skills needed to break 90 consistently and enjoy more competitive rounds.',
+        },
+        {
+            title: 'Personalized Path',
+            levelNumber: 'Level 03-05',
+            image: '/twovision-dial-game.png',
+            description: 'Tailored coaching for advanced players seeking specific improvements. These levels offer personalized instruction based on your goals:',
+            features: [
+                'Detailed swing analysis using advanced technology.',
+                'Customized practice routines for your specific needs.',
+                'Tournament preparation and competitive strategies.',
+                'Advanced course management and shot creativity.',
+            ],
+            conclusion: 'Whether you’re aiming to break 80, compete in tournaments, or master specific aspects of your game, these levels provide the expertise you need.',
+        },
+    ];
 
-	// Level data configuration
-	const levelData = [
-		{
-			levelId: 'level01',
-			title: 'Beginner to Bogey',
-			levelNumber: 'Level 01',
-			description:
-				"Perfect for first-timers or those getting back into the swing of things. Over 4 structured sessions, you'll build a solid foundation:",
-			bulletPoints: [
-				'Understand the basics of grip, posture, stance, and alignment.',
-				'Learn golf rules, scoring, and course etiquette.',
-				'Get hands-on with putting, chipping, and full-swing techniques.',
-				'Build comfort with the simulator and learn how to track your progress.',
-			],
-			conclusion: "By the end, you'll feel confident stepping up to any tee.",
-			imagePlaceholder: 'Level 01 Image',
-		},
-		{
-			levelId: 'level02',
-			title: 'Beyond Bogey',
-			levelNumber: 'Level 02',
-			description:
-				'Ready to take your game to the next level? This intermediate program focuses on consistency and course management over 6 sessions:',
-			bulletPoints: [
-				'Refine your swing mechanics for better ball striking.',
-				'Learn advanced short game techniques and shot selection.',
-				'Develop course strategy and mental game skills.',
-				'Practice advanced putting techniques and green reading.',
-			],
-			conclusion:
-				"You'll gain the skills needed to break 90 consistently and enjoy more competitive rounds.",
-			imagePlaceholder: 'Level 02 Image',
-		},
-		{
-			levelId: 'level03',
-			title: 'Personalized Path',
-			levelNumber: 'Level 03-05',
-			description:
-				'Tailored coaching for advanced players seeking specific improvements. These levels offer personalized instruction based on your goals:',
-			bulletPoints: [
-				'Detailed swing analysis using advanced technology.',
-				'Customized practice routines for your specific needs.',
-				'Tournament preparation and competitive strategies.',
-				'Advanced course management and shot creativity.',
-			],
-			conclusion:
-				"Whether you're aiming to break 80, compete in tournaments, or master specific aspects of your game, these levels provide the expertise you need.",
-			imagePlaceholder: 'Level 03-05 Image',
-		},
-	];
-
-	return (
-		<div className='relative w-full bg-white py-16'>
-			{/* Section title */}
-			<div className='text-center mb-16'>
-				<h2 className='font-morganite font-extrabold text-[96px] leading-[90px] text-black uppercase tracking-[1.92px]'>
-					Lesson Levels and Journey
-				</h2>
-			</div>
-
-			{/* Accordion levels */}
-			<div className='max-w-[1360px] mx-auto px-4'>
-				{levelData.map((level, index) => (
-					<LevelComponent
-						key={level.levelId}
-						levelId={level.levelId}
-						title={level.title}
-						levelNumber={level.levelNumber}
-						description={level.description}
-						bulletPoints={level.bulletPoints}
-						conclusion={level.conclusion}
-						imagePlaceholder={level.imagePlaceholder}
-						isExpanded={expandedLevel === level.levelId}
-						onToggle={() => toggleLevel(level.levelId)}
-					/>
-				))}
-			</div>
-		</div>
-	);
+    return (
+        <div className="bg-white py-24">
+            <div className="text-center mb-16">
+                <h2 className="font-['Morganite-ExtraBold',_sans-serif] text-8xl text-black uppercase tracking-wider">Lesson Levels and Journey</h2>
+            </div>
+            <div className="max-w-7xl mx-auto px-4">
+                {levels.map((level) => (
+                    <Level
+                        key={level.title}
+                        level={level}
+                        isOpen={openLevel === level.title}
+                        onToggle={() => setOpenLevel(openLevel === level.title ? null : level.title)}
+                    />
+                ))}
+            </div>
+        </div>
+    );
 };

@@ -6,7 +6,6 @@
 import React from 'react';
 import { Button } from '../../../../components/ui/button';
 
-// Arrow Right icon component
 const ArrowRight = ({ className = 'w-6 h-6' }) => (
 	<svg className={className} viewBox='0 0 24 24' fill='none'>
 		<path
@@ -21,52 +20,28 @@ const ArrowRight = ({ className = 'w-6 h-6' }) => (
 
 export const CorporateSection = () => {
 	return (
-		<div className='relative w-full bg-white py-16'>
-			<div className='max-w-[1700px] mx-auto px-4'>
-				<div className='flex items-center gap-16'>
-					{/* Left side - image placeholder */}
-					<div className='w-[655px] h-[400px] bg-gray-400 rounded-[30px] bg-center bg-cover flex items-center justify-center'>
-						<div className='text-white text-xl font-bold opacity-50'>
-							Corporate Image
-						</div>
-					</div>
-
-					{/* Right side - content */}
-					<div className='flex-1 max-w-[655px]'>
-						{/* Section title */}
-						<h2 className='font-morganite font-extrabold text-[96px] leading-[90px] text-black uppercase tracking-[1.92px] mb-6'>
-							Corporate Programs
-						</h2>
-
-						{/* Tagline */}
-						<p className='font-TVG-typography-tagline font-gilroy font-medium text-[22px] leading-[26px] text-[#009444] uppercase tracking-[0.44px] mb-8'>
-							Golf is a great team-building and well-being tool
-						</p>
-
-						{/* Description */}
-						<div className='mb-8'>
-							<p className='font-TVG-typography-default text-[20px] leading-[28px] text-[#757575] mb-4'>
-								The Virtual Greens recognizes the importance of employee
-								wellbeing and offers various initiatives to help companies
-								support their employees.
-							</p>
-							<p className='font-TVG-typography-default text-[20px] leading-[28px] text-[#757575]'>
-								We offer company individual or group golf lessons and beginners
-								programmes that remove the barriers of traditional corporate
-								golf membership and make the sport more accessible.
-							</p>
-						</div>
-
-						{/* CTA Button */}
-						<div className='flex justify-start'>
-							<Button className='bg-[#009444] hover:bg-[#007a3a] rounded-[50px] px-8 py-8 font-TVG-typography-button text-[18px] text-white uppercase'>
-								<span>Learn More</span>
-								<ArrowRight className='w-6 h-6' />
-							</Button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div className="relative w-full bg-white py-16">
+            <div className="max-w-7xl mx-auto px-4">
+                <div className="flex items-center justify-center gap-16">
+                    <div className="w-[655px]">
+                        <img src="/freepik__background__81702-1.png" alt="Corporate Event" className="rounded-3xl" />
+                    </div>
+                    <div className="w-[655px]">
+                        <h2 className="font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-black uppercase">Corporate Programs</h2>
+                        <p className="font-TVG-typography-tagline font-[700] text-[22px] leading-[26px] tracking-[0.44px] text-[#009444] uppercase mt-4">Golf is a great team-building and well-being tool</p>
+                        <div className="font-TVG-typography-default font-[500] text-lg text-[#757575] mt-6 space-y-4">
+                            <p>The Virtual Greens recognizes the importance of employee wellbeing and offers various initiatives to help companies support their employees.</p>
+                            <p>We offer company individual or group golf lessons and beginners programmes that remove the barriers of traditional corporate golf membership and make the sport more accessible.</p>
+                        </div>
+                        <div className="mt-8">
+                            <Button className="bg-[#009444] hover:bg-[#007a3a] rounded-[50px] px-8 py-8 font-TVG-typography-button text-[18px] text-white uppercase">
+                                <span>Learn More</span>
+                                <ArrowRight className='w-6 h-6' />
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 	);
 };

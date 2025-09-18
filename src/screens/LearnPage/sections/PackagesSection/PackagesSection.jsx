@@ -1,16 +1,18 @@
 // src/screens/LearnPage/sections/PackagesSection/PackagesSection.jsx
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 // Assuming your Button component is set up correctly
 // import { Button } from '../../../../components/ui/button';
 
 // Mock Button for standalone example
-const Button = ({ className, children }) => (
-	<button
-		className={`${className} flex items-center justify-center gap-2 px-6 py-3 text-white transition-colors duration-300`}
+const Button = ({ className, children, to }) => (
+	<Link
+		to={to}
+		className={`${className} flex items-center justify-center gap-2 px-6 py-3 text-white transition-colors duration-300 no-underline`}
 	>
 		{children}
-	</button>
+	</Link>
 );
 
 // --- ICONS (New icons created to match the design) ---
@@ -84,6 +86,21 @@ const ArrowRight = ({ className = 'w-6 h-6' }) => (
 	</svg>
 );
 
+const TrophyIcon = ({ className = 'w-6 h-6' }) => (
+	<svg
+		className={className}
+		viewBox='0 0 60 60'
+		fill='none'
+		xmlns='http://www.w3.org/2000/svg'
+		aria-hidden='true'
+	>
+		<path
+			d='M17.5 52.5V47.5H27.5V39.75C25.4583 39.2917 23.6354 38.4271 22.0312 37.1562C20.4271 35.8854 19.25 34.2917 18.5 32.375C15.375 32 12.7604 30.6354 10.6562 28.2812C8.55208 25.9271 7.5 23.1667 7.5 20V17.5C7.5 16.125 7.98958 14.9479 8.96875 13.9688C9.94792 12.9896 11.125 12.5 12.5 12.5H17.5V7.5H42.5V12.5H47.5C48.875 12.5 50.0521 12.9896 51.0312 13.9688C52.0104 14.9479 52.5 16.125 52.5 17.5V20C52.5 23.1667 51.4479 25.9271 49.3438 28.2812C47.2396 30.6354 44.625 32 41.5 32.375C40.75 34.2917 39.5729 35.8854 37.9688 37.1562C36.3646 38.4271 34.5417 39.2917 32.5 39.75V47.5H42.5V52.5H17.5ZM17.5 27V17.5H12.5V20C12.5 21.5833 12.9583 23.0104 13.875 24.2812C14.7917 25.5521 16 26.4583 17.5 27ZM30 35C32.0833 35 33.8542 34.2708 35.3125 32.8125C36.7708 31.3542 37.5 29.5833 37.5 27.5V12.5H22.5V27.5C22.5 29.5833 23.2292 31.3542 24.6875 32.8125C26.1458 34.2708 27.9167 35 30 35ZM42.5 27C44 26.4583 45.2083 25.5521 46.125 24.2812C47.0417 23.0104 47.5 21.5833 47.5 20V17.5H42.5V27Z'
+			fill='currentColor'
+		/>
+	</svg>
+);
+
 export const PackagesSection = () => {
 	return (
 		// Set background back to white as requested
@@ -144,7 +161,10 @@ export const PackagesSection = () => {
 						{/* Add spacing to match middle card height */}
 						<div className='flex-grow'></div>
 						<div className='mt-auto'>
-							<Button className='w-full bg-[#009444] hover:bg-[#007a3a] rounded-[50px] py-4 font-TVG-typography-button text-[18px] uppercase tracking-wider'>
+							<Button
+								to='/contact'
+								className='w-full bg-[#009444] hover:bg-[#007a3a] rounded-[50px] py-4 font-TVG-typography-button text-[18px] uppercase tracking-wider'
+							>
 								<span>Book Evaluation</span>
 								<ArrowRight className='w-5 h-5' />
 							</Button>
@@ -253,7 +273,10 @@ export const PackagesSection = () => {
 							</div>
 						</div>
 						<div className='mt-auto pt-8'>
-							<Button className='w-full bg-[#009444] hover:bg-[#007a3a] rounded-[50px] py-4 font-TVG-typography-button text-[18px] uppercase tracking-wider'>
+							<Button
+								to='/contact'
+								className='w-full bg-[#009444] hover:bg-[#007a3a] rounded-[50px] py-4 font-TVG-typography-button text-[18px] uppercase tracking-wider'
+							>
 								<span>Book a Lesson</span>
 								<ArrowRight className='w-5 h-5' />
 							</Button>
@@ -319,7 +342,10 @@ export const PackagesSection = () => {
 						{/* Add spacing to match middle card height */}
 						<div className='flex-grow'></div>
 						<div className='mt-auto'>
-							<Button className='w-full bg-[#009444] hover:bg-[#007a3a] rounded-[50px] py-4 font-TVG-typography-button text-[18px] uppercase tracking-wider'>
+							<Button
+								to='/contact'
+								className='w-full bg-[#009444] hover:bg-[#007a3a] rounded-[50px] py-4 font-TVG-typography-button text-[18px] uppercase tracking-wider'
+							>
 								<span>Book a Bay</span>
 								<ArrowRight className='w-5 h-5' />
 							</Button>
@@ -329,33 +355,41 @@ export const PackagesSection = () => {
 			</div>
 			{/* Footer notes */}
 			<div className='text-center space-y-2 mb-16'>
-				<p className='font-TVG-typography-default text-base text-[#757575]'>
+				<p className='font-TVG-typography-default text-lg text-[#757575]'>
 					Your session data, videos, and notes are emailed to you after each
 					lesson
 				</p>
-				<p className='font-TVG-typography-default text-base text-[#757575]'>
+				<p className='font-TVG-typography-default text-lg text-[#757575]'>
 					<strong>NOTE:</strong> The prices are exclusive of 15% VAT
 				</p>
 			</div>
-			{/* Leagues banner (matching the green badge on left and white panel on right) */}
-			<div className='max-w-[1000px] mx-auto px-4'>
-				<div className='flex items-stretch gap-4'>
-					<div className='w-36 bg-[#009444] rounded-[12px] flex items-center justify-center p-4'>
-						<div className='text-white uppercase tracking-wider font-TVG-typography-tagline text-xl text-center'>
+			{/* Leagues banner */}
+			<div className='max-w-[1400px] mx-auto px-4'>
+				<div className='w-full relative rounded-[30px] bg-[#e8e8e8] h-[235px] overflow-hidden'>
+					{/* Left green section with LEAGUES text and trophy icon */}
+					<div className='absolute top-0 left-0 rounded-tl-[30px] rounded-tr-none rounded-br-none rounded-bl-[30px] bg-[#009444] w-[300px] h-full flex flex-col items-center justify-center'>
+						<TrophyIcon className='w-[60px] h-[60px] text-white mb-4' />
+						<div className='text-white font-morganite text-[64px] md:text-[80px] lg:text-[88px] font-black uppercase tracking-[0.02em] leading-[0.95] text-center'>
 							LEAGUES
 						</div>
 					</div>
-					<div className='flex-1 bg-white rounded-[12px] shadow-[0_8px_20px_rgba(0,0,0,0.04)] p-6 flex flex-col justify-center'>
-						<h4 className='font-TVG-typography-tagline text-[18px] text-black mb-2 uppercase'>
+
+					{/* Right content section */}
+					<div className='absolute left-[340px] top-0 h-full flex flex-col justify-center px-8'>
+						<h3 className='text-black font-gilroy font-bold text-[28px] uppercase mb-4 tracking-wide'>
 							JOIN THE ACTION
-						</h4>
-						<p className='font-TVG-typography-default text-[#6b6b6b] mb-4 text-sm'>
+						</h3>
+						<p className='text-black text-[18px] leading-relaxed mb-8 max-w-[600px] font-medium'>
 							Test your skills in leagues or tournaments. It's all friendly
 							competition but with guaranteed growth.
 						</p>
-						<Button className='w-max bg-[#009444] hover:bg-[#007a3a] rounded-[50px] py-2 px-4 text-white text-sm'>
-							Explore Leagues
-							<ArrowRight className='w-4 h-4' />
+
+						<Button
+							to='/contact'
+							className='bg-[#009444] hover:bg-[#007a3a] rounded-[50px] py-4 px-10 text-white text-[16px] font-medium uppercase tracking-wide w-max flex items-center gap-3 transition-colors duration-300 no-underline'
+						>
+							EXPLORE LEAGUES
+							<ArrowRight className='w-5 h-5' />
 						</Button>
 					</div>
 				</div>

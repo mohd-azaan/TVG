@@ -1,8 +1,8 @@
 
-	// src/screens/FAQPage/sections/HeroSection.jsx
-// Hero section for FAQ page with main headline, subtitle, and decorative background
-// Pixel-perfect recreation of Figma design with green background and shape overlay
-// RELEVANT FILES: FAQPage.jsx, styleguide.css, tailwind.config.js, shape14-2.svg
+// src/screens/OurStoryPage/sections/HeroSection.jsx
+// Hero section for Our Story page with main headline, subtitle, and decorative background
+// Pixel-perfect recreation of Figma design with dark background and green accent
+// RELEVANT FILES: OurStoryPage.jsx, styleguide.css, tailwind.config.js, shape14-2.svg
 
 import React from 'react';
 
@@ -27,17 +27,17 @@ export const HeroSection = () => {
 			{/* Main content container */}
 			<div className='relative z-10 max-w-[1920px] mx-auto'>
 				{/* Content positioned with absolute positioning to match Figma exactly */}
-				<div className='absolute top-[237px] left-[280px] w-[655px]'>
+				<div className='absolute top-[180px] left-[280px] w-[800px]'>
 					{/* Main title */}
 					<h1 className='font-morganite font-extrabold text-[160px] leading-[148px] text-white uppercase tracking-[3.2px] mb-6'>
-						Frequently Asked Questions
+						Our Story
 					</h1>
 				</div>
 
 				{/* Subtitle positioned exactly like Figma */}
-				<div className='absolute top-[357px] left-[843px] w-[800px]'>
+				<div className='absolute top-[340px] left-[280px] w-[800px]'>
 					<p className='font-TVG-typography-hero-text font-[number:var(--TVG-typography-hero-text-font-weight)] text-[length:var(--TVG-typography-hero-text-font-size)] leading-[var(--TVG-typography-hero-text-line-height)] tracking-[var(--TVG-typography-hero-text-letter-spacing)] text-[#dedede] [font-style:var(--TVG-typography-hero-text-font-style)]'>
-						Most answers can be found below, but if you still have a question, our team is just a message away.
+						GOLF AND A BIT OF HISTORY YOU WOULD NOT LEAST EXPECT IT
 					</p>
 				</div>
 			</div>
@@ -47,12 +47,12 @@ export const HeroSection = () => {
 				{/* Mobile layout */}
 				<div className='space-y-8 text-center'>
 					<h1 className='font-morganite font-extrabold text-[clamp(48px,10vw,120px)] leading-[1.1] tracking-[2px] text-white uppercase'>
-						Frequently Asked Questions
+						Our Story
 					</h1>
 
 					<div className='max-w-[600px] mx-auto'>
 						<p className='font-TVG-typography-hero-text font-[number:var(--TVG-typography-hero-text-font-weight)] text-[length:var(--TVG-typography-hero-text-font-size)] leading-[var(--TVG-typography-hero-text-line-height)] tracking-[var(--TVG-typography-hero-text-letter-spacing)] text-[#dedede] [font-style:var(--TVG-typography-hero-text-font-style)]'>
-							Most answers can be found below, but if you still have a question, our team is just a message away.
+							GOLF AND A BIT OF HISTORY YOU WOULD NOT LEAST EXPECT IT
 						</p>
 					</div>
 				</div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HomepageDesktop } from './screens/HomepageDesktop/HomepageDesktop';
 import AboutPage from './screens/AboutPage/AboutPage';
+import OurStoryPage from './screens/OurStoryPage/OurStoryPage';
 import PlayPage from './screens/PlayPage/PlayPage';
 import LearnPage from './screens/LearnPage/LearnPage';
 import MembershipPage from './screens/MembershipPage/MembershipPage';
@@ -23,6 +24,14 @@ export const App = () => {
 					element={
 						<MainLayout>
 							<AboutPage />
+						</MainLayout>
+					}
+				/>
+				<Route
+					path='/our-story'
+					element={
+						<MainLayout>
+							<OurStoryPage />
 						</MainLayout>
 					}
 				/>

@@ -12,13 +12,14 @@ import { SpecificationsSection } from './Sections/SpecificationsSection';
 import { CoursesSection } from './Sections/CoursesSection';
 import { GallerySection } from './Sections/GallerySection';
 import { PlanningSection } from './Sections/PlanningSection';
+import WhereToUse from './Sections/WhereToUse';
 
 export const SimulatorPage = () => {
 	return (
 		<div className='simulator-page w-full'>
 			{/* Hero Section - "BRING THE COURSE TO YOUR SPACE" */}
 			<HeroSection />
-
+			<WhereToUse />
 			{/* Features Section - "THE MOST CONVENIENT FORMS AND LOCATION" with benefit boxes */}
 			<FeaturesSection />
 

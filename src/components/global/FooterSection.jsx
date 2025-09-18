@@ -33,11 +33,11 @@ export const FooterSection = () => {
 
 				{/* "What's Happening at TVG" section */}
 				<h3 
-					className='absolute top-[317px] left-[280px] text-[#7DDB8A]'
+					className='absolute top-[317px] left-[280px] text-white font-bold'
 					style={{
 						fontFamily: 'var(--TVG-typography-footer-title-font-family)',
 						fontSize: 'var(--TVG-typography-footer-title-font-size)',
-						fontWeight: 'var(--TVG-typography-footer-title-font-weight)',
+						fontWeight: 'bold',
 						letterSpacing: 'var(--TVG-typography-footer-title-letter-spacing)',
 						lineHeight: 'var(--TVG-typography-footer-title-line-height)'
 					}}
@@ -78,97 +78,14 @@ export const FooterSection = () => {
 					</Button>
 				</div>
 
-				{/* INDOOR GOLF Column - positioned exactly like Figma */}
+				{/* COMPANY Column - positioned as first column */}
 				<div className='absolute top-[118px] left-[963px] w-[325px] h-[390px]'>
 					<h3 
-						className='absolute top-0 left-0 text-[#FFFFFF]'
+						className='absolute top-0 left-0 text-white font-bold'
 						style={{
 							fontFamily: 'var(--TVG-typography-footer-title-font-family)',
 							fontSize: 'var(--TVG-typography-footer-title-font-size)',
-							fontWeight: 'var(--TVG-typography-footer-title-font-weight)',
-							letterSpacing: 'var(--TVG-typography-footer-title-letter-spacing)',
-							lineHeight: 'var(--TVG-typography-footer-title-line-height)'
-						}}
-					>
-						INDOOR GOLF
-					</h3>
-
-					{/* Indoor Golf Links - positioned exactly like Figma */}
-					<a
-						href='#'
-						className='absolute top-[40px] left-0 text-[#7f8c8c] hover:text-[#7DDB8A] transition-colors duration-200'
-						style={{
-							fontFamily: 'var(--TVG-typography-footer-menu-font-family)',
-							fontSize: 'var(--TVG-typography-footer-menu-font-size)',
-							fontWeight: 'var(--TVG-typography-footer-menu-font-weight)',
-							letterSpacing: 'var(--TVG-typography-footer-menu-letter-spacing)',
-							lineHeight: 'var(--TVG-typography-footer-menu-line-height)'
-						}}
-					>
-						Plan your visit
-					</a>
-					<a
-						href='#'
-						className='absolute top-[80px] left-0 text-[#7f8c8c] hover:text-[#7DDB8A] transition-colors duration-200'
-						style={{
-							fontFamily: 'var(--TVG-typography-footer-menu-font-family)',
-							fontSize: 'var(--TVG-typography-footer-menu-font-size)',
-							fontWeight: 'var(--TVG-typography-footer-menu-font-weight)',
-							letterSpacing: 'var(--TVG-typography-footer-menu-letter-spacing)',
-							lineHeight: 'var(--TVG-typography-footer-menu-line-height)'
-						}}
-					>
-						Lessons
-					</a>
-					<a
-						href='#'
-						className='absolute top-[120px] left-0 text-[#7f8c8c] hover:text-[#7DDB8A] transition-colors duration-200'
-						style={{
-							fontFamily: 'var(--TVG-typography-footer-menu-font-family)',
-							fontSize: 'var(--TVG-typography-footer-menu-font-size)',
-							fontWeight: 'var(--TVG-typography-footer-menu-font-weight)',
-							letterSpacing: 'var(--TVG-typography-footer-menu-letter-spacing)',
-							lineHeight: 'var(--TVG-typography-footer-menu-line-height)'
-						}}
-					>
-						Leagues
-					</a>
-					<a
-						href='#'
-						className='absolute top-[160px] left-0 text-[#7f8c8c] hover:text-[#7DDB8A] transition-colors duration-200'
-						style={{
-							fontFamily: 'var(--TVG-typography-footer-menu-font-family)',
-							fontSize: 'var(--TVG-typography-footer-menu-font-size)',
-							fontWeight: 'var(--TVG-typography-footer-menu-font-weight)',
-							letterSpacing: 'var(--TVG-typography-footer-menu-letter-spacing)',
-							lineHeight: 'var(--TVG-typography-footer-menu-line-height)'
-						}}
-					>
-						Membership
-					</a>
-					<a
-						href='#'
-						className='absolute top-[200px] left-0 text-[#7f8c8c] hover:text-[#7DDB8A] transition-colors duration-200'
-						style={{
-							fontFamily: 'var(--TVG-typography-footer-menu-font-family)',
-							fontSize: 'var(--TVG-typography-footer-menu-font-size)',
-							fontWeight: 'var(--TVG-typography-footer-menu-font-weight)',
-							letterSpacing: 'var(--TVG-typography-footer-menu-letter-spacing)',
-							lineHeight: 'var(--TVG-typography-footer-menu-line-height)'
-						}}
-					>
-						Events
-					</a>
-				</div>
-
-				{/* COMPANY Column - positioned exactly like Figma */}
-				<div className='absolute top-[118px] left-[1318px] w-[325px] h-[390px]'>
-					<h3 
-						className='absolute top-0 left-0 text-[#FFFFFF]'
-						style={{
-							fontFamily: 'var(--TVG-typography-footer-title-font-family)',
-							fontSize: 'var(--TVG-typography-footer-title-font-size)',
-							fontWeight: 'var(--TVG-typography-footer-title-font-weight)',
+							fontWeight: 'bold',
 							letterSpacing: 'var(--TVG-typography-footer-title-letter-spacing)',
 							lineHeight: 'var(--TVG-typography-footer-title-line-height)'
 						}}
@@ -241,6 +158,89 @@ export const FooterSection = () => {
 						}}
 					>
 						Contact us
+					</a>
+				</div>
+
+				{/* INDOOR GOLF Column - positioned as second column */}
+				<div className='absolute top-[118px] left-[1318px] w-[325px] h-[390px]'>
+					<h3 
+						className='absolute top-0 left-0 text-white font-bold'
+						style={{
+							fontFamily: 'var(--TVG-typography-footer-title-font-family)',
+							fontSize: 'var(--TVG-typography-footer-title-font-size)',
+							fontWeight: 'bold',
+							letterSpacing: 'var(--TVG-typography-footer-title-letter-spacing)',
+							lineHeight: 'var(--TVG-typography-footer-title-line-height)'
+						}}
+					>
+						INDOOR GOLF
+					</h3>
+
+					{/* Indoor Golf Links - positioned exactly like Figma */}
+					<a
+						href='#'
+						className='absolute top-[40px] left-0 text-[#7f8c8c] hover:text-[#7DDB8A] transition-colors duration-200'
+						style={{
+							fontFamily: 'var(--TVG-typography-footer-menu-font-family)',
+							fontSize: 'var(--TVG-typography-footer-menu-font-size)',
+							fontWeight: 'var(--TVG-typography-footer-menu-font-weight)',
+							letterSpacing: 'var(--TVG-typography-footer-menu-letter-spacing)',
+							lineHeight: 'var(--TVG-typography-footer-menu-line-height)'
+						}}
+					>
+						Plan your visit
+					</a>
+					<a
+						href='#'
+						className='absolute top-[80px] left-0 text-[#7f8c8c] hover:text-[#7DDB8A] transition-colors duration-200'
+						style={{
+							fontFamily: 'var(--TVG-typography-footer-menu-font-family)',
+							fontSize: 'var(--TVG-typography-footer-menu-font-size)',
+							fontWeight: 'var(--TVG-typography-footer-menu-font-weight)',
+							letterSpacing: 'var(--TVG-typography-footer-menu-letter-spacing)',
+							lineHeight: 'var(--TVG-typography-footer-menu-line-height)'
+						}}
+					>
+						Lessons
+					</a>
+					<a
+						href='#'
+						className='absolute top-[120px] left-0 text-[#7f8c8c] hover:text-[#7DDB8A] transition-colors duration-200'
+						style={{
+							fontFamily: 'var(--TVG-typography-footer-menu-font-family)',
+							fontSize: 'var(--TVG-typography-footer-menu-font-size)',
+							fontWeight: 'var(--TVG-typography-footer-menu-font-weight)',
+							letterSpacing: 'var(--TVG-typography-footer-menu-letter-spacing)',
+							lineHeight: 'var(--TVG-typography-footer-menu-line-height)'
+						}}
+					>
+						Leagues
+					</a>
+					<a
+						href='#'
+						className='absolute top-[160px] left-0 text-[#7f8c8c] hover:text-[#7DDB8A] transition-colors duration-200'
+						style={{
+							fontFamily: 'var(--TVG-typography-footer-menu-font-family)',
+							fontSize: 'var(--TVG-typography-footer-menu-font-size)',
+							fontWeight: 'var(--TVG-typography-footer-menu-font-weight)',
+							letterSpacing: 'var(--TVG-typography-footer-menu-letter-spacing)',
+							lineHeight: 'var(--TVG-typography-footer-menu-line-height)'
+						}}
+					>
+						Membership
+					</a>
+					<a
+						href='#'
+						className='absolute top-[200px] left-0 text-[#7f8c8c] hover:text-[#7DDB8A] transition-colors duration-200'
+						style={{
+							fontFamily: 'var(--TVG-typography-footer-menu-font-family)',
+							fontSize: 'var(--TVG-typography-footer-menu-font-size)',
+							fontWeight: 'var(--TVG-typography-footer-menu-font-weight)',
+							letterSpacing: 'var(--TVG-typography-footer-menu-letter-spacing)',
+							lineHeight: 'var(--TVG-typography-footer-menu-line-height)'
+						}}
+					>
+						Events
 					</a>
 				</div>
 

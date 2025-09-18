@@ -73,7 +73,7 @@ export const FooterSection = () => {
 								Stay in the loop on tournaments, events, and deals
 							</p>
 
-							<Button className='flex items-center justify-center gap-4 px-8 py-4 bg-transparent hover:bg-white/10 rounded-full border-2 border-white text-white transition-colors duration-200'>
+							<Button className='flex items-center justify-center gap-4 px-8 py-3 bg-transparent hover:bg-white/10 rounded-full border-2 border-white text-white transition-colors duration-200'>
 								<img
 									className='w-8 h-8'
 									alt='WhatsApp logo'

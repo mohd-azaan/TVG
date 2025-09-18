@@ -10,10 +10,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 4. Don't Update the services or endpoints which are already confirmed and working! But your written if just optimizing then it's fine
 5. When Working with features please create a feature/\*\* branch and then implement it in that branch and ask for MERGE!, if Okay then merge it in 'develop' branch
 6. Before generating anything from scratch, check if exists and try to reuse properly
+7. for now no need of responsive just focus on Desktop view
 
 ## COMMENTS
 
-1. Write Comments in your code. Explain Exactly what you are doing in you comments.
+1. Write Comments in your code. Explain Exactly what you are doing in you comments.W
 
 ## PLAN MODE RULES
 

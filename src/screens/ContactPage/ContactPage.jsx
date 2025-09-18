@@ -1,36 +1,21 @@
-// src/screens/ContactPage/ContactPage.jsx
-// Complete Contact page component featuring hero section, contact information, form, and map
-// This component displays the full Contact page layout with all sections based on provided Figma design
-// RELEVANT FILES: App.jsx, MainLayout.jsx, styleguide.css, ContactPage.css
-
 import React from 'react';
 import '../../styleguide.css';
 import './ContactPage.css';
 import { HeroSection } from './sections/HeroSection';
-import { ContactInfoSection } from './sections/ContactInfoSection';
-import { ContactFormSection } from './sections/ContactFormSection';
-import { GoogleMapSection } from './sections/GoogleMapSection';
+import { ContactBody } from './sections/ContactBody'; // Using the new combined component
 import { ReadyToVisitSection } from './sections/ReadyToVisitSection';
 
 export const ContactPage = () => {
 	return (
 		<div className='w-full bg-white min-h-screen'>
-			{/* Hero Section - "CONTACT THE VIRTUAL GREENS" */}
+			{/* Hero Section - Untouched as per instruction */}
 			<HeroSection />
 
-			{/* Contact Info & Form Section - Contact details and contact form side by side */}
-			<section className="bg-white relative w-full min-h-[800px] py-16">
-				<div className="max-w-[1400px] mx-auto px-4 relative">
-					<div className="flex flex-col lg:flex-row gap-8">
-						<ContactInfoSection />
-						<ContactFormSection />
-					</div>
-				</div>
-				<GoogleMapSection />
-			</section>
+			{/* Combined Contact Info, Form, and Map section */}
+			<ContactBody />
 
-			{/* Ready to Visit Section - Standard CTA section */}
-			<ReadyToVisitSection />
+			{/* Ready to Visit Section - Untouched */}
+			{/* <ReadyToVisitSection /> */}
 		</div>
 	);
 };

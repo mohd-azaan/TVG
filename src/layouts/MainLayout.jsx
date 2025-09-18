@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Navbar from '../components/global/Navbar';
 import { TestimonialsSection } from '../components/global/TestimonialsSection';
 import { CallToActionSection } from '../components/global/CallToActionSection';
@@ -7,6 +8,13 @@ import { MobileComingSoon } from '../components/global/MobileComingSoon';
 import { TestimonialProvider } from '../contexts/TestimonialContext';
 
 export const MainLayout = ({ children }) => {
+	const location = useLocation();
+
+	// Smooth scroll to top when route changes
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}, [location.pathname]);
+
 	return (
 		<TestimonialProvider>
 			{/* Mobile-only coming soon experience */}

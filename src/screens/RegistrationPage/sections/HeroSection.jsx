@@ -1,73 +1,57 @@
-// src/screens/RegistrationPage/sections/HeroSection.jsx
-// Hero section for Registration page with "Join The 96" title and decorative background
-// Pixel-perfect recreation of Figma design with proper typography and background elements
-// RELEVANT FILES: RegistrationPage.jsx, styleguide.css, tailwind.config.js
 
-import React from 'react';
+const imgGroup = "http://localhost:3845/assets/d230ca1d6b764f5d8b3db692c524015d9597e87f.svg";
+const imgVector = "http://localhost:3845/assets/055c39ab8d25d54bc5a606ccafb013e90b0a2731.svg";
+const imgVector1 = "http://localhost:3845/assets/555294d2bd71056770063a68ff71175764b452f7.svg";
+const imgVector2 = "http://localhost:3845/assets/660b5111503e1fcd4bc9a0af0bb5e4171f7753d5.svg";
 
 export const HeroSection = () => {
-	return (
-		<section className='relative w-full h-[591px] bg-[#102121] overflow-hidden'>
-			{/* Green background section at bottom */}
-			<div className='absolute bottom-0 left-0 w-full h-[335px] bg-[#006f33]' />
-
-			{/* Decorative background shape - Complex SVG background */}
-			<div className='absolute top-[33.91px] left-[341.98px] w-[2102px] h-[1454px] transform rotate-[348.049deg] opacity-30'>
-				<div className='relative w-full h-full'>
-					{/* Main decorative shape group */}
-					<div className='absolute inset-0 mix-blend-screen'>
-						<div
-							className='w-full h-full'
-							style={{
-								background: `url('http://localhost:3845/assets/d230ca1d6b764f5d8b3db692c524015d9597e87f.svg') no-repeat center`,
-								backgroundSize: 'contain'
-							}}
-						/>
-					</div>
-					{/* Additional decorative vectors */}
-					<div className='absolute' style={{ top: '41.71%', left: '15.3%', width: '59.2%', height: '38.17%' }}>
-						<img
-							src="http://localhost:3845/assets/660b5111503e1fcd4bc9a0af0bb5e4171f7753d5.svg"
-							alt=""
-							className='w-full h-full object-contain'
-						/>
-					</div>
-				</div>
-			</div>
-
-			{/* Main content container */}
-			<div className='relative z-10 max-w-[1920px] mx-auto h-full flex items-center'>
-				{/* Main title - positioned exactly like Figma */}
-				<div className='absolute left-[280px] top-[296px] w-[655px]'>
-					<h1 className='font-[var(--font-morganite)] text-[110px] leading-[100px] tracking-[2.2px] text-white uppercase'>
-						Join<br />
-						The 96
-					</h1>
-				</div>
-
-				{/* Descriptive text - positioned exactly like Figma */}
-				<div className='absolute left-[690px] top-[323px] w-[800px]'>
-					<div className='font-gilroy font-medium text-[24px] text-[#dedede] leading-normal'>
-						<p>Membership at TVG is limited to just 96 individuals each year. Secure your place today and enjoy full benefits, including exclusive partner access for your first year.</p>
-						<p className="mt-4">Register now to secure your spot and receive onboarding details.</p>
-					</div>
-				</div>
-			</div>
-
-			{/* Responsive mobile layout */}
-			<div className='block lg:hidden relative z-10 px-4 sm:px-6 pt-24 pb-16 h-full flex flex-col justify-center'>
-				<div className='space-y-6'>
-					<h1 className='font-TVG-typography-hero-title2 font-[number:var(--TVG-typography-hero-title2-font-weight)] text-[clamp(60px,12vw,110px)] leading-[1.1] tracking-[2.2px] text-white uppercase'>
-						Join The 96
-					</h1>
-
-					<div className='max-w-[600px]'>
-						<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[18px] sm:text-[20px] leading-[28px] text-[#dedede]'>
-							Membership at TVG is limited to just 96 individuals each year. Secure your place today and enjoy full benefits, including exclusive partner access for your first year.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-	);
-};
+  return (
+    <div className="bg-[#272727] relative w-full h-[591px]" data-name="Hero" data-node-id="3059:3548">
+      <div className="absolute bg-[#006f33] h-[335px] left-0 top-[558px] w-full" data-node-id="3059:3549" />
+      <div className="absolute h-[1080px] w-[1920px] top-0 left-0 overflow-hidden">
+        <div
+          className="absolute w-[2102.03px] h-[1454.19px] top-[431.51px] left-[341.98px] transform rotate-[348.05deg]"
+          data-name="Shape14 2"
+          data-node-id="3059:3550"
+        >
+          <div className="absolute w-[1888.04px] h-[931.39px] left-[116.38px] top-[363.78px]" data-name="Group" data-node-id="3059:3551">
+            <div className="absolute w-full h-full" data-name="Layer 1" data-node-id="3059:3552">
+              <div className="absolute w-full h-full mix-blend-screen" data-name="Group" data-node-id="3059:3553">
+                <div className="absolute w-full h-full mix-blend-screen" data-name="Group" data-node-id="3059:3554">
+                  <img alt="background shape" className="block max-w-none size-full" src={imgGroup} />
+                </div>
+              </div>
+              <div className="absolute w-[701.15px] h-[328.39px] left-[611.98px] top-[478.69px]" data-name="Group" data-node-id="3059:3596">
+                <div className="absolute w-[687.98px] h-[275.11px] left-0 top-[165.36px] mix-blend-screen">
+                  <div className="relative w-[165.5px] h-[669.74px] transform -rotate-[82.33deg] translate-x-[256.13px] -translate-y-[253.43px]">
+                    <div className="relative size-full" data-name="Vector" data-node-id="3059:3597">
+                      <img alt="background shape" className="block max-w-none size-full" src={imgVector} />
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute w-[445.7px] h-[191.1px] left-[119.88px] top-[147.8px] mix-blend-screen">
+                  <div className="relative w-[120.66px] h-[431.6px] transform -rotate-[82.33deg] translate-x-[155.47px] -translate-y-[155.47px]">
+                    <div className="relative size-full" data-name="Vector" data-node-id="3059:3598">
+                      <img alt="background shape" className="block max-w-none size-full" src={imgVector1} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute w-[1285.15px] h-[654.26px] left-[399.13px] top-[450.51px]" data-name="Vector" data-node-id="3059:3599">
+                <img alt="background shape" className="block max-w-none size-full" src={imgVector2} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute flex items-start justify-start top-[323px] left-1/2 -translate-x-1/2" data-name="Text box" data-node-id="3059:3600" style={{ left: "calc(50% + 130px)" }}>
+        <p className="font-gilroy text-xl leading-7 text-[#dedede] w-[800px]" data-node-id="3059:3601">
+          Membership at TVG is limited to just 96 individuals each year. Secure your place today and enjoy full benefits, including exclusive partner access for your first year.
+        </p>
+      </div>
+      <p className="absolute font-morganite text-[110px] leading-[100px] left-[280px] text-white top-[296px] tracking-[2.2px] uppercase w-[655px]" data-node-id="3059:3602">
+        Join The 96
+      </p>
+    </div>
+  );
+}

@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '../ui/button';
 
-const FooterLink = ({ href, children }) => (
-    <a href={href} className="block text-[#7f8c8c] hover:text-[#7DDB8A] transition-colors duration-200 font-gilroy text-lg py-1">
+const FooterLink = ({ to, children }) => (
+    <Link to={to} className="block text-[#7f8c8c] hover:text-[#7DDB8A] transition-colors duration-200 font-gilroy text-lg py-1">
         {children}
-    </a>
+    </Link>
 );
 
 const SocialIcon = ({ href, alt, src }) => (
-    <a href={href} className="opacity-80 hover:opacity-100 transition-opacity">
+    <a href={href} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
         <img className="h-7" alt={alt} src={src} />
     </a>
 );
@@ -30,10 +31,10 @@ export const FooterSection = () => {
                             <p className="font-gilroy text-lg text-[#7f8c8c] leading-relaxed">
                                 Stay in the loop on tournaments, events, and deals
                             </p>
-                            <Button className='flex items-center justify-center gap-3 px-8 py-7 bg-transparent hover:bg-white/10 rounded-full border-2 border-white text-white transition-colors duration-200 w-full max-w-sm'>
+                            <a href="https://whatsapp.com/channel/0029VaAbc123XYZ456" target="_blank" rel="noopener noreferrer" className='flex items-center justify-center gap-3 px-8 py-4 bg-transparent hover:bg-white/10 rounded-full border-2 border-white text-white transition-colors duration-200 w-full max-w-sm'>
                                 <img className='w-7 h-7' alt='WhatsApp logo' src='/whatsapp-logo-variant-svgrepo-com-1.svg' />
                                 <span className='font-semibold tracking-wide font-gilroy text-base whitespace-nowrap'>Subscribe To WhatsApp Channel</span>
-                            </Button>
+                            </a>
                         </div>
                     </div>
 
@@ -44,11 +45,11 @@ export const FooterSection = () => {
                     <div className="md:col-span-2 space-y-4">
                         <h3 className="font-gilroy font-bold text-lg uppercase">COMPANY</h3>
                         <div className="space-y-2">
-                            <FooterLink href="#">About us</FooterLink>
-                            <FooterLink href="#">Own/Rent simulators</FooterLink>
-                            <FooterLink href="#">Partner with us</FooterLink>
-                            <FooterLink href="#">Terms & Conditions</FooterLink>
-                            <FooterLink href="#">Contact us</FooterLink>
+                            <FooterLink to="/about">About us</FooterLink>
+                            <FooterLink to="/simulator">Own/Rent simulators</FooterLink>
+                            <FooterLink to="/partnership">Partner with us</FooterLink>
+                            <FooterLink to="/faq">Terms & Conditions</FooterLink>
+                            <FooterLink to="/contact">Contact us</FooterLink>
                         </div>
                     </div>
 
@@ -56,17 +57,17 @@ export const FooterSection = () => {
                     <div className="md:col-span-3 space-y-4">
                         <h3 className="font-gilroy font-bold text-lg uppercase">INDOOR GOLF</h3>
                         <div className="space-y-2">
-                            <FooterLink href="#">Plan your visit</FooterLink>
-                            <FooterLink href="#">Lessons</FooterLink>
-                            <FooterLink href="#">Leagues</FooterLink>
-                            <FooterLink href="#">Membership</FooterLink>
-                            <FooterLink href="#">Events</FooterLink>
+                            <FooterLink to="/contact">Plan your visit</FooterLink>
+                            <FooterLink to="/learn">Lessons</FooterLink>
+                            <FooterLink to="/leagues">Leagues</FooterLink>
+                            <FooterLink to="/membership">Membership</FooterLink>
+                            <FooterLink to="/events">Events</FooterLink>
                         </div>
                         <div className="flex items-center gap-5 pt-8">
-                            <SocialIcon href="#" alt="Instagram" src="/images/Instagram.svg" />
-                            <SocialIcon href="#" alt="YouTube" src="/images/Youtube.svg" />
-                            <SocialIcon href="#" alt="LinkedIn" src="/images/Linkedin.svg" />
-                            <SocialIcon href="#" alt="Tiktok" src="/images/Tiktok.svg" />
+                            <SocialIcon href="https://instagram.com/thevirtualgreens" alt="Instagram" src="/images/Instagram.svg" />
+                            <SocialIcon href="https://youtube.com/@thevirtualgreens" alt="YouTube" src="/images/Youtube.svg" />
+                            <SocialIcon href="https://linkedin.com/company/thevirtualgreens" alt="LinkedIn" src="/images/Linkedin.svg" />
+                            <SocialIcon href="https://tiktok.com/@thevirtualgreens" alt="Tiktok" src="/images/Tiktok.svg" />
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <!-- v26396 -->
+
+
+  <title>Guide to the Dev Mode MCP Server &ndash; Figma Learn - Help Center</title>
+
+  
+
+  <meta name="description" content="🚧 The Dev Mode MCP Server is currently in open beta. Some functions and settings may not yet be available. The feature may change and you..." /><meta property="og:image" content="https://help.figma.com/hc/theming_assets/01HZFG1N1QJPKABHT3PHQQ0J9J" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Figma Learn - Help Center" />
+<meta property="og:title" content="Guide to the Dev Mode MCP Server" />
+<meta property="og:description" content="🚧 The Dev Mode MCP Server is currently in open beta. Some functions and settings may not yet be available. The feature may change and you may experience bugs or performance issues during the beta p..." />
+<meta property="og:url" content="https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server" />
+<link rel="canonical" href="https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server">
+<link rel="alternate" hreflang="de" href="https://help.figma.com/hc/de/articles/32132100833559-Leitfaden-zum-Dev-Mode-MCP-Server">
+<link rel="alternate" hreflang="en-us" href="https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server">
+<link rel="alternate" hreflang="es" href="https://help.figma.com/hc/es-es/articles/32132100833559-Gu%C3%ADa-del-servidor-MCP-en-Dev-Mode">
+<link rel="alternate" hreflang="es-419" href="https://help.figma.com/hc/es-419/articles/32132100833559-Gu%C3%ADa-del-servidor-MCP-en-Dev-Mode">
+<link rel="alternate" hreflang="es-es" href="https://help.figma.com/hc/es-es/articles/32132100833559-Gu%C3%ADa-del-servidor-MCP-en-Dev-Mode">
+<link rel="alternate" hreflang="fr" href="https://help.figma.com/hc/fr/articles/32132100833559-Guide-du-serveur-MCP-en-Dev-Mode">
+<link rel="alternate" hreflang="ja" href="https://help.figma.com/hc/ja/articles/32132100833559-Dev-Mode-MCP%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E5%88%A9%E7%94%A8%E3%82%AC%E3%82%A4%E3%83%89">
+<link rel="alternate" hreflang="ko" href="https://help.figma.com/hc/ko/articles/32132100833559-Dev-Mode-MCP-%EC%84%9C%EB%B2%84-%EC%95%88%EB%82%B4%EC%84%9C">
+<link rel="alternate" hreflang="nl-nl" href="https://help.figma.com/hc/nl-nl/articles/32132100833559-Handleiding-voor-de-MCP-server-in-Dev-Mode">
+<link rel="alternate" hreflang="pl-pl" href="https://help.figma.com/hc/pl-pl/articles/32132100833559-Przewodnik-po-serwerze-MCP-w-Dev-Mode">
+<link rel="alternate" hreflang="pt-br" href="https://help.figma.com/hc/pt-br/articles/32132100833559-Guia-para-o-servidor-MCP-do-Dev-Mode">
+<link rel="alternate" hreflang="x-default" href="https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server">
+
+  <link rel="stylesheet" href="//static.zdassets.com/hc/assets/application-3566fe63d022e25f84041ca8d54a727b.css" media="all" id="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="/hc/theming_assets/9325143/360002676493/style.css?digest=34983359029527">
+
+  <link rel="icon" type="image/x-icon" href="/hc/theming_assets/01HZFG1NHWKZA6P3KEG8EQ31YX">
+
+    
+    
+
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta property="og:image" content="https://help.figma.com/hc/theming_assets/01JMYWSNCNTYE97HCPWWCJNSRN" />
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link rel="stylesheet" href="/hc/theming_assets/01HZFG1DTG8R13CABP5NVF1P1X" />
+<link rel="stylesheet" href="/hc/theming_assets/01JZTGBH4CRGW9YQ0E77GT4A6N" />
+<link rel="stylesheet" href="/hc/theming_assets/01K3H5WQ5WKYH165001EHCAA5A" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.18.0/URI.min.js"></script>
+
+<script src="/hc/theming_assets/01HZFG190S3X3KQSCHW2KF60M8"></script>
+<script src="/hc/theming_assets/01HZFG1AR5D59E2783S5ZDV7QF"></script>
+<script src="/hc/theming_assets/01HZFG1HJ7SJQNVDZSNN61RMXY"></script>
+<script src="/hc/theming_assets/01HZFG14YEGNT9ZYCF8A3YST30"></script>
+  
+</head>
+<body class="">
+  
+  
+  
+
+  <header class="header-wrapper">
+    <div class="header">
+        <a title="Home" href="/hc/en-us">
+            <div class="logo">
+                <span class="logo-text"><strong>Figma</strong> Learn</span>
+            </div>
+        </a>
+        <div class="mega-nav-items">
+            <nav>
+                <a href="https://help.figma.com/hc/categories/360002051613-Get-started" class="body body-regular">Get started</a>
+                <button id="MenuProduct" class="body body-regular" aria-label="Click to open product documentation menu">Product documentation</button>
+                <button id="MenuAdmin" class="body body-regular" aria-label="Click to open administration menu">Administration</button>
+                <button id="MenuCourses" class="body body-regular" aria-label="Click to open courses, tutorials, and projects documentation menu">Courses, tutorials, projects</button>
+                <button id="MenuHelp" class="body body-regular" aria-label="Click to open help menu">Help</button>
+            </nav>
+        </div>
+        <div class="grid grid-flow-col items-center gap-1 sm:gap-6">
+            <div class="header-signup-wrapper">
+                <div class="search-wrapper header-search">
+                    <section
+                        class="search-overlay fixed left-4 right-4 top-[160px] z-50 m-auto hidden max-w-[600px] flex-col justify-end gap-2 rounded-[13px] border border-solid border-black bg-white shadow-lg shadow-black/50 sm:left-0 sm:right-0"
+                    >
+                        <div class="hidden grid-flow-col gap-3 self-end p-3 pb-1 text-sm text-zinc-500 sm:grid">
+                            <span><kbd>enter</kbd>to select</span>
+                            <span><kbd>↑</kbd><kbd>↓</kbd>to navigate</span>
+                            <span><kbd>esc</kbd>to close</span>
+                        </div>
+                        <form role="search" class="search" data-search="" data-instant="true" autocomplete="off" action="/hc/en-us/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><input type="search" name="query" id="query" placeholder="Search components, styles, auto layout, etc..." autocomplete="off" aria-label="Search components, styles, auto layout, etc..." /></form>
+                    </section>
+                    
+                    <button class="grid grid-flow-col items-center gap-1 rounded-full border-none bg-transparent px-3 py-2 transition-all hover:bg-zinc-200" id="ActionSearch">
+                        <img src="/hc/theming_assets/01JYKS7CZ94QTYRX1XR0HPP9MS" class="h-7 w-7" />
+                        <div class="search-keys grid grid-flow-col gap-1 text-black">
+                        </div>
+                    </button>
+                </div>
+            </div>
+            
+                <span id="HeaderSignup">
+                    <fl-button text="Sign up" href="https://www.figma.com/zendesk/sso?locale=en-us"></fl-button>
+                </span>
+            
+        </div>
+    </div>
+    <div class="mega-nav-menu">
+        <div class="mega-nav-content-wrapper">
+            <div class="content-desktop">
+                <section id="MenuProduct" class="flex flex-col">
+                    
+                    <div class="grid grid-cols-4 gap-12">
+                        <article>
+                            <a href="https://help.figma.com/hc/categories/360002042553" class="group block">
+                                <div class="mb-4 flex flex-col gap-1">
+                                    <p class="body !m-0 !p-0 text-2xl font-light group-hover:underline">Figma Design</p>
+                                    <p class="!m-0 !p-0 text-[1.15rem] font-light leading-6 text-[#697485]">Design and prototype in one place</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article>
+                            <a href="https://help.figma.com/hc/sections/15023066873239" class="group block">
+                                <div class="mb-4 flex flex-col gap-1">
+                                    <p class="body !m-0 !p-0 text-2xl font-light group-hover:underline">Dev Mode</p>
+                                    <p class="!m-0 !p-0 text-[1.15rem] font-light leading-6 text-[#697485]">Translate designs into code</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article>
+                            <a href="https://help.figma.com/hc/categories/360002051633" class="group block">
+                                <div class="mb-4 flex flex-col gap-1">
+                                    <p class="body !m-0 !p-0 text-2xl font-light group-hover:underline">FigJam</p>
+                                    <p class="!m-0 !p-0 text-[1.15rem] font-light leading-6 text-[#697485]">Collaborate with a digital whiteboard</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article>
+                            <a href="https://help.figma.com/hc/categories/24146015318551" class="group block">
+                                <div class="mb-4 flex flex-col gap-1">
+                                    <p class="body !m-0 !p-0 text-2xl font-light group-hover:underline">Figma Slides</p>
+                                    <p class="!m-0 !p-0 text-[1.15rem] font-light leading-6 text-[#697485]">Co-create presentations</p>
+                                </div>
+                            </a>
+                        </article>
+                        
+                        <article>
+                            <a href="https://help.figma.com/hc/sections/31830768959511" class="group block">
+                                <div class="mb-4 flex flex-col gap-1">
+                                    <div class="flex items-center gap-2">
+                                        <p class="body !m-0 !p-0 text-2xl font-light group-hover:underline">Figma Draw</p>
+                                        <span class="nav-tag tag-default">New</span>
+                                    </div>
+                                    <p class="!m-0 !p-0 text-[1.15rem] font-light leading-6 text-[#697485]">Illustrate with advanced vector tools</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article>
+                            <a href="https://help.figma.com/hc/categories/31194838351767" class="group block">
+                                <div class="mb-4 flex flex-col gap-1">
+                                    <div class="flex items-center gap-2">
+                                        <p class="body !m-0 !p-0 text-2xl font-light group-hover:underline">Figma Buzz</p>
+                                        <span class="nav-tag tag-default">Beta</span>
+                                    </div>
+                                    <p class="!m-0 !p-0 text-[1.15rem] font-light leading-6 text-[#697485]">Produce on-brand assets at scale</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article>
+                            <a href="https://help.figma.com/hc/categories/31823555275671" class="group block">
+                                <div class="mb-4 flex flex-col gap-1">
+                                    <div class="flex items-center gap-2">
+                                        <p class="body !m-0 !p-0 text-2xl font-light group-hover:underline">Figma Sites</p>
+                                        <span class="nav-tag tag-default">Beta</span>
+                                    </div>
+                                    <p class="!m-0 !p-0 text-[1.15rem] font-light leading-6 text-[#697485]">Publish fully responsive websites</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article>
+                            <a href="https://help.figma.com/hc/categories/31304285531543" class="group block">
+                                <div class="mb-4 flex flex-col gap-1">
+                                    <div class="flex items-center gap-2">
+                                        <p class="body !m-0 !p-0 text-2xl font-light group-hover:underline">Figma Make</p>
+                                    </div>
+                                    <p class="!m-0 !p-0 text-[1.15rem] font-light leading-6 text-[#697485]">Prompt to code anything you can imagine</p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    
+                    <div class="grid grid-cols-4 gap-12 border-0 border-t border-solid border-gray-200 pt-10">
+                        <article>
+                            <a href="https://help.figma.com/hc/en-us/sections/24369548041111" class="group block">
+                                <div class="mb-4 flex flex-col gap-1">
+                                    <p class="body !m-0 !p-0 text-2xl font-light group-hover:underline">AI</p>
+                                    <p class="!m-0 !p-0 text-[1.15rem] font-light leading-6 text-[#697485]">Explore all Figma AI features</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article>
+                            <a href="https://help.figma.com/hc/categories/23556790977431" class="group block">
+                                <div class="mb-4 flex flex-col gap-1">
+                                    <p class="body !m-0 !p-0 text-2xl font-light group-hover:underline">Work across Figma</p>
+                                    <p class="!m-0 !p-0 text-[1.15rem] font-light leading-6 text-[#697485]">Learn how Figma tools work together</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article>
+                            <a href="https://www.figma.com/developers" class="group block">
+                                <div class="mb-4 flex flex-col gap-1">
+                                    <p class="body !m-0 !p-0 text-2xl font-light group-hover:underline">Developer docs</p>
+                                    <p class="!m-0 !p-0 text-[1.15rem] font-light leading-6 text-[#697485]">Work with APIs, embeds, and more</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article>
+                            <a href="https://help.figma.com/hc/en-us/categories/360002772634" class="group block">
+                                <div class="mb-4 flex flex-col gap-1">
+                                    <p class="body !m-0 !p-0 text-2xl font-light group-hover:underline">Figma Community</p>
+                                    <p class="!m-0 !p-0 text-[1.15rem] font-light leading-6 text-[#697485]">Discover resources from other Figma creators</p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+                <section id="MenuAdmin">
+                    <div class="nav-list-category nav-list-size-4">
+                        <p class="body body-eyebrow">For everyone</p>
+                        <div class="nav-list-items">
+                            <div class="nav-list">
+                                <a href="https://help.figma.com/hc/sections/360006479433" class="body text-lg font-normal">Account</a>
+                                <ul class="body body-regular">
+                                    <li><a href="https://help.figma.com/hc/sections/4403936365591">Manage settings</a></li>
+                                    <li><a href="https://help.figma.com/hc/sections/4403936364311">Change preferences</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-list">
+                                <a href="https://help.figma.com/hc/sections/360006050633" class="body text-lg font-normal">Files and projects</a>
+                                <ul class="body body-regular">
+                                    <li><a href="https://help.figma.com/hc/sections/13166486919191">Use the file browser</a></li>
+                                    <li><a href="https://help.figma.com/hc/sections/13166489863319">Manage files and projects</a></li>
+                                    <li><a href="https://help.figma.com/hc/sections/1500001331382">Sharing and permissions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-list-category nav-list-size-8">
+                        <p class="body body-eyebrow">For administration</p>
+                        <div class="nav-list-items-flexible">
+                            <div class="nav-list">
+                                <a href="https://help.figma.com/hc/sections/4421076253719" class="body text-lg font-normal">Billing</a>
+                                <ul class="body body-regular">
+                                    <li><a href="https://help.figma.com/hc/sections/4403936381463">Overview</a></li>
+                                    <li><a href="https://help.figma.com/hc/sections/20830735292567">Manage seats</a></li>
+                                    <li><a href="https://help.figma.com/hc/sections/4403929058327">Manage your plan</a></li>
+                                    <li><a href="https://help.figma.com/hc/sections/1500001018842">Pay for Figma
+                                        </a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-list">
+                                <a href="https://help.figma.com/hc/sections/360006457394" class="body text-lg font-normal">Teams</a>
+                                <ul class="body body-regular">
+                                    <li><a href="https://help.figma.com/hc/sections/360006457394">Manage a team</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-list">
+                                <a href="https://help.figma.com/hc/sections/360006606913" class="body text-lg font-normal">Organizations</a>
+                                <ul class="body body-regular">
+                                    <li><a href="https://help.figma.com/hc/sections/20832795476375">Overview</a></li>
+                                    <li><a href="https://help.figma.com/hc/sections/4403936348311">Login and authentication</a></li>
+                                    <li><a href="https://help.figma.com/hc/sections/4403928836759">Deploy Figma</a></li>
+                                    <li><a href="https://help.figma.com/hc/sections/4403928781847">Members and guests</a></li>
+                                    <li><a href="https://help.figma.com/hc/sections/20832780119959">Teams</a></li>
+                                    <li><a href="https://help.figma.com/hc/sections/4403928823063">Libraries and resources</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-list">
+                                <a href="https://help.figma.com/hc/sections/20832705104407" class="body text-lg font-normal">Enterprise</a>
+                                <ul class="body body-regular">
+                                    <li><a href="https://help.figma.com/hc/sections/19100866155543">Billing groups</a></li>
+                                    <li><a href="https://help.figma.com/hc/sections/4419363208855">Workspaces</a></li>
+                                    <li><a href="https://help.figma.com/hc/sections/20833164749719">Security features</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="MenuCourses">
+                    <div class="nav-list-category nav-list-size-12">
+                        <p class="body body-eyebrow">Find out more</p>
+                        <div class="nav-list-items">
+                            <a href="https://help.figma.com/hc/sections/23691657321239" class="nav-list nav-list-size-3 group">
+                                <div class="nav-list-title">
+                                    <span class="nav-list-icon list-ic-learn-courses"></span>
+                                    <div class="nav-title-tag">
+                                        <p class="body text-lg font-normal group-hover:underline">Courses</p>
+                                        <span class="nav-tag tag-default">New</span>
+                                    </div>
+                                </div>
+                                <p class="body body-regular">Level up your Figma skills with these comprehensive skill-based courses.</p>
+                            </a>
+                            <a href="https://help.figma.com/hc/sections/13148624530967" class="nav-list nav-list-size-3 group">
+                                <div class="nav-list-title">
+                                    <span class="nav-list-icon list-ic-learn-mini-project"></span>
+                                    <div class="nav-title-tag">
+                                        <p class="body text-lg font-normal group-hover:underline">Projects</p>
+                                    </div>
+                                </div>
+                                <p class="body body-regular">Get hands-on experience in Figma with these practical bite-sized projects.</p>
+                            </a>
+                            <a href="https://www.youtube.com/@Figma" class="nav-list nav-list-size-3 group">
+                                <div class="nav-list-title">
+                                    <span class="nav-list-icon list-ic-learn-tutorial"></span>
+                                    <div class="nav-title-tag">
+                                        <p class="body text-lg font-normal group-hover:underline">Tutorials</p>
+                                    </div>
+                                </div>
+                                <p class="body body-regular">Explore tools and features by watching and following along with these expert-led video tutorials.</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section id="MenuHelp">
+                    <div class="nav-list-category nav-list-size-9">
+                        <p class="body body-eyebrow">Get solutions</p>
+                        <div class="nav-list-items">
+                            <a href="https://help.figma.com/hc/sections/1500000378401" class="nav-list nav-list-size-3 group">
+                                <div class="nav-list-title">
+                                    <div class="nav-title-tag">
+                                        <p class="body text-lg font-normal group-hover:underline">Troubleshoot</p>
+                                    </div>
+                                </div>
+                                <p class="body body-regular">Get help with common issues and troubleshoot unexpected behavior.</p>
+                            </a>
+                            <a href="https://help.figma.com/hc/sections/19818052690455" class="nav-list nav-list-size-3 group">
+                                <div class="nav-list-title">
+                                    <div class="nav-title-tag">
+                                        <p class="body text-lg font-normal group-hover:underline">Work with support</p>
+                                    </div>
+                                </div>
+                                <p class="body body-regular">Submit a bug report, get help collecting log files, and find your system information.</p>
+                            </a>
+                            <a href="https://help.figma.com/hc/sections/13148115222551" class="nav-list nav-list-size-3 group">
+                                <div class="nav-list-title">
+                                    <div class="nav-title-tag">
+                                        <p class="body text-lg font-normal group-hover:underline">Common questions</p>
+                                    </div>
+                                </div>
+                                <p class="body body-regular">Get answers to frequently asked questions.</p>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="https://forum.figma.com/" class="nav-featured-card featured-gray nav-list-size-3">
+                        <div class="nav-list">
+                            <div class="nav-list-title">
+                                <span class="nav-list-icon list-ic-forum"></span>
+                                <p class="body text-lg font-normal">Figma Community Forum</p>
+                            </div>
+                            <p class="body body-regular">Ask the community, share ideas, and connect with other Figma users.</p>
+                        </div>
+                    </a>
+                </section>
+            </div>
+            <div class="content-mobile">
+                <nav id="MenuMobileContent">
+                    <a href="https://help.figma.com/hc/categories/360002051613-Get-started" class="body body-medium">Get started</a>
+                    <div class="body body-medium">
+                        <button id="MenuMobileProduct">Product documentation</button>
+                        <div id="MenuMobileProduct" class="body body-regular">
+                            <div class="mobile-nav-list">
+                                <span class="body body-eyebrow">Products</span>
+                                <a href="https://help.figma.com/hc/categories/360002042553">Figma Design</a>
+                                <a href="https://help.figma.com/hc/sections/15023066873239">Dev Mode</a>
+                                <a href="https://help.figma.com/hc/categories/360002051633">FigJam</a>
+                                <a href="https://help.figma.com/hc/categories/24146015318551">Figma Slides</a>
+                                <a href="https://help.figma.com/hc/sections/31830768959511" class="group flex items-center gap-2">
+                                    <p class="!m-0 !p-0 group-hover:underline">Figma Draw</p>
+                                    <span class="nav-tag tag-default">New</span>
+                                </a>
+                                <a href="https://help.figma.com/hc/categories/31823555275671" class="group flex items-center gap-2">
+                                    <p class="!m-0 !p-0 group-hover:underline">Figma Sites</p>
+                                    <span class="nav-tag tag-default">Beta</span>
+                                </a>
+                                <a href="https://help.figma.com/hc/categories/31304285531543" class="group flex items-center gap-2">
+                                    <p class="!m-0 !p-0 group-hover:underline">Figma Make</p>
+                                </a>
+                                <a href="https://help.figma.com/hc/categories/31194838351767" class="group flex items-center gap-2">
+                                    <p class="!m-0 !p-0 group-hover:underline">Figma Buzz</p>
+                                    <span class="nav-tag tag-default">Beta</span>
+                                </a>
+                            </div>
+                            <div class="mobile-nav-list">
+                                <span class="body body-eyebrow">Features</span>
+                                <a href="https://help.figma.com/hc/en-us/sections/24369548041111">AI</a>
+                                <a href="https://help.figma.com/hc/sections/23691965907223">Work across Figma</a>
+                                <a href="https://help.figma.com/hc/sections/23691965907223">Developer docs</a>
+                                <a href="https://help.figma.com/hc/en-us/categories/360002772634">Figma Community</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body body-medium">
+                        <button id="MenuMobileAdmin">Administration</button>
+                        <div id="MenuMobileAdmin" class="body body-regular">
+                            <div class="mobile-nav-list">
+                                <span class="body body-eyebrow">For everyone</span>
+                                <a href="https://help.figma.com/hc/sections/360006479433">Account</a>
+                                <a href="https://help.figma.com/hc/sections/360006050633">Files and projects</a>
+                            </div>
+                            <div class="mobile-nav-list">
+                                <span class="body body-eyebrow">For administration</span>
+                                <a href="https://help.figma.com/hc/sections/4421076253719">Billing</a>
+                                <a href="https://help.figma.com/hc/sections/360006457394">Teams </a>
+                                <a href="https://help.figma.com/hc/sections/360006606913">Organizations </a>
+                                <a href="https://help.figma.com/hc/sections/20832705104407">Enterprise
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body body-medium">
+                        <button id="MenuMobileCourses">Courses, tutorials, projects</button>
+                        <div id="MenuMobileCourses" class="body body-regular">
+                            <div class="mobile-nav-list">
+                                <span class="body body-eyebrow">Find out more</span>
+                                <a href="https://help.figma.com/hc/sections/23691657321239">Courses</a>
+                                <a href="https://help.figma.com/hc/sections/13148624530967">Projects</a>
+                                <a href="https://www.youtube.com/@Figma">Tutorials</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body body-medium">
+                        <button id="MenuMobileHelp">Help</button>
+                        <div id="MenuMobileHelp" class="body body-regular">
+                            <div class="mobile-nav-list">
+                                <span class="body body-eyebrow">Get solutions</span>
+                                <a href="https://help.figma.com/hc/sections/1500000378401">Troubleshoot</a>
+                                <a href="https://help.figma.com/hc/sections/19818052690455">Work with support</a>
+                                <a href="https://help.figma.com/hc/sections/13148115222551">Common questions</a>
+                                <a href="https://forum.figma.com/">Figma Community Forum</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+  <main role="main">
+    <script src="/hc/theming_assets/01HZFG1D3WNNSK6AXTH4R9DD66"></script>
+
+<script>
+  document.body.classList.add("article_page");
+</script>
+
+
+<fl-mobile-metabar class="fixed z-10 left-0 right-0 items-start top-[var(--nav-height)] grid grid-cols-page overflow-y-auto lg:hidden"></fl-mobile-metabar>
+ 
+<div class="flex flex-col-reverse mt-[calc(var(--nav-height)_+_3rem)] lg:mt-0 gap-8 lg:grid lg:grid-cols-[1fr_300px] ">
+    
+    <article class="pb-24 pt-8 lg:pt-[calc(var(--nav-height)_+_2rem)]">
+      <nav class="sub-nav">
+        <ol class="breadcrumbs">
+  
+    <li title="Figma Learn - Help Center">
+      
+        <a href="/hc/en-us">Figma Learn - Help Center</a>
+      
+    </li>
+  
+    <li title="Figma Design">
+      
+        <a href="/hc/en-us/categories/360002042553-Figma-Design">Figma Design</a>
+      
+    </li>
+  
+    <li title="Dev Mode">
+      
+        <a href="/hc/en-us/sections/15023066873239-Dev-Mode">Dev Mode</a>
+      
+    </li>
+  
+    <li title="Turn designs to code">
+      
+        <a href="/hc/en-us/sections/23512714336151-Turn-designs-to-code">Turn designs to code</a>
+      
+    </li>
+  
+</ol>
+
+      </nav>
+      <header class="article-header ">
+        <h1 title="Guide to the Dev Mode MCP Server" class="article-title" data-swiftype-name="title" data-swiftype-type="string">
+          <span>Guide to the Dev Mode MCP Server</span>
+          
+          
+        </h1>
+
+        <div class="article-meta-wrapper">
+          
+
+        </div>
+      </header>
+
+      <section class="article-info">
+        <div class="article-content">
+          <div class="article-body" data-swiftype-name="body" data-swiftype-type="text"><div class="warning-wrapper"><div class="warning"><p>🚧 The Dev Mode MCP Server is currently in <a href="https://help.figma.com/hc/en-us/articles/4406787442711">open beta</a>. Some functions and settings may not yet be available. The feature may change and you may experience bugs or performance issues during the beta period.</p></div></div><section class="before-you-start-wrapper"><div class="before-you-start"><div>
+<p class="main-heading">Before you start</p>
+<p class="sub-heading">Who can use this feature</p>
+<div class="plan">
+<p><span class="icon"></span></p>
+<p>The Dev Mode MCP Server is in open beta.</p>
+</div>
+<div class="qualification">
+<p><span class="icon"></span></p>
+<p>Available on a <a href="https://help.figma.com/hc/en-us/articles/27468498501527-Updates-to-Figma-s-pricing-seats-and-billing-experience#h_01JCPBM8X2MBEXTABDM92HWZG4">Dev or Full seat</a> on the <a href="https://help.figma.com/hc/en-us/articles/360040328273-Figma-plans-and-features">Professional, Organization, or Enterprise plans</a></p>
+</div>
+<div class="qualification">
+<p><span class="icon"></span></p>
+<p>You must use a code editor or application that supports MCP Servers (i.e. VS Code, Cursor, Windsurf, Claude Code)</p>
+</div>
+<div class="qualification">
+<p><span class="icon"></span></p>
+<p>You can only use the Dev Mode MCP server from the Figma desktop app. <a href="https://www.figma.com/downloads/">Download the Figma desktop app →</a></p>
+</div>
+</div></div></section><p>The Dev Mode MCP Server brings Figma directly into your workflow by providing important design information and context to AI agents generating code from Figma design files.</p><p>MCP Servers are part of a standardized interface for AI agents to interact with data sources using the <a href="https://modelcontextprotocol.io/introduction">Model Context Protocol</a>.</p><p><a href="https://www.figma.com/blog/introducing-figmas-dev-mode-mcp-server/">Learn more about the Dev Mode MCP Server and bringing Figma into your workflow →</a></p><p>With the server enabled, you can:</p><ul>
+<li>
+<p><strong>Generate code from selected frames</strong></p>
+<p>Select a Figma frame and turn it into code. Great for product teams building new flows or iterating on app features.</p>
+</li>
+<li>
+<p><strong>Extract design context</strong></p>
+<p>Pull in variables, components, and layout data directly into your IDE. This is especially useful for design systems and component-based workflows.</p>
+</li>
+<li>
+<p><strong>Code smarter with Code Connect</strong></p>
+<p>Boost output quality by reusing your actual components. Code Connect keeps your generated code consistent with your codebase.</p>
+<p><a href="https://help.figma.com/hc/en-us/articles/23920389749655-Code-Connect">Learn more about Code Connect →</a></p>
+</li>
+</ul><h2 id="h_01K25F7RBP00A3VH1733692QN2">Step 1: Enable the MCP Server</h2><ol>
+<li>Open the <a href="https://www.figma.com/downloads/">Figma desktop app</a> and make sure you’ve <a href="https://help.figma.com/hc/en-us/articles/5601429983767-Guide-to-the-Figma-desktop-app#h_01HE5QD60DG6FEEDTZVJYM82QW">updated to the latest version</a>.</li>
+<li>Create or open a Figma Design file.</li>
+<li>In the upper-left corner, open the Figma menu.</li>
+<li>Under <strong>Preferences</strong>, select <strong>Enable local MCP Server</strong>.</li>
+</ol><p>You should see a confirmation message at the bottom of the screen letting you know the server is enabled and running.</p><div class="tip-wrapper"><div class="tip"><p>The server runs locally at <code>http://127.0.0.1:3845/mcp</code>. Keep this address handy for your configuration file in the next step.</p></div></div><h2 id="h_01K25F7RBRZKCATVJHNXCS6KXW">Step 2: Set up your MCP client</h2><p>Once the server is running locally on the Figma desktop app, MCP clients will be able to connect to your server. Follow the instructions for your specific client to add the Dev Mode MCP server.</p><div class="tab">
+    <button id="defaultOpen" class="tablinks" onclick="openContent(event, 'id1')">VS Code</button><button class="tablinks" onclick="openContent(event, 'id2')">Cursor</button><button class="tablinks" onclick="openContent(event, 'id3')">Windsurf</button><button class="tablinks" onclick="openContent(event, 'id4')">Claude Code</button><button class="tablinks" onclick="openContent(event, 'id5')">Other editors</button>
+  </div><div class="tabcontent" id="id1">
+<ol>
+<li>Use the shortcut <kbd>⌘ Shift P</kbd> to search for <code>MCP:Add Server</code>.</li>
+<li>Select <code>HTTP</code>.</li>
+<li>Paste the server url <a href="http://127.0.0.1:3845/mcp"><code>http://127.0.0.1:3845/mcp</code></a> in the search bar, then hit <kbd>Enter</kbd>.</li>
+<li>Type in <code>Figma Dev Mode MCP</code> when it asks for a Server ID, then hit <kbd>Enter</kbd>.</li>
+<li>
+<p>Select whether you want to add this server globally or only for the current workspace. Once confirmed, you'll see a configuration like this in your <code>mcp.json</code> file:</p>
+<pre class="language-json">{
+   "servers": {
+     "Figma Dev Mode MCP": {
+       "type": "http",
+       "url": "http://127.0.0.1:3845/mcp"
+     }
+   }
+ }</pre>
+</li>
+<li>Open the chat toolbar using <kbd>⌥⌘B</kbd> or <kbd>⌃⌘I</kbd> and switch to <strong>Agent</strong> mode.</li>
+<li>With the chat open, type in <code>#get_code</code> to confirm that the Dev Mode MCP server tools are available. If no tools are listed, restart the Figma desktop app and VS Code.</li>
+</ol>
+<div class="note-wrapper"><div class="note">
+<p><strong>Note:</strong> You must have <a href="https://github.com/features/copilot">GitHub Copilot</a> enabled on your account to use MCP in VS Code.</p>
+<p>For more information, see <a href="https://code.visualstudio.com/docs/copilot/chat/mcp-servers">VS Code’s official documentation</a>.</p>
+</div></div>
+</div><div class="tabcontent" id="id2">
+<ol>
+<li>Open <strong>Cursor → Settings → Cursor Settings</strong>.</li>
+<li>Go to the <strong>MCP</strong> tab.</li>
+<li>Click <strong>+ Add new global MCP server</strong>.</li>
+<li>
+<p>Enter the following configuration and save:</p>
+<pre class="language-json">{
+  "mcpServers": {
+    "Figma": {
+      "url": "http://127.0.0.1:3845/mcp"
+    }
+  }
+}
+</pre>
+</li>
+</ol>
+<p>For more information, see <a href="https://docs.cursor.com/context/model-context-protocol">Cursor’s official documentation</a>.</p>
+</div><div class="tabcontent" id="id3">
+<ol>
+<li>Open <strong>Windsurf → Settings → Windsurf Settings</strong> or use the shortcut <code>⌘ ,</code>.</li>
+<li>Navigate to <strong>Cascade settings</strong> and select <strong>Open plugin store</strong>.</li>
+<li>Search for <strong>Figma</strong> and install the plugin.</li>
+<li>Open <strong>Cascade</strong> and you should see the Figma MCP server and available tools.<br><img src="/hc/article_attachments/32582527427607" alt="cascade.png">
+</li>
+</ol>
+<p>For more information, see <a href="https://docs.windsurf.com/windsurf/mcp">Windsurf’s official documentation</a>.</p>
+<div class="note-wrapper"><div class="note"><p><strong>Note:</strong> For Windsurf, change the <code>url</code> property in the configuration file to <code>serverUrl</code> to avoid errors.</p></div></div>
+</div><div class="tabcontent" id="id4">
+<ol>
+<li>
+<p>Open your terminal and run:</p>
+<pre class="language-json">claude mcp add --transport http figma-dev-mode-mcp-server http://127.0.0.1:3845/mcp</pre>
+</li>
+<li>Use the following commands to check MCP settings and manage servers:<ul>
+<li>
+<p>List all configured servers</p>
+<pre class="language-json">claude mcp list</pre>
+</li>
+<li>
+<p>Get details for a specific server</p>
+<pre class="language-json">claude mcp get my-server</pre>
+</li>
+<li>
+<p>Remove a server</p>
+<pre class="language-json">claude mcp remove my-server</pre>
+</li>
+</ul>
+</li>
+</ol>
+<p>For more information, see <a href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/tutorials#set-up-model-context-protocol-mcp">Anthropic’s official documentation</a>.</p>
+</div><div class="tabcontent" id="id5">
+<p>Other code editors and tools that support SSE (Server-Sent Events) can also connect to the Dev Mode MCP server.</p>
+<p>If you're using a different editor or tool, check its documentation to confirm it supports SSE-based communication. If it does, you can manually add the Dev Mode MCP server using this configuration:</p>
+<pre class="language-json">{
+  "mcpServers": {
+    "Figma Dev Mode MCP": {
+      "url": "http://127.0.0.1:3845/mcp"
+    }
+  }
+}
+</pre>
+<div class="note-wrapper"><div class="note"><p><strong>Note:</strong> The Dev Mode MCP server communicates over the SSE protocol. Use your editor’s steps for setting up an SSE-compatible MCP server, and use the URL: <code>http://localhost:3845/mcp</code></p></div></div>
+</div><p>Once configured, refresh or start the server. You should see a successful connection and the available tools. If the connection failed or you do not see any tools, double check that the server is active in the Figma desktop app.</p><h2 id="h_01K25F7RBTYYHG2M8MQ64BF5N0">Step 3: Prompt your MCP client</h2><p>The Dev Mode MCP server introduces a set of tools that help LLMs translate designs in Figma. Once connected, you can prompt your MCP client to access a specific design node.</p><p>There are two ways to provide Figma design context to your AI client:</p><h3 id="h_01JVAXZD3HN927QKE31PXG7PSA">Selection-based</h3><ol>
+<li>Select a frame or layer inside Figma using the desktop app.</li>
+<li>Prompt your client to help you implement your current selection.<br><img src="/hc/article_attachments/32209690330263" alt="prompt.png">
+</li>
+</ol><h3 id="h_01JVAY07T0PXQF777TE8YEM3KA">Link-based</h3><ol>
+<li>Copy the link to a frame or layer in Figma.</li>
+<li>Prompt your client to help you implement the design at the selected URL.</li>
+</ol><p><img src="/hc/article_attachments/34049303807895" alt="copy_link 1.png"></p><div class="note-wrapper"><div class="note"><p><strong>Note:</strong> Your client won’t be able to navigate to the selected URL, but it will extract the node-id that is required for the MCP server to identify which object to return information about.</p></div></div><h2 id="h_01JZ8NN55YWF0HT5VBVYXF8WK9">Tools and usage suggestions</h2><h3 id="h_01JZ8NN55YRA6MAEYQH8R5FKTC"><code><strong>get_code</strong></code></h3><p>Use this to generate code for your Figma selection using the MCP server. The default output is <strong>React + Tailwind</strong>, but you can customize this through your prompts:</p><ul>
+<li>Change the framework<ul>
+<li>“Generate my Figma selection in Vue.”</li>
+<li>“Generate my Figma selection in plain HTML + CSS.”</li>
+<li>“Generate my Figma selection in iOS.”</li>
+</ul>
+</li>
+<li>
+<p>Use your components</p>
+<ul>
+<li>“Generate my Figma selection using components from src/components/ui”</li>
+<li>“Generate my Figma selection using components from src/ui and style with Tailwind”</li>
+</ul>
+<p>You can paste links or select the frame or component in Figma before prompting.</p>
+<p><a href="https://help.figma.com/hc/en-us/articles/23920389749655-Code-Connect">Learn how to set up Code Connect for better component reuse →</a></p>
+</li>
+</ul><h3 id="h_01JZ8NN55Y66P75FBKZEG689SS"><code><strong>get_variable_defs</strong></code></h3><p>Returns variables and styles used in your selection—like colors, spacing, and typography.</p><ul>
+<li>List all tokens used<ul><li>“Get the variables used in my Figma selection.”</li></ul>
+</li>
+<li>Focus on a specific type<ul><li>“What color and spacing variables are used in my Figma selection?”</li></ul>
+</li>
+<li>Get both names and values<ul><li>“List the variable names and their values used in my Figma selection.”</li></ul>
+</li>
+</ul><h3 id="h_01JZ8NN55YJAEMBG455VDBM4JK"><code><strong>get_code_connect_map</strong></code></h3><p>Retrieves a mapping between Figma node IDs and their corresponding code components in your codebase. Specifically, it returns an object where each key is a Figma node ID, and the value contains:</p><ul>
+<li>
+<code>codeConnectSrc</code>: The location of the component in your codebase (e.g., a file path or URL).</li>
+<li>
+<code>codeConnectName</code>: The name of the component in your codebase.</li>
+</ul><p>This mapping is used to connect Figma design elements directly to their React (or other framework) implementations, enabling seamless design-to-code workflows and ensuring that the correct components are used for each part of the design. If a Figma node is connected to a code component, this function helps you identify and use the exact component in your project.</p><h3 id="h_01JZ8NN55YZ218GSTFJVF75J8K"><code><strong>get_screenshot</strong></code></h3><p>This takes a screenshot of your selection to preserve layout fidelity. Keep this on unless you’re managing token limits.</p><h3 id="h_01K20CAZQFATWZ8DH8DFVXDDV8"><code><strong>create_design_system_rules</strong></code></h3><p>Use this tool to create a rule file that gives agents the context they need to generate high-quality front end code. Rule files help align output with your design system and tech stack, improving accuracy and ensuring code is tailored to your needs.</p><p>After running the tool, save the output to the appropriate <code>rules/</code> or <code>instructions/</code> directory so your agent can access it during code generation.</p><h3 id="h_01K4TBVAHA4B3M5THN4J2QAQVQ"><code><strong>get_metadata</strong></code></h3><div>Returns an XML representation of your selection containing basic properties such as layer IDs, names, types, position and sizes. You can use <code>get_code</code> on the resulting outline to retrieve only the styling information of the design you need. </div><div> </div><div>This is useful for very large designs where <code>get_code</code> produces output with a large context size. It also works with multiple selections or the whole page if nothing is selected.</div><h2 id="h_01JZ8NN55YMNJFYHVSBXAGPMY5">Dev Mode MCP Server Settings</h2><p>These are additional settings you can toggle under Preferences and use with the MCP client</p><p><strong>Enable Code Connect</strong></p><p>Includes Code Connect mappings in the response, so the generated code can reuse components from your connected codebase where possible.</p><p><strong>Image settings</strong></p><ul>
+<li>
+<strong>Use placeholder images:</strong> Skips image extraction and adds generic placeholders instead - helpful if you prefer swapping them manually in code. Otherwise, it pulls real images from your file.</li>
+<li style="list-style-type: disc;">
+<strong>Use local image server:</strong> Uses local images, adds a localhost link to the returned markup, allowing you to use the actual image asset wherever your file is rendered.</li>
+<li style="list-style-type: disc;">
+<strong>Download:</strong> Allows the MCP server to download and write image assets (e.g. icons, images) from Figma into the user’s project.</li>
+</ul><div class="note-wrapper"><div class="note"><p>As you use the Dev Mode MCP server, you may see a popup inside Figma asking you for feedback. To give us feedback, <a href="https://form.asana.com/?k=jMdFq_1SBUOyh8_k3q76QA&amp;d=10497086658021">please use this form</a>.</p></div></div><h2 id="h_01K25F7RC899PTXCS4B2J1HQPV">MCP best practices</h2><p>The quality of the generated code depends on several factors. Some controlled by you, and some by the tools you’re using. Here are some suggestions for clean, consistent output.</p><h3 id="h_01K25F7RC986TPKEQRW6G9S683">Structure your Figma file for better code</h3><p>Provide the best context for your design intent, so the MCP and your AI assistant can generate code that’s clear, consistent, and aligned with your system.</p><ul>
+<li>
+<strong>Use components</strong> for anything reused (buttons, cards, inputs, etc.)</li>
+<li>
+<strong>Link components to your codebase</strong> via Code Connect. This is the best way to get consistent component reuse in code. Without it, the model is guessing.</li>
+<li>
+<strong>Use variables</strong> for spacing, color, radius, and typography.</li>
+<li>
+<strong>Name layers semantically</strong> (e.g. <code>CardContainer</code>, not <code>Group 5</code>)</li>
+<li>
+<p><strong>Use Auto layout</strong> to communicate responsive intent.</p>
+<div class="tip-wrapper"><div class="tip"><p><strong>Tip:</strong> Resize the frame in Figma to check that it behaves as expected before generating code.</p></div></div>
+</li>
+<li>
+<strong>Use annotations and dev resources</strong> to convey design intent that’s hard to capture from visuals alone, like how something should behave, align, or respond.</li>
+</ul><h3 id="h_01K25F7RCA7F72BZV4G1VYK72Y">Write effective prompts to guide the AI</h3><p>MCP gives your AI assistant structured Figma data, but your prompt drives the result. Good prompts can:</p><ul>
+<li>Align the result with your framework or styling system</li>
+<li>Follow file structure and naming conventions</li>
+<li>Add code to specific paths (e.g. <code>src/components/ui</code>)</li>
+<li>Add or modify code in existing files instead of creating new ones</li>
+<li>Follow specific layout systems (e.g. grid, flexbox, absolute)</li>
+</ul><p><strong>Examples:</strong></p><ul>
+<li>“Generate iOS SwiftUI code from this frame”</li>
+<li>“Use Chakra UI for this layout”</li>
+<li>“Use <code>src/components/ui</code> components”</li>
+<li>“Add this to <code>src/components/marketing/PricingCard.tsx</code>"</li>
+<li>“Use our <code>Stack</code> layout component”</li>
+</ul><p>Think of prompts like a brief to a teammate. Clear intent leads to better results.</p><h3 id="h_01K25F7RCB944SQ1MX3F41KBQ3">Trigger specific tools when needed</h3><p>The MCP supports different tools, and each one provides your AI assistant with a different kind of structured context. Sometimes, the assistant doesn’t automatically pick the right one, especially as more tools become available. If results are off, try being explicit in your prompt.</p><ul>
+<li>
+<strong>get_code</strong> provides a structured <strong>React + Tailwind</strong> representation of your Figma selection. This is a starting point that your AI assistant can translate into any framework or code style, depending on your prompt.</li>
+<li>
+<strong>get_variable_defs</strong> extracts the variables and styles used in your selection (color, spacing, typography, etc). This helps the model reference your tokens directly in the generated code.</li>
+</ul><p>For example, if you’re getting raw code instead of tokens, try something like:</p><ul><li>“Get the variable names and values used in this frame.”</li></ul><h3 id="h_01K25F7RCCTEFJ0266BX9GFDG6">Add custom rules</h3><p>Set project-level guidance to keep output consistent—just like onboarding notes for a new developer. These are things like:</p><ul>
+<li>Preferred layout primitives</li>
+<li>File organization</li>
+<li>Naming patterns</li>
+<li>What not to hardcode</li>
+</ul><p>You can provide this in whatever format your MCP client uses for instruction files.</p><p><strong>Examples:</strong></p><div class="tab">
+    <button id="defaultOpen" class="tablinks" onclick="openContent(event, 'id11')">Cursor</button><button class="tablinks" onclick="openContent(event, 'id12')">Claude Code</button><button class="tablinks" onclick="openContent(event, 'id13')">General rules</button>
+  </div><div class="tabcontent" id="id11"><pre><code class="language-auto language-plain-text"> 
+---
+description: Figma Dev Mode MCP rules
+globs: 
+alwaysApply: true
+---
+  - The Figma Dev Mode MCP Server provides an assets endpoint which can serve image and SVG assets
+  - IMPORTANT: If the Figma Dev Mode MCP Server returns a localhost source for an image or an SVG, use that image or SVG source directly
+  - IMPORTANT: DO NOT import/add new icon packages, all the assets should be in the Figma payload
+  - IMPORTANT: do NOT use or create placeholders if a localhost source is provided
+</code></pre></div><div class="tabcontent" id="id12"><pre class="language-markdown"># MCP Servers
+## Figma Dev Mode MCP Rules
+  - The Figma Dev Mode MCP Server provides an assets endpoint which can serve image and SVG assets
+  - IMPORTANT: If the Figma Dev Mode MCP Server returns a localhost source for an image or an SVG, use that image or SVG source directly
+  - IMPORTANT: DO NOT import/add new icon packages, all the assets should be in the Figma payload
+  - IMPORTANT: do NOT use or create placeholders if a localhost source is provided
+</pre></div><div class="tabcontent" id="id13"><pre><code class="language-auto language-plain-text">- IMPORTANT: Always use components from `/path_to_your_design_system` when possible
+- Prioritize Figma fidelity to match designs exactly
+- Avoid hardcoded values, use design tokens from Figma where available
+- Follow WCAG requirements for accessibility
+- Add component documentation
+- Place UI components in `/path_to_your_design_system`; avoid inline styles unless truly necessary
+</code></pre></div><p>Adding these once can dramatically reduce the need for repetitive prompting and ensures that teammates or agents consistently follow the same expectations.</p><p>Be sure to check your IDE or MCP client’s documentation for how to structure rules, and experiment to find what works best for your team. Clear, consistent guidance often leads to better, more reusable code with less back-and-forth.</p><h3 id="h_01K25F7RCDRH0C6M004GG3KMB7">Break down large selections</h3><p>Break screens into smaller parts (like components or logical chunks) for faster, more reliable results.</p><p>Large selections can slow the tools down, cause errors, or result in incomplete responses, especially when there's too much context for the model to process. Instead:</p><ol>
+<li>Generate code for smaller sections or individual components (e.g. Card, Header, Sidebar)</li>
+<li>If it feels slow or stuck, reduce your selection size</li>
+</ol><p>This helps keep the context manageable and results more predictable, both for you and for the model.</p><p>If something in the output doesn’t look quite right, it usually helps to revisit the basics: how the Figma file is structured, how the prompt is written, and what context is being sent. Following the best practices above can make a big difference, and often leads to more consistent, reusable code.</p></div>
+        </div>
+      </section>
+
+      
+        <div class="block min-[1010px]:hidden mt-10">
+            <fl-course-navigator></fl-course-navigator>
+        </div>
+
+       
+      <footer>
+        <div class="article-footer">
+          <div class="article-inner-content-area">
+            
+          <div class="comment-icon">
+            
+            </div>
+        </div>
+        </div>
+        
+        
+        <div class="my-16 lg:my-24 flex items-center gap-8 justify-end">
+          <span class="article-votes-question">Was this article helpful?</span>
+          <div class="flex gap-4 justify-center" role='radiogroup'>
+            <button type="button" class="button article-vote-up" data-helper="vote" data-item="article" data-type="up" data-id="32132100833559" data-upvote-count="511" data-vote-count="699" data-vote-sum="323" data-vote-url="/hc/en-us/articles/32132100833559/vote" data-value="null" data-label="511 out of 699 found this helpful" data-selected-class="null" aria-label="This article was helpful" aria-pressed="false">Yes</button>
+            <button type="button" class="button article-vote-down" data-helper="vote" data-item="article" data-type="down" data-id="32132100833559" data-upvote-count="511" data-vote-count="699" data-vote-sum="323" data-vote-url="/hc/en-us/articles/32132100833559/vote" data-value="null" data-label="511 out of 699 found this helpful" data-selected-class="null" aria-label="This article was not helpful" aria-pressed="false">No</button>
+          </div>
+        </div>
+        
+        <div class="article-ticket-form">
+          <form action="#" class="request-form hide" id="article-vote-up-form" accept-charset="UTF-8">
+            <select name="request[ticket_form_id]" class="hide">
+              <option data-url="https://help.figma.com/hc/en-us/requests/new?ticket_form_id=14017867691287" selected="selected" value="14017867691287">Help Center feedback</option>
+            </select>
+            <label for="description">Got a second? Tell us what we’re doing well.</label>
+            <input type="hidden" value="Article feedback: Guide to the Dev Mode MCP Server" class="hide" name="subject">
+            <input type="hidden" value=32132100833559 name="url">
+            <input type="hidden" value=en-us name="locale">
+            <textarea name="description" placeholder="Tell us more" required></textarea>
+            <button type="submit" class="button feedback-button">Submit article feedback</button>
+            <p>Your feedback helps us improve Figma’s Help Center. To get help from support, <a href="https://help.figma.com/hc/en-us/requests/new">submit a request through our contact form</a>.</p>
+          </form>
+          <form action="#" class="request-form hide" id="article-vote-down-form" accept-charset="UTF-8" >
+            <select name="request[ticket_form_id]" class="hide">
+              <option data-url="https://help.figma.com/hc/en-us/requests/new?ticket_form_id=14017867691287" selected="selected" value="14017867691287">Help Center feedback</option>
+            </select>
+            <label for="reason">Thanks for letting us know! What was the issue?</label>
+            <input type="hidden" value="Article feedback: Guide to the Dev Mode MCP Server" class="hide" name="subject">
+            <input type="hidden" value=32132100833559 name="url">
+            <input type="hidden" value=en-us name="locale">
+            <select class="custom-form-field" id="reason" name="reason" required>
+              <option value="" disabled selected>-- Please choose an option --</option>
+              <option value="article__dsat_incorrect">Incorrect or missing information</option>
+              <option value="article__dsat_unclear">Hard to understand</option>
+              <option value="article__dsat_typos">There are typos or broken links</option>
+              <option value="article__dsat_resources">Issues with images, GIFs, or videos</option>
+              <option value="article__dsat_feature">I wish the feature worked a different way</option>
+              <option value="article__dsat_general">Something else</option>
+            </select>
+            <textarea name="description" placeholder="Tell us more" required></textarea>
+            <button type="submit" class="button feedback-button">Submit article feedback</button>
+            <p>Your feedback helps us improve Figma’s Help Center. To get help from support, <a href="https://help.figma.com/hc/en-us/requests/new">submit a request through our contact form</a>.</p>
+          </form>
+        </div>
+        
+        <div id="feedback-success" class="hide">
+          <p>Thank you for helping us improve Figma’s Help Center!</p>
+          <img src="/hc/theming_assets/01HZFG1CK3ZD17MJD7X1K6QF2N" width="50%" class="feedback-response-icon" />
+        </div>
+      </footer>
+
+
+      
+
+      
+    </article>
+    
+    <section class="border-0 border-solid border-[var(--border-light)] border-l hidden lg:block">
+        <section class="flex flex-col sticky top-[calc(var(--nav-height))] p-6 pt-12 max-h-[calc(100svh_-_var(--nav-height))] overflow-y-auto">
+            
+            <div class="hidden min-[1010px]:block">
+                <fl-course-navigator></fl-course-navigator>
+            </div>
+            
+            <fl-metabar class="w-full"></fl-metabar>
+      </section>
+    </section>
+</div>
+
+<script>
+  document.onreadystatechange = () => {
+    if (document.readyState === "complete") {
+      const voteButtonUp = document.querySelector(".article-vote-up");
+      const voteButtonDown = document.querySelector(".article-vote-down");
+      const successMessage = document.querySelector("#feedback-success");
+      const voteUpForm = document.querySelector("#article-vote-up-form");
+      const voteDownForm = document.querySelector("#article-vote-down-form");
+
+      async function submitRequest(e) {
+        const formData = new FormData(e.target);
+        const form = Object.fromEntries(formData);
+        const reason = form.reason || "";
+
+        let body = {
+          request: {
+            subject: form.subject,
+            comment: { body: form.description },
+            custom_fields: [{id: 14017850592535, "value": form.url}, {id: 17164389590039, "value": reason}, {id: 17350912268695, "value": form.locale }],
+            ticket_form_id: 14017867691287,
+          }
+        }
+
+        let headers = new Headers();
+        headers.append("Content-Type", "application/json");
+        headers.append("Accept", "application/json");
+
+        if ("false" == "false") {
+          body.request.requester = { name: "Anonymous" };
+          await fetch("/hc/api/internal/csrf_token.json")
+            .then(data => { return data.json();})
+            .then(res => {
+              headers.append("X-CSRF-Token", res.current_session.csrf_token);
+              headers.append("X-REQUESTED-WITH", "XMLHttpRequest");
+            });
+        } else {
+          await fetch("/api/v2/users/me.json")
+            .then(data => { return data.json();})
+            .then(res => { headers.append("X-CSRF-Token", res.user.authenticity_token);});
+        }
+
+        await fetch("/api/v2/requests", {
+          method: "POST",
+          headers: headers,
+          body: JSON.stringify(body),
+        }).then(res => {
+          if (res.status == 201) {
+            voteUpForm.classList.add("hide");
+            voteDownForm.classList.add("hide");
+            successMessage.classList.remove("hide");
+          }
+          else {
+            console.log("Error submitting request");
+          }
+        });
+      }
+
+      voteUpForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        submitRequest(e);
+        return false;
+      });
+      voteDownForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        submitRequest(e);
+        return false;
+      });
+
+      const observer = new MutationObserver(() => {
+        if(!successMessage.matches(".hide")) {
+          return;
+        }
+        if(voteButtonUp.matches("[aria-pressed=true]")) {
+          voteUpForm.classList.remove("hide");
+          voteDownForm.classList.add("hide");
+          return;
+        }
+        else if(voteButtonDown.matches("[aria-pressed=true]")) {
+          voteDownForm.classList.remove("hide");
+          voteUpForm.classList.add("hide");
+          return;
+        }
+        else {
+          successMessage.classList.add("hide");
+          voteDownForm.classList.add("hide");
+          voteUpForm.classList.add("hide");
+          return;
+        }
+      });
+
+      observer.observe(voteButtonUp, {
+        attributes: true,
+        attributeFilter: ['aria-pressed'],
+      });
+      observer.observe(voteButtonDown, {
+        attributes: true,
+        attributeFilter: ['aria-pressed'],
+      });
+    }
+  };
+</script>
+
+  </main>
+
+  <div class="wrap">
+<footer class="footer">
+    <div class="logo-and-social footer-links">
+        <a aria-current="page" href="https://www.figma.com/" class="mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" alt="Figma" class="logo-mark" fill="none" viewBox="0 0 120 44" aria-hidden="true"><path fill="currentColor" d="M108.157 35.146q-2.47 0-4.435-.927-1.915-.928-3.074-2.49-1.11-1.61-1.109-3.71 0-2.733 1.814-4.442t5.191-2.343l5.897-1.171q1.763-.342 2.419-1.074.655-.732.655-2.148l.604 5.711-8.466 1.758q-1.713.34-2.671 1.22-.907.88-.907 2.44 0 1.611 1.26 2.588 1.31.975 3.527.976 1.815 0 3.327-.781 1.561-.78 2.419-2.148.907-1.416.907-3.222v-8.542q0-1.758-1.311-2.734-1.26-1.025-3.477-1.025-2.822 0-4.334 1.367t-1.764 3.856l-4.435-.585q.252-2.588 1.613-4.442 1.361-1.904 3.628-2.93 2.268-1.024 5.393-1.024 4.434 0 6.803 2.196T120 17.183v17.23h-4.384v-3.172q-.656 1.61-2.671 2.782-1.967 1.123-4.788 1.123M63.807 34.414V10.056h4.384v2.734q.504-1.416 2.218-2.441t3.98-1.025q2.22 0 4.083.927 1.865.928 2.419 2.783.655-1.71 2.42-2.685 1.813-1.025 4.03-1.025 3.831 0 5.847 2.148 2.016 2.147 2.016 6.248v16.694h-4.486V18.305q0-2.44-1.108-3.66-1.06-1.27-3.125-1.27-2.268 0-3.528 1.562-1.21 1.515-1.21 4.442v15.035h-4.484V18.305q0-2.44-1.11-3.66-1.057-1.27-3.124-1.27-2.268 0-3.528 1.562-1.21 1.515-1.21 4.442v15.035zM46.656 43.2q-4.687 0-7.61-2.099t-3.73-5.857l4.385-.928q.555 2.392 2.369 3.71 1.814 1.367 4.586 1.367 3.325 0 4.989-1.66 1.713-1.61 1.713-4.832v-3.857q-.755 1.805-2.822 2.93-2.016 1.122-4.535 1.122-3.327 0-5.846-1.464-2.52-1.515-3.931-4.198-1.411-2.685-1.411-6.2 0-3.563 1.41-6.248 1.412-2.685 3.881-4.149 2.52-1.513 5.897-1.513 2.52 0 4.586 1.122 2.115 1.074 2.872 2.685v-3.075h4.385V32.9q0 3.22-1.31 5.516-1.31 2.343-3.83 3.563-2.47 1.22-6.048 1.22m-.101-13.96q3.225 0 5.14-2.197 1.965-2.196 1.966-5.809 0-3.66-1.966-5.857t-5.14-2.197q-3.225 0-5.191 2.197-1.915 2.197-1.915 5.857 0 3.612 1.965 5.81 1.966 2.195 5.14 2.196M25.761 34.414V10.056h4.486v24.358zm-.05-27.482V0h4.586v6.932zM0 34.414V0h4.737v34.414zm.958-14.547v-4.149h19.301v4.15zm0-15.669V0h21.166v4.198z"></path></svg>              
+        </a>
+        <ul class="md:mt-6">
+            <li class="locale-options">
+            <select id="locale-picker" role="menu">
+                <option value="/hc/change_language/en-us?return_to=%2Fhc%2Fen-us%2Farticles%2F32132100833559-Guide-to-the-Dev-Mode-MCP-Server">
+                English (US)
+                </option>
+                
+                <option value="/hc/change_language/de?return_to=%2Fhc%2Fde%2Farticles%2F32132100833559-Leitfaden-zum-Dev-Mode-MCP-Server">
+                    Deutsch
+                </option>
+                
+                <option value="/hc/change_language/es-419?return_to=%2Fhc%2Fes-419%2Farticles%2F32132100833559-Gu%25C3%25ADa-del-servidor-MCP-en-Dev-Mode">
+                    Español (Latinoamérica)
+                </option>
+                
+                <option value="/hc/change_language/es-es?return_to=%2Fhc%2Fes-es%2Farticles%2F32132100833559-Gu%25C3%25ADa-del-servidor-MCP-en-Dev-Mode">
+                    Español (España)
+                </option>
+                
+                <option value="/hc/change_language/fr?return_to=%2Fhc%2Ffr%2Farticles%2F32132100833559-Guide-du-serveur-MCP-en-Dev-Mode">
+                    Français
+                </option>
+                
+                <option value="/hc/change_language/ja?return_to=%2Fhc%2Fja%2Farticles%2F32132100833559-Dev-Mode-MCP%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E5%2588%25A9%25E7%2594%25A8%25E3%2582%25AC%25E3%2582%25A4%25E3%2583%2589">
+                    日本語
+                </option>
+                
+                <option value="/hc/change_language/ko?return_to=%2Fhc%2Fko%2Farticles%2F32132100833559-Dev-Mode-MCP-%25EC%2584%259C%25EB%25B2%2584-%25EC%2595%2588%25EB%2582%25B4%25EC%2584%259C">
+                    한국어
+                </option>
+                
+                <option value="/hc/change_language/nl-nl?return_to=%2Fhc%2Fnl-nl%2Farticles%2F32132100833559-Handleiding-voor-de-MCP-server-in-Dev-Mode">
+                    Nederlands (Nederland)
+                </option>
+                
+                <option value="/hc/change_language/pl-pl?return_to=%2Fhc%2Fpl-pl%2Farticles%2F32132100833559-Przewodnik-po-serwerze-MCP-w-Dev-Mode">
+                    Polski (Polska)
+                </option>
+                
+                <option value="/hc/change_language/pt-br?return_to=%2Fhc%2Fpt-br%2Farticles%2F32132100833559-Guia-para-o-servidor-MCP-do-Dev-Mode">
+                    Português do Brasil
+                </option>
+                
+            </select>
+            </li>
+
+            <script>
+                $(function(){
+                // bind change event to select
+                $('#locale-picker').on('change', function () {
+                    var url = $(this).val(); // get selected value
+                    if (url) { // require a URL
+                        window.location = url; // redirect
+                    }
+                    return false;
+                });
+                });
+            </script>
+            <ul class="flex gap-2 social-icons">
+                <li>
+                    <a href="https://x.com/figma" target="_blank" rel="noreferrer" aria-label="X" title="X" class="css-3l9mu9">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true" class="css-jaq9k5">
+                            <path fill="currentColor" d="M9.47 6.77 15.3 0h-1.4L8.85 5.88 4.81 0H.15l6.11 8.9L.15 16h1.38l5.35-6.21L11.14 16h4.67zm-1.9 2.2-.61-.88-4.93-7.05h2.12l3.98 5.69.62.88 5.17 7.4h-2.13L7.58 8.97z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/figmadesign" target="_blank" rel="noreferrer" aria-label="YouTube" title="YouTube" class="css-3l9mu9">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none" viewBox="0 0 16 14" aria-hidden="true" class="css-jaq9k5">
+                            <g clip-path="url(#a)">
+                            <path fill="currentColor" d="M15.6 2.5c.4 1.4.4 4.4.4 4.4s0 3-.4 4.4c-.2.8-.8 1.4-1.5 1.6-1.4.4-6.1.4-6.1.4s-4.7 0-6-.4c-.8-.2-1.4-.8-1.6-1.6C0 9.9 0 6.9 0 6.9s0-3 .4-4.4c.2-.8.8-1.4 1.5-1.6C3.3.5 8 .5 8 .5s4.7 0 6 .4c.8.2 1.4.8 1.6 1.6M6.4 9.7l4.8-2.8-4.8-2.8z"></path>
+                            </g>
+                            <defs>
+                            <clipPath id="a">
+                                <path fill="currentColor" d="M0 .5h16v13H0z"></path>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/figma" target="_blank" rel="noreferrer" aria-label="Instagram" title="Instagram" class="css-3l9mu9">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 449 449" aria-hidden="true" class="css-jaq9k5">
+                            <path fill="currentColor" d="M224.18 109.6c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9 114.9-51.3 114.9-114.9-51.3-114.9-114.9-114.9m0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7m146.4-194.3c0 14.9-12 26.8-26.8 26.8a26.8 26.8 0 1 1 26.8-26.8m76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8m-47.8 224.5a75.63 75.63 0 0 1-42.6 42.6c-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9a75.63 75.63 0 0 1-42.6-42.6c-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1a75.63 75.63 0 0 1 42.6-42.6c29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9a75.63 75.63 0 0 1 42.6 42.6c11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/figmadesign" target="_blank" rel="noreferrer" aria-label="Facebook" title="Facebook" class="css-3l9mu9">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 448 449" aria-hidden="true" class="css-jaq9k5">
+                            <path fill="currentColor" d="M448 25.2v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V275h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8V70.8c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4V275h58.4v173.5H24.7C11.1 448.5 0 437.4 0 423.8V25.2C0 11.6 11.1.5 24.7.5h398.5C436.9.5 448 11.6 448 25.2"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </ul>
+    </div>
+    <div class="footer-links">
+        <h6>Use cases</h6>
+        <ul>
+            <li>
+                <a href="https://www.figma.com/ui-design-tool/" target="_blank">UI design</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/ux-design-tool/" target="_blank">UX design</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/prototyping/" target="_blank">Prototyping</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/graphic-design-tool/" target="_blank">Graphic design</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/wireframe-tool/" target="_blank">Wireframing</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/brainstorming-tool/" target="_blank">Brainstorming</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/templates/" target="_blank">Templates</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/remote-design/" target="_blank">Remote design</a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer-links">
+        <h6>Explore</h6>
+        <ul>
+            <li>
+                <a href="https://www.figma.com/design/" target="_blank">Design features</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/prototyping/" target="_blank">Prototyping features</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/design-systems/" target="_blank">Design systems features</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/collaboration/" target="_blank">Collaboration features</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/figjam/" target="_blank">FigJam</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/pricing/" target="_blank">Pricing</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/organization/" target="_blank">Enterprise</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/education/" target="_blank">Students and educators</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/customers/" target="_blank">Customers</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/security/" target="_blank">Security</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/product-integrations/" target="_blank">Integrations</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/contact/" target="_blank">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer-links">
+        <h6>Resources</h6>
+        <ul>
+            <li>
+                <a href="https://www.figma.com/blog/" target="_blank">Blog</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/best-practices/" target="_blank">Best practices</a>
+            </li>
+            <li>
+                <a href="https://help.figma.com/hc/" title="Support" target="_blank">Support</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/developers" target="_blank">Developers</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/resources/learn-design/" target="_blank">Learn design</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/downloads/" target="_blank">Downloads</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/whats-new/" target="_blank">What's new</a>
+            </li>
+            <li>
+                <a href="https://releases.figma.com/" target="_blank">Releases</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/careers/" target="_blank">Careers</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/about/" target="_blank">About us</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/agency-partner-program/" target="_blank">Agency partners</a>
+            </li>
+            <li>
+                <a href="https://www.figma.com/summary-of-policy/" target="_blank">Privacy</a>
+            </li>
+            <li>
+                <a href="https://status.figma.com/" target="_blank">Status</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+</div>
+
+
+  <!-- / -->
+
+  
+  <script src="//static.zdassets.com/hc/assets/en-us.a06b7bec605429e39926.js"></script>
+  <script src="https://figma.zendesk.com/auth/v2/host/without_iframe.js" data-brand-id="360002676493" data-return-to="https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server" data-theme="hc" data-locale="en-us" data-auth-origin="360002676493,true,true"></script>
+
+  <script type="text/javascript">
+  /*
+
+    Greetings sourcecode lurker!
+
+    This is for internal Zendesk and legacy usage,
+    we don't support or guarantee any of these values
+    so please don't build stuff on top of them.
+
+  */
+
+  HelpCenter = {};
+  HelpCenter.account = {"subdomain":"figma","environment":"production","name":"Figma"};
+  HelpCenter.user = {"identifier":"da39a3ee5e6b4b0d3255bfef95601890afd80709","email":null,"name":"","role":"anonymous","avatar_url":"https://assets.zendesk.com/hc/assets/default_avatar.png","is_admin":false,"organizations":[],"groups":[]};
+  HelpCenter.internal = {"asset_url":"//static.zdassets.com/hc/assets/","web_widget_asset_composer_url":"https://static.zdassets.com/ekr/snippet.js","current_session":{"locale":"en-us","csrf_token":null,"shared_csrf_token":null},"usage_tracking":{"event":"article_viewed","data":"BAh7CDoLbG9jYWxlSSIKZW4tdXMGOgZFVDoPYXJ0aWNsZV9pZGwrCBfBdFY5HToKX21ldGF7DDoPYWNjb3VudF9pZGkDV0qOOhNoZWxwX2NlbnRlcl9pZGwrCNXztNFTADoNYnJhbmRfaWRsKwgN59TRUwA6DHVzZXJfaWQwOhN1c2VyX3JvbGVfbmFtZUkiDkFOT05ZTU9VUwY7BlQ7AEkiCmVuLXVzBjsGVDoaYW5vbnltb3VzX3RyYWNraW5nX2lkMA==--938e5e37511672f4d9df402c0bce13bc88187245","url":"https://help.figma.com/hc/activity"},"current_record_id":"32132100833559","current_record_url":"/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server","current_record_title":"Guide to the Dev Mode MCP Server","current_text_direction":"ltr","current_brand_id":360002676493,"current_brand_name":"Figma","current_brand_url":"https://figma.zendesk.com","current_brand_active":true,"current_path":"/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server","show_autocomplete_breadcrumbs":true,"user_info_changing_enabled":false,"has_user_profiles_enabled":true,"has_end_user_attachments":true,"user_aliases_enabled":false,"has_anonymous_kb_voting":true,"has_multi_language_help_center":true,"show_at_mentions":false,"embeddables_config":{"embeddables_web_widget":true,"embeddables_help_center_auth_enabled":false,"embeddables_connect_ipms":false},"answer_bot_subdomain":"static","general_settings_url":"https://help.figma.com/hc/admin/general_settings?locale=en-us","user_segments_url":"https://figma.zendesk.com/knowledge/user_segments?brand_id=360002676493","has_gather":true,"has_ckeditor":false,"has_community_enabled":false,"has_community_badges":true,"has_community_post_content_tagging":false,"has_gather_content_tags":true,"has_guide_content_tags":true,"has_user_segments":true,"has_answer_bot_web_form_enabled":false,"has_garden_modals":false,"theming_cookie_key":"hc-da39a3ee5e6b4b0d3255bfef95601890afd80709-2-preview","is_preview":false,"has_alternate_templates":true,"arrange_articles_url":"https://figma.zendesk.com/knowledge/arrange?brand_id=360002676493","article_verification_url":"https://figma.zendesk.com/knowledge/verification?brand_id=360002676493","has_article_verification":true,"guide_language_settings_url":"https://help.figma.com/hc/admin/language_settings?locale=en-us","docs_importer_url":"https://figma.zendesk.com/knowledge/import_articles?brand_id=360002676493","content_tags_url":"https://figma.zendesk.com/knowledge/content_tags?brand_id=360002676493","community_badges_url":"https://figma.zendesk.com/knowledge/community_badges?brand_id=360002676493","community_settings_url":"https://figma.zendesk.com/knowledge/community_settings?brand_id=360002676493","gather_plan_state":"subscribed","search_settings_url":"https://figma.zendesk.com/knowledge/search_settings?brand_id=360002676493","has_search_settings_in_plan":true,"theming_api_version":2,"theming_settings":{"brand_color":"#000000","brand_text_color":"#FFFFFF","text_color":"#545454","link_color":"#5551FF","background_color":"#FFFFFF","header_background_color":"#FFFFFF","header_link_color":"#000000","footer_background_color":"#FFFFFF","footer_text_color":"#000000","heading_font":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif","text_font":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif","logo":"/hc/theming_assets/01HZFG1N1QJPKABHT3PHQQ0J9J","favicon":"/hc/theming_assets/01HZFG1NHWKZA6P3KEG8EQ31YX","hero_image_visibility":false,"homepage_banner_bg_color":"#FFFFFF","homepage_background_image":"/hc/theming_assets/01HZFG1P7YTYN0F6FBWXEAJPAV","chero_image_visibility":true,"community_banner_bg_color":"#FFFFFF","community_background_image":"/hc/theming_assets/01HZFG1P7YTYN0F6FBWXEAJPAV","error_image":"/hc/theming_assets/01HZFG1Q8NQDVZP9YJXP59F2SZ","welcome_message_text":"Welcome to the Figma Help Center","welcome_message_text_dc":"NONE","welcome_message_text_color":"#000000","alter_welcome_message_text":"Learn and level up","alter_welcome_message_text_dc":"NONE","alter_welcome_text_color":"#000000","search_placeholder_text":"Search Components, Styles, Smart Selections","search_placeholder_text_dc":"NONE","category_block_visibility":false,"custom_block_visibility":true,"show_knowledge_base_tree":false,"first_block_icon":"/hc/theming_assets/01HZFG1QQWRMWCNW3CW3C84PSD","first_block_title_color":"rgba(0, 0, 0, 1)","first_block_title":"","first_block_title_dc":"help_center_category_blocks_getting_started","first_block_url":"https://figma.zendesk.com/hc/en-us/categories/360002051613-Getting-Started","second_block_icon":"/hc/theming_assets/01HZFG1R8PB98V9D16W0S2HYAM","second_block_title_color":"rgba(0, 0, 0, 1)","second_block_title":"","second_block_title_dc":"help_center_category_blocks_figma_organization","second_block_url":"https://help.figma.com/hc/en-us/sections/360006606913-Organizations","third_block_icon":"/hc/theming_assets/01HZFG1RQZN8KY9VTPB439AKC0","third_block_title_color":"rgba(0, 0, 0, 1)","third_block_title":"","third_block_title_dc":"help_center_category_blocks_community","third_block_url":"https://help.figma.com/hc/en-us/categories/360002772634-Community#Figma-Community","fourth_block_icon":"/hc/theming_assets/01HZFG1S5DVRJB5R24H5QVQQP3","fourth_block_title_color":"rgba(0, 0, 0, 1)","fourth_block_title":"","fourth_block_title_dc":"help_center_category_blocks_administration","fourth_block_url":"https://figma.zendesk.com/hc/en-us/categories/360001980773-Administration","fifth_block_icon":"/hc/theming_assets/01HZFG1DMFKVD0FXM4JPGAN809","fifth_block_title_color":"rgba(0, 0, 0, 1)","fifth_block_title":"","fifth_block_title_dc":"help_center_category_blocks_video_tutorials","fifth_block_url":"https://www.youtube.com/channel/UCQsVmhSa4X-G3lHlUtejzLA","sixth_block_icon":"/hc/theming_assets/01HZFG1SY15B659D2G6CYTD460","sixth_block_title_color":"rgba(0, 0, 0, 1)","sixth_block_title":"","sixth_block_title_dc":"help_center_category_blocks_components","sixth_block_url":"https://figma.zendesk.com/hc/en-us/categories/360002042553-Using-Figma#Components","seventh_block_icon":"/hc/theming_assets/01HZFG1TCYCSSNN6TQ6GN08FG2","seventh_block_title_color":"rgba(0, 0, 0, 1)","seventh_block_title":"","seventh_block_title_dc":"help_center_footer_downloads","seventh_block_url":"https://www.figma.com/downloads/","eighth_block_icon":"/hc/theming_assets/01HZFG1TVY2ZTK75Q3SMFNG75W","eighth_block_title_color":"rgba(0, 0, 0, 1)","eighth_block_title":"","eighth_block_title_dc":"help_center_footer_blog","eighth_block_url":"https://www.figma.com/blog/","show_follow_button":false,"hide_search_result_sidebar":true,"comment_block_visibility":false,"show_articles_in_section":false,"author_meta_details_visibility":false,"show_follow_article":false,"social_share_visibility":false,"twitter_link":"https://twitter.com/figmadesign","facebook_link":"https://www.facebook.com/figmadesign","medium_link":"https://medium.com/figma-design","instagram_link":"https://www.instagram.com/figmadesign/"},"has_pci_credit_card_custom_field":true,"help_center_restricted":false,"is_assuming_someone_else":false,"flash_messages":[],"user_photo_editing_enabled":true,"user_preferred_locale":"en-us","base_locale":"en-us","has_user_session_cookie_enabled":true,"has_custom_statuses_enabled":false,"has_hc_generative_answers_setting_enabled":true,"has_generative_search_with_zgpt_enabled":false,"has_guide_service_catalog":true,"has_remove_breadcrumbs":true,"has_csat_reverse_2_scale_in_mobile":false,"version":"v26396"};
+</script>
+
+  
+  <script src="//static.zdassets.com/hc/assets/hc_enduser-d0e6dbae7988ce8848209ad61fe7a4d4.js"></script>
+  <script type="text/javascript" src="/hc/theming_assets/9325143/360002676493/script.js?digest=34983359029527"></script>
+  
+</body>
+</html>

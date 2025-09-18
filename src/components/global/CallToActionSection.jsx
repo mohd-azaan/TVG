@@ -12,8 +12,7 @@ export const CallToActionSection = () => {
 			<header className='relative w-full h-20 bg-[#0c1a1a]'>
 				<div className='flex items-center justify-center gap-4 h-full px-8 py-8 max-w-7xl mx-auto'>
 					<h2
-						className={`text-white font-gilroy font-bold text-[30px] tracking-[1.28px] leading-[60px]`
-					}
+						className={`text-white font-gilroy font-bold text-[30px] tracking-[1.28px] leading-[60px]`}
 					>
 						READY TO VISIT?
 					</h2>

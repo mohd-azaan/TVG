@@ -10,7 +10,7 @@ import { Hero } from './Sections/Hero';
 import { VisionMissionSection } from './Sections/VisionMissionSection';
 import { WorldClassTechSection } from './Sections/WorldClassTechSection';
 import { Vision2030Section } from './Sections/Vision2030Section';
-import { FeaturesSection } from './Sections/FeaturesSection';
+import FeaturesSection from './Sections/FeaturesSection';
 
 
 export const AboutPage = () => {

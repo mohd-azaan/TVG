@@ -8,43 +8,47 @@ import { sendRegistrationEmail } from '../../../services/emailService';
 
 // Dropdown arrow components from Figma
 const ArrowDropDown = () => (
-	<div className="relative size-6">
-		<div className="absolute inset-[41.67%_29.17%_37.5%_29.17%]">
+	<div className='relative size-6'>
+		<div className='absolute inset-[41.67%_29.17%_37.5%_29.17%]'>
 			<img
-				alt=""
-				className="block max-w-none size-full"
-				src="http://localhost:3845/assets/a0c382809d4e3c35fbc5dbe0ba8cd2aac493584b.svg"
+				alt=''
+				className='block max-w-none size-full'
+				src='http://localhost:3845/assets/a0c382809d4e3c35fbc5dbe0ba8cd2aac493584b.svg'
 			/>
 		</div>
 	</div>
 );
 
 const ArrowDropUp = () => (
-	<div className="relative size-6">
-		<div className="absolute inset-[37.5%_29.17%_41.67%_29.17%]">
+	<div className='relative size-6'>
+		<div className='absolute inset-[37.5%_29.17%_41.67%_29.17%]'>
 			<img
-				alt=""
-				className="block max-w-none size-full"
-				src="http://localhost:3845/assets/500c31cede34a9c2f425eadb86a340b2795ba7db.svg"
+				alt=''
+				className='block max-w-none size-full'
+				src='http://localhost:3845/assets/500c31cede34a9c2f425eadb86a340b2795ba7db.svg'
 			/>
 		</div>
 	</div>
 );
 
 const RadioButton = ({ selected }) => (
-	<div className="overflow-hidden relative size-6">
-		<div className="absolute inset-[8.333%]">
-			<div className="absolute inset-[-6.25%]">
+	<div className='overflow-hidden relative size-6'>
+		<div className='absolute inset-[8.333%]'>
+			<div className='absolute inset-[-6.25%]'>
 				<img
-					alt=""
-					className="block max-w-none size-full"
-					src="http://localhost:3845/assets/90296a316bda45154592ee2cbe02ed13b3bf9b47.svg"
-					style={{ '--stroke-0': selected ? 'rgba(0, 148, 68, 1)' : 'rgba(211, 211, 211, 1)' }}
+					alt=''
+					className='block max-w-none size-full'
+					src='http://localhost:3845/assets/90296a316bda45154592ee2cbe02ed13b3bf9b47.svg'
+					style={{
+						'--stroke-0': selected
+							? 'rgba(0, 148, 68, 1)'
+							: 'rgba(211, 211, 211, 1)',
+					}}
 				/>
 			</div>
 		</div>
 		{selected && (
-			<div className="absolute inset-[33.33%] bg-[#009444] rounded-full" />
+			<div className='absolute inset-[33.33%] bg-[#009444] rounded-full' />
 		)}
 	</div>
 );
@@ -64,7 +68,7 @@ export const RegistrationFormSection = () => {
 		companyName: '',
 		designation: '',
 		preferredAccountManager: '',
-		additionalNotes: ''
+		additionalNotes: '',
 	});
 
 	const [errors, setErrors] = useState({});
@@ -72,10 +76,10 @@ export const RegistrationFormSection = () => {
 	const [submitMessage, setSubmitMessage] = useState({ type: '', text: '' });
 
 	const handleInputChange = (field, value) => {
-		setFormData(prev => ({ ...prev, [field]: value }));
+		setFormData((prev) => ({ ...prev, [field]: value }));
 		// Clear error when user starts typing
 		if (errors[field]) {
-			setErrors(prev => ({ ...prev, [field]: '' }));
+			setErrors((prev) => ({ ...prev, [field]: '' }));
 		}
 	};
 
@@ -109,7 +113,7 @@ export const RegistrationFormSection = () => {
 					company: '',
 					designation: '',
 					preferredAccountManager: '',
-					additionalNotes: ''
+					additionalNotes: '',
 				});
 			} else {
 				setSubmitMessage({ type: 'error', text: result.message });
@@ -117,7 +121,7 @@ export const RegistrationFormSection = () => {
 		} catch (error) {
 			setSubmitMessage({
 				type: 'error',
-				text: 'An unexpected error occurred. Please try again later.'
+				text: 'An unexpected error occurred. Please try again later.',
 			});
 		} finally {
 			setIsSubmitting(false);
@@ -167,7 +171,9 @@ export const RegistrationFormSection = () => {
 									<input
 										type='text'
 										value={formData.firstName}
-										onChange={(e) => handleInputChange('firstName', e.target.value)}
+										onChange={(e) =>
+											handleInputChange('firstName', e.target.value)
+										}
 										placeholder='Your first name'
 										className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black placeholder:text-[#757575] border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444]'
 									/>
@@ -181,7 +187,9 @@ export const RegistrationFormSection = () => {
 									<input
 										type='text'
 										value={formData.lastName}
-										onChange={(e) => handleInputChange('lastName', e.target.value)}
+										onChange={(e) =>
+											handleInputChange('lastName', e.target.value)
+										}
 										placeholder='Your last name'
 										className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black placeholder:text-[#757575] border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444]'
 									/>
@@ -222,7 +230,9 @@ export const RegistrationFormSection = () => {
 								<input
 									type='tel'
 									value={formData.phoneNumber}
-									onChange={(e) => handleInputChange('phoneNumber', e.target.value)}
+									onChange={(e) =>
+										handleInputChange('phoneNumber', e.target.value)
+									}
 									placeholder='50 000 0000'
 									className='flex-1 h-[60px] bg-[#f6f6f6] rounded-r-[30px] px-[34px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black placeholder:text-[#757575] border border-l-0 border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444]'
 								/>
@@ -238,7 +248,9 @@ export const RegistrationFormSection = () => {
 								<input
 									type='text'
 									value={formData.dateOfBirth}
-									onChange={(e) => handleInputChange('dateOfBirth', e.target.value)}
+									onChange={(e) =>
+										handleInputChange('dateOfBirth', e.target.value)
+									}
 									placeholder='DD/MM/YY'
 									className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black placeholder:text-[#757575] border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444]'
 								/>
@@ -253,10 +265,14 @@ export const RegistrationFormSection = () => {
 							<div className='relative w-[390px]'>
 								<select
 									value={formData.nationality}
-									onChange={(e) => handleInputChange('nationality', e.target.value)}
+									onChange={(e) =>
+										handleInputChange('nationality', e.target.value)
+									}
 									className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] pr-[60px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444] appearance-none cursor-pointer'
 								>
-									<option value='' className='text-[#757575]'>-select-</option>
+									<option value='' className='text-[#757575]'>
+										-select-
+									</option>
 									<option value='saudi'>Saudi Arabian</option>
 									<option value='american'>American</option>
 									<option value='british'>British</option>
@@ -279,10 +295,14 @@ export const RegistrationFormSection = () => {
 							<div className='relative w-[390px]'>
 								<select
 									value={formData.businessSector}
-									onChange={(e) => handleInputChange('businessSector', e.target.value)}
+									onChange={(e) =>
+										handleInputChange('businessSector', e.target.value)
+									}
 									className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] pr-[60px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444] appearance-none cursor-pointer'
 								>
-									<option value='' className='text-[#757575]'>-select-</option>
+									<option value='' className='text-[#757575]'>
+										-select-
+									</option>
 									<option value='technology'>Technology</option>
 									<option value='finance'>Finance</option>
 									<option value='healthcare'>Healthcare</option>
@@ -306,7 +326,9 @@ export const RegistrationFormSection = () => {
 							<input
 								type='text'
 								value={formData.companyName}
-								onChange={(e) => handleInputChange('companyName', e.target.value)}
+								onChange={(e) =>
+									handleInputChange('companyName', e.target.value)
+								}
 								placeholder='Your company name'
 								className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black placeholder:text-[#757575] border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444]'
 							/>
@@ -320,7 +342,9 @@ export const RegistrationFormSection = () => {
 							<input
 								type='text'
 								value={formData.designation}
-								onChange={(e) => handleInputChange('designation', e.target.value)}
+								onChange={(e) =>
+									handleInputChange('designation', e.target.value)
+								}
 								placeholder='Your job title'
 								className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black placeholder:text-[#757575] border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444]'
 							/>
@@ -334,10 +358,14 @@ export const RegistrationFormSection = () => {
 							<div className='relative w-[390px]'>
 								<select
 									value={formData.preferredAccountManager}
-									onChange={(e) => handleInputChange('preferredAccountManager', e.target.value)}
+									onChange={(e) =>
+										handleInputChange('preferredAccountManager', e.target.value)
+									}
 									className='w-full h-[60px] bg-[#f6f6f6] rounded-[30px] px-[34px] pr-[60px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444] appearance-none cursor-pointer'
 								>
-									<option value='' className='text-[#757575]'>-select-</option>
+									<option value='' className='text-[#757575]'>
+										-select-
+									</option>
 									<option value='manager1'>Manager 1</option>
 									<option value='manager2'>Manager 2</option>
 									<option value='manager3'>Manager 3</option>
@@ -359,7 +387,9 @@ export const RegistrationFormSection = () => {
 							<div className='relative'>
 								<textarea
 									value={formData.additionalNotes}
-									onChange={(e) => handleInputChange('additionalNotes', e.target.value)}
+									onChange={(e) =>
+										handleInputChange('additionalNotes', e.target.value)
+									}
 									placeholder='Message'
 									rows={6}
 									className='w-full h-[194px] bg-[#f6f6f6] rounded-[30px] px-[34px] py-[19px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[20px] leading-[28px] text-black placeholder:text-[#757575] border border-[lightgrey] focus:outline-none focus:ring-2 focus:ring-[#009444] resize-none'
@@ -369,12 +399,14 @@ export const RegistrationFormSection = () => {
 
 						{/* Submit Message */}
 						{submitMessage.text && (
-							<div className={`p-4 rounded-[20px] text-center ${
-								submitMessage.type === 'success'
-									? 'bg-green-50 border border-green-200 text-green-800'
-									: 'bg-red-50 border border-red-200 text-red-800'
-							}`}>
-								<p className="font-TVG-typography-form-label text-[16px]">
+							<div
+								className={`p-4 rounded-[20px] text-center ${
+									submitMessage.type === 'success'
+										? 'bg-green-50 border border-green-200 text-green-800'
+										: 'bg-red-50 border border-red-200 text-red-800'
+								}`}
+							>
+								<p className='font-TVG-typography-form-label text-[16px]'>
 									{submitMessage.text}
 								</p>
 							</div>

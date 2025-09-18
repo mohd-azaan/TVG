@@ -27,7 +27,7 @@ const amenityFeatures = [
     { icon: '/assets/parking_meter_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'VIP Paid Parking' }
 ];
 
-export const FeaturesSection = () => {
+const FeaturesSection = () => {
   return (
     <section className='w-full bg-[#102121] py-16 lg:py-24'>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,3 +84,5 @@ export const FeaturesSection = () => {
     </section>
   );
 };
+
+export default FeaturesSection;

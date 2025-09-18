@@ -39,7 +39,7 @@ export const WorldClassTechSection = () => {
           {/* Right Column: Image */}
           <div className="flex items-center justify-center">
             <img
-              className='w-full max-w-xl h-auto object-cover rounded-2xl shadow-2xl'
+              className='w-full max-w-xl h-auto object-cover'
               alt='Indoor golf simulator technology setup'
               src='/indoor-golf-1.png'
             />

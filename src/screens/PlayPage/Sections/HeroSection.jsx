@@ -5,7 +5,12 @@
 
 import React from 'react';
 import { ResponsiveHeroSection } from '../../../components/shared/ResponsiveHeroSection';
-import { HeroTitle, HeroTagline, HeroDescription, useResponsiveSpacing } from '../../../components/shared/ResponsiveTypography';
+import {
+	HeroTitle,
+	HeroTagline,
+	HeroDescription,
+	useResponsiveSpacing,
+} from '../../../components/shared/ResponsiveTypography';
 
 export const HeroSection = () => {
 	const spacing = useResponsiveSpacing();
@@ -15,11 +20,13 @@ export const HeroSection = () => {
 		const sizeClasses = {
 			default: 'px-8 py-3 text-base',
 			large: 'px-10 py-4 text-lg',
-			small: 'px-6 py-2 text-sm'
+			small: 'px-6 py-2 text-sm',
 		};
 
 		return (
-			<button className={`bg-[#009444] hover:bg-[#007a38] transition-all duration-300 rounded-[50px] flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 ${sizeClasses[size]} ${className}`}>
+			<button
+				className={`bg-[#009444] hover:bg-[#007a38] transition-all duration-300 rounded-[50px] flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 ${sizeClasses[size]} ${className}`}
+			>
 				<span className='font-TVG-typography-button text-white uppercase font-bold whitespace-nowrap'>
 					Book Your Bay
 				</span>
@@ -52,16 +59,18 @@ export const HeroSection = () => {
 					Your Game, Your Pace, Your Greens
 				</HeroTitle>
 
-				<HeroTagline className='mb-8'>
-					The New Era of Indoor Golf
-				</HeroTagline>
+				<HeroTagline className='mb-8'>The New Era of Indoor Golf</HeroTagline>
 
 				<div className='space-y-6 max-w-[600px]'>
 					<HeroDescription large>
 						The ultimate golf and social experience, only in Riyadh.
 					</HeroDescription>
 					<HeroDescription large>
-						At The Virtual Greens, playing golf doesn't mean dressing up or heading out of town. It means stepping into a sleek, air-conditioned space where you can tee off on the world's most iconic course, day or night, rain or shine. Unwind after work, celebrate with friends, or host an event with a twist. This is golf on your terms.
+						At The Virtual Greens, playing golf doesn't mean dressing up or
+						heading out of town. It means stepping into a sleek, air-conditioned
+						space where you can tee off on the world's most iconic course, day
+						or night, rain or shine. Unwind after work, celebrate with friends,
+						or host an event with a twist. This is golf on your terms.
 					</HeroDescription>
 				</div>
 
@@ -85,14 +94,12 @@ export const HeroSection = () => {
 
 	// Tablet content with optimized layout
 	const tabletContent = (
-		<div className={`${spacing.heroElementSpacing} text-center max-w-4xl mx-auto`}>
-			<HeroTitle className='mb-6'>
-				Your Game, Your Pace, Your Greens
-			</HeroTitle>
+		<div
+			className={`${spacing.heroElementSpacing} text-center max-w-4xl mx-auto`}
+		>
+			<HeroTitle className='mb-6'>Your Game, Your Pace, Your Greens</HeroTitle>
 
-			<HeroTagline className='mb-8'>
-				The New Era of Indoor Golf
-			</HeroTagline>
+			<HeroTagline className='mb-8'>The New Era of Indoor Golf</HeroTagline>
 
 			<div className='aspect-[4/3] w-full max-w-[600px] mx-auto mb-8 bg-gradient-to-br from-[#009444] to-[#006f33] rounded-[25px] flex items-center justify-center shadow-xl'>
 				<div className='text-center text-white space-y-3'>
@@ -107,7 +114,11 @@ export const HeroSection = () => {
 					The ultimate golf and social experience, only in Riyadh.
 				</HeroDescription>
 				<HeroDescription large>
-					At The Virtual Greens, playing golf doesn't mean dressing up or heading out of town. It means stepping into a sleek, air-conditioned space where you can tee off on the world's most iconic course, day or night, rain or shine. Unwind after work, celebrate with friends, or host an event with a twist. This is golf on your terms.
+					At The Virtual Greens, playing golf doesn't mean dressing up or
+					heading out of town. It means stepping into a sleek, air-conditioned
+					space where you can tee off on the world's most iconic course, day or
+					night, rain or shine. Unwind after work, celebrate with friends, or
+					host an event with a twist. This is golf on your terms.
 				</HeroDescription>
 			</div>
 
@@ -121,12 +132,14 @@ export const HeroSection = () => {
 	const mobileContent = (
 		<div className={`${spacing.heroElementSpacing} text-center`}>
 			<HeroTitle className='mb-4'>
-				Your Game,<br />Your Pace,<br />Your Greens
+				Your Game,
+				<br />
+				Your Pace,
+				<br />
+				Your Greens
 			</HeroTitle>
 
-			<HeroTagline className='mb-6'>
-				The New Era of Indoor Golf
-			</HeroTagline>
+			<HeroTagline className='mb-6'>The New Era of Indoor Golf</HeroTagline>
 
 			<div className='aspect-[4/3] w-full max-w-[400px] mx-auto mb-6 bg-gradient-to-br from-[#009444] to-[#006f33] rounded-[20px] flex items-center justify-center shadow-lg'>
 				<div className='text-center text-white space-y-2'>
@@ -141,7 +154,11 @@ export const HeroSection = () => {
 					The ultimate golf and social experience, only in Riyadh.
 				</HeroDescription>
 				<HeroDescription>
-					At The Virtual Greens, playing golf doesn't mean dressing up or heading out of town. It means stepping into a sleek, air-conditioned space where you can tee off on the world's most iconic course, day or night, rain or shine. Unwind after work, celebrate with friends, or host an event with a twist. This is golf on your terms.
+					At The Virtual Greens, playing golf doesn't mean dressing up or
+					heading out of town. It means stepping into a sleek, air-conditioned
+					space where you can tee off on the world's most iconic course, day or
+					night, rain or shine. Unwind after work, celebrate with friends, or
+					host an event with a twist. This is golf on your terms.
 				</HeroDescription>
 			</div>
 
@@ -177,7 +194,7 @@ export const HeroSection = () => {
 
 	return (
 		<ResponsiveHeroSection
-			backgroundColor='#272727'
+			backgroundColor='#102121'
 			greenSection={true}
 			greenSectionHeight='clamp(300px, 25vh, 435px)'
 			minHeight='min-h-[100svh]'
@@ -187,7 +204,7 @@ export const HeroSection = () => {
 			{{
 				desktop: desktopContent,
 				tablet: tabletContent,
-				mobile: mobileContent
+				mobile: mobileContent,
 			}}
 		</ResponsiveHeroSection>
 	);

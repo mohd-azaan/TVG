@@ -6,11 +6,14 @@
 import '../../styleguide.css';
 import { FeaturesSection } from './Sections/FeaturesSection';
 import { GolfzonAdvantagesSection } from './Sections/GolfzonAdvantagesSection';
+import { WhyGolfzonSection } from './Sections/WhyGolfzonSection';
+import { HowWeHelpSection } from './Sections/HowWeHelpSection';
+import { AwardsSection } from './Sections/AwardsSection';
 import { HeroSection } from './Sections/HeroSection';
 import Simulator from './Sections/Simulator';
-import Simulators from './Sections/Simulator';
 import WhereToUse from './Sections/WhereToUse';
 import SpecSection from './Sections/SpecSection';
+import { ReadyToOwnSection } from './Sections/ReadyToOwnSection';
 
 export const SimulatorPage = () => {
 	return (
@@ -19,10 +22,15 @@ export const SimulatorPage = () => {
 			<HeroSection />
 			<FeaturesSection />
 			<WhereToUse />
+
 			<Simulator />
 			{/* Specifications Table Section */}
 			<SpecSection />
 			<GolfzonAdvantagesSection />
+			<WhyGolfzonSection />
+			<HowWeHelpSection />
+			<AwardsSection />
+			<ReadyToOwnSection />
 		</div>
 	);
 };

@@ -1,6 +1,6 @@
 // src/screens/SimulatorPage/Sections/FeaturesSection.jsx
-// Features section displaying benefits and conveniences of the simulator service
-// Shows "THE MOST CONVENIENT FORMS AND LOCATION" with three benefit boxes
+// Features section displaying advanced golf technology benefits
+// Shows "THE MOST ADVANCED INDOOR GOLF TECH ON THE PLANET" with three feature boxes
 // RELEVANT FILES: SimulatorPage.jsx, styleguide.css, tailwind.config.js
 
 import React from 'react';
@@ -8,56 +8,68 @@ import React from 'react';
 export const FeaturesSection = () => {
 	const features = [
 		{
-			icon: '🏢',
-			title: 'Professional Setup',
-			description: 'State-of-the-art equipment and professional installation for the ultimate golf experience'
+			icon: '/speed_24dp.svg',
+			title: 'ZERO-LATENCY',
+			description:
+				'These simulators mimic real-world terrain, track balls in real-time with zero latency, and look FIRE.',
 		},
 		{
-			icon: '🏠',
-			title: 'Home Convenience',
-			description: 'Play anytime, anywhere in the comfort of your own space without travel time'
+			icon: '/public_24dp.svg',
+			title: 'TRUSTED WORLDWIDE',
+			description:
+				"Golfzon's technology is trusted by tour players, coaches, and venues in over 60 countries.",
 		},
 		{
-			icon: '⚡',
-			title: 'Instant Access',
-			description: 'No waiting for tee times or weather delays. Perfect golf conditions 24/7'
-		}
+			icon: '/sports_golf.svg',
+			title: 'REALISM & ACCURACY',
+			description:
+				'Every shot is captured. Every swing analyzed. Every game elevated.',
+		},
 	];
 
 	return (
-		<section className='w-full bg-white py-16 lg:py-24'>
-			<div className='max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10'>
+		<section className='w-full bg-[#f8f8f8] py-20 lg:py-28'>
+			<div className='max-w-[1200px] mx-auto px-8 lg:px-16'>
 				{/* Section Header */}
-				<div className='text-center mb-12 lg:mb-16'>
-					<h2 className="font-['Morganite',Helvetica] font-bold text-[36px] sm:text-[48px] lg:text-[56px] leading-[1.1] text-[#1a1a1a] tracking-[-1px] max-w-4xl mx-auto">
-						THE MOST CONVENIENT FORMS AND LOCATION
+				<div className='text-center mb-16 lg:mb-20'>
+					<h2 className='font-morganite font-bold text-[42px] sm:text-[48px] lg:text-[56px] xl:text-[64px] leading-[1.1] text-[#1a1a1a] tracking-[-1px] max-w-5xl mx-auto uppercase'>
+						THE MOST ADVANCED INDOOR
+						<br />
+						GOLF TECH ON THE PLANET
 					</h2>
 				</div>
 
 				{/* Features Grid */}
-				<div className='grid md:grid-cols-3 gap-8 lg:gap-12'>
+				<div className='grid md:grid-cols-3 gap-8 lg:gap-10'>
 					{features.map((feature, index) => (
-						<div key={index} className='text-center group hover:transform hover:scale-105 transition-all duration-300'>
-							{/* Feature Icon */}
-							<div className='text-[48px] sm:text-[56px] lg:text-[64px] mb-6 group-hover:scale-110 transition-transform duration-300'>
-								{feature.icon}
+						<div
+							key={index}
+							className='bg-white rounded-[20px] p-6 lg:p-8 shadow-sm flex flex-col'
+						>
+							{/* Top block: icon + title - slightly reduced height to decrease card height */}
+							<div className='min-h-[72px] lg:min-h-[80px] flex flex-col items-start'>
+								<div className='mb-3'>
+									<img
+										src={feature.icon}
+										alt={feature.title}
+										className='w-[44px] h-[44px]'
+									/>
+								</div>
+
+								<h3 className='font-gilroy font-bold text-[19px] lg:text-[20px] text-[#0b0b0b] mb-0 leading-[1.12] tracking-[0.4px] uppercase text-left'>
+									{feature.title}
+								</h3>
 							</div>
 
-							{/* Feature Title */}
-							<h3 className='font-TVG-typography-h3 font-bold text-[24px] sm:text-[28px] lg:text-[32px] text-[#1a1a1a] mb-4 leading-[1.2]'>
-								{feature.title}
-							</h3>
-
-							{/* Feature Description */}
-							<p className='font-TVG-typography-default text-[16px] sm:text-[18px] leading-[1.6] text-[#666666] max-w-[300px] mx-auto'>
-								{feature.description}
-							</p>
+							{/* Description block - aligned start and separated */}
+							<div className='mt-3'>
+								<p className='font-gilroy text-[15px] lg:text-[16px] leading-[1.45] text-[#7b7b7b] max-w-[520px]'>
+									{feature.description}
+								</p>
+							</div>
 						</div>
 					))}
 				</div>
-
-				{/* Bottom spacing for visual separation */}
-				<div className='mt-16 lg:mt-20 border-b border-gray-200'></div>
 			</div>
 		</section>
 	);

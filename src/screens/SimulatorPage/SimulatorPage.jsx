@@ -6,6 +6,7 @@
 import '../../styleguide.css';
 import { FeaturesSection } from './Sections/FeaturesSection';
 import { GolfzonAdvantagesSection } from './Sections/GolfzonAdvantagesSection';
+import WhyGolfzonSection from './Sections/WhyGolfzonSection';
 import { HeroSection } from './Sections/HeroSection';
 import Simulator from './Sections/Simulator';
 import Simulators from './Sections/Simulator';
@@ -19,10 +20,12 @@ export const SimulatorPage = () => {
 			<HeroSection />
 			<FeaturesSection />
 			<WhereToUse />
+
 			<Simulator />
 			{/* Specifications Table Section */}
 			<SpecSection />
 			<GolfzonAdvantagesSection />
+			<WhyGolfzonSection />
 		</div>
 	);
 };

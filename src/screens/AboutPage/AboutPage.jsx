@@ -6,7 +6,7 @@
 import React from 'react';
 import '../../styleguide.css';
 import './AboutPage.css';
-import { HeroSection } from './Sections/HeroSection';
+import { Hero } from './Sections/Hero';
 import { VisionMissionSection } from './Sections/VisionMissionSection';
 import { WorldClassTechSection } from './Sections/WorldClassTechSection';
 import { Vision2030Section } from './Sections/Vision2030Section';
@@ -17,7 +17,7 @@ export const AboutPage = () => {
 	return (
 		<div className='about-page w-full'>
 			{/* Hero Section - "Where Golf People Belong" */}
-			<HeroSection />
+			<Hero />
 
 			{/* Vision & Mission Section - Vision, Mission, and What We Believe cards */}
 			<VisionMissionSection />

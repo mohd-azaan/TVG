@@ -4,23 +4,34 @@
 // RELEVANT FILES: HomepageDesktop.jsx, AboutPage.jsx, App.jsx, tailwind.config.js
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 // Asset constants for logos and icons
 const imgIcon = '/chevron-down.svg';
 const tvgLogo = '/tvg-logo-green.svg';
 
 function TopNavItem({ children, to = '#', status = 'Default' }) {
+	const location = useLocation();
+	const isActive = location.pathname === to || (to !== '/' && location.pathname.startsWith(to));
+	
 	return (
 		<Link
 			to={to}
 			className='content-stretch flex flex-col gap-2.5 items-center justify-center relative size-full group cursor-pointer'
 		>
-			<div className="flex flex-col font-['Gilroy-Bold',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[10px] sm:text-[11px] lg:text-[12px] font-bold text-nowrap text-white tracking-[0.4px] group-hover:text-[#009444] transition-colors duration-200">
+			<div className={`flex flex-col font-['Gilroy-Bold',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[10px] sm:text-[11px] lg:text-[12px] font-bold text-nowrap tracking-[0.4px] transition-colors duration-200 ${
+				isActive 
+					? 'text-[#009444]' 
+					: 'text-white group-hover:text-[#009444]'
+			}`}>
 				<p className='leading-[52px] whitespace-pre'>{children}</p>
 			</div>
 			<div
-				className='absolute bg-transparent group-hover:bg-[#009444] h-0.5 top-[61px] translate-x-[-50%] w-[30px] transition-colors duration-200'
+				className={`absolute h-0.5 top-[61px] translate-x-[-50%] w-[30px] transition-colors duration-200 ${
+					isActive 
+						? 'bg-[#009444]' 
+						: 'bg-transparent group-hover:bg-[#009444]'
+				}`}
 				style={{ left: 'calc(50% + 0.5px)' }}
 			/>
 		</Link>
@@ -183,18 +194,25 @@ export const Navbar = () => {
 								<div className='h-1 bg-[#009444] rounded-t-[20px] w-full' />
 								<div className='bg-white rounded-b-[20px] shadow-2xl border border-gray-200 overflow-hidden backdrop-blur-sm' style={{ marginTop: '-1px' }}>
 									<div className="font-['Gilroy-Bold',sans-serif] leading-[0] not-italic overflow-clip relative text-[14px] font-bold text-black text-nowrap tracking-[0.2px] w-[280px] py-4 px-6">
-										{menuItems.slice(4).map((item, index) => (
-											<Link
-												key={item.label}
-												to={item.to}
-												className='absolute flex flex-col justify-center left-[24px] translate-y-[-50%] hover:text-[#009444] transition-colors duration-200 cursor-pointer py-3 text-left'
-												style={{ top: `${35 + index * 40}px` }}
-											>
-												<p className='leading-[40px] text-nowrap whitespace-pre font-bold'>
-													{item.label}
-												</p>
-											</Link>
-										))}
+										{menuItems.slice(4).map((item, index) => {
+											const isActive = location.pathname === item.to || (item.to !== '/' && location.pathname.startsWith(item.to));
+											return (
+												<Link
+													key={item.label}
+													to={item.to}
+													className={`absolute flex flex-col justify-center left-[24px] translate-y-[-50%] transition-colors duration-200 cursor-pointer py-3 text-left ${
+														isActive 
+															? 'text-[#009444]' 
+															: 'hover:text-[#009444]'
+													}`}
+													style={{ top: `${35 + index * 40}px` }}
+												>
+													<p className='leading-[40px] text-nowrap whitespace-pre font-bold'>
+														{item.label}
+													</p>
+												</Link>
+											);
+										})}
 									</div>
 								</div>
 							</div>
@@ -314,31 +332,45 @@ export const Navbar = () => {
 
 						{/* Mobile Menu Items */}
 						<div className='py-6 px-6 space-y-4'>
-							{menuItems.map((item, index) => (
-								<div key={item.label} className='space-y-2'>
-									<Link
-										to={item.to}
-										onClick={closeMobileMenu}
-										className="block font-['Gilroy-Bold',sans-serif] text-white text-[14px] font-bold tracking-[0.4px] py-3 px-4 rounded-lg hover:bg-[#009444]/20 hover:text-[#009444] transition-colors duration-200"
-									>
-										{item.label}
-									</Link>
-									{item.hasDropdown && item.dropdownItems && (
-										<div className='ml-4 space-y-1'>
-											{item.dropdownItems.map((dropdownItem) => (
-												<Link
-													key={dropdownItem.label}
-													to={dropdownItem.to}
-													onClick={closeMobileMenu}
-													className="block font-['Gilroy-Bold',sans-serif] text-white/80 text-[12px] font-medium py-2 px-4 rounded-md hover:bg-[#009444]/10 hover:text-[#009444] transition-colors duration-200"
-												>
-													{dropdownItem.label}
-												</Link>
-											))}
-										</div>
-									)}
-								</div>
-							))}
+							{menuItems.map((item, index) => {
+								const isActive = location.pathname === item.to || (item.to !== '/' && location.pathname.startsWith(item.to));
+								return (
+									<div key={item.label} className='space-y-2'>
+										<Link
+											to={item.to}
+											onClick={closeMobileMenu}
+											className={`block font-['Gilroy-Bold',sans-serif] text-[14px] font-bold tracking-[0.4px] py-3 px-4 rounded-lg transition-colors duration-200 ${
+												isActive 
+													? 'bg-[#009444]/20 text-[#009444]' 
+													: 'text-white hover:bg-[#009444]/20 hover:text-[#009444]'
+											}`}
+										>
+											{item.label}
+										</Link>
+										{item.hasDropdown && item.dropdownItems && (
+											<div className='ml-4 space-y-1'>
+												{item.dropdownItems.map((dropdownItem) => {
+													const isDropdownActive = location.pathname === dropdownItem.to || (dropdownItem.to !== '/' && location.pathname.startsWith(dropdownItem.to));
+													return (
+														<Link
+															key={dropdownItem.label}
+															to={dropdownItem.to}
+															onClick={closeMobileMenu}
+															className={`block font-['Gilroy-Bold',sans-serif] text-[12px] font-medium py-2 px-4 rounded-md transition-colors duration-200 ${
+																isDropdownActive 
+																	? 'bg-[#009444]/10 text-[#009444]'
+																	: 'text-white/80 hover:bg-[#009444]/10 hover:text-[#009444]'
+															}`}
+														>
+															{dropdownItem.label}
+														</Link>
+													);
+												})}
+											</div>
+										)}
+									</div>
+								);
+							})}
 
 							{/* Mobile Book Now Button */}
 							<div className='pt-4 border-t border-white/10'>

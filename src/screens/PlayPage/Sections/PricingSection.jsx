@@ -70,11 +70,11 @@ export const PricingSection = () => {
 				{/* Pricing cards */}
 				<div className='absolute top-[449px] left-[281px] flex gap-[35px]'>
 					{pricing[activeTab].map((bay, index) => (
-						<div key={index} className='w-[430px] h-[408px] relative'>
+						<div key={index} className='w-[430px] h-[450px] relative bg-white rounded-[30px] shadow-lg overflow-hidden'>
 							{/* Header */}
-							<div className='bg-[#009444] w-full h-[111px] rounded-tl-[30px] rounded-tr-[30px] flex items-center justify-center px-[30px] pb-[50px] pt-[30px]'>
+							<div className={`${index === 1 ? 'bg-[#0b5b2f]' : 'bg-[#009444]'} w-full h-[120px] rounded-tl-[30px] rounded-tr-[30px] flex items-center justify-center px-[30px] pb-[10px] pt-[20px]`}> 
 								<div className='text-center text-white space-y-1'>
-									<h3 className='font-TVG-typography-footer-title font-[number:var(--TVG-typography-footer-title-font-weight)] text-[30px] leading-normal tracking-[var(--TVG-typography-footer-title-letter-spacing)] [font-style:var(--TVG-typography-footer-title-font-style)] uppercase'>
+									<h3 className='font-TVG-typography-footer-title font-[700] text-[30px] leading-normal tracking-[var(--TVG-typography-footer-title-letter-spacing)] [font-style:var(--TVG-typography-footer-title-font-style)] uppercase'>
 										{bay.type}
 									</h3>
 									<p className='font-TVG-typography-footer-menu font-[number:var(--TVG-typography-footer-menu-font-weight)] text-[18px] leading-[26px] tracking-[var(--TVG-typography-footer-menu-letter-spacing)] [font-style:var(--TVG-typography-footer-menu-font-style)] capitalize'>
@@ -84,31 +84,28 @@ export const PricingSection = () => {
 							</div>
 
 							{/* Pricing content */}
-							<div className='bg-[#f6f6f6] w-full h-[297px] rounded-bl-[30px] rounded-br-[30px] relative'>
-								{/* Price display */}
-								<div className='absolute top-[44.5px] left-[143px] w-36 h-[110px] flex items-center justify-center'>
-									<div className='relative'>
-										<div className='font-TVG-typography-counter-number font-[number:var(--TVG-typography-counter-number-font-weight)] text-[120px] leading-[110px] tracking-[2.4px] text-black [font-style:var(--TVG-typography-counter-number-font-style)] uppercase text-center'>
-											{bay.price}
+							<div className='bg-[#f6f6f6] w-full h-[330px] rounded-bl-[30px] rounded-br-[30px] relative'>
+								{/* Price display - centered, symbol left of number */}
+								<div className='absolute top-[60px] left-1/2 transform -translate-x-1/2 flex items-baseline justify-center'>
+									<div className='flex items-baseline gap-1'>
+										<div className='w-[35px] h-[35px] mb-1'>
+											<img src={'/saudi-riyal.svg'} alt='SAR' className='w-full h-full object-contain' />
 										</div>
-										{/* Saudi Riyal Symbol */}
-										<div className='absolute top-[36px] left-[-37px] w-[45px] h-[50px]'>
-											<svg viewBox='0 0 28 31' fill='none' className='w-full h-full'>
-												<path d='M4.2 28.5H23.8V31H0V28.5H4.2ZM14 0L25.2 11.625H18.9V21H16.1V13.5H11.9V21H9.1V11.625H2.8L14 0Z' fill='black'/>
-											</svg>
+										<div className='font-TVG-typography-counter-number font-[number:var(--TVG-typography-counter-number-font-weight)] text-[140px] leading-[120px] tracking-[2.4px] text-black [font-style:var(--TVG-typography-counter-number-font-style)] uppercase'>
+											{bay.price}
 										</div>
 									</div>
 								</div>
 
 								{/* Per hour text */}
-								<div className='absolute top-[161.5px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center'>
+								<div className='absolute top-[200px] left-1/2 transform -translate-x-1/2 text-center'>
 									<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-black [font-style:var(--TVG-typography-default-font-style)] whitespace-nowrap'>
 										/hour/bay/person
 									</p>
 								</div>
 
 								{/* CTA Button */}
-								<div className='absolute top-[212.5px] left-1/2 transform -translate-x-1/2'>
+								<div className='absolute top-[250px] left-1/2 transform -translate-x-1/2'>
 									<button className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-[30px] py-[7px] flex items-center gap-2.5'>
 										<span className='font-TVG-typography-button font-[number:var(--TVG-typography-button-font-weight)] text-[length:var(--TVG-typography-button-font-size)] leading-[var(--TVG-typography-button-line-height)] tracking-[var(--TVG-typography-button-letter-spacing)] text-white [font-style:var(--TVG-typography-button-font-style)] uppercase text-center whitespace-nowrap'>
 											Book a Bay
@@ -149,9 +146,7 @@ export const PricingSection = () => {
 						{/* Price */}
 						<div className='flex items-center gap-2'>
 							<div className='w-7 h-[31px]'>
-								<svg viewBox='0 0 28 31' fill='none' className='w-full h-full'>
-									<path d='M4.2 28.5H23.8V31H0V28.5H4.2ZM14 0L25.2 11.625H18.9V21H16.1V13.5H11.9V21H9.1V11.625H2.8L14 0Z' fill='black'/>
-								</svg>
+								<img src={'/saudi-riyal.svg'} alt='SAR' className='w-full h-full object-contain' />
 							</div>
 							<span className='font-TVG-typography-footer-title font-[number:var(--TVG-typography-footer-title-font-weight)] text-[49px] leading-normal tracking-[var(--TVG-typography-footer-title-letter-spacing)] text-black [font-style:var(--TVG-typography-footer-title-font-style)] uppercase'>
 								25
@@ -223,8 +218,8 @@ export const PricingSection = () => {
 						{pricing[activeTab].map((bay, index) => (
 							<div key={index} className='bg-white rounded-[20px] shadow-lg overflow-hidden'>
 								{/* Header */}
-								<div className='bg-[#009444] p-6 text-center text-white'>
-									<h3 className='font-TVG-typography-footer-title font-[number:var(--TVG-typography-footer-title-font-weight)] text-[24px] leading-normal tracking-[var(--TVG-typography-footer-title-letter-spacing)] [font-style:var(--TVG-typography-footer-title-font-style)] uppercase'>
+								<div className={`${index === 1 ? 'bg-[#0b5b2f]' : 'bg-[#009444]'} p-6 text-center text-white`}>
+									<h3 className='font-TVG-typography-footer-title font-[700] text-[24px] leading-normal tracking-[var(--TVG-typography-footer-title-letter-spacing)] [font-style:var(--TVG-typography-footer-title-font-style)] uppercase'>
 										{bay.type}
 									</h3>
 									<p className='font-TVG-typography-footer-menu font-[number:var(--TVG-typography-footer-menu-font-weight)] text-[16px] leading-[24px] tracking-[var(--TVG-typography-footer-menu-letter-spacing)] [font-style:var(--TVG-typography-footer-menu-font-style)] capitalize opacity-90'>
@@ -235,13 +230,11 @@ export const PricingSection = () => {
 								{/* Content */}
 								<div className='bg-[#f6f6f6] p-6 text-center space-y-4'>
 									{/* Price */}
-									<div className='flex items-center justify-center gap-2'>
-										<div className='w-6 h-7'>
-											<svg viewBox='0 0 28 31' fill='none' className='w-full h-full'>
-												<path d='M4.2 28.5H23.8V31H0V28.5H4.2ZM14 0L25.2 11.625H18.9V21H16.1V13.5H11.9V21H9.1V11.625H2.8L14 0Z' fill='black'/>
-											</svg>
+									<div className='flex items-baseline justify-center gap-1 relative'>
+										<div className='w-[28px] h-[28px] mb-1'>
+											<img src={'/saudi-riyal.svg'} alt='SAR' className='w-full h-full object-contain' />
 										</div>
-										<span className='font-TVG-typography-counter-number font-[number:var(--TVG-typography-counter-number-font-weight)] text-[clamp(60px,15vw,120px)] leading-[1] tracking-[2.4px] text-black [font-style:var(--TVG-typography-counter-number-font-style)] uppercase'>
+										<span className='font-TVG-typography-counter-number font-[number:var(--TVG-typography-counter-number-font-weight)] text-[clamp(48px,12vw,96px)] leading-[1] tracking-[2.4px] text-black [font-style:var(--TVG-typography-counter-number-font-style)] uppercase'>
 											{bay.price}
 										</span>
 									</div>
@@ -284,9 +277,7 @@ export const PricingSection = () => {
 							</div>
 							<div className='flex items-center gap-2'>
 								<div className='w-5 h-6'>
-									<svg viewBox='0 0 28 31' fill='none' className='w-full h-full'>
-										<path d='M4.2 28.5H23.8V31H0V28.5H4.2ZM14 0L25.2 11.625H18.9V21H16.1V13.5H11.9V21H9.1V11.625H2.8L14 0Z' fill='black'/>
-									</svg>
+									<img src={'/saudi-riyal.svg'} alt='SAR' className='w-full h-full object-contain' />
 								</div>
 								<span className='text-2xl font-bold text-black'>25</span>
 							</div>

@@ -107,7 +107,15 @@ export const App = () => {
 					}
 				/>
 				<Route
-					path='/*'
+					path='/'
+					element={
+						<MainLayout>
+							<HomepageDesktop />
+						</MainLayout>
+					}
+				/>
+				<Route
+					path='*'
 					element={
 						<MainLayout>
 							<HomepageDesktop />

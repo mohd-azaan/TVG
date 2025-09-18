@@ -76,6 +76,36 @@ export const FAQSection = () => {
 		}
 	];
 
+	// Left column additional categories (after General FAQs)
+	const leftColumnCategories = [
+		{
+			id: 'reservations',
+			title: 'Reservations',
+			questions: [
+				{ question: 'Do I need to book ahead or can I walk in?', answer: 'While walk-ins are welcome subject to availability, we highly recommend booking ahead, especially for evenings and weekends.' },
+				{ question: 'Can I book over the phone?', answer: 'Yes! You can book by calling us directly during business hours, or use our convenient online booking system 24/7.' },
+				{ question: 'How do the time slots work?', answer: 'We offer flexible time slots typically in 1-hour increments. You can extend your session based on availability.' },
+				{ question: 'What time do I need to arrive?', answer: 'Please arrive 10-15 minutes before your scheduled time for check-in and equipment setup.' },
+				{ question: 'Can I cancel or change my online booking?', answer: 'Yes, you can modify or cancel bookings up to 2 hours before your scheduled time through our website or by calling us.' },
+				{ question: 'Can I just come for food, drinks and coffee?', answer: 'Absolutely! Our restaurant and bar are open to everyone, whether you\'re playing golf or just enjoying our hospitality.' },
+				{ question: 'I\'m running late, what do I do?', answer: 'Please call us immediately. We\'ll do our best to accommodate you, though late arrivals may result in shortened sessions.' },
+				{ question: 'I haven\'t received my confirmation, what do I do?', answer: 'Check your spam folder first, then contact us with your booking details and we\'ll resend your confirmation.' },
+				{ question: 'I\'ve forgotten to print my booking. Is that a problem?', answer: 'No problem at all! We can look up your booking with your name and phone number, or you can show the confirmation on your phone.' }
+			]
+		},
+		{
+			id: 'giftcards',
+			title: 'Gift Cards',
+			questions: [
+				{ question: 'What can gift cards be redeemed against?', answer: 'Gift cards can be used for bay rentals, food and beverages, lessons, merchandise, and any services we offer.' },
+				{ question: 'Where can I buy TVG Gift Cards?', answer: 'Purchase gift cards online through our website, at our facility, or call us to arrange purchase and delivery.' },
+				{ question: 'Are there any fees?', answer: 'No additional fees! You pay face value for gift cards, and recipients get the full value toward their experience.' },
+				{ question: 'How long will the gift card be valid for?', answer: 'Our gift cards are valid for one year from the date of purchase with no expiration fees or penalties.' },
+				{ question: 'When will my recipient receive their eGift Card?', answer: 'Digital gift cards are delivered instantly via email, while physical cards can be picked up immediately or mailed within 2-3 business days.' }
+			]
+		}
+	];
+
 	// Right column categories and questions
 	const rightColumnCategories = [
 		{
@@ -110,32 +140,6 @@ export const FAQSection = () => {
 			]
 		},
 		{
-			id: 'reservations',
-			title: 'Reservations',
-			questions: [
-				{ question: 'Do I need to book ahead or can I walk in?', answer: 'While walk-ins are welcome subject to availability, we highly recommend booking ahead, especially for evenings and weekends.' },
-				{ question: 'Can I book over the phone?', answer: 'Yes! You can book by calling us directly during business hours, or use our convenient online booking system 24/7.' },
-				{ question: 'How do the time slots work?', answer: 'We offer flexible time slots typically in 1-hour increments. You can extend your session based on availability.' },
-				{ question: 'What time do I need to arrive?', answer: 'Please arrive 10-15 minutes before your scheduled time for check-in and equipment setup.' },
-				{ question: 'Can I cancel or change my online booking?', answer: 'Yes, you can modify or cancel bookings up to 2 hours before your scheduled time through our website or by calling us.' },
-				{ question: 'Can I just come for food, drinks and coffee?', answer: 'Absolutely! Our restaurant and bar are open to everyone, whether you\'re playing golf or just enjoying our hospitality.' },
-				{ question: 'I\'m running late, what do I do?', answer: 'Please call us immediately. We\'ll do our best to accommodate you, though late arrivals may result in shortened sessions.' },
-				{ question: 'I haven\'t received my confirmation, what do I do?', answer: 'Check your spam folder first, then contact us with your booking details and we\'ll resend your confirmation.' },
-				{ question: 'I\'ve forgotten to print my booking. Is that a problem?', answer: 'No problem at all! We can look up your booking with your name and phone number, or you can show the confirmation on your phone.' }
-			]
-		},
-		{
-			id: 'giftcards',
-			title: 'Gift Cards',
-			questions: [
-				{ question: 'What can gift cards be redeemed against?', answer: 'Gift cards can be used for bay rentals, food and beverages, lessons, merchandise, and any services we offer.' },
-				{ question: 'Where can I buy TVG Gift Cards?', answer: 'Purchase gift cards online through our website, at our facility, or call us to arrange purchase and delivery.' },
-				{ question: 'Are there any fees?', answer: 'No additional fees! You pay face value for gift cards, and recipients get the full value toward their experience.' },
-				{ question: 'How long will the gift card be valid for?', answer: 'Our gift cards are valid for one year from the date of purchase with no expiration fees or penalties.' },
-				{ question: 'When will my recipient receive their eGift Card?', answer: 'Digital gift cards are delivered instantly via email, while physical cards can be picked up immediately or mailed within 2-3 business days.' }
-			]
-		},
-		{
 			id: 'membership',
 			title: 'Membership',
 			questions: [
@@ -155,15 +159,15 @@ export const FAQSection = () => {
 	];
 
 	return (
-		<section className='relative w-full bg-white py-[125px]'>
-			<div className='max-w-[1920px] mx-auto px-4 lg:px-[110px]'>
+		<section className='relative w-full bg-white py-[80px]'>
+			<div className='max-w-[1920px] mx-auto px-4 lg:px-[280px]'>
 				{/* Two column layout matching Figma exactly */}
-				<div className='grid grid-cols-1 lg:grid-cols-2 gap-[50px]'>
+				<div className='grid grid-cols-1 lg:grid-cols-2 gap-[120px]'>
 					{/* Left Column - General FAQs */}
-					<div className='w-full max-w-[655px]'>
+					<div className='w-full max-w-[580px]'>
 						{/* Category Title */}
-						<div className='mb-[13px]'>
-							<h2 className='font-morganite font-extrabold text-[64px] leading-[60px] text-[#009444] uppercase tracking-[1.28px]'>
+						<div className='mb-[16px]'>
+							<h2 className='font-morganite font-extrabold text-[48px] leading-[44px] text-[#009444] uppercase tracking-[0.96px]'>
 								General FAQs
 							</h2>
 						</div>
@@ -180,34 +184,34 @@ export const FAQSection = () => {
 										<div
 											className={`${isExpanded ? '' : 'border-b border-[#e5e5e5]'} ${
 												index === 0 ? 'rounded-t-[30px]' : ''
-											} ${isLast ? 'rounded-b-[30px]' : ''}`}
+											} ${isLast ? '' : ''}`}
 										>
 											{/* Question Header */}
 											<button
 												onClick={() => toggleItem(faq.id)}
-												className={`w-full flex items-start justify-between p-0 py-4 text-left ${
+												className={`w-full flex items-start justify-between p-0 py-[18px] text-left ${
 													index === 0 ? 'rounded-t-[30px]' : ''
-												} ${isLast && !isExpanded ? 'rounded-b-[30px]' : ''}`}
+												} ${isLast && !isExpanded ? '' : ''}`}
 											>
-												<div className='flex-1 pr-4'>
-													<p className='font-semibold text-[20px] leading-[28px] text-black font-TVG-typography-default'>
+												<div className='flex-1 pr-6'>
+													<p className='font-semibold text-[18px] leading-[24px] text-black font-TVG-typography-default'>
 														{faq.question}
 													</p>
 												</div>
-												<div className='flex-shrink-0 w-5 h-5 text-[#757575]'>
+												<div className='flex-shrink-0 w-6 h-6 text-[#757575]'>
 													{isExpanded ? (
-														<ChevronUp className='w-5 h-5 text-[#009444]' />
+														<ChevronUp className='w-6 h-6 text-[#009444]' />
 													) : (
-														<ChevronDown className='w-5 h-5 text-[#757575]' />
+														<ChevronDown className='w-6 h-6 text-[#757575]' />
 													)}
 												</div>
 											</button>
 
 											{/* Answer Content */}
 											{isExpanded && faq.answer && (
-												<div className='pb-3 border-t border-[#e5e5e5]'>
-													<div className='pt-3'>
-														<p className='font-TVG-typography-default text-[20px] leading-[28px] text-[#757575]'>
+												<div className='pb-4 border-t border-[#e5e5e5]'>
+													<div className='pt-4'>
+														<p className='font-TVG-typography-default text-[16px] leading-[24px] text-[#666666] font-normal'>
 															{faq.answer}
 														</p>
 													</div>
@@ -218,15 +222,13 @@ export const FAQSection = () => {
 								);
 							})}
 						</div>
-					</div>
 
-					{/* Right Column - Other Categories */}
-					<div className='w-full max-w-[655px]'>
-						{rightColumnCategories.map((category, categoryIndex) => (
-							<div key={category.id} className={`${categoryIndex > 0 ? 'mt-[60px]' : ''}`}>
+						{/* Additional Left Column Categories */}
+						{leftColumnCategories.map((category, categoryIndex) => (
+							<div key={category.id} className='mt-[72px]'>
 								{/* Category Title */}
-								<div className='mb-[13px]'>
-									<h2 className='font-morganite font-extrabold text-[64px] leading-[60px] text-[#009444] uppercase tracking-[1.28px]'>
+								<div className='mb-[16px]'>
+									<h2 className='font-morganite font-extrabold text-[48px] leading-[44px] text-[#009444] uppercase tracking-[0.96px]'>
 										{category.title}
 									</h2>
 								</div>
@@ -244,33 +246,98 @@ export const FAQSection = () => {
 												<div
 													className={`${isExpanded ? '' : 'border-b border-[#e5e5e5]'} ${
 														questionIndex === 0 ? 'rounded-t-[30px]' : ''
-													} ${isLast ? 'rounded-b-[30px]' : ''}`}
+													} ${isLast ? '' : ''}`}
 												>
 													<button
 														onClick={() => toggleItem(questionId)}
-														className={`w-full flex items-center justify-between p-0 py-4 text-left ${
+														className={`w-full flex items-center justify-between p-0 py-[18px] text-left ${
 															questionIndex === 0 ? 'rounded-t-[30px]' : ''
-														} ${isLast && !isExpanded ? 'rounded-b-[30px]' : ''}`}
+														} ${isLast && !isExpanded ? '' : ''}`}
 													>
-														<div className='flex-1 pr-4'>
-															<p className='font-semibold text-[20px] leading-[28px] text-black font-TVG-typography-default'>
+														<div className='flex-1 pr-6'>
+															<p className='font-semibold text-[18px] leading-[24px] text-black font-TVG-typography-default'>
 																{questionObj.question}
 															</p>
 														</div>
-														<div className='flex-shrink-0 w-5 h-5 text-[#757575]'>
+														<div className='flex-shrink-0 w-6 h-6 text-[#757575]'>
 															{isExpanded ? (
-																<ChevronUp className='w-5 h-5 text-[#009444]' />
+																<ChevronUp className='w-6 h-6 text-[#009444]' />
 															) : (
-																<ChevronDown className='w-5 h-5 text-[#757575]' />
+																<ChevronDown className='w-6 h-6 text-[#757575]' />
 															)}
 														</div>
 													</button>
 
 													{/* Answer Content */}
 													{isExpanded && questionObj.answer && (
-														<div className='pb-3 border-t border-[#e5e5e5]'>
-															<div className='pt-3'>
-																<p className='font-TVG-typography-default text-[20px] leading-[28px] text-[#757575]'>
+														<div className='pb-4 border-t border-[#e5e5e5]'>
+															<div className='pt-4'>
+																<p className='font-TVG-typography-default text-[16px] leading-[24px] text-[#666666] font-normal'>
+																	{questionObj.answer}
+																</p>
+															</div>
+														</div>
+													)}
+												</div>
+											</div>
+										);
+									})}
+								</div>
+							</div>
+						))}
+					</div>
+
+					{/* Right Column - Other Categories */}
+					<div className='w-full max-w-[580px]'>
+						{rightColumnCategories.map((category, categoryIndex) => (
+							<div key={category.id} className={`${categoryIndex > 0 ? 'mt-[72px]' : ''}`}>
+								{/* Category Title */}
+								<div className='mb-[16px]'>
+									<h2 className='font-morganite font-extrabold text-[48px] leading-[44px] text-[#009444] uppercase tracking-[0.96px]'>
+										{category.title}
+									</h2>
+								</div>
+
+								{/* Category Questions */}
+								<div className='space-y-0'>
+									{category.questions.map((questionObj, questionIndex) => {
+										const questionId = `${category.id}-${questionIndex}`;
+										const isExpanded = expandedItem === questionId;
+										const isLast = questionIndex === category.questions.length - 1;
+
+										return (
+											<div key={questionId} className='relative'>
+												{/* Question Item */}
+												<div
+													className={`${isExpanded ? '' : 'border-b border-[#e5e5e5]'} ${
+														questionIndex === 0 ? 'rounded-t-[30px]' : ''
+													} ${isLast ? '' : ''}`}
+												>
+													<button
+														onClick={() => toggleItem(questionId)}
+														className={`w-full flex items-center justify-between p-0 py-[18px] text-left ${
+															questionIndex === 0 ? 'rounded-t-[30px]' : ''
+														} ${isLast && !isExpanded ? '' : ''}`}
+													>
+														<div className='flex-1 pr-6'>
+															<p className='font-semibold text-[18px] leading-[24px] text-black font-TVG-typography-default'>
+																{questionObj.question}
+															</p>
+														</div>
+														<div className='flex-shrink-0 w-6 h-6 text-[#757575]'>
+															{isExpanded ? (
+																<ChevronUp className='w-6 h-6 text-[#009444]' />
+															) : (
+																<ChevronDown className='w-6 h-6 text-[#757575]' />
+															)}
+														</div>
+													</button>
+
+													{/* Answer Content */}
+													{isExpanded && questionObj.answer && (
+														<div className='pb-4 border-t border-[#e5e5e5]'>
+															<div className='pt-4'>
+																<p className='font-TVG-typography-default text-[16px] leading-[24px] text-[#666666] font-normal'>
 																	{questionObj.answer}
 																</p>
 															</div>

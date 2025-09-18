@@ -7,9 +7,15 @@ import React from 'react';
 import { Button } from '../../../../components/ui/button';
 
 // Arrow Right icon component
-const ArrowRight = ({ className = "w-6 h-6" }) => (
-	<svg className={className} viewBox="0 0 24 24" fill="none">
-		<path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+const ArrowRight = ({ className = 'w-6 h-6' }) => (
+	<svg className={className} viewBox='0 0 24 24' fill='none'>
+		<path
+			d='M5 12H19M19 12L12 5M19 12L12 19'
+			stroke='currentColor'
+			strokeWidth='2'
+			strokeLinecap='round'
+			strokeLinejoin='round'
+		/>
 	</svg>
 );
 
@@ -33,25 +39,29 @@ export const CorporateSection = () => {
 						</h2>
 
 						{/* Tagline */}
-						<p className='font-TVG-typography-tagline text-[22px] leading-[26px] text-[#009444] uppercase tracking-[0.44px] mb-8'>
+						<p className='font-TVG-typography-tagline font-gilroy font-medium text-[22px] leading-[26px] text-[#009444] uppercase tracking-[0.44px] mb-8'>
 							Golf is a great team-building and well-being tool
 						</p>
 
 						{/* Description */}
 						<div className='mb-8'>
 							<p className='font-TVG-typography-default text-[20px] leading-[28px] text-[#757575] mb-4'>
-								The Virtual Greens recognizes the importance of employee wellbeing and offers various initiatives to help companies support their employees.
+								The Virtual Greens recognizes the importance of employee
+								wellbeing and offers various initiatives to help companies
+								support their employees.
 							</p>
 							<p className='font-TVG-typography-default text-[20px] leading-[28px] text-[#757575]'>
-								We offer company individual or group golf lessons and beginners programmes that remove the barriers of traditional corporate golf membership and make the sport more accessible.
+								We offer company individual or group golf lessons and beginners
+								programmes that remove the barriers of traditional corporate
+								golf membership and make the sport more accessible.
 							</p>
 						</div>
 
 						{/* CTA Button */}
 						<div className='flex justify-start'>
-							<Button className='bg-[#009444] hover:bg-[#007a3a] rounded-[50px] px-8 py-4 font-TVG-typography-button text-[18px] text-white uppercase'>
+							<Button className='bg-[#009444] hover:bg-[#007a3a] rounded-[50px] px-8 py-8 font-TVG-typography-button text-[18px] text-white uppercase'>
 								<span>Learn More</span>
-								<ArrowRight className="w-6 h-6" />
+								<ArrowRight className='w-6 h-6' />
 							</Button>
 						</div>
 					</div>

@@ -88,7 +88,7 @@ export const BaySelectionSection = () => {
 				</div>
 
 				{/* Description text */}
-				<div className='absolute top-[190px] left-[626px] w-[655px] text-center'>
+				<div className='absolute top-[190px] left-1/2 transform -translate-x-1/2 w-[655px] text-center'>
 					<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[lightgrey] [font-style:var(--TVG-typography-default-font-style)]'>
 						Each bay is powered by Golfzon's cutting-edge technology, but the
 						vibe is up to you. Here's how to play it
@@ -96,7 +96,7 @@ export const BaySelectionSection = () => {
 				</div>
 
 				{/* Bay cards grid */}
-				<div className='absolute top-[554px] left-[280px] flex gap-[50px]'>
+				<div className='absolute top-[554px] left-1/2 transform -translate-x-1/2 flex gap-[50px]'>
 					{bayTypes.map((bay, index) => (
 						<div
 							key={index}

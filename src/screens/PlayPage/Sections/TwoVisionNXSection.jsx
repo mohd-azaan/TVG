@@ -54,14 +54,14 @@ export const TwoVisionNXSection = () => {
 				</p>
 
 				{/* Description text */}
-				<div className='absolute left-[632px] top-[283px] w-[655px]'>
+				<div className='absolute left-1/2 top-[283px] transform -translate-x-1/2 w-[655px]'>
 					<p className='font-TVG-typography-default font-[500] text-[20px] leading-[28px] text-[#757575] text-center'>
 						At The Virtual Greens, we've teamed up with the best in the game, Golfzon TwoVisionNX. It's a global leader in simulation tech, trusted by top-tier tours across Asia (with multi-million dollar prize pools, by the way). And now, it's right here in Riyadh. We're bringing next-level realism to every round.
 					</p>
 				</div>
 
 				{/* Feature cards with exact Figma positioning */}
-				<div className='absolute top-[482px] left-[280px]'>
+				<div className='absolute top-[482px] left-1/2 transform -translate-x-1/2 w-[1360px]'>
 					{/* Play the Legends */}
 					<div className='bg-[#f6f6f6] h-[430px] w-[1360px] rounded-[30px] relative'>
 						<img

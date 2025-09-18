@@ -7,7 +7,7 @@ import React from 'react';
 
 export const HeroSection = () => {
 	return (
-		<section className="contact-hero bg-[#272727] h-[591px] relative overflow-hidden w-full">
+		<section className="bg-[#102121] h-[591px] relative overflow-hidden w-full">
 			{/* Green accent section at bottom */}
 			<div className="absolute bg-[#006f33] h-[335px] left-0 top-[558px] w-full" />
 
@@ -16,10 +16,10 @@ export const HeroSection = () => {
 				<div className="rotate-[348.049deg]">
 					<div className="h-[1080px] w-[1920px] relative overflow-hidden">
 						{/* Background decorative elements */}
-						<div className="absolute inset-[33.68%_-0.3%_13.63%_6.06%]">
-							<div className="absolute inset-[33.68%_-0.3%_13.63%_6.06%] mix-blend-screen">
+						<div className="absolute inset-[20.68%_-3.0%_13.63%_6.06%]">
+							<div className="absolute inset-[30.68%_-0.3%_3.63%_3.06%] mix-blend-screen">
 								<img
-									src="/shape14-3.svg"
+									src="/shape14-2.svg"
 									alt=""
 									className="w-full h-full object-cover"
 								/>

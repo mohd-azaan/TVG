@@ -8,8 +8,8 @@ import React from 'react';
 export const GoogleMapSection = () => {
 	return (
 		<>
-			{/* Map positioned exactly as in Figma - inside the contact section */}
-			<div className="absolute left-[280px] top-[912px] w-[1360px] h-[426px]">
+			{/* Map positioned responsively */}
+			<div className="w-full max-w-[1360px] h-[426px] mt-8">
 				<div
 					className="google-map-section bg-center bg-cover bg-no-repeat w-full h-full rounded-[30px]"
 					style={{

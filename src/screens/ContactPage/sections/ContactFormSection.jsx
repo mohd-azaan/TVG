@@ -77,7 +77,7 @@ export const ContactFormSection = () => {
 	};
 
 	return (
-		<div className="absolute left-[1028px] top-[100px] w-[612px] h-[667px] overflow-hidden">
+		<div className="w-full lg:w-1/2 lg:pl-8">
 			{/* Form Title */}
 			<h2 className="contact-form-title font-['Gilroy-Bold',sans-serif] text-[22px] font-bold leading-[26px] tracking-[0.44px] text-[#009444] uppercase mb-[63px]">
 				Drop us a line

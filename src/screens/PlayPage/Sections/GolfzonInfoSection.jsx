@@ -12,51 +12,54 @@ export const GolfzonInfoSection = () => {
 			<div className='hidden lg:block'>
 			{/* Container positioned according to Figma layout */}
 			<div className='relative max-w-[1920px] mx-auto'>
-				{/* Main title */}
-				<h2 className='absolute left-[280px] top-[159px] w-[655px] font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-white uppercase'>
-					What is Golfzon?
-				</h2>
+				{/* Content wrapper for responsive centering */}
+				<div className='absolute top-[159px] left-1/2 transform -translate-x-1/2 w-[1360px]'>
+					{/* Main title */}
+					<h2 className='absolute left-0 top-0 w-[655px] font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-white uppercase'>
+						What is Golfzon?
+					</h2>
 
-				{/* Green tagline */}
-				<p className='absolute left-[280px] top-[255px] w-[542px] font-TVG-typography-tagline font-[700] text-[22px] leading-[26px] tracking-[0.44px] text-[#7ddb8a] uppercase'>
-					The World's #1 Golf Simulator For a Reason
-				</p>
+					{/* Green tagline */}
+					<p className='absolute left-0 top-[96px] w-[542px] font-TVG-typography-tagline font-[700] text-[22px] leading-[26px] tracking-[0.44px] text-[#7ddb8a] uppercase'>
+						The World's #1 Golf Simulator For a Reason
+					</p>
 
-				{/* Description text */}
-				<div className='absolute left-[280px] top-[295px] w-[655px]'>
-					<div className='font-TVG-typography-default font-[500] text-[20px] leading-[28px] text-[lightgrey]'>
-						<p className='mb-5'>
-							The first time you try Golfzon, it's hard to believe it's not the real thing. The visuals are jaw-dropping. The feel is unbelievably accurate. And the gameplay is just addictive.
-						</p>
-						<p>
-							One swing in, and you'll wonder why you ever settled for less.
-						</p>
-					</div>
-				</div>
-
-				{/* CTA Button */}
-				<div className='absolute left-[280px] top-[420px]'>
-					<button className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-[30px] py-[7px] flex items-center gap-[10px]'>
-						<span className='font-TVG-typography-button font-[600] text-[18px] leading-[40px] text-white uppercase text-center whitespace-nowrap'>
-							Book a Bay
-						</span>
-						<div className='w-6 h-6'>
-							<img
-								src='/arrow-right-figma.svg'
-								alt='Arrow right'
-								className='w-full h-full object-contain'
-							/>
+					{/* Description text */}
+					<div className='absolute left-0 top-[136px] w-[655px]'>
+						<div className='font-TVG-typography-default font-[500] text-[20px] leading-[28px] text-[lightgrey]'>
+							<p className='mb-5'>
+								The first time you try Golfzon, it's hard to believe it's not the real thing. The visuals are jaw-dropping. The feel is unbelievably accurate. And the gameplay is just addictive.
+							</p>
+							<p>
+								One swing in, and you'll wonder why you ever settled for less.
+							</p>
 						</div>
-					</button>
-				</div>
+					</div>
 
-				{/* Golfzon Screenshot */}
-				<div className='absolute left-[985px] top-[159px] w-[655px] h-[368px]'>
-					<img
-						src='/golfzon-screenshot.png'
-						alt='Golfzon Interface Screenshot'
-						className='w-full h-full object-cover rounded-[30px] shadow-lg'
-					/>
+					{/* CTA Button */}
+					<div className='absolute left-0 top-[261px]'>
+						<button className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-[30px] py-[7px] flex items-center gap-[10px]'>
+							<span className='font-TVG-typography-button font-[600] text-[18px] leading-[40px] text-white uppercase text-center whitespace-nowrap'>
+								Book a Bay
+							</span>
+							<div className='w-6 h-6'>
+								<img
+									src='/arrow-right-figma.svg'
+									alt='Arrow right'
+									className='w-full h-full object-contain'
+								/>
+							</div>
+						</button>
+					</div>
+
+					{/* Golfzon Screenshot */}
+					<div className='absolute right-0 top-0 w-[655px] h-[368px]'>
+						<img
+							src='/golfzon-screenshot.png'
+							alt='Golfzon Interface Screenshot'
+							className='w-full h-full object-cover rounded-[30px] shadow-lg'
+						/>
+					</div>
 				</div>
 			</div>
 			</div>

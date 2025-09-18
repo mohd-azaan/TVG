@@ -15,9 +15,10 @@ export const GolfzonNumbersSection = () => {
 					Golfzon Worldwide Numbers
 				</h2>
 
-				{/* Statistics cards with exact Figma positioning */}
-				{/* #1 Card - Light Green */}
-				<div className='absolute left-[279px] top-[279px] w-[312px] h-[250px] bg-[#64ff8a] rounded-[30px] p-[20px] flex flex-col justify-between'>
+				{/* Statistics cards container with responsive centering */}
+				<div className='absolute top-[279px] left-1/2 transform -translate-x-1/2 w-[1360px] h-[520px]'>
+					{/* #1 Card - Light Green */}
+					<div className='absolute left-0 top-0 w-[312px] h-[250px] bg-[#64ff8a] rounded-[30px] p-[20px] flex flex-col justify-between'>
 					<p className='font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-black uppercase'>
 						#1
 					</p>
@@ -26,8 +27,8 @@ export const GolfzonNumbersSection = () => {
 					</p>
 				</div>
 
-				{/* 100+ Million Card - Dark Green */}
-				<div className='absolute left-[611px] top-[279px] w-[392px] h-[250px] bg-[#006f33] rounded-[30px] p-[20px] flex flex-col justify-between'>
+					{/* 100+ Million Card - Dark Green */}
+					<div className='absolute left-[332px] top-0 w-[392px] h-[250px] bg-[#006f33] rounded-[30px] p-[20px] flex flex-col justify-between'>
 					<p className='font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-white uppercase'>
 						100+ Million
 					</p>
@@ -36,8 +37,8 @@ export const GolfzonNumbersSection = () => {
 					</p>
 				</div>
 
-				{/* 160K+ Card - Green */}
-				<div className='absolute left-[1023px] top-[279px] w-[328px] h-[250px] bg-[#009444] rounded-[30px] p-[20px] flex flex-col justify-between'>
+					{/* 160K+ Card - Green */}
+					<div className='absolute left-[744px] top-0 w-[328px] h-[250px] bg-[#009444] rounded-[30px] p-[20px] flex flex-col justify-between'>
 					<p className='font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-white uppercase'>
 						160K+
 					</p>
@@ -46,8 +47,8 @@ export const GolfzonNumbersSection = () => {
 					</p>
 				</div>
 
-				{/* 13,490K Card - Light Green */}
-				<div className='absolute left-[1371px] top-[279px] w-[268px] h-[250px] bg-[#33a969] rounded-[30px] p-[20px] flex flex-col justify-between'>
+					{/* 13,490K Card - Light Green */}
+					<div className='absolute left-[1092px] top-0 w-[268px] h-[250px] bg-[#33a969] rounded-[30px] p-[20px] flex flex-col justify-between'>
 					<p className='font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-black uppercase'>
 						13,490K
 					</p>
@@ -56,8 +57,8 @@ export const GolfzonNumbersSection = () => {
 					</p>
 				</div>
 
-				{/* 8.5+ Billion Card - Dark Green */}
-				<div className='absolute left-[279px] top-[549px] w-[510px] h-[250px] bg-[#004a22] rounded-[30px] p-[20px] flex flex-col justify-between'>
+					{/* 8.5+ Billion Card - Dark Green */}
+					<div className='absolute left-0 top-[270px] w-[510px] h-[250px] bg-[#004a22] rounded-[30px] p-[20px] flex flex-col justify-between'>
 					<p className='font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-white uppercase'>
 						8.5+ Billion
 					</p>
@@ -66,8 +67,8 @@ export const GolfzonNumbersSection = () => {
 					</p>
 				</div>
 
-				{/* 51K+ Card - Light Green */}
-				<div className='absolute left-[809px] top-[549px] w-[262px] h-[250px] bg-[#33a969] rounded-[30px] p-[20px] flex flex-col justify-between'>
+					{/* 51K+ Card - Light Green */}
+					<div className='absolute left-[530px] top-[270px] w-[262px] h-[250px] bg-[#33a969] rounded-[30px] p-[20px] flex flex-col justify-between'>
 					<p className='font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-black uppercase'>
 						51K+
 					</p>
@@ -76,8 +77,8 @@ export const GolfzonNumbersSection = () => {
 					</p>
 				</div>
 
-				{/* 63 Card - Light Green */}
-				<div className='absolute left-[1091px] top-[549px] w-[139px] h-[250px] bg-[#66bf8f] rounded-[30px] p-[20px] flex flex-col justify-between'>
+					{/* 63 Card - Light Green */}
+					<div className='absolute left-[812px] top-[270px] w-[139px] h-[250px] bg-[#66bf8f] rounded-[30px] p-[20px] flex flex-col justify-between'>
 					<p className='font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-black uppercase'>
 						63
 					</p>
@@ -86,8 +87,8 @@ export const GolfzonNumbersSection = () => {
 					</p>
 				</div>
 
-				{/* 6.2+ Million Card - Green */}
-				<div className='absolute left-[1250px] top-[549px] w-[389px] h-[250px] bg-[#009444] rounded-[30px] p-[20px] flex flex-col justify-between'>
+					{/* 6.2+ Million Card - Green */}
+					<div className='absolute left-[971px] top-[270px] w-[389px] h-[250px] bg-[#009444] rounded-[30px] p-[20px] flex flex-col justify-between'>
 					<p className='font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-white uppercase'>
 						6.2+ Million
 					</p>
@@ -95,9 +96,10 @@ export const GolfzonNumbersSection = () => {
 						Registered Users
 					</p>
 				</div>
+			</div>
 
-				{/* Bottom Line Section */}
-				<div className='absolute left-[279px] top-[882px] w-[1360px] h-[213px] bg-[#0c1a1a] rounded-[30px]'>
+			{/* Bottom Line Section */}
+			<div className='absolute left-1/2 top-[882px] transform -translate-x-1/2 w-[1360px] h-[213px] bg-[#0c1a1a] rounded-[30px]'>
 					<h3 className='absolute left-[50px] top-[50px] font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-white uppercase whitespace-nowrap'>
 						Bottom Line?
 					</h3>

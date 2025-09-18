@@ -1,23 +1,24 @@
-
-import React from "react";
+import React from 'react';
+import { HeroSection as ReusableHeroSection } from '../../../layouts/HeroSection/HeroSection';
 
 export const HeroSection = () => {
-  return (
-    <div className="relative w-full h-[591px] bg-[#272727] overflow-clip">
-      <div className="absolute w-[1920px] h-[335px] left-0 top-[558px] bg-[#006f33]" />
-      <div className="absolute top-[357px] left-1/2 translate-x-[-50%]">
-        <p className="font-['Gilroy-Medium'] text-[24px] text-[#dedede] w-[800px] leading-[1.2]">
-          Most answers can be found below, but if you still have a question, our team is just{" "}
-          <span className="text-[#009444]">a message away</span>.
-        </p>
-      </div>
-      <div className="absolute top-[237px] left-[280px] w-[655px]">
-        <h1 className="font-['Morganite-Black'] text-[110px] text-white uppercase tracking-[2.2px] leading-[100px]">
-          Frequently Asked
-          <br />
-          Questions
-        </h1>
-      </div>
-    </div>
-  );
+    const title = <>LEAGUES AT <br /> THE VIRTUAL GREENS</>;
+    const subtitle = "WELCOME TO YOUR WEEKLY GOLF ROUTINE.";
+    const description = (
+        <>
+            <p>With this league, we're bringing the heat indoors, literally!!</p>
+            <p>While the sun blazes outside, we're getting everything ready for a season of high-energy league play. Expect good games, better company, and a weekly competition you'll actually look forward to.</p>
+        </>
+    );
+
+    return (
+        <ReusableHeroSection
+            title={title}
+            subtitle={subtitle}
+            description={description}
+            imageUrl="/indoor-golf-1.png"
+            ctaText="JOIN THE WHATSAPP GROUP"
+            ctaLink="#"
+        />
+    );
 };

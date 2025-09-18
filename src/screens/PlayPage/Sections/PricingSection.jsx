@@ -12,13 +12,13 @@ export const PricingSection = () => {
 		weekdays: [
 			{ type: 'Standard Bay', location: 'Mezzanine Floor', price: 180 },
 			{ type: 'Semi-Private Bay', location: 'Ground Floor', price: 180 },
-			{ type: 'VIP Bay', location: 'Ground Floor', price: 500 }
+			{ type: 'VIP Bay', location: 'Ground Floor', price: 500 },
 		],
 		weekends: [
 			{ type: 'Standard Bay', location: 'Mezzanine Floor', price: 220 },
 			{ type: 'Semi-Private Bay', location: 'Ground Floor', price: 220 },
-			{ type: 'VIP Bay', location: 'Ground Floor', price: 600 }
-		]
+			{ type: 'VIP Bay', location: 'Ground Floor', price: 600 },
+		],
 	};
 
 	return (
@@ -35,7 +35,9 @@ export const PricingSection = () => {
 				{/* Description text */}
 				<div className='absolute top-[220px] left-[632px] w-[655px] text-center'>
 					<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[#757575] [font-style:var(--TVG-typography-default-font-style)]'>
-						Prices are per hour, per bay, and per person. Each bay can accommodate a maximum of 6 players, and you can hit unlimited golf balls during your time with us.
+						Prices are per hour, per bay, and per person. Each bay can
+						accommodate a maximum of 6 players, and you can hit unlimited golf
+						balls during your time with us.
 					</p>
 				</div>
 
@@ -70,9 +72,16 @@ export const PricingSection = () => {
 				{/* Pricing cards */}
 				<div className='absolute top-[449px] left-[281px] flex gap-[35px]'>
 					{pricing[activeTab].map((bay, index) => (
-						<div key={index} className='w-[430px] h-[450px] relative bg-white rounded-[30px] shadow-lg overflow-hidden'>
+						<div
+							key={index}
+							className='w-[430px] h-[450px] relative bg-white rounded-[30px] shadow-lg overflow-hidden'
+						>
 							{/* Header */}
-							<div className={`${index === 1 ? 'bg-[#0b5b2f]' : 'bg-[#009444]'} w-full h-[120px] rounded-tl-[30px] rounded-tr-[30px] flex items-center justify-center px-[30px] pb-[10px] pt-[20px]`}> 
+							<div
+								className={`${
+									index === 1 ? 'bg-[#0b5b2f]' : 'bg-[#009444]'
+								} w-full h-[120px] rounded-tl-[30px] rounded-tr-[30px] flex items-center justify-center px-[30px] pb-[10px] pt-[20px]`}
+							>
 								<div className='text-center text-white space-y-1'>
 									<h3 className='font-TVG-typography-footer-title font-[700] text-[30px] leading-normal tracking-[var(--TVG-typography-footer-title-letter-spacing)] [font-style:var(--TVG-typography-footer-title-font-style)] uppercase'>
 										{bay.type}
@@ -89,7 +98,11 @@ export const PricingSection = () => {
 								<div className='absolute top-[60px] left-1/2 transform -translate-x-1/2 flex items-baseline justify-center'>
 									<div className='flex items-baseline gap-1'>
 										<div className='w-[35px] h-[35px] mb-1'>
-											<img src={'/saudi-riyal.svg'} alt='SAR' className='w-full h-full object-contain' />
+											<img
+												src={'/saudi-riyal.svg'}
+												alt='SAR'
+												className='w-full h-full object-contain'
+											/>
 										</div>
 										<div className='font-TVG-typography-counter-number font-[number:var(--TVG-typography-counter-number-font-weight)] text-[140px] leading-[120px] tracking-[2.4px] text-black [font-style:var(--TVG-typography-counter-number-font-style)] uppercase'>
 											{bay.price}
@@ -146,7 +159,11 @@ export const PricingSection = () => {
 						{/* Price */}
 						<div className='flex items-center gap-2'>
 							<div className='w-7 h-[31px]'>
-								<img src={'/saudi-riyal.svg'} alt='SAR' className='w-full h-full object-contain' />
+								<img
+									src={'/saudi-riyal.svg'}
+									alt='SAR'
+									className='w-full h-full object-contain'
+								/>
 							</div>
 							<span className='font-TVG-typography-footer-title font-[number:var(--TVG-typography-footer-title-font-weight)] text-[49px] leading-normal tracking-[var(--TVG-typography-footer-title-letter-spacing)] text-black [font-style:var(--TVG-typography-footer-title-font-style)] uppercase'>
 								25
@@ -181,7 +198,9 @@ export const PricingSection = () => {
 							Pricing
 						</h2>
 						<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[#757575] [font-style:var(--TVG-typography-default-font-style)]'>
-							Prices are per hour, per bay, and per person. Each bay can accommodate a maximum of 6 players, and you can hit unlimited golf balls during your time with us.
+							Prices are per hour, per bay, and per person. Each bay can
+							accommodate a maximum of 6 players, and you can hit unlimited golf
+							balls during your time with us.
 						</p>
 					</div>
 
@@ -216,9 +235,16 @@ export const PricingSection = () => {
 					{/* Mobile pricing cards */}
 					<div className='space-y-6'>
 						{pricing[activeTab].map((bay, index) => (
-							<div key={index} className='bg-white rounded-[20px] shadow-lg overflow-hidden'>
+							<div
+								key={index}
+								className='bg-white rounded-[20px] shadow-lg overflow-hidden'
+							>
 								{/* Header */}
-								<div className={`${index === 1 ? 'bg-[#0b5b2f]' : 'bg-[#009444]'} p-6 text-center text-white`}>
+								<div
+									className={`${
+										index === 1 ? 'bg-[#0b5b2f]' : 'bg-[#009444]'
+									} p-6 text-center text-white`}
+								>
 									<h3 className='font-TVG-typography-footer-title font-[700] text-[24px] leading-normal tracking-[var(--TVG-typography-footer-title-letter-spacing)] [font-style:var(--TVG-typography-footer-title-font-style)] uppercase'>
 										{bay.type}
 									</h3>
@@ -232,7 +258,11 @@ export const PricingSection = () => {
 									{/* Price */}
 									<div className='flex items-baseline justify-center gap-1 relative'>
 										<div className='w-[28px] h-[28px] mb-1'>
-											<img src={'/saudi-riyal.svg'} alt='SAR' className='w-full h-full object-contain' />
+											<img
+												src={'/saudi-riyal.svg'}
+												alt='SAR'
+												className='w-full h-full object-contain'
+											/>
 										</div>
 										<span className='font-TVG-typography-counter-number font-[number:var(--TVG-typography-counter-number-font-weight)] text-[clamp(48px,12vw,96px)] leading-[1] tracking-[2.4px] text-black [font-style:var(--TVG-typography-counter-number-font-style)] uppercase'>
 											{bay.price}
@@ -277,13 +307,22 @@ export const PricingSection = () => {
 							</div>
 							<div className='flex items-center gap-2'>
 								<div className='w-5 h-6'>
-									<img src={'/saudi-riyal.svg'} alt='SAR' className='w-full h-full object-contain' />
+									<img
+										src={'/saudi-riyal.svg'}
+										alt='SAR'
+										className='w-full h-full object-contain'
+									/>
 								</div>
 								<span className='text-2xl font-bold text-black'>25</span>
 							</div>
 						</div>
-						<p className='text-sm text-[#757575]'>One-time registration fee for first-time players</p>
-						<p className='text-xs text-[#757575]'><strong>NOTE:</strong> The prices are exclusive of 15% VAT + 3% transaction surcharge</p>
+						<p className='text-sm text-[#757575]'>
+							One-time registration fee for first-time players
+						</p>
+						<p className='text-xs text-[#757575]'>
+							<strong>NOTE:</strong> The prices are exclusive of 15% VAT + 3%
+							transaction surcharge
+						</p>
 					</div>
 				</div>
 			</div>

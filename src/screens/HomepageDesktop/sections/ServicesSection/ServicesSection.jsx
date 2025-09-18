@@ -6,8 +6,7 @@ import { Card, CardContent } from '../../../../components/ui/card';
 const serviceCards = [
 	{
 		title: 'GOLF SIMULATOR BAYS',
-		description:
-			"5 Golf Simulator Bays (open, private, and VIP) with the world's most advanced Golfzon TwoVisionNX tech.",
+		description: '5 Golf Simulator Bays (open, private, and VIP) with the world\'s most advanced Golfzon TwoVisionNX tech.',
 		image: '/advanced-simulators-1-5.png',
 	},
 	{
@@ -17,13 +16,9 @@ const serviceCards = [
 	},
 	{
 		title: 'LESSONS & COACHING',
-		description:
-			'Fun, fast-paced options from mini golf to longest drive battles.',
+		description: 'Fun, fast-paced options from mini golf to longest drive battles.',
 		image: '/advanced-simulators-1-3.png',
 	},
-];
-
-const additionalServices = [
 	{
 		title: 'MEMBERSHIPS',
 		description: 'More golf, more perks.',
@@ -86,50 +81,47 @@ export const ServicesSection = () => {
 					</div>
 				</div>
 
-				{/* Service Cards Grid */}
-				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mb-16 sm:mb-20 lg:mb-24'>
+				{/* Service Cards Grid - Exact Figma Design */}
+				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-10'>
 					{serviceCards.map((service, index) => (
 						<Card
 							key={`service-${index}`}
-							className='h-[350px] sm:h-[400px] lg:h-[450px] rounded-[30px] bg-gradient-to-b from-gray-100 to-gray-200 border-0 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 group'
+							className='bg-[#F6F6F6] border-0 rounded-[20px] overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group'
 						>
-							<div className='relative h-full'>
-								<img
-									className='absolute w-full h-[300px] sm:h-[350px] lg:h-[400px] top-[-150px] sm:top-[-180px] lg:top-[-200px] left-0 rounded-[30px] object-cover group-hover:scale-110 transition-transform duration-500'
-									alt={service.title}
-									src={service.image}
-								/>
-								<CardContent className='absolute bottom-0 left-0 right-0 p-6 sm:p-8 lg:p-10 space-y-3 sm:space-y-4 bg-gradient-to-t from-white via-white/95 to-transparent'>
-									<h3 className='text-xl sm:text-2xl lg:text-[28px] font-gilroy font-bold text-black leading-tight'>
+							<div className='space-y-4 p-0'>
+								{/* Image Container - Dark placeholder exactly like Figma */}
+								<div className='w-full h-[300px] bg-[#3A3A3A] rounded-[20px] overflow-hidden'>
+									<img
+										className='w-full h-full object-cover'
+										alt={service.title}
+										src={service.image}
+									/>
+								</div>
+								
+								{/* Content Container */}
+								<CardContent className='px-10 pb-10 pt-2 space-y-3'>
+									<h3 
+										className='text-black leading-tight'
+										style={{
+											fontFamily: "'Gilroy', Helvetica, sans-serif",
+											fontSize: '24px',
+											fontWeight: '700',
+											letterSpacing: '0px',
+											lineHeight: 'normal'
+										}}
+									>
 										{service.title}
 									</h3>
-									<p className='text-sm sm:text-base lg:text-md font-medium text-[#757575] leading-relaxed'>
-										{service.description}
-									</p>
-								</CardContent>
-							</div>
-						</Card>
-					))}
-				</div>
-
-				{/* Additional Services Grid */}
-				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10'>
-					{additionalServices.map((service, index) => (
-						<Card
-							key={`additional-service-${index}`}
-							className='h-[350px] sm:h-[400px] lg:h-[450px] rounded-[30px] bg-gradient-to-b from-gray-100 to-gray-200 border-0 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 group'
-						>
-							<div className='relative h-full'>
-								<img
-									className='relative w-full h-[300px] sm:h-[350px] lg:h-[300px] lg:w-[400px] rounded-[30px] object-cover group-hover:scale-110 transition-transform duration-500'
-									alt={service.title}
-									src={service.image}
-								/>
-								<CardContent className='relative p-6 sm:p-8 lg:p-10 space-y-3 sm:space-y-4 bg-gradient-to-t from-white via-white/95 to-transparent'>
-									<h3 className='text-xl sm:text-2xl lg:text-[28px] font-gilroy font-bold text-black leading-tight h-[60px]'>
-										{service.title}
-									</h3>
-									<p className='text-sm sm:text-base lg:text-md font-medium text-[#757575] leading-relaxed'>
+									<p 
+										className='text-[#757575] leading-relaxed'
+										style={{
+											fontFamily: "'Gilroy', Helvetica, sans-serif",
+											fontSize: '18px',
+											fontWeight: '500',
+											letterSpacing: '0px',
+											lineHeight: '26px'
+										}}
+									>
 										{service.description}
 									</p>
 								</CardContent>

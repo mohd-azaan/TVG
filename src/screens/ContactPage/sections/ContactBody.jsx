@@ -17,11 +17,11 @@ export const ContactBody = () => {
             Contact Details
           </p>
           <div className="flex items-center gap-4 mb-8">
-            <img src="/public/assets/call-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1.svg" alt="Phone" className="w-8 h-8" />
+            <img src="/call-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1.svg" alt="Phone" className="w-8 h-8" />
             <p className="font-gilroy font-bold text-2xl text-[#757575]">+966 53 830 9749</p>
           </div>
-          <button className="border border-black rounded-full px-8 py-3 font-gilroy font-semibold text-lg uppercase flex items-center gap-3 hover:bg-gray-100 transition-colors">
-            <img src="/public/assets/whatsapp-logo-variant-svgrepo-com-1.svg" alt="WhatsApp" className="w-7 h-7" />
+          <button className="border border-black rounded-full px-8 py-3 font-gilroy font-semibold text-lg uppercase flex items-center gap-3 bg-gray-100 transition-colors">
+            <img src="/whatsapp-logo-variant-svgrepo-com-1.svg" alt="WhatsApp" className="w-7 h-7" />
             <span>Chat with us</span>
           </button>
         </div>

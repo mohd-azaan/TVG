@@ -5,41 +5,56 @@
 
 import React from 'react';
 
-// Golf icon component
-const GolfIcon = ({ className = "w-8 h-8" }) => (
-	<svg className={className} viewBox="0 0 24 24" fill="none">
-		<path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor" />
+// Golf icon (from sports_golf SVG)
+const GolfIcon = ({ className = 'w-8 h-8' }) => (
+	<svg
+		className={className}
+		viewBox='0 0 30 30'
+		fill='none'
+		xmlns='http://www.w3.org/2000/svg'
+	>
+		<path
+			d='M21.2373 21.2627V23.7373H18.75C18.0592 23.7373 17.4675 23.9837 16.9756 24.4756C16.4837 24.9675 16.2373 25.5592 16.2373 26.25V27.4873H13.7627V26.25C13.7627 25.5592 13.5163 24.9675 13.0244 24.4756C12.5325 23.9837 11.9408 23.7373 11.25 23.7373H8.7627V21.2627H21.2373ZM15 2.5127C17.4342 2.5127 19.4988 3.36013 21.1943 5.05566C22.8899 6.7512 23.7373 8.81576 23.7373 11.25C23.7373 13.6842 22.8899 15.7488 21.1943 17.4443C19.4988 19.1399 17.4342 19.9873 15 19.9873C12.5658 19.9873 10.5012 19.1399 8.80566 17.4443C7.11013 15.7488 6.2627 13.6842 6.2627 11.25C6.2627 8.81576 7.11013 6.7512 8.80566 5.05566C10.5012 3.36013 12.5658 2.5127 15 2.5127ZM15 4.9873C13.2675 4.9873 11.7904 5.59823 10.5693 6.81934C9.34823 8.04044 8.7373 9.51753 8.7373 11.25C8.7373 12.9825 9.34823 14.4596 10.5693 15.6807C11.7904 16.9018 13.2675 17.5127 15 17.5127C16.7325 17.5127 18.2096 16.9018 19.4307 15.6807C20.6518 14.4596 21.2627 12.9825 21.2627 11.25C21.2627 9.51753 20.6518 8.04044 19.4307 6.81934C18.2096 5.59823 16.7325 4.9873 15 4.9873ZM12.5 8.7627C12.851 8.7627 13.1447 8.88104 13.3818 9.11816C13.619 9.35529 13.7373 9.64898 13.7373 10C13.7373 10.351 13.619 10.6447 13.3818 10.8818C13.1447 11.119 12.851 11.2373 12.5 11.2373C12.149 11.2373 11.8553 11.119 11.6182 10.8818C11.381 10.6447 11.2627 10.351 11.2627 10C11.2627 9.64898 11.381 9.35529 11.6182 9.11816C11.8553 8.88104 12.149 8.7627 12.5 8.7627ZM17.5 8.7627C17.851 8.7627 18.1447 8.88104 18.3818 9.11816C18.619 9.35529 18.7373 9.64898 18.7373 10C18.7373 10.351 18.619 10.6447 18.3818 10.8818C18.1447 11.119 17.851 11.2373 17.5 11.2373C17.149 11.2373 16.8553 11.119 16.6182 10.8818C16.381 10.6447 16.2627 10.351 16.2627 10C16.2627 9.64898 16.381 9.35529 16.6182 9.11816C16.8553 8.88104 17.149 8.7627 17.5 8.7627ZM15 6.2627C15.351 6.2627 15.6447 6.38104 15.8818 6.61816C16.119 6.85529 16.2373 7.14898 16.2373 7.5C16.2373 7.85102 16.119 8.14471 15.8818 8.38184C15.6447 8.61896 15.351 8.7373 15 8.7373C14.649 8.7373 14.3553 8.61896 14.1182 8.38184C13.881 8.14471 13.7627 7.85102 13.7627 7.5C13.7627 7.14898 13.881 6.85529 14.1182 6.61816C14.3553 6.38104 14.649 6.2627 15 6.2627Z'
+			fill='#7DDB8A'
+			stroke='#7DDB8A'
+			stroke-width='0.025'
+		/>
 	</svg>
 );
 
-// Crew/Group icon component
-const CrewIcon = ({ className = "w-15 h-15" }) => (
-	<svg className={className} viewBox="0 0 24 24" fill="none">
-		<path d="M12 12C14.21 12 16 10.21 16 8S14.21 4 12 4 8 5.79 8 8 9.79 12 12 12ZM21 16.22C19.93 15.35 18.69 14.7 17.35 14.3C16.68 14.1 15.99 14 15.28 14C14.12 14 12.99 14.24 11.94 14.69C10.89 15.14 9.94 15.78 9.13 16.58C8.32 17.38 7.66 18.32 7.19 19.36C6.72 20.4 6.46 21.52 6.43 22.65H17.57C17.54 21.52 17.28 20.4 16.81 19.36C16.34 18.32 15.68 17.38 14.87 16.58C14.06 15.78 13.11 15.14 12.06 14.69Z" fill="currentColor" />
-		<circle cx="6" cy="8" r="2" fill="currentColor" />
-		<circle cx="18" cy="8" r="2" fill="currentColor" />
+// Crew/group icon (from crew.svg)
+const CrewIcon = ({ className = 'w-12 h-12' }) => (
+	<svg
+		className={className}
+		viewBox='0 0 60 60'
+		fill='none'
+		xmlns='http://www.w3.org/2000/svg'
+	>
+		<path
+			d='M0 45V41.0625C0 39.2708 0.916667 37.8125 2.75 36.6875C4.58333 35.5625 7 35 10 35C10.5417 35 11.0625 35.0104 11.5625 35.0312C12.0625 35.0521 12.5417 35.1042 13 35.1875C12.4167 36.0625 11.9792 36.9792 11.6875 37.9375C11.3958 38.8958 11.25 39.8958 11.25 40.9375V45H0ZM15 45V40.9375C15 39.6042 15.3646 38.3854 16.0938 37.2812C16.8229 36.1771 17.8542 35.2083 19.1875 34.375C20.5208 33.5417 22.1146 32.9167 23.9688 32.5C25.8229 32.0833 27.8333 31.875 30 31.875C32.2083 31.875 34.2396 32.0833 36.0938 32.5C37.9479 32.9167 39.5417 33.5417 40.875 34.375C42.2083 35.2083 43.2292 36.1771 43.9375 37.2812C44.6458 38.3854 45 39.6042 45 40.9375V45H15ZM48.75 45V40.9375C48.75 39.8542 48.6146 38.8333 48.3438 37.875C48.0729 36.9167 47.6667 36.0208 47.125 35.1875C47.5833 35.1042 48.0521 35.0521 48.5312 35.0312C49.0104 35.0104 49.5 35 50 35C53 35 55.4167 35.5521 57.25 36.6562C59.0833 37.7604 60 39.2292 60 41.0625V45H48.75ZM20.3125 40H39.75C39.3333 39.1667 38.1771 38.4375 36.2812 37.8125C34.3854 37.1875 32.2917 36.875 30 36.875C27.7083 36.875 25.6146 37.1875 23.7188 37.8125C21.8229 38.4375 20.6875 39.1667 20.3125 40ZM10 32.5C8.625 32.5 7.44792 32.0104 6.46875 31.0312C5.48958 30.0521 5 28.875 5 27.5C5 26.0833 5.48958 24.8958 6.46875 23.9375C7.44792 22.9792 8.625 22.5 10 22.5C11.4167 22.5 12.6042 22.9792 13.5625 23.9375C14.5208 24.8958 15 26.0833 15 27.5C15 28.875 14.5208 30.0521 13.5625 31.0312C12.6042 32.0104 11.4167 32.5 10 32.5ZM50 32.5C48.625 32.5 47.4479 32.0104 46.4688 31.0312C45.4896 30.0521 45 28.875 45 27.5C45 26.0833 45.4896 24.8958 46.4688 23.9375C47.4479 22.9792 48.625 22.5 50 22.5C51.4167 22.5 52.6042 22.9792 53.5625 23.9375C54.5208 24.8958 55 26.0833 55 27.5C55 28.875 54.5208 30.0521 53.5625 31.0312C52.6042 32.0104 51.4167 32.5 50 32.5ZM30 30C27.9167 30 26.1458 29.2708 24.6875 27.8125C23.2292 26.3542 22.5 24.5833 22.5 22.5C22.5 20.375 23.2292 18.5938 24.6875 17.1562C26.1458 15.7188 27.9167 15 30 15C32.125 15 33.9062 15.7188 35.3438 17.1562C36.7812 18.5938 37.5 20.375 37.5 22.5C37.5 24.5833 36.7812 26.3542 35.3438 27.8125C33.9062 29.2708 32.125 30 30 30ZM30 25C30.7083 25 31.3021 24.7604 31.7812 24.2812C32.2604 23.8021 32.5 23.2083 32.5 22.5C32.5 21.7917 32.2604 21.1979 31.7812 20.7188C31.3021 20.2396 30.7083 20 30 20C29.2917 20 28.6979 20.2396 28.2188 20.7188C27.7396 21.1979 27.5 21.7917 27.5 22.5C27.5 23.2083 27.7396 23.8021 28.2188 24.2812C28.6979 24.7604 29.2917 25 30 25Z'
+			fill='#5EA458'
+		/>
 	</svg>
 );
 
-// Child hat icon component
-const ChildHatIcon = ({ className = "w-15 h-15" }) => (
-	<svg className={className} viewBox="0 0 24 24" fill="none">
-		<path d="M12 2C8.69 2 6 4.69 6 8V12C6 15.31 8.69 18 12 18S18 15.31 18 12V8C18 4.69 15.31 2 12 2Z" fill="currentColor" />
-		<path d="M5 10H3C2.45 10 2 10.45 2 11V13C2 13.55 2.45 14 3 14H5V10Z" fill="currentColor" />
-		<path d="M21 10H19V14H21C21.55 14 22 13.55 22 13V11C22 10.45 21.55 10 21 10Z" fill="currentColor" />
-		<circle cx="9" cy="9" r="1" fill="white" />
-		<circle cx="15" cy="9" r="1" fill="white" />
+// Child hat icon (from child-hat SVG)
+const ChildHatIcon = ({ className = 'w-12 h-12' }) => (
+	<svg
+		className={className}
+		viewBox='0 0 60 60'
+		fill='none'
+		xmlns='http://www.w3.org/2000/svg'
+	>
+		<path
+			d='M30 45C27.5 45 25.2396 44.3125 23.2188 42.9375C21.1979 41.5625 19.7083 39.75 18.75 37.5H41.25C40.2917 39.75 38.8021 41.5625 36.7813 42.9375C34.7604 44.3125 32.5 45 30 45ZM23.75 33.75C22.875 33.75 22.1354 33.4479 21.5313 32.8438C20.9271 32.2396 20.625 31.5 20.625 30.625C20.625 29.75 20.9271 29.0104 21.5313 28.4062C22.1354 27.8021 22.875 27.5 23.75 27.5C24.625 27.5 25.3646 27.8021 25.9688 28.4062C26.5729 29.0104 26.875 29.75 26.875 30.625C26.875 31.5 26.5729 32.2396 25.9688 32.8438C25.3646 33.4479 24.625 33.75 23.75 33.75ZM36.25 33.75C35.375 33.75 34.6354 33.4479 34.0313 32.8438C33.4271 32.2396 33.125 31.5 33.125 30.625C33.125 29.75 33.4271 29.0104 34.0313 28.4062C34.6354 27.8021 35.375 27.5 36.25 27.5C37.125 27.5 37.8646 27.8021 38.4688 28.4062C39.0729 29.0104 39.375 29.75 39.375 30.625C39.375 31.5 39.0729 32.2396 38.4688 32.8438C37.8646 33.4479 37.125 33.75 36.25 33.75ZM30 55C26.875 55 23.9479 54.4062 21.2188 53.2188C18.4896 52.0312 16.1146 50.4271 14.0938 48.4062C12.0729 46.3854 10.4688 44.0104 9.28125 41.2812C8.09375 38.5521 7.5 35.625 7.5 32.5C7.5 31.1667 7.60417 29.875 7.8125 28.625C8.02083 27.375 8.35417 26.1458 8.8125 24.9375L13.8125 25.8125C13.3542 26.8542 13.0208 27.9271 12.8125 29.0312C12.6042 30.1354 12.5 31.2917 12.5 32.5C12.5 37.375 14.1979 41.5104 17.5938 44.9062C20.9896 48.3021 25.125 50 30 50C34.875 50 39.0104 48.3021 42.4063 44.9062C45.8021 41.5104 47.5 37.375 47.5 32.5C47.5 31.8333 47.4583 31.1771 47.375 30.5312C47.2917 29.8854 47.1875 29.25 47.0625 28.625C43.6875 28.25 40.5625 27.25 37.6875 25.625C34.8125 24 32.3542 21.8958 30.3125 19.3125L34.6875 16.75C36.0208 18.2917 37.5313 19.6042 39.2188 20.6875C40.9063 21.7708 42.75 22.5833 44.75 23.125C43.7083 21.5 42.4271 20.0729 40.9063 18.8438C39.3854 17.6146 37.6875 16.6667 35.8125 16L41.0625 12.875C44.5208 14.8333 47.2917 17.5312 49.375 20.9688C51.4583 24.4062 52.5 28.25 52.5 32.5C52.5 35.625 51.9063 38.5521 50.7188 41.2812C49.5313 44.0104 47.9271 46.3854 45.9063 48.4062C43.8854 50.4271 41.5104 52.0312 38.7813 53.2188C36.0521 54.4062 33.125 55 30 55ZM12.5 21.5625L38.3125 11.875C36.9792 10.7917 35.5208 9.96875 33.9375 9.40625C32.3542 8.84375 30.6875 8.5625 28.9375 8.5625C24.9792 8.5625 21.4479 9.76042 18.3438 12.1562C15.2396 14.5521 13.2917 17.6875 12.5 21.5625ZM8.5 28.4375C8.20833 27.6042 7.96875 26.75 7.78125 25.875C7.59375 25 7.5 24.1042 7.5 23.1875C7.5 19.3958 8.5625 16 10.6875 13C12.8125 10 15.5 7.66667 18.75 6C18.6667 5.83333 18.6146 5.67708 18.5938 5.53125C18.5729 5.38542 18.5625 5.20833 18.5625 5C18.5625 4.29167 18.8021 3.69792 19.2813 3.21875C19.7604 2.73958 20.3542 2.5 21.0625 2.5C21.6458 2.5 22.1458 2.66667 22.5625 3C22.9792 3.33333 23.2708 3.75 23.4375 4.25C24.3542 4.04167 25.2604 3.875 26.1563 3.75C27.0521 3.625 27.9792 3.5625 28.9375 3.5625C31.7292 3.5625 34.3854 4.10417 36.9063 5.1875C39.4271 6.27083 41.6458 7.83333 43.5625 9.875L51.1875 7L52.9375 11.6875L8.5 28.4375Z'
+			fill='#009444'
+		/>
 	</svg>
 );
 
 export const LessonTypesSection = () => {
 	return (
 		<div className='relative w-full bg-[#102121] py-16 overflow-hidden'>
-			{/* Complex background graphics - simplified */}
-			<div className='absolute top-[272px] left-[-1003px] w-[1920px] h-[1080px] opacity-20'>
-				<div className='w-full h-full bg-gradient-to-br from-green-400/10 to-transparent mix-blend-screen' />
-			</div>
-
 			{/* Section title */}
 			<div className='text-center mb-16'>
 				<h2 className='font-morganite font-extrabold text-[96px] leading-[90px] text-white uppercase tracking-[1.92px]'>
@@ -47,63 +62,64 @@ export const LessonTypesSection = () => {
 				</h2>
 			</div>
 
-			{/* Two lesson type cards */}
-			<div className='max-w-[1360px] mx-auto px-4 flex gap-[50px] items-center justify-center'>
+			{/* Two lesson type cards - using absolute positioning structure */}
+			<div className='w-full relative flex items-center justify-center py-[38px] px-0 box-border gap-[50px] text-left text-xl text-lightgray font-gilroy-medium'>
 				{/* Adults Academy Card */}
-				<div className='bg-[#0c1a1a] rounded-[30px] w-[655px] h-[250px] p-10 relative'>
-					{/* Title */}
-					<h3 className='font-TVG-typography-tagline text-[28px] text-white uppercase mb-6'>
+				<div className='w-[655px] relative rounded-[30px] bg-[#0c1a1a] h-[250px]'>
+					<div className='absolute top-[152px] left-[40px] w-[563px] h-[57px]'>
+						<div className='absolute top-[1px] left-[38px] leading-7 inline-block w-[525px] text-[rgba(209,211,212,0.85)]'>
+							One-on-one sessions. Flexible timing. Real results tracked in real
+							time.
+						</div>
+						<GolfIcon className='absolute top-[0px] left-[0px] w-[30px] h-[30px]' />
+					</div>
+					<div className='absolute top-[116px] left-[40px] w-[563px] h-[30px]'>
+						<div className='absolute top-[1px] left-[38px] leading-7 inline-block w-[525px] text-[rgba(209,211,212,0.85)]'>
+							Start from scratch or sharpen your edge.
+						</div>
+						<GolfIcon className='absolute top-[0px] left-[0px] w-[30px] h-[30px]' />
+					</div>
+					<div className='absolute top-[56px] left-[41px] text-[28px] uppercase font-TVG-typography-tagline font-bold text-white inline-block w-[490px] h-[37px]'>
 						Adults Academy
-					</h3>
-
-					{/* Feature list */}
-					<div className='space-y-4'>
-						<div className='flex items-center gap-4'>
-							<GolfIcon className="text-[rgba(209,211,212,0.85)] w-8 h-8" />
-							<p className='font-TVG-typography-default text-[20px] leading-[28px] text-[rgba(209,211,212,0.85)] max-w-[525px]'>
-								Start from scratch or sharpen your edge.
-							</p>
-						</div>
-						<div className='flex items-center gap-4'>
-							<GolfIcon className="text-[rgba(209,211,212,0.85)] w-8 h-8" />
-							<p className='font-TVG-typography-default text-[20px] leading-[28px] text-[rgba(209,211,212,0.85)] max-w-[525px]'>
-								One-on-one sessions. Flexible timing. Real results tracked in real time.
-							</p>
-						</div>
+					</div>
+					{/* Decorative crew icon */}
+					<div className='absolute top-[56px] right-[40px] h-[37px] flex items-center'>
+						<CrewIcon className='w-[60px] h-[60px]' />
 					</div>
 				</div>
 
 				{/* Juniors Academy Card */}
-				<div className='bg-[#0c1a1a] rounded-[30px] w-[655px] h-[250px] p-10 relative'>
-					{/* Title */}
-					<h3 className='font-TVG-typography-tagline text-[28px] text-white uppercase mb-6'>
+				<div className='w-[655px] relative rounded-[30px] bg-[#0c1a1a] h-[250px]'>
+					<div className='absolute top-[152px] left-[40px] w-[563px] h-[57px]'>
+						<div className='absolute top-[1px] left-[38px] leading-7 inline-block w-[525px] text-[rgba(209,211,212,0.85)]'>
+							Our certified instructors know how to teach, encourage, and
+							inspire the next gen.
+						</div>
+						<GolfIcon className='absolute top-[0px] left-[0px] w-[30px] h-[30px]' />
+					</div>
+					<div className='absolute top-[116px] left-[40px] w-[563px] h-[30px]'>
+						<div className='absolute top-[1px] left-[38px] leading-7 inline-block w-[525px] text-[rgba(209,211,212,0.85)]'>
+							A safe, fun, and structured way to get kids into the game.
+						</div>
+						<GolfIcon className='absolute top-[0px] left-[0px] w-[30px] h-[30px]' />
+					</div>
+					<div className='absolute top-[56px] left-[41px] text-[28px] uppercase font-TVG-typography-tagline font-bold text-white inline-block w-[490px] h-[37px]'>
 						Juniors Academy
-					</h3>
-
-					{/* Feature list */}
-					<div className='space-y-4'>
-						<div className='flex items-center gap-4'>
-							<GolfIcon className="text-[rgba(209,211,212,0.85)] w-8 h-8" />
-							<p className='font-TVG-typography-default text-[20px] leading-[28px] text-[rgba(209,211,212,0.85)] max-w-[525px]'>
-								A safe, fun, and structured way to get kids into the game.
-							</p>
-						</div>
-						<div className='flex items-center gap-4'>
-							<GolfIcon className="text-[rgba(209,211,212,0.85)] w-8 h-8" />
-							<p className='font-TVG-typography-default text-[20px] leading-[28px] text-[rgba(209,211,212,0.85)] max-w-[525px]'>
-								Our certified instructors know how to teach, encourage, and inspire the next gen.
-							</p>
-						</div>
+					</div>
+					{/* Decorative child hat icon */}
+					<div className='absolute top-[56px] right-[40px] h-[37px] flex items-center'>
+						<ChildHatIcon className='w-[60px] h-[60px]' />
 					</div>
 				</div>
 			</div>
 
-			{/* Decorative icons */}
-			<div className='absolute right-[393px] top-[353px]'>
-				<CrewIcon className="text-white/60 w-15 h-15" />
-			</div>
-			<div className='absolute right-[393px] top-[353px] left-[1527px]'>
-				<ChildHatIcon className="text-white/60 w-15 h-15" />
+			{/* Decorative shape in bottom left corner */}
+			<div className='absolute bottom-[-300px] left-[-120px] w-[800px] h-[600px] opacity-90'>
+				<img
+					src='/shape14-2.svg'
+					alt='Decorative shape'
+					className='w-full h-full object-cover transform scale-x-[-1]'
+				/>
 			</div>
 		</div>
 	);

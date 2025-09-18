@@ -21,8 +21,8 @@ const ArrowRight = ({ className = 'w-6 h-6' }) => (
 export const CorporateSection = () => {
 	return (
 		<div className="relative w-full bg-white py-16">
-            <div className="max-w-7xl mx-auto px-4">
-                <div className="flex items-center justify-center gap-16">
+            <div className="max-w-[1360px] mx-auto px-4">
+                <div className="flex items-center gap-[50px]">
                     <div className="w-[655px]">
                         <img src="/freepik__background__81702-1.png" alt="Corporate Event" className="rounded-3xl" />
                     </div>

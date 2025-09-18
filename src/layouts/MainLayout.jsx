@@ -1,12 +1,14 @@
 import React from 'react';
 import Navbar from '../components/global/Navbar';
 import { TestimonialsSection } from '../components/global/TestimonialsSection';
+import { CallToActionSection } from '../components/global/CallToActionSection';
 import { FooterSection } from '../components/global/FooterSection';
 import { MobileComingSoon } from '../components/global/MobileComingSoon';
+import { TestimonialProvider } from '../contexts/TestimonialContext';
 
 export const MainLayout = ({ children }) => {
 	return (
-		<>
+		<TestimonialProvider>
 			{/* Mobile-only coming soon experience */}
 			<MobileComingSoon />
 
@@ -16,9 +18,10 @@ export const MainLayout = ({ children }) => {
 					<Navbar />
 				</div>
 				<main className='w-full'>{children}</main>
+				<CallToActionSection />
 				<TestimonialsSection />
 				<FooterSection />
 			</div>
-		</>
+		</TestimonialProvider>
 	);
 };

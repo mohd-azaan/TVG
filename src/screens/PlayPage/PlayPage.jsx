@@ -12,9 +12,6 @@ import { GolfzonInfoSection } from './Sections/GolfzonInfoSection';
 import { TwoVisionNXSection } from './Sections/TwoVisionNXSection';
 import { GolfzonNumbersSection } from './Sections/GolfzonNumbersSection';
 
-// Import existing components from homepage that we can reuse
-import { TestimonialsSection } from '../HomepageDesktop/sections/TestimonialsSection/TestimonialsSection';
-import { FooterSection } from '../HomepageDesktop/sections/FooterSection/FooterSection';
 
 export const PlayPage = () => {
 	return (
@@ -37,11 +34,6 @@ export const PlayPage = () => {
 			{/* Golfzon Numbers Section - Statistics grid */}
 			<GolfzonNumbersSection />
 
-			{/* Testimonials Section - Reuse from homepage */}
-			<TestimonialsSection />
-
-			{/* Footer Section - Reuse from homepage */}
-			<FooterSection />
 		</div>
 	);
 };

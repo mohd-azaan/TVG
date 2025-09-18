@@ -12,9 +12,6 @@ import { WorldClassTechSection } from './Sections/WorldClassTechSection';
 import { Vision2030Section } from './Sections/Vision2030Section';
 import { FeaturesSection } from './Sections/FeaturesSection';
 
-// Import existing components from homepage that we can reuse
-import { TestimonialsSection } from '../HomepageDesktop/sections/TestimonialsSection/TestimonialsSection';
-import { FooterSection } from '../HomepageDesktop/sections/FooterSection/FooterSection';
 
 export const AboutPage = () => {
 	return (

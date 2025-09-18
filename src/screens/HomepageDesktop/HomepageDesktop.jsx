@@ -9,7 +9,6 @@ import { MeetGolfzonSection } from './sections/MeetGolfzonSection/MeetGolfzonSec
 import { PlayYourWaySection } from './sections/PlayYourWaySection/PlayYourWaySection';
 import { ServicesSection } from './sections/ServicesSection/ServicesSection';
 import { StatisticsSection } from './sections/StatisticsSection/StatisticsSection';
-import { TestimonialsSection } from './sections/TestimonialsSection/TestimonialsSection';
 
 export const HomepageDesktop = () => {
 	const [showPromoCard, setShowPromoCard] = useState(true);

@@ -14,9 +14,6 @@ import { WhatsIncludedSection } from './sections/WhatsIncludedSection';
 import { CorporateOptionsSection } from './sections/CorporateOptionsSection';
 import { ReadySection } from './sections/ReadySection';
 
-// Import existing components from homepage that we can reuse
-import { TestimonialsSection } from '../HomepageDesktop/sections/TestimonialsSection/TestimonialsSection';
-import { FooterSection } from '../HomepageDesktop/sections/FooterSection/FooterSection';
 
 export const EventsPage = () => {
 	return (
@@ -42,9 +39,6 @@ export const EventsPage = () => {
 			{/* Ready Section - "Let's Plan Your Event" CTA */}
 			<ReadySection />
 
-			{/* Reuse existing components */}
-			<TestimonialsSection />
-			<FooterSection />
 		</div>
 	);
 };

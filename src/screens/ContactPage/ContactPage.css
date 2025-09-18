@@ -2,6 +2,9 @@
 .contact-page {
 	min-height: 100vh;
 	font-family: var(--TVG-typography-default-font-family);
+	width: 100%;
+	max-width: 100vw;
+	overflow-x: hidden;
 }
 
 /* Hero Section Styles */
@@ -10,6 +13,7 @@
 	position: relative;
 	overflow: hidden;
 	height: 591px;
+	width: 100%;
 }
 
 .contact-hero-title {
@@ -32,8 +36,10 @@
 
 /* Contact Main Section Styles */
 .contact-main-section {
-	height: 1457px;
+	min-height: 800px;
 	position: relative;
+	width: 100%;
+	padding: 64px 0;
 }
 
 /* Contact Info Styles */

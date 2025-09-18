@@ -7,7 +7,7 @@ import React from 'react';
 
 export const ContactInfoSection = () => {
 	return (
-		<div className="absolute left-[280px] top-[100px] w-[655px]">
+		<div className="w-full lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
 			{/* Contact Details Section */}
 			<div className="mb-[52px]">
 				<h2 className="contact-section-title font-['Gilroy-Bold',sans-serif] text-[22px] font-bold leading-[26px] tracking-[0.44px] text-[#009444] uppercase mb-[50px]">

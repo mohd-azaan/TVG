@@ -14,14 +14,18 @@ import { ReadyToVisitSection } from './sections/ReadyToVisitSection';
 
 export const ContactPage = () => {
 	return (
-		<div className='contact-page w-full bg-white'>
+		<div className='w-full bg-white min-h-screen'>
 			{/* Hero Section - "CONTACT THE VIRTUAL GREENS" */}
 			<HeroSection />
 
 			{/* Contact Info & Form Section - Contact details and contact form side by side */}
-			<section className="contact-main-section bg-white h-[1457px] relative overflow-hidden w-full">
-				<ContactInfoSection />
-				<ContactFormSection />
+			<section className="bg-white relative w-full min-h-[800px] py-16">
+				<div className="max-w-[1400px] mx-auto px-4 relative">
+					<div className="flex flex-col lg:flex-row gap-8">
+						<ContactInfoSection />
+						<ContactFormSection />
+					</div>
+				</div>
 				<GoogleMapSection />
 			</section>
 

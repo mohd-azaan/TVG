@@ -24,10 +24,10 @@ export const HeroSection = () => {
 		// Main container matching the exact layout from the image
 		<div className='relative w-full h-[100vh] bg-[#102121] text-white overflow-hidden'>
 			{/* Content Wrapper */}
-			<div className='relative z-10 mx-auto flex max-w-[1440px] items-center px-8 pt-32 lg:px-16 lg:pt-40 h-full'>
+			<div className='relative z-10 mx-auto flex max-w-[1440px] items-center px-8 pt-20 lg:px-16 lg:pt-24 h-full'>
 				{/* Left Column: Text content */}
 				<div className='w-full lg:w-[55%] lg:pr-12'>
-					<div className='flex flex-col'>
+					<div className='flex flex-col lg:mt-6'>
 						{/* Main Heading - Matching homepage hero title2 (110px) */}
 						<h1 className='-translate-y-4 lg:-translate-y-6 font-morganite text-[clamp(80px,10vw,120px)] font-[900] uppercase leading-[0.88] tracking-[2.2px] mb-2 mt-0'>
 							YOUR GAME, YOUR
@@ -41,7 +41,7 @@ export const HeroSection = () => {
 						</p>
 
 						{/* Description Text - wider and smaller */}
-						<div className='font-TVG-typography-hero-text font-[number:var(--TVG-typography-hero-text-font-weight)] text-[22px] leading-7 text-white space-y-4 max-w-[600px] mb-6'>
+						<div className='font-TVG-typography-hero-text font-[number:var(--TVG-typography-hero-text-font-weight)] text-[22px] leading-7 text-white space-y-4 max-w-[600px] mb-0 mt-4 lg:mt-6'>
 							<p>The ultimate golf and social experience, only in Riyadh.</p>
 							<p>
 								At The Virtual Greens, playing golf doesn't mean dressing up or
@@ -56,7 +56,7 @@ export const HeroSection = () => {
 						{/* CTA Button - Using homepage button style */}
 						<Link
 							to='/contact'
-							className='inline-flex w-fit items-center gap-3 rounded-full bg-[#009444] px-6 py-2 text-center text-[18px] font-gilroy font-medium uppercase leading-[40px] tracking-wide transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:brightness-105 focus:outline-none focus:ring-4 focus:ring-[#0b6e38]/30'
+							className='inline-flex w-fit items-center gap-3 rounded-full bg-[#009444] px-6 py-2 mt-6 text-center text-[18px] font-gilroy font-medium uppercase leading-[40px] tracking-wide transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:brightness-105 focus:outline-none focus:ring-4 focus:ring-[#0b6e38]/30'
 						>
 							<span>BOOK YOU BAY</span>
 							<ArrowIcon />
@@ -65,10 +65,10 @@ export const HeroSection = () => {
 				</div>
 
 				{/* Right Column: Image - Adjusted height */}
-				<div className='hidden lg:block w-[45%]'>
+				<div className='hidden lg:flex lg:-translate-y-[48px] w-[55%] justify-center'>
 					<img
-						className='h-[380px] w-[520px] rounded-[30px] object-cover'
-						src='/freepik-background.png'
+						className='w-[90%] max-w-[900px] h-auto max-h-[480px] rounded-[30px] object-contain'
+						src='/play-bg.png'
 						alt='Man playing on an indoor golf simulator with motion trails'
 					/>
 				</div>

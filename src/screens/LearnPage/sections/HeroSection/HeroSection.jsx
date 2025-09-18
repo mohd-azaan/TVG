@@ -1,165 +1,67 @@
-// src/screens/LearnPage/sections/HeroSection/HeroSection.jsx
-// Hero section for Learn page featuring "Train at TVG Academy" with fully responsive layout
-// Now uses enhanced ResponsiveHeroSection with adaptive typography and fluid containers
-// RELEVANT FILES: LearnPage.jsx, ResponsiveHeroSection.jsx, ResponsiveTypography.jsx, tailwind.config.js
-
 import React from 'react';
-import { ResponsiveHeroSection } from '../../../../components/shared/ResponsiveHeroSection';
-import { HeroTitle, HeroTagline, HeroDescription, useResponsiveSpacing } from '../../../../components/shared/ResponsiveTypography';
+import { Link } from 'react-router-dom';
 
 export const HeroSection = () => {
-	const spacing = useResponsiveSpacing();
-
-	// Desktop content with improved responsive layout
-	const desktopContent = (
-		<div className='flex items-center justify-between h-full w-full max-w-[1600px] mx-auto'>
-			{/* Left content column */}
-			<div className='flex-1 max-w-[655px] space-y-8'>
-				<HeroTitle className='mb-6'>
-					Train at<br />TVG Academy
-				</HeroTitle>
-
-				<HeroTagline className='mb-8'>
-					The beginning of a better game
-				</HeroTagline>
-
-				<div className='space-y-6 max-w-[600px]'>
-					<HeroDescription large>
-						It doesn't matter if you're a complete beginner or chasing a lower handicap; this is your space to grow.
-					</HeroDescription>
-					<HeroDescription large>
-						At The Virtual Greens Academy, you won't just swing for fun. You'll train with purpose (while having fun, of course).
-					</HeroDescription>
-					<HeroDescription large>
-						Our coaching is built around your goals, powered by the same world-class Golfzon tech used by professional tours.
-					</HeroDescription>
-					<HeroDescription large>
-						We make learning the game easy, enjoyable, and tailored to you.
-					</HeroDescription>
-				</div>
-			</div>
-
-			{/* Right image column */}
-			<div className='flex-1 max-w-[650px] ml-12'>
-				<div className='aspect-[650/536] w-full bg-gradient-to-br from-green-600 to-green-800 rounded-[30px] flex items-center justify-center shadow-2xl overflow-hidden'>
-					<div className='text-center text-white space-y-4'>
-						<div className='text-6xl'>🏌️</div>
-						<div className='text-2xl font-bold'>TVG Academy</div>
-						<div className='text-lg opacity-75'>Training Excellence</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
-
-	// Tablet content with optimized layout
-	const tabletContent = (
-		<div className={`${spacing.heroElementSpacing} text-center max-w-4xl mx-auto`}>
-			<HeroTitle className='mb-6'>
-				Train at TVG Academy
-			</HeroTitle>
-
-			<HeroTagline className='mb-8'>
-				The beginning of a better game
-			</HeroTagline>
-
-			<div className='aspect-[4/3] w-full max-w-[600px] mx-auto mb-8 bg-gradient-to-br from-green-600 to-green-800 rounded-[25px] flex items-center justify-center shadow-xl'>
-				<div className='text-center text-white space-y-3'>
-					<div className='text-5xl'>🏌️</div>
-					<div className='text-xl font-bold'>TVG Academy</div>
-					<div className='text-base opacity-75'>Training Excellence</div>
-				</div>
-			</div>
-
-			<div className='space-y-6 max-w-[700px] mx-auto text-left'>
-				<HeroDescription large>
-					It doesn't matter if you're a complete beginner or chasing a lower handicap; this is your space to grow.
-				</HeroDescription>
-				<HeroDescription large>
-					At The Virtual Greens Academy, you won't just swing for fun. You'll train with purpose (while having fun, of course).
-				</HeroDescription>
-				<HeroDescription large>
-					Our coaching is built around your goals, powered by the same world-class Golfzon tech used by professional tours.
-				</HeroDescription>
-				<HeroDescription large>
-					We make learning the game easy, enjoyable, and tailored to you.
-				</HeroDescription>
-			</div>
-		</div>
-	);
-
-	// Mobile content with stacked layout
-	const mobileContent = (
-		<div className={`${spacing.heroElementSpacing} text-center`}>
-			<HeroTitle className='mb-4'>
-				Train at<br />TVG Academy
-			</HeroTitle>
-
-			<HeroTagline className='mb-6'>
-				The beginning of a better game
-			</HeroTagline>
-
-			<div className='aspect-[4/3] w-full max-w-[400px] mx-auto mb-6 bg-gradient-to-br from-green-600 to-green-800 rounded-[20px] flex items-center justify-center shadow-lg'>
-				<div className='text-center text-white space-y-2'>
-					<div className='text-4xl'>🏌️</div>
-					<div className='text-lg font-bold'>TVG Academy</div>
-					<div className='text-sm opacity-75'>Training Excellence</div>
-				</div>
-			</div>
-
-			<div className='space-y-4 max-w-[500px] mx-auto text-left'>
-				<HeroDescription>
-					It doesn't matter if you're a complete beginner or chasing a lower handicap; this is your space to grow.
-				</HeroDescription>
-				<HeroDescription>
-					At The Virtual Greens Academy, you won't just swing for fun. You'll train with purpose (while having fun, of course).
-				</HeroDescription>
-				<HeroDescription>
-					Our coaching is built around your goals, powered by the same world-class Golfzon tech used by professional tours.
-				</HeroDescription>
-				<HeroDescription>
-					We make learning the game easy, enjoyable, and tailored to you.
-				</HeroDescription>
-			</div>
-		</div>
-	);
-
-	// Enhanced decorative elements with responsive positioning
-	const decorativeElements = (
-		<div className='absolute inset-0 overflow-hidden'>
-			{/* Main decorative background - responsive positioning */}
-			<div
-				className='absolute opacity-20 transition-all duration-500'
-				style={{
-					top: 'clamp(200px, 30vh, 432px)',
-					left: 'clamp(100px, 15vw, 342px)',
-					transform: 'rotate(348deg)',
-				}}
-			>
-				<div className='w-[clamp(800px, 100vw, 1920px)] h-[clamp(600px, 75vh, 1080px)] relative overflow-hidden'>
-					<div className='absolute inset-0 mix-blend-screen'>
-						<div className='absolute inset-0 bg-gradient-to-br from-green-400/30 via-green-500/20 to-transparent' />
-						<div className='absolute inset-0 bg-gradient-to-tl from-emerald-400/20 via-transparent to-green-300/10' />
-					</div>
-				</div>
-			</div>
-		</div>
-	);
-
 	return (
-		<ResponsiveHeroSection
-			backgroundColor='#272727'
-			greenSection={true}
-			greenSectionHeight='clamp(300px, 25vh, 435px)'
-			minHeight='min-h-[100svh]'
-			decorativeElements={decorativeElements}
-			enableFluidLayout={true}
-		>
-			{{
-				desktop: desktopContent,
-				tablet: tabletContent,
-				mobile: mobileContent
-			}}
-		</ResponsiveHeroSection>
+		// Main container matching the exact layout from the image
+		<div className='relative w-full h-[100vh] bg-[#102121] text-white overflow-hidden'>
+			{/* Content Wrapper */}
+			<div className='relative z-10 mx-auto flex max-w-[1440px] items-center px-8 pt-20 lg:px-16 lg:pt-24 h-full'>
+				{/* Left Column: Text content */}
+				<div className='w-full lg:w-[55%] lg:pr-12'>
+					<div className='flex flex-col lg:mt-6'>
+						{/* Main Heading - Matching homepage hero title2 (110px) */}
+						<h1 className='-translate-y-4 lg:-translate-y-6 font-morganite text-[clamp(80px,10vw,120px)] font-[900] uppercase leading-[0.88] tracking-[2.2px] mb-2 mt-0'>
+							TRAIN AT
+							<br />
+							TVG Academy
+						</h1>
+
+						{/* Subheading - Positioned to align with green background */}
+						<p className='-translate-y-2 lg:-translate-y-4 font-gilroy font-bold text-[15px] sm:text-[15px] lg:text-[20px] uppercase tracking-[1.10px] leading-[0.5] text-[#7ddb8a] mb-6 mt-0'>
+							The beginning of a better game
+						</p>
+
+						{/* Description Text - wider and smaller */}
+						<div className='font-TVG-typography-hero-text font-medium text-[22px] leading-7 text-white space-y-4 max-w-[600px] mb-0 mt-4 lg:mt-6'>
+							<p>
+								It doesn’t matter if you're a complete beginner or chasing a
+								lower handicap; this is your space to grow.
+							</p>
+							<p>
+								At The Virtual Greens Academy, you won’t just swing for fun.
+								You’ll train with purpose (while having fun, of course).
+							</p>
+							<p>
+								Our coaching is built around your goals, powered by the same
+								world-class Golfzon tech used by professional tours
+							</p>
+							<p>
+								We make learning the game easy, enjoyable, and tailored to you.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				{/* Right Column: Image - Adjusted height */}
+				<div className='hidden lg:flex lg:-translate-y-[48px]  justify-center'>
+					<img
+						className='w-[90%] max-w-[1000px] h-auto max-h-[580px] rounded-[30px] object-contain'
+						src='/learn-hero-training.png'
+						alt='Man playing on an indoor golf simulator with motion trails'
+					/>
+				</div>
+			</div>
+
+			{/* Green Background Section - Positioned to align with green text */}
+			<div className='absolute top-[55%] left-0 w-full h-[45vh] bg-[#006F33]'></div>
+
+			{/* Decorative SVG bottom-right */}
+			<img
+				alt='decorative green waves'
+				src='/shape14-2.svg'
+				className='pointer-events-none absolute right-[-420px] bottom-[-220px] w-[1100px] opacity-95 lg:right-[-620px] lg:bottom-[-520px] lg:w-[1800px] mix-blend-screen'
+			/>
+		</div>
 	);
 };

@@ -1,110 +1,115 @@
 // src/screens/PlayPage/Sections/GolfzonNumbersSection.jsx
-// Golfzon statistics and numbers section with impressive achievements grid
-// Grid layout showcasing Golfzon's global reach and technology achievements
+// Golfzon Worldwide Numbers section with masonry layout and branded statistics
+// Pixel-perfect recreation of Figma design with exact positioning and Bottom Line section
 // RELEVANT FILES: PlayPage.jsx, styleguide.css, tailwind.config.js, TwoVisionNXSection.jsx
 
 import React from 'react';
 
 export const GolfzonNumbersSection = () => {
-	const statistics = [
-		{
-			number: '10M+',
-			label: 'Golfers Worldwide',
-			description: 'Players trust Golfzon technology',
-			icon: '👥'
-		},
-		{
-			number: '40+',
-			label: 'Countries',
-			description: 'Global presence across continents',
-			icon: '🌍'
-		},
-		{
-			number: '200+',
-			label: 'Golf Courses',
-			description: 'Authentic course recreations',
-			icon: '⛳'
-		},
-		{
-			number: '99.9%',
-			label: 'Accuracy Rate',
-			description: 'Precision in ball tracking',
-			icon: '🎯'
-		},
-		{
-			number: '30+',
-			label: 'Years Experience',
-			description: 'Industry-leading innovation',
-			icon: '🏆'
-		},
-		{
-			number: '15,000+',
-			label: 'Installations',
-			description: 'Golf simulators worldwide',
-			icon: '📊'
-		}
-	];
-
 	return (
-		<section className='relative w-full min-h-[900px] bg-[#006f33] overflow-hidden'>
-			{/* Decorative background elements */}
-			<div className='absolute top-[200px] left-[300px] opacity-20'>
-				<div
-					className='w-[1400px] h-[800px] transform rotate-[-10deg]'
-					style={{
-						background: `url('/shape14-2.svg') no-repeat center`,
-						backgroundSize: 'contain',
-						mixBlendMode: 'screen'
-					}}
-				/>
-			</div>
+		<section className='relative w-full min-h-[1095px] bg-[#102121] overflow-hidden'>
+			{/* Container positioned according to Figma layout */}
+			<div className='relative max-w-[1920px] mx-auto'>
+				{/* Main title */}
+				<h2 className='absolute left-1/2 top-[130px] transform -translate-x-1/2 w-[655px] text-center font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-white uppercase'>
+					Golfzon Worldwide Numbers
+				</h2>
 
-			{/* Container positioned according to design layout */}
-			<div className='relative z-10 max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-0'>
-				{/* Section title */}
-				<div className='absolute top-[100px] left-1/2 transform -translate-x-1/2 w-[800px] text-center'>
-					<h2 className='font-TVG-typography-h2 font-[number:var(--TVG-typography-h2-font-weight)] text-[length:var(--TVG-typography-h2-font-size)] leading-[var(--TVG-typography-h2-line-height)] tracking-[var(--TVG-typography-h2-letter-spacing)] text-white [font-style:var(--TVG-typography-h2-font-style)] uppercase'>
-						Golfzon by the Numbers
-					</h2>
-				</div>
-
-				{/* Subtitle */}
-				<div className='absolute top-[180px] left-1/2 transform -translate-x-1/2 w-[600px] text-center'>
-					<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[#e6f7e6] [font-style:var(--TVG-typography-default-font-style)]'>
-						Trusted by millions of golfers worldwide, Golfzon leads the industry in golf simulation technology.
+				{/* Statistics cards with exact Figma positioning */}
+				{/* #1 Card - Light Green */}
+				<div className='absolute left-[279px] top-[279px] w-[312px] h-[250px] bg-[#64ff8a] rounded-[30px] p-[20px] flex flex-col justify-between'>
+					<p className='font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-black uppercase'>
+						#1
+					</p>
+					<p className='font-TVG-typography-default font-[500] text-[22px] leading-[28px] text-black'>
+						Largest Simulator Company by Market Cap, Revenue & Shots Tracked
 					</p>
 				</div>
 
-				{/* Statistics grid */}
-				<div className='absolute top-[320px] left-[280px] w-[1360px]'>
-					<div className='grid grid-cols-3 gap-[40px]'>
-						{statistics.map((stat, index) => (
-							<div
-								key={index}
-								className='bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] text-center space-y-4 hover:bg-white/15 transition-colors'
-							>
-								{/* Icon */}
-								<div className='text-5xl mb-4'>
-									{stat.icon}
-								</div>
+				{/* 100+ Million Card - Dark Green */}
+				<div className='absolute left-[611px] top-[279px] w-[392px] h-[250px] bg-[#006f33] rounded-[30px] p-[20px] flex flex-col justify-between'>
+					<p className='font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-white uppercase'>
+						100+ Million
+					</p>
+					<p className='font-TVG-typography-default font-[500] text-[22px] leading-[28px] text-white'>
+						Rounds Played Annually
+					</p>
+				</div>
 
-								{/* Number */}
-								<div className='font-TVG-typography-hero-title font-[number:var(--TVG-typography-hero-title-font-weight)] text-[64px] leading-[1] tracking-[var(--TVG-typography-hero-title-letter-spacing)] text-white [font-style:var(--TVG-typography-hero-title-font-style)]'>
-									{stat.number}
-								</div>
+				{/* 160K+ Card - Green */}
+				<div className='absolute left-[1023px] top-[279px] w-[328px] h-[250px] bg-[#009444] rounded-[30px] p-[20px] flex flex-col justify-between'>
+					<p className='font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-white uppercase'>
+						160K+
+					</p>
+					<p className='font-TVG-typography-default font-[500] text-[22px] leading-[28px] text-white'>
+						Tournaments Hosted Annually
+					</p>
+				</div>
 
-								{/* Label */}
-								<div className='font-TVG-typography-h4 font-[number:var(--TVG-typography-h4-font-weight)] text-[20px] leading-normal tracking-[var(--TVG-typography-h4-letter-spacing)] text-white [font-style:var(--TVG-typography-h4-font-style)] uppercase'>
-									{stat.label}
-								</div>
+				{/* 13,490K Card - Light Green */}
+				<div className='absolute left-[1371px] top-[279px] w-[268px] h-[250px] bg-[#33a969] rounded-[30px] p-[20px] flex flex-col justify-between'>
+					<p className='font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-black uppercase'>
+						13,490K
+					</p>
+					<p className='font-TVG-typography-default font-[500] text-[22px] leading-[28px] text-black'>
+						Locations Worldwide
+					</p>
+				</div>
 
-								{/* Description */}
-								<div className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[#e6f7e6] [font-style:var(--TVG-typography-default-font-style)]'>
-									{stat.description}
-								</div>
-							</div>
-						))}
+				{/* 8.5+ Billion Card - Dark Green */}
+				<div className='absolute left-[279px] top-[549px] w-[510px] h-[250px] bg-[#004a22] rounded-[30px] p-[20px] flex flex-col justify-between'>
+					<p className='font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-white uppercase'>
+						8.5+ Billion
+					</p>
+					<p className='font-TVG-typography-default font-[500] text-[22px] leading-[28px] text-white'>
+						Shots Tracked Last Year
+					</p>
+				</div>
+
+				{/* 51K+ Card - Light Green */}
+				<div className='absolute left-[809px] top-[549px] w-[262px] h-[250px] bg-[#33a969] rounded-[30px] p-[20px] flex flex-col justify-between'>
+					<p className='font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-black uppercase'>
+						51K+
+					</p>
+					<p className='font-TVG-typography-default font-[500] text-[22px] leading-[28px] text-black'>
+						Simulators in Operation
+					</p>
+				</div>
+
+				{/* 63 Card - Light Green */}
+				<div className='absolute left-[1091px] top-[549px] w-[139px] h-[250px] bg-[#66bf8f] rounded-[30px] p-[20px] flex flex-col justify-between'>
+					<p className='font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-black uppercase'>
+						63
+					</p>
+					<p className='font-TVG-typography-default font-[500] text-[22px] leading-[28px] text-black'>
+						Countries Served
+					</p>
+				</div>
+
+				{/* 6.2+ Million Card - Green */}
+				<div className='absolute left-[1250px] top-[549px] w-[389px] h-[250px] bg-[#009444] rounded-[30px] p-[20px] flex flex-col justify-between'>
+					<p className='font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-white uppercase'>
+						6.2+ Million
+					</p>
+					<p className='font-TVG-typography-default font-[500] text-[22px] leading-[28px] text-white'>
+						Registered Users
+					</p>
+				</div>
+
+				{/* Bottom Line Section */}
+				<div className='absolute left-[279px] top-[882px] w-[1360px] h-[213px] bg-[#0c1a1a] rounded-[30px]'>
+					<h3 className='absolute left-[50px] top-[50px] font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-white uppercase whitespace-nowrap'>
+						Bottom Line?
+					</h3>
+					<div className='absolute left-[454px] top-[50px] w-[655px]'>
+						<p className='font-TVG-typography-default font-[500] text-[20px] leading-[28px] text-[lightgrey]'>
+							This isn't just a simulator. It's the closest you'll get to
+							playing outdoors without breaking a sweat.
+						</p>
 					</div>
+					<p className='absolute left-1/2 top-[135px] transform -translate-x-1/2 w-[655px] text-center font-TVG-typography-tagline font-[700] text-[22px] leading-[26px] tracking-[0.44px] text-[#7ddb8a] uppercase'>
+						Now playing exclusively at The Virtual Greens
+					</p>
 				</div>
 			</div>
 
@@ -112,43 +117,107 @@ export const GolfzonNumbersSection = () => {
 			<div className='block lg:hidden px-4 sm:px-6 py-16'>
 				<div className='space-y-12 max-w-[600px] mx-auto'>
 					{/* Title */}
-					<div className='text-center space-y-6'>
-						<h2 className='font-TVG-typography-h2 font-[number:var(--TVG-typography-h2-font-weight)] text-[clamp(32px,8vw,64px)] leading-[1.1] tracking-[var(--TVG-typography-h2-letter-spacing)] text-white [font-style:var(--TVG-typography-h2-font-style)] uppercase'>
-							Golfzon by the Numbers
+					<div className='text-center'>
+						<h2 className='font-TVG-typography-h2 font-[800] text-[clamp(40px,10vw,72px)] leading-[1.1] tracking-[1.2px] text-white uppercase'>
+							Golfzon Worldwide Numbers
 						</h2>
-						<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[18px] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[#e6f7e6] [font-style:var(--TVG-typography-default-font-style)]'>
-							Trusted by millions of golfers worldwide, Golfzon leads the industry in golf simulation technology.
-						</p>
 					</div>
 
-					{/* Mobile statistics grid */}
-					<div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
-						{statistics.map((stat, index) => (
-							<div
-								key={index}
-								className='bg-white/10 backdrop-blur-sm rounded-[16px] p-6 text-center space-y-3'
-							>
-								{/* Icon */}
-								<div className='text-3xl mb-2'>
-									{stat.icon}
-								</div>
+					{/* Mobile statistics cards */}
+					<div className='space-y-6'>
+						{/* #1 Card */}
+						<div className='bg-[#64ff8a] rounded-[20px] p-6'>
+							<p className='font-TVG-typography-h2 font-[800] text-[clamp(48px,12vw,72px)] leading-[1] tracking-[1.2px] text-black uppercase mb-3'>
+								#1
+							</p>
+							<p className='font-TVG-typography-default font-[500] text-[18px] leading-[24px] text-black'>
+								Largest Simulator Company by Market Cap, Revenue & Shots Tracked
+							</p>
+						</div>
 
-								{/* Number */}
-								<div className='font-TVG-typography-hero-title font-[number:var(--TVG-typography-hero-title-font-weight)] text-[clamp(40px,8vw,56px)] leading-[1] tracking-[var(--TVG-typography-hero-title-letter-spacing)] text-white [font-style:var(--TVG-typography-hero-title-font-style)]'>
-									{stat.number}
-								</div>
+						{/* 100+ Million Card */}
+						<div className='bg-[#006f33] rounded-[20px] p-6'>
+							<p className='font-TVG-typography-h2 font-[800] text-[clamp(48px,12vw,72px)] leading-[1] tracking-[1.2px] text-white uppercase mb-3'>
+								100+ Million
+							</p>
+							<p className='font-TVG-typography-default font-[500] text-[18px] leading-[24px] text-white'>
+								Rounds Played Annually
+							</p>
+						</div>
 
-								{/* Label */}
-								<div className='font-TVG-typography-h4 font-[number:var(--TVG-typography-h4-font-weight)] text-[18px] leading-normal tracking-[var(--TVG-typography-h4-letter-spacing)] text-white [font-style:var(--TVG-typography-h4-font-style)] uppercase'>
-									{stat.label}
-								</div>
+						{/* 160K+ Card */}
+						<div className='bg-[#009444] rounded-[20px] p-6'>
+							<p className='font-TVG-typography-h2 font-[800] text-[clamp(48px,12vw,72px)] leading-[1] tracking-[1.2px] text-white uppercase mb-3'>
+								160K+
+							</p>
+							<p className='font-TVG-typography-default font-[500] text-[18px] leading-[24px] text-white'>
+								Tournaments Hosted Annually
+							</p>
+						</div>
 
-								{/* Description */}
-								<div className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[16px] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[#e6f7e6] [font-style:var(--TVG-typography-default-font-style)]'>
-									{stat.description}
-								</div>
-							</div>
-						))}
+						{/* 13,490K Card */}
+						<div className='bg-[#33a969] rounded-[20px] p-6'>
+							<p className='font-TVG-typography-h2 font-[800] text-[clamp(48px,12vw,72px)] leading-[1] tracking-[1.2px] text-black uppercase mb-3'>
+								13,490K
+							</p>
+							<p className='font-TVG-typography-default font-[500] text-[18px] leading-[24px] text-black'>
+								Locations Worldwide
+							</p>
+						</div>
+
+						{/* 8.5+ Billion Card */}
+						<div className='bg-[#004a22] rounded-[20px] p-6'>
+							<p className='font-TVG-typography-h2 font-[800] text-[clamp(48px,12vw,72px)] leading-[1] tracking-[1.2px] text-white uppercase mb-3'>
+								8.5+ Billion
+							</p>
+							<p className='font-TVG-typography-default font-[500] text-[18px] leading-[24px] text-white'>
+								Shots Tracked Last Year
+							</p>
+						</div>
+
+						{/* 51K+ Card */}
+						<div className='bg-[#33a969] rounded-[20px] p-6'>
+							<p className='font-TVG-typography-h2 font-[800] text-[clamp(48px,12vw,72px)] leading-[1] tracking-[1.2px] text-black uppercase mb-3'>
+								51K+
+							</p>
+							<p className='font-TVG-typography-default font-[500] text-[18px] leading-[24px] text-black'>
+								Simulators in Operation
+							</p>
+						</div>
+
+						{/* 63 Card */}
+						<div className='bg-[#66bf8f] rounded-[20px] p-6'>
+							<p className='font-TVG-typography-h2 font-[800] text-[clamp(48px,12vw,72px)] leading-[1] tracking-[1.2px] text-black uppercase mb-3'>
+								63
+							</p>
+							<p className='font-TVG-typography-default font-[500] text-[18px] leading-[24px] text-black'>
+								Countries Served
+							</p>
+						</div>
+
+						{/* 6.2+ Million Card */}
+						<div className='bg-[#009444] rounded-[20px] p-6'>
+							<p className='font-TVG-typography-h2 font-[800] text-[clamp(48px,12vw,72px)] leading-[1] tracking-[1.2px] text-white uppercase mb-3'>
+								6.2+ Million
+							</p>
+							<p className='font-TVG-typography-default font-[500] text-[18px] leading-[24px] text-white'>
+								Registered Users
+							</p>
+						</div>
+					</div>
+
+					{/* Mobile Bottom Line Section */}
+					<div className='bg-[#0c1a1a] rounded-[20px] p-6 space-y-4'>
+						<h3 className='font-TVG-typography-h2 font-[800] text-[clamp(40px,10vw,64px)] leading-[1.1] tracking-[1.2px] text-white uppercase'>
+							Bottom Line?
+						</h3>
+						<p className='font-TVG-typography-default font-[500] text-[18px] leading-[26px] text-[lightgrey]'>
+							This isn't just a simulator. It's the closest you'll get to
+							playing outdoors without breaking a sweat.
+						</p>
+						<p className='font-TVG-typography-tagline font-[700] text-[18px] leading-[22px] tracking-[0.3px] text-[#7ddb8a] uppercase text-center'>
+							Now playing exclusively at The Virtual Greens
+						</p>
 					</div>
 				</div>
 			</div>

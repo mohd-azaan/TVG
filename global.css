@@ -138,3 +138,15 @@ select {
 }
 
 /* End of global.css */
+
+/* Force check icons to render as black across the site */
+.check-icon {
+	/* For SVGs this will recolor where possible; for PNGs this forces a dark appearance */
+	filter: grayscale(1) brightness(0) invert(0);
+	display: inline-block;
+}
+
+.check-icon[alt='✓'] {
+	/* ensure consistent sizing if needed */
+	vertical-align: middle;
+}

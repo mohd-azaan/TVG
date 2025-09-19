@@ -26,7 +26,11 @@ export const ReadyToOwnSection = () => {
 								<span>Request a Quote</span>
 								<ArrowRight />
 							</button>
-							<Link to='/contact' className='inline-block border border-white text-white font-gilroy-semibold py-3 px-6 rounded-full transition-colors duration-200 hover:bg-[#9be0b7] hover:text-black focus:outline-none focus:ring-4 focus:ring-[#9be0b7]/40' aria-label='Speak to our team - contact page'>
+							<Link
+								to='/contact'
+								className='inline-block border border-white text-white font-gilroy-semibold py-3 px-6 rounded-full transition-colors duration-200 hover:bg-[#9be0b7] hover:text-black focus:outline-none focus:ring-4 focus:ring-[#9be0b7]/40'
+								aria-label='Speak to our team - contact page'
+							>
 								Speak to Our Team
 							</Link>
 						</div>

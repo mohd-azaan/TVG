@@ -10,21 +10,21 @@ const forYouFeatures = [
 ];
 
 const amenityFeatures = [
-    { icon: '/assets/stairs_2_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: '2 Floors' },
-    { icon: '/assets/house_with_shield_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: '5 All-Weather Hitting Bays' },
-    { icon: '/assets/vrpano_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'VIP Private Screening' },
-    { icon: '/assets/wifi_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'Free Wifi' },
-    { icon: '/assets/restaurant_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'Restaurant Partners' },
-    { icon: '/assets/strategy_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24(1) 1.svg', text: 'Golf Lessons' },
-    { icon: '/assets/videogame_asset_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'Junior Golf Arcade Games' },
-    { icon: '/assets/local_bar_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'Rental Clubs' },
-    { icon: '/assets/golf_course_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: '275+ Golf Courses' },
-    { icon: '/assets/sports_soccer_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'Live Sports On Screens' },
-    { icon: '/assets/campaign_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'Screens Advertising' },
-    { icon: '/assets/cake_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24(1) 1.svg', text: 'Private Event Spaces' },
-    { icon: '/assets/credit_score_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'Card/Contactless Payments Only' },
-    { icon: '/assets/parking_sign_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'On-Site Basement Parking' },
-    { icon: '/assets/parking_meter_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'VIP Paid Parking' }
+    { icon: '/stairs_2_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: '2 Floors' },
+    { icon: '/house_with_shield_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: '5 All-Weather Hitting Bays' },
+    { icon: '/vrpano_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'VIP Private Screening' },
+    { icon: '/wifi_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'Free Wifi' },
+    { icon: '/restaurant_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'Restaurant Partners' },
+    { icon: '/strategy_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24(1) 1.svg', text: 'Golf Lessons' },
+    { icon: '/videogame_asset_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'Junior Golf Arcade Games' },
+    { icon: '/local_bar_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'Rental Clubs' },
+    { icon: '/golf_course_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: '275+ Golf Courses' },
+    { icon: '/sports_soccer_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'Live Sports On Screens' },
+    { icon: '/campaign_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'Screens Advertising' },
+    { icon: '/cake_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24(1) 1.svg', text: 'Private Event Spaces' },
+    { icon: '/credit_score_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'Card/Contactless Payments Only' },
+    { icon: '/parking_sign_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'On-Site Basement Parking' },
+    { icon: '/parking_meter_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1.svg', text: 'VIP Paid Parking' }
 ];
 
 const FeaturesSection = () => {

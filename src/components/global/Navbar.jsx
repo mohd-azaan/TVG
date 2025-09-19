@@ -220,11 +220,11 @@ export const Navbar = () => {
 					</div>
 
 					{/* Book Now Button */}
-					<div className='bg-[#009444] h-8 sm:h-9 overflow-clip relative rounded-[50px] shrink-0 w-[100px] sm:w-[115px] hover:bg-[#007a3a] transition-colors duration-200 cursor-pointer'>
+					<Link to="/contact" className='bg-[#009444] h-8 sm:h-9 overflow-clip relative rounded-[50px] shrink-0 w-[100px] sm:w-[115px] hover:bg-[#007a3a] transition-colors duration-200 cursor-pointer flex items-center justify-center'>
 						<div className="absolute font-['Open_Sans',sans-serif] font-semibold leading-[0] left-1/2 not-italic text-[12px] sm:text-[14px] text-center text-nowrap text-white top-1/2 -translate-x-1/2 -translate-y-1/2">
 							<p className='whitespace-pre'>BOOK NOW</p>
 						</div>
-					</div>
+					</Link>
 				</div>
 			</div>
 
@@ -302,11 +302,11 @@ export const Navbar = () => {
 					})}
 
 					{/* Book Now Button */}
-					<div className='bg-[#009444] h-8 sm:h-9 lg:h-10 overflow-clip relative rounded-[50px] shrink-0 w-[110px] sm:w-[125px] lg:w-[137px] hover:bg-[#007a3a] transition-colors duration-200 cursor-pointer'>
+					<Link to="/contact" className='bg-[#009444] h-8 sm:h-9 lg:h-10 overflow-clip relative rounded-[50px] shrink-0 w-[110px] sm:w-[125px] lg:w-[137px] hover:bg-[#007a3a] transition-colors duration-200 cursor-pointer flex items-center justify-center'>
 						<div className="absolute font-['Open_Sans',sans-serif] font-semibold leading-[0] left-1/2 not-italic text-[14px] sm:text-[15px] lg:text-[16px] text-center text-nowrap text-white top-1/2 -translate-x-1/2 -translate-y-1/2">
 							<p className='whitespace-pre'>BOOK NOW</p>
 						</div>
-					</div>
+					</Link>
 				</div>
 			</div>
 
@@ -374,11 +374,11 @@ export const Navbar = () => {
 
 							{/* Mobile Book Now Button */}
 							<div className='pt-4 border-t border-white/10'>
-								<div className='bg-[#009444] h-12 overflow-clip relative rounded-[50px] w-full hover:bg-[#007a3a] transition-colors duration-200 cursor-pointer'>
+								<Link to="/contact" onClick={closeMobileMenu} className='bg-[#009444] h-12 overflow-clip relative rounded-[50px] w-full hover:bg-[#007a3a] transition-colors duration-200 cursor-pointer flex items-center justify-center'>
 									<div className="absolute font-['Open_Sans',sans-serif] font-semibold leading-[0] left-1/2 not-italic text-[16px] text-center text-nowrap text-white top-1/2 -translate-x-1/2 -translate-y-1/2">
 										<p className='whitespace-pre'>BOOK NOW</p>
 									</div>
-								</div>
+								</Link>
 							</div>
 						</div>
 					</div>

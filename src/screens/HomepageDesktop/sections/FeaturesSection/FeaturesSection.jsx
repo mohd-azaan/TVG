@@ -309,9 +309,14 @@ export const FeaturesSection = () => {
 								<div className='w-[30px] h-0.5' />
 							</div>
 						))}
-						<Button className='bg-[#009444] text-white rounded-[50px] h-10 px-6'>
+						<a
+							href='https://widget.servmeco.com/?oid=1662'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='inline-flex items-center justify-center bg-[#009444] text-white rounded-[50px] h-10 px-6'
+						>
 							BOOK NOW
-						</Button>
+						</a>
 					</div>
 
 					<Link to='/' className='absolute left-0 top-[-13px]'>

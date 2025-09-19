@@ -6,7 +6,8 @@ import { Card, CardContent } from '../../../../components/ui/card';
 const serviceCards = [
 	{
 		title: 'GOLF SIMULATOR BAYS',
-		description: '5 Golf Simulator Bays (open, private, and VIP) with the world\'s most advanced Golfzon TwoVisionNX tech.',
+		description:
+			"5 Golf Simulator Bays (open, private, and VIP) with the world's most advanced Golfzon TwoVisionNX tech.",
 		image: '/advanced-simulators-1-5.png',
 	},
 	{
@@ -16,7 +17,8 @@ const serviceCards = [
 	},
 	{
 		title: 'LESSONS & COACHING',
-		description: 'Fun, fast-paced options from mini golf to longest drive battles.',
+		description:
+			'Fun, fast-paced options from mini golf to longest drive battles.',
 		image: '/advanced-simulators-1-3.png',
 	},
 	{
@@ -66,10 +68,15 @@ export const ServicesSection = () => {
 						</p>
 
 						<div className='flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6'>
-							<Button className='bg-[#009444] hover:bg-[#007a3a] text-white rounded-full px-8 py-4 h-auto text-lg font-semibold tracking-wide inline-flex items-center gap-3 transition-colors duration-200'>
+							<a
+								href='https://widget.servmeco.com/?oid=1662'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='bg-[#009444] hover:bg-[#007a3a] text-white rounded-full px-8 py-4 h-auto text-lg font-semibold tracking-wide inline-flex items-center gap-3 transition-colors duration-200'
+							>
 								BOOK A BAY
 								<ArrowRightIcon className='w-5 h-5' />
-							</Button>
+							</a>
 
 							<Button
 								variant='outline'
@@ -97,29 +104,29 @@ export const ServicesSection = () => {
 										src={service.image}
 									/>
 								</div>
-								
+
 								{/* Content Container */}
 								<CardContent className='px-10 pb-10 pt-2 space-y-3'>
-									<h3 
+									<h3
 										className='text-black leading-tight'
 										style={{
 											fontFamily: "'Gilroy', Helvetica, sans-serif",
 											fontSize: '24px',
 											fontWeight: '700',
 											letterSpacing: '0px',
-											lineHeight: 'normal'
+											lineHeight: 'normal',
 										}}
 									>
 										{service.title}
 									</h3>
-									<p 
+									<p
 										className='text-[#757575] leading-relaxed'
 										style={{
 											fontFamily: "'Gilroy', Helvetica, sans-serif",
 											fontSize: '18px',
 											fontWeight: '500',
 											letterSpacing: '0px',
-											lineHeight: '26px'
+											lineHeight: '26px',
 										}}
 									>
 										{service.description}

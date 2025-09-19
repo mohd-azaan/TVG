@@ -161,13 +161,15 @@ export const PackagesSection = () => {
 						{/* Add spacing to match middle card height */}
 						<div className='flex-grow'></div>
 						<div className='mt-auto'>
-							<Button
-								to='/contact'
-								className='w-full bg-[#009444] hover:bg-[#007a3a] rounded-[50px] py-4 font-TVG-typography-button text-[18px] uppercase tracking-wider'
+							<a
+								href='https://widget.servmeco.com/?oid=1662'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='w-full bg-[#009444] hover:bg-[#007a3a] rounded-[50px] py-4 font-TVG-typography-button text-[18px] uppercase tracking-wider inline-flex items-center justify-center gap-2'
 							>
 								<span>Book Evaluation</span>
 								<ArrowRight className='w-5 h-5' />
-							</Button>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -273,13 +275,15 @@ export const PackagesSection = () => {
 							</div>
 						</div>
 						<div className='mt-auto pt-8'>
-							<Button
-								to='/contact'
-								className='w-full bg-[#009444] hover:bg-[#007a3a] rounded-[50px] py-4 font-TVG-typography-button text-[18px] uppercase tracking-wider'
+							<a
+								href='https://widget.servmeco.com/?oid=1662'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='w-full bg-[#009444] hover:bg-[#007a3a] rounded-[50px] py-4 font-TVG-typography-button text-[18px] uppercase tracking-wider inline-flex items-center justify-center gap-2'
 							>
 								<span>Book a Lesson</span>
 								<ArrowRight className='w-5 h-5' />
-							</Button>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -342,13 +346,15 @@ export const PackagesSection = () => {
 						{/* Add spacing to match middle card height */}
 						<div className='flex-grow'></div>
 						<div className='mt-auto'>
-							<Button
-								to='/contact'
-								className='w-full bg-[#009444] hover:bg-[#007a3a] rounded-[50px] py-4 font-TVG-typography-button text-[18px] uppercase tracking-wider'
+							<a
+								href='https://widget.servmeco.com/?oid=1662'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='w-full bg-[#009444] hover:bg-[#007a3a] rounded-[50px] py-4 font-TVG-typography-button text-[18px] uppercase tracking-wider inline-flex items-center justify-center gap-2'
 							>
 								<span>Book a Bay</span>
 								<ArrowRight className='w-5 h-5' />
-							</Button>
+							</a>
 						</div>
 					</div>
 				</div>

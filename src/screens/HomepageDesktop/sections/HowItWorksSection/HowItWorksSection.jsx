@@ -84,14 +84,19 @@ export const HowItWorksSection = () => {
 									</p>
 								</div>
 								<div className='flex justify-center xl:justify-start mt-6 sm:mb-8'>
-									<Button className='inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#009444] rounded-full h-auto hover:bg-[#007a3a] transition-colors duration-200 text-lg font-semibold tracking-wide'>
+									<a
+										href='https://widget.servmeco.com/?oid=1662'
+										target='_blank'
+										rel='noopener noreferrer'
+										className='inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#009444] rounded-full h-auto hover:bg-[#007a3a] transition-colors duration-200 text-lg font-semibold tracking-wide'
+									>
 										<span className='text-white'>BOOK A BAY</span>
 										<img
 											className='w-5 h-5'
 											alt='Arrow right'
 											src='/arrow-right.svg'
 										/>
-									</Button>
+									</a>
 								</div>
 							</div>
 

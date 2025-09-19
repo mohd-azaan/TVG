@@ -119,7 +119,12 @@ export const PricingSection = () => {
 
 								{/* CTA Button */}
 								<div className='absolute top-[230px] left-1/2 transform -translate-x-1/2'>
-									<button className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-[28px] py-[10px] flex items-center gap-2'>
+									<a
+										href='https://widget.servmeco.com/?oid=1662'
+										target='_blank'
+										rel='noopener noreferrer'
+										className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-[28px] py-[10px] inline-flex items-center gap-2'
+									>
 										<span className='font-TVG-typography-button font-[600] text-[14px] leading-[18px] tracking-[0.8px] text-white uppercase text-center whitespace-nowrap'>
 											Book a Bay
 										</span>
@@ -139,7 +144,7 @@ export const PricingSection = () => {
 												/>
 											</svg>
 										</div>
-									</button>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -273,7 +278,12 @@ export const PricingSection = () => {
 										/hour/bay/person
 									</p>
 
-									<button className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-6 py-2 flex items-center gap-2 mx-auto'>
+									<a
+										href='https://widget.servmeco.com/?oid=1662'
+										target='_blank'
+										rel='noopener noreferrer'
+										className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-6 py-2 inline-flex items-center gap-2 mx-auto'
+									>
 										<span className='font-TVG-typography-button font-[number:var(--TVG-typography-button-font-weight)] text-[16px] leading-[var(--TVG-typography-button-line-height)] tracking-[var(--TVG-typography-button-letter-spacing)] text-white [font-style:var(--TVG-typography-button-font-style)] uppercase'>
 											Book a Bay
 										</span>
@@ -293,7 +303,7 @@ export const PricingSection = () => {
 												/>
 											</svg>
 										</div>
-									</button>
+									</a>
 								</div>
 							</div>
 						))}

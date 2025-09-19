@@ -54,13 +54,15 @@ export const HeroSection = () => {
 						</div>
 
 						{/* CTA Button - Using homepage button style */}
-						<Link
-							to='/contact'
+						<a
+							href='https://widget.servmeco.com/?oid=1662'
+							target='_blank'
+							rel='noopener noreferrer'
 							className='inline-flex w-fit items-center gap-3 rounded-full bg-[#009444] px-6 py-2 mt-6 text-center text-[18px] font-gilroy font-medium uppercase leading-[40px] tracking-wide transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:brightness-105 focus:outline-none focus:ring-4 focus:ring-[#0b6e38]/30'
 						>
 							<span>BOOK YOU BAY</span>
 							<ArrowIcon />
-						</Link>
+						</a>
 					</div>
 				</div>
 

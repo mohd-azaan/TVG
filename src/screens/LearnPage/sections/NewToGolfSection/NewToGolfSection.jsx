@@ -46,10 +46,15 @@ export const NewToGolfSection = () => {
 
 							{/* CTA Button */}
 							<div className='flex justify-start'>
-								<Button className='bg-[#009444] hover:bg-[#007a3a] rounded-[50px] px-8 py-6 min-h-[64px] font-TVG-typography-button text-[18px] text-white uppercase'>
+								<a
+									href='https://widget.servmeco.com/?oid=1662'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='bg-[#009444] hover:bg-[#007a3a] rounded-[50px] px-8 py-6 min-h-[64px] font-TVG-typography-button text-[18px] text-white uppercase inline-flex items-center gap-3'
+								>
 									<span>Book Evaluation</span>
 									<ArrowRight className='w-6 h-6' />
-								</Button>
+								</a>
 							</div>
 						</div>
 					</div>

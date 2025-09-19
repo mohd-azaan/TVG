@@ -4,7 +4,7 @@
 // RELEVANT FILES: HomepageDesktop.jsx, AboutPage.jsx, App.jsx, tailwind.config.js
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 // Asset constants for logos and icons
 const imgIcon = '/chevron-down.svg';
@@ -89,6 +89,8 @@ export const Navbar = () => {
 	const dropdownRef = useRef(null);
 	const mobileMenuRef = useRef(null);
 	const moreDropdownRef = useRef(null);
+	const location = useLocation();
+	const navigate = useNavigate();
 
 	const menuItems = [
 		{ label: 'ABOUT', hasDropdown: false, to: '/about' },
@@ -109,6 +111,18 @@ export const Navbar = () => {
 		{ label: 'SIMULATOR', hasDropdown: false, to: '/simulator' },
 		{ label: 'OWN THE BUSINESS', hasDropdown: false, to: '/partnership' },
 	];
+
+	// Handle logo click - scroll to top if on home page, navigate to home otherwise
+	const handleLogoClick = (e) => {
+		e.preventDefault();
+		if (location.pathname === '/') {
+			// If already on home page, scroll to top
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		} else {
+			// If on different page, navigate to home page
+			navigate('/');
+		}
+	};
 
 	const handleMouseEnter = () => setIsLearnDropdownOpen(true);
 	const handleMouseLeave = () => setIsLearnDropdownOpen(false);
@@ -150,13 +164,17 @@ export const Navbar = () => {
 		<div className='backdrop-blur-[10px] backdrop-filter bg-[#102121]/95 relative rounded-[20px] sm:rounded-[30px] lg:rounded-[40px] w-full h-[60px] sm:h-[70px] lg:h-[80px] max-w-[1700px] mx-auto mt-2 sm:mt-4 lg:mt-5 shadow-lg border border-white/10 px-4 sm:px-6 lg:px-8 z-10'>
 			{/* TVG Logo */}
 			<div className='absolute h-[36px] sm:h-[44px] left-4 sm:left-6 lg:left-8 top-1/2 -translate-y-1/2 w-[80px] sm:w-[100px] lg:w-[120px] flex items-center'>
-				<Link to='/' aria-label='Home' className='flex items-center'>
+				<button
+					onClick={handleLogoClick}
+					aria-label='Go to top of page or home'
+					className='flex items-center cursor-pointer'
+				>
 					<img
 						alt='The Virtual Greens logo'
 						className='block max-w-none w-[70px] sm:w-[90px] lg:w-[110px] max-h-[30px] sm:max-h-[34px] lg:max-h-[38px] object-contain'
 						src={tvgLogo}
 					/>
-				</Link>
+				</button>
 			</div>
 
 			{/* Mobile Hamburger Menu Button */}

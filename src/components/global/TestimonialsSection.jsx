@@ -13,9 +13,11 @@ export const TestimonialsSection = () => {
   const getPageKey = (pathname) => {
     if (pathname === '/') return 'homepage';
     if (pathname === '/about') return 'aboutPage';
+    if (pathname === '/our-story') return 'ourStoryPage';
     if (pathname === '/play') return 'playPage';
     if (pathname === '/learn') return 'learnPage';
     if (pathname === '/membership') return 'membershipPage';
+    if (pathname === '/faq') return 'faqPage';
     return 'homepage';
   };
 

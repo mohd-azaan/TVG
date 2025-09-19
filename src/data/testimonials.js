@@ -46,6 +46,24 @@ export const testimonialData = {
 		authorImage: "/chatgpt-image-aug-22--2025--09-37-50-pm-1-2.png",
 		backgroundColor: "from-[#0E5C4E] to-[#006B4F]",
 		showAccentLines: true
+	},
+
+	faqPage: {
+		quote: "I had so many questions before my first visit, but the staff here answered everything patiently. The FAQ section on their website was incredibly helpful, and the experience exceeded all my expectations. Now I'm a regular!",
+		authorName: "Michael Chen",
+		authorTitle: "First-Time Visitor",
+		authorImage: "/chatgpt-image-aug-22--2025--09-37-50-pm-1-2.png",
+		backgroundColor: "from-[#0E5C4E] to-[#006B4F]",
+		showAccentLines: true
+	},
+
+	ourStoryPage: {
+		quote: "We've built a golfer's dream with an innovative indoor experience where every swing counts. Powered by world-class technology, this is where golf meets the future. Come for the golf, stay for the community of like-minded players and the unmatched experience that brings golfers together.",
+		authorName: "Co-Founder Muhammad Hoja",
+		authorTitle: "Ambassador",
+		authorImage: "/chatgpt-image-aug-22--2025--09-37-50-pm-1-2.png",
+		backgroundColor: "from-[#0E5C4E] to-[#006B4F]",
+		showAccentLines: true
 	}
 };
 

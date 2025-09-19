@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Morganite';
+    src: url('/fonts/Morganite-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Morganite-ExtraBold';
+    src: url('/fonts/Morganite-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}

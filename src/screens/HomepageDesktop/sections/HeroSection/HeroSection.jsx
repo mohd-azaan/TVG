@@ -2,7 +2,7 @@ import React from 'react';
 
 export const HeroSection = () => {
 	return (
-		<section className='relative w-full min-h-screen'>
+		<section className='relative w-full h-screen'>
 			{/* Background image */}
 			<div
 				className='absolute inset-0 bg-cover bg-center bg-no-repeat'

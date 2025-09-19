@@ -13,7 +13,7 @@ import { TwoVisionNXSection } from './Sections/TwoVisionNXSection';
 
 export const PlayPage = () => {
 	return (
-		<div className='play-page w-full'>
+		<div className='play-page w-full mb-16'>
 			{/* Hero Section - "Your Game, Your Pace, Your Greens" */}
 			<HeroSection />
 

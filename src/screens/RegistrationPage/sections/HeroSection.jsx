@@ -1,8 +1,8 @@
 
-const imgGroup = "http://localhost:3845/assets/d230ca1d6b764f5d8b3db692c524015d9597e87f.svg";
-const imgVector = "http://localhost:3845/assets/055c39ab8d25d54bc5a606ccafb013e90b0a2731.svg";
-const imgVector1 = "http://localhost:3845/assets/555294d2bd71056770063a68ff71175764b452f7.svg";
-const imgVector2 = "http://localhost:3845/assets/660b5111503e1fcd4bc9a0af0bb5e4171f7753d5.svg";
+const imgGroup = "/assets/figma/d230ca1d6b764f5d8b3db692c524015d9597e87f.svg";
+const imgVector = "/assets/figma/055c39ab8d25d54bc5a606ccafb013e90b0a2731.svg";
+const imgVector1 = "/assets/figma/555294d2bd71056770063a68ff71175764b452f7.svg";
+const imgVector2 = "/assets/figma/660b5111503e1fcd4bc9a0af0bb5e4171f7753d5.svg";
 
 export const HeroSection = () => {
   return (

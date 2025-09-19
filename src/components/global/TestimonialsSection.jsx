@@ -40,13 +40,13 @@ export const TestimonialsSection = () => {
        
         
         {/* Secondary accent shape for depth */}
-        <div className='absolute bottom-[-450px] left-[-400px] w-[1200px] h-[900px] '>
+        <div className='absolute bottom-[-350px] left-[-300px] w-[1000px] h-[700px] '>
           <img
             className='w-full h-full object-contain'
             alt='Secondary accent lines'
             src='/shape14-2.svg'
             style={{
-              transform: 'rotate(10deg) scale(0.8)'
+              transform: 'rotate(10deg) scale(0.7)'
             }}
           />
         </div>

@@ -7,7 +7,7 @@ import React from 'react';
 
 export const GolfzonNumbersSection = () => {
 	return (
-		<section className='relative w-full min-h-[1095px] bg-[#102121] overflow-hidden'>
+		<section className='relative w-full min-h-[1200px] bg-[#102121] overflow-hidden pb-16'>
 			{/* Container positioned according to Figma layout */}
 			<div className='relative max-w-[1920px] mx-auto'>
 				{/* Main title */}
@@ -116,7 +116,7 @@ export const GolfzonNumbersSection = () => {
 			</div>
 
 			{/* Mobile responsive layout */}
-			<div className='block lg:hidden px-4 sm:px-6 py-16'>
+			<div className='block lg:hidden px-4 sm:px-6 py-16 pb-20'>
 				<div className='space-y-12 max-w-[600px] mx-auto'>
 					{/* Title */}
 					<div className='text-center'>

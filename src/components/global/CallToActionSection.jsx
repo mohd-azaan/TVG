@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 export const CallToActionSection = () => {
 	return (
-		<section className='relative w-full '>
+		<section className='relative w-full'>
 			<header className='relative w-full h-20 bg-[#0c1a1a]'>
 				<div className='flex items-center justify-center gap-4 h-full px-8 py-8 max-w-7xl mx-auto'>
 					<h2

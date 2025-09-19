@@ -4,7 +4,7 @@
 
 import React from 'react';
 import { TestimonialSection } from '../../../../components/sections/TestimonialSection';
-import { CallToActionSection } from '../../../../components/sections/CallToActionSection';
+import { CallToActionSection } from '../../../../components/global/CallToActionSection';
 import { testimonialData } from '../../../../data/testimonials';
 
 export const TestimonialsSection = () => {

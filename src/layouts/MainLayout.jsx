@@ -4,7 +4,7 @@ import Navbar from '../components/global/Navbar';
 import { TestimonialsSection } from '../components/global/TestimonialsSection';
 import { CallToActionSection } from '../components/global/CallToActionSection';
 import { FooterSection } from '../components/global/FooterSection';
-import { MobileComingSoon } from '../components/global/MobileComingSoon';
+import { MobileHeader } from '../components/global/MobileHeader';
 import { TestimonialProvider } from '../contexts/TestimonialContext';
 
 export const MainLayout = ({ children }) => {
@@ -17,11 +17,21 @@ export const MainLayout = ({ children }) => {
 
 	return (
 		<TestimonialProvider>
-			{/* Mobile-only coming soon experience */}
-			<MobileComingSoon />
+			{/* Mobile view */}
+			<div className="lg:hidden">
+				<div className="fixed top-0 left-0 right-0 z-50">
+					<MobileHeader />
+				</div>
+				<main className='w-full pt-20'>
+					{children}
+				</main>
+				<CallToActionSection />
+				<TestimonialsSection />
+				<FooterSection />
+			</div>
 
 			{/* Desktop-only full website */}
-			<div className='hidden lg:block min-h-screen w-full bg-white'>
+			<div className='hidden lg:block min-h-screen w-full bg-[#102121]'>
 				<div className='fixed top-0 left-0 right-0 z-50 px-4'>
 					<Navbar />
 				</div>

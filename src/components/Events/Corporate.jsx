@@ -21,7 +21,7 @@ export const Corporate = () => {
 	];
 
 	return (
-		<section className='w-full py-16'>
+		<section className='w-full py-16 bg-white'>
 			<div className='max-w-7xl mx-auto px-6 lg:px-8'>
 				<div className='flex flex-col lg:flex-row items-start gap-10'>
 					{/* Image */}

@@ -6,10 +6,9 @@
 import '../../styleguide.css';
 import { FeaturesSection } from './Sections/FeaturesSection';
 import { GolfzonAdvantagesSection } from './Sections/GolfzonAdvantagesSection';
-import WhyGolfzonSection from './Sections/WhyGolfzonSection';
+import { WhyGolfzonSection } from './Sections/WhyGolfzonSection';
 import { HeroSection } from './Sections/HeroSection';
 import Simulator from './Sections/Simulator';
-import Simulators from './Sections/Simulator';
 import WhereToUse from './Sections/WhereToUse';
 import SpecSection from './Sections/SpecSection';
 

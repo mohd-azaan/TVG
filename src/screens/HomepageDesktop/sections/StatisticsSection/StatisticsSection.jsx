@@ -43,6 +43,8 @@ export const StatisticsSection = () => {
 					className='absolute w-full  h-[426px] top-60 left-[-860px] opacity-100 z-0'
 					alt='Background shape'
 					src='/shape14-2.svg'
+					loading='lazy'
+					decoding='async'
 				/>
 
 				{/* Header */}
@@ -90,7 +92,7 @@ export const StatisticsSection = () => {
 							</div>
 
 							{/* Description text */}
-							<div className='font-["Gilroy",_Helvetica] font-bold text-white text-[17px] text-center leading-tight whitespace-nowrap'>
+							<div className='font-gilroy font-bold text-white text-[17px] text-center leading-tight whitespace-nowrap'>
 								{stat.text}
 							</div>
 						</div>
@@ -102,6 +104,10 @@ export const StatisticsSection = () => {
 					className='absolute w-12 h-12 top-[248px] right-[155px] z-10'
 					alt='Saudi riyal symbol'
 					src='/saudi-riyal-symbol-2-1-1.svg'
+					loading='lazy'
+					decoding='async'
+					width='48'
+					height='48'
 				/>
 			</div>
 		</section>

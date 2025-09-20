@@ -27,7 +27,7 @@ export const WhatToExpectSection = () => {
                     <img src="/indoor-golf 1.png" alt="Indoor golf setup" className="rounded-3xl" />
                 </div>
                 <div className="w-1/2">
-                    <h2 className="font-TVG-typography-h2 font-[800] text-[96px] text-black uppercase leading-none mb-4">What to Expect</h2>
+                    <h2 className="font-morganite font-black text-[96px] text-black uppercase leading-none mb-4">What to Expect</h2>
                     <p className="font-TVG-typography-tagline font-bold text-2xl text-green-700 uppercase mb-8">Stay Tuned...</p>
                     <div className="space-y-2">
                         {features.map((feature, index) => (

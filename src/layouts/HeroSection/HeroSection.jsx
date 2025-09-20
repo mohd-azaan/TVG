@@ -99,6 +99,10 @@ export const HeroSection = ({
 							className='w-[90%] max-w-[900px] h-auto max-h-[480px] rounded-[30px] object-contain'
 							src={imageUrl}
 							alt='Hero image'
+							fetchPriority='high'
+							decoding='async'
+							width='900'
+							height='480'
 						/>
 					</div>
 				)}
@@ -112,6 +116,10 @@ export const HeroSection = ({
 				alt='decorative green waves'
 				src='/shape14-2.svg'
 				className='pointer-events-none absolute right-[-420px] bottom-[-220px] w-[1100px] opacity-95 lg:right-[-620px] lg:bottom-[-520px] lg:w-[1800px] mix-blend-screen z-0'
+				fetchPriority='high'
+				decoding='async'
+				width='1800'
+				height='800'
 			/>
 		</div>
 	);

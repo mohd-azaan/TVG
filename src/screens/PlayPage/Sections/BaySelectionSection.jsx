@@ -65,15 +65,18 @@ export const BaySelectionSection = () => {
 	];
 
 	return (
-		<section className='relative w-full min-h-[1420px] bg-[#102121]'>
+		// Clip large decorative background shapes so they don't add to page width
+		<section className='relative w-full min-h-[1420px] bg-[#102121] overflow-hidden'>
 			{/* Decorative background shape (increased size + rotated) */}
-			<div className='absolute top-[559px] left-[1020.86px] transform rotate-[20deg]'>
+			<div className='absolute top-[559px] left-[1020.86px] transform rotate-[20deg] pointer-events-none select-none'>
 				<div
-					className='w-[2400px] h-[1800px]'
+					className='w-[2400px] h-[1800px] max-w-none'
+					aria-hidden='true'
 					style={{
 						background: `url('/shape14-2.svg') no-repeat center`,
 						backgroundSize: 'contain',
 						mixBlendMode: 'screen',
+						transform: 'translateZ(0)'
 					}}
 				/>
 			</div>
@@ -82,14 +85,14 @@ export const BaySelectionSection = () => {
 			<div className='relative z-10 max-w-[1920px] mx-auto'>
 				{/* Section title */}
 				<div className='absolute top-[100px] left-1/2 transform -translate-x-1/2 w-[655px] text-center'>
-					<h2 className='font-TVG-typography-h2 font-[number:var(--TVG-typography-h2-font-weight)] text-[length:var(--TVG-typography-h2-font-size)] leading-[var(--TVG-typography-h2-line-height)] tracking-[var(--TVG-typography-h2-letter-spacing)] text-white [font-style:var(--TVG-typography-h2-font-style)] uppercase'>
+					<h2 className='font-morganite font-black text-[96px] leading-[90px] tracking-[1.92px] text-white uppercase'>
 						Choose Your Bay
 					</h2>
 				</div>
 
 				{/* Description text */}
 				<div className='absolute top-[190px] left-1/2 transform -translate-x-1/2 w-[655px] text-center'>
-					<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[lightgrey] [font-style:var(--TVG-typography-default-font-style)]'>
+					<p className='font-gilroy font-medium text-[20px] leading-[28px] tracking-[0.1px] text-[lightgrey]'>
 						Each bay is powered by Golfzon's cutting-edge technology, but the
 						vibe is up to you. Here's how to play it
 					</p>
@@ -121,7 +124,7 @@ export const BaySelectionSection = () => {
 
 							{/* Location */}
 							<div className='absolute top-[187px] left-[41px] w-[362px]'>
-								<p className='font-TVG-typography-footer-menu font-[number:var(--TVG-typography-footer-menu-font-weight)] text-[18px] leading-normal tracking-[var(--TVG-typography-footer-menu-letter-spacing)] text-white [font-style:var(--TVG-typography-footer-menu-font-style)] uppercase'>
+								<p className='font-gilroy font-normal text-[18px] leading-normal tracking-[0.2px] text-white uppercase'>
 									{bay.location}
 								</p>
 							</div>
@@ -136,7 +139,7 @@ export const BaySelectionSection = () => {
 										<div className='flex-shrink-0 w-[30px] h-[30px] text-[#d1d3d4] mt-[2px]'>
 											<GolfIcon className='w-[30px] h-[30px]' />
 										</div>
-										<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[#d1d3d4] [font-style:var(--TVG-typography-default-font-style)] flex-1'>
+										<p className='font-gilroy font-medium text-[20px] leading-[28px] tracking-[0.1px] text-[#d1d3d4] flex-1'>
 											{feature}
 										</p>
 									</div>
@@ -151,10 +154,10 @@ export const BaySelectionSection = () => {
 			<div className='block lg:hidden px-4 sm:px-6 py-16'>
 				<div className='space-y-12 max-w-[600px] mx-auto'>
 					<div className='text-center space-y-6'>
-						<h2 className='font-TVG-typography-h2 font-[number:var(--TVG-typography-h2-font-weight)] text-[clamp(32px,8vw,96px)] leading-[1.1] tracking-[var(--TVG-typography-h2-letter-spacing)] text-white [font-style:var(--TVG-typography-h2-font-style)] uppercase'>
+						<h2 className='font-morganite font-black text-[clamp(32px,8vw,96px)] leading-[1.1] tracking-[1.92px] text-white uppercase'>
 							Choose Your Bay
 						</h2>
-						<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[lightgrey] [font-style:var(--TVG-typography-default-font-style)]'>
+						<p className='font-gilroy font-medium text-[20px] leading-[28px] tracking-[0.1px] text-[lightgrey]'>
 							Each bay is powered by Golfzon's cutting-edge technology, but the
 							vibe is up to you. Here's how to play it
 						</p>
@@ -181,10 +184,10 @@ export const BaySelectionSection = () => {
 								{/* Content */}
 								<div className='space-y-4'>
 									<div>
-										<h3 className='font-TVG-typography-h4 font-[number:var(--TVG-typography-h4-font-weight)] text-[clamp(20px,5vw,28px)] leading-normal tracking-[var(--TVG-typography-h4-letter-spacing)] text-white [font-style:var(--TVG-typography-h4-font-style)] uppercase'>
+										<h3 className='font-gilroy font-bold text-[clamp(20px,5vw,28px)] leading-normal tracking-[0.5px] text-white uppercase'>
 											{bay.title}
 										</h3>
-										<p className='font-TVG-typography-footer-menu font-[number:var(--TVG-typography-footer-menu-font-weight)] text-[16px] leading-normal tracking-[var(--TVG-typography-footer-menu-letter-spacing)] text-white [font-style:var(--TVG-typography-footer-menu-font-style)] uppercase opacity-75'>
+										<p className='font-gilroy font-normal text-[16px] leading-normal tracking-[0.2px] text-white uppercase opacity-75'>
 											{bay.location}
 										</p>
 									</div>

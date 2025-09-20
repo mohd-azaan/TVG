@@ -36,7 +36,7 @@ export const HeroSection = () => {
 
 				{/* Subtitle positioned exactly like Figma */}
 				<div className='absolute top-[357px] left-[843px] w-[800px]'>
-					<p className='font-TVG-typography-hero-text font-[number:var(--TVG-typography-hero-text-font-weight)] text-[length:var(--TVG-typography-hero-text-font-size)] leading-[var(--TVG-typography-hero-text-line-height)] tracking-[var(--TVG-typography-hero-text-letter-spacing)] text-[#dedede] [font-style:var(--TVG-typography-hero-text-font-style)]'>
+					<p className='font-tvg-hero-text font-medium text-[24px] leading-[32px] tracking-[0.5px] text-[#dedede]'>
 						Most answers can be found below, but if you still have a question, our team is just a message away.
 					</p>
 				</div>
@@ -51,7 +51,7 @@ export const HeroSection = () => {
 					</h1>
 
 					<div className='max-w-[600px] mx-auto'>
-						<p className='font-TVG-typography-hero-text font-[number:var(--TVG-typography-hero-text-font-weight)] text-[length:var(--TVG-typography-hero-text-font-size)] leading-[var(--TVG-typography-hero-text-line-height)] tracking-[var(--TVG-typography-hero-text-letter-spacing)] text-[#dedede] [font-style:var(--TVG-typography-hero-text-font-style)]'>
+						<p className='font-tvg-hero-text font-medium text-[24px] leading-[32px] tracking-[0.5px] text-[#dedede]'>
 							Most answers can be found below, but if you still have a question, our team is just a message away.
 						</p>
 					</div>

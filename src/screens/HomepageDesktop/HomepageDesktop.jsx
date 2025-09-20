@@ -1,7 +1,10 @@
 import { XIcon } from 'lucide-react';
 import React, { useState } from 'react';
+import { JsonLd } from 'react-schemaorg';
+import { Organization, LocalBusiness } from 'schema-dts';
 import { Button } from '../../components/ui/button';
 import { Card, CardContent } from '../../components/ui/card';
+import { SEOHead } from '../../components/SEO/SEOHead';
 // Header, Footer and Testimonials are rendered by MainLayout
 import { HeroSection } from './sections/HeroSection/HeroSection';
 import { HowItWorksSection } from './sections/HowItWorksSection/HowItWorksSection';
@@ -15,6 +18,88 @@ export const HomepageDesktop = () => {
 
 	return (
 		<div className='bg-white w-full min-h-screen relative'>
+			<SEOHead
+				title="The Virtual Greens - Indoor Golf Simulator Lounge in Riyadh"
+				description="Experience Riyadh's premier indoor golf simulator lounge. Cutting-edge Golfzon TwoVisionNX technology, professional coaching, and premium dining in a relaxed social atmosphere."
+				canonicalUrl="/"
+				ogImage="/hero.png"
+				keywords="indoor golf simulator Riyadh, golf simulator lounge, Golfzon technology, golf coaching Riyadh, virtual golf Saudi Arabia"
+			/>
+
+			<JsonLd
+				item={{
+					"@context": "https://schema.org",
+					"@type": "Organization",
+					"name": "The Virtual Greens",
+					"url": "https://www.thevirtualgreens.com",
+					"logo": "https://www.thevirtualgreens.com/tvg-logo.svg",
+					"description": "Riyadh's premier indoor golf simulator lounge featuring cutting-edge Golfzon TwoVisionNX technology, professional coaching, and premium dining experiences.",
+					"foundingDate": "2024",
+					"address": {
+						"@type": "PostalAddress",
+						"addressCountry": "SA",
+						"addressLocality": "Riyadh",
+						"addressRegion": "Riyadh Province"
+					},
+					"contactPoint": {
+						"@type": "ContactPoint",
+						"contactType": "customer service",
+						"telephone": "+966-XXX-XXX-XXXX",
+						"email": "info@thevirtualgreens.com"
+					},
+					"sameAs": [
+						"https://www.instagram.com/thevirtualgreens",
+						"https://www.youtube.com/@thevirtualgreens",
+						"https://www.tiktok.com/@thevirtualgreens"
+					]
+				}}
+			/>
+
+			<JsonLd
+				item={{
+					"@context": "https://schema.org",
+					"@type": "LocalBusiness",
+					"@id": "https://www.thevirtualgreens.com/#localbusiness",
+					"name": "The Virtual Greens",
+					"description": "Indoor golf simulator lounge with Golfzon TwoVisionNX technology, professional golf coaching, leagues, and premium dining.",
+					"url": "https://www.thevirtualgreens.com",
+					"telephone": "+966-XXX-XXX-XXXX",
+					"email": "info@thevirtualgreens.com",
+					"address": {
+						"@type": "PostalAddress",
+						"addressCountry": "SA",
+						"addressLocality": "Riyadh",
+						"addressRegion": "Riyadh Province"
+					},
+					"geo": {
+						"@type": "GeoCoordinates",
+						"latitude": "24.7136",
+						"longitude": "46.6753"
+					},
+					"openingHours": [
+						"Mo-Su 09:00-23:00"
+					],
+					"priceRange": "$$",
+					"servedCuisine": "International",
+					"amenityFeature": [
+						{
+							"@type": "LocationFeatureSpecification",
+							"name": "Indoor Golf Simulators",
+							"value": true
+						},
+						{
+							"@type": "LocationFeatureSpecification",
+							"name": "Golf Coaching",
+							"value": true
+						},
+						{
+							"@type": "LocationFeatureSpecification",
+							"name": "Restaurant",
+							"value": true
+						}
+					]
+				}}
+			/>
 			<div className='w-full flex flex-col'>
 				<HeroSection />
 				<div className='pt-24'>

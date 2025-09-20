@@ -3,6 +3,7 @@
 // This component displays the full Learn page layout with all sections based on provided Figma design
 // RELEVANT FILES: App.jsx, MainLayout.jsx, HeroSection.jsx, PackagesSection.jsx
 
+import { SEOHead } from '../../components/SEO/SEOHead';
 import { CorporateSection } from './sections/CorporateSection/CorporateSection';
 import { HeroSection } from './sections/HeroSection/HeroSection';
 import { LessonLevelsSection } from './sections/LessonLevelsSection/LessonLevelsSection';
@@ -14,6 +15,13 @@ import { WhatYouWorkOnSection } from './sections/WhatYouWorkOnSection/WhatYouWor
 export const LearnPage = () => {
 	return (
 		<div className='learn-page w-full'>
+			<SEOHead
+				title="Golf Lessons & Coaching in Riyadh | Learn Golf at TVG"
+				description="Professional golf lessons & coaching at TVG Riyadh. From beginner to advanced levels. Expert PGA instructors, Golfzon technology, personalized lesson packages."
+				canonicalUrl="/learn"
+				ogImage="/golf-club---ball-1.png"
+				keywords="golf lessons Riyadh, golf coaching Saudi Arabia, PGA golf instructor, beginner golf lessons, advanced golf coaching, golf lesson packages"
+			/>
 			{/* Hero Section - "Train at TVG Academy" */}
 			<HeroSection />
 

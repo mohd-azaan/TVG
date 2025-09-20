@@ -22,7 +22,7 @@ function TopNavItem({ children, to = '#', status = 'Default' }) {
 			className='content-stretch flex flex-col gap-2.5 items-center justify-center relative size-full group cursor-pointer'
 		>
 			<div
-				className={`flex flex-col font-['Gilroy-Bold',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[10px] sm:text-[11px] lg:text-[12px] font-bold text-nowrap tracking-[0.4px] transition-colors duration-200 ${
+				className={`flex flex-col font-gilroy font-bold justify-center leading-[0] not-italic relative shrink-0 text-[10px] sm:text-[11px] lg:text-[12px] font-bold text-nowrap tracking-[0.4px] transition-colors duration-200 ${
 					isActive ? 'text-[#009444]' : 'text-white group-hover:text-[#009444]'
 				}`}
 			>
@@ -202,7 +202,7 @@ export const Navbar = () => {
 						onMouseEnter={handleMoreMouseEnter}
 						onMouseLeave={handleMoreMouseLeave}
 					>
-						<button className="flex items-center gap-1 h-full px-2 font-['Gilroy-Bold',sans-serif] justify-center not-italic text-[10px] sm:text-[11px] lg:text-[12px] font-bold text-nowrap text-white tracking-[0.4px] group-hover:text-[#009444] transition-colors duration-200">
+						<button className="flex items-center gap-1 h-full px-2 font-gilroy font-bold justify-center not-italic text-[10px] sm:text-[11px] lg:text-[12px] font-bold text-nowrap text-white tracking-[0.4px] group-hover:text-[#009444] transition-colors duration-200">
 							<span className='leading-[52px] whitespace-pre block'>MORE</span>
 							<span className='inline-flex w-4 h-4 items-center justify-center'>
 								<ChevronDown size='24' />
@@ -273,7 +273,7 @@ export const Navbar = () => {
 								>
 									<Link
 										to={item.to}
-										className="flex items-center gap-1 h-full px-2 font-['Gilroy-Bold',sans-serif] justify-center not-italic text-[10px] sm:text-[11px] lg:text-[12px] font-bold text-nowrap text-white tracking-[0.4px] group-hover:text-[#009444] transition-colors duration-200 z-10"
+										className="flex items-center gap-1 h-full px-2 font-gilroy font-bold justify-center not-italic text-[10px] sm:text-[11px] lg:text-[12px] font-bold text-nowrap text-white tracking-[0.4px] group-hover:text-[#009444] transition-colors duration-200 z-10"
 										onKeyDown={handleKeyDown}
 										aria-expanded={isLearnDropdownOpen}
 										aria-haspopup='true'
@@ -301,7 +301,7 @@ export const Navbar = () => {
 												className='bg-white rounded-b-[20px] shadow-2xl border border-gray-200 overflow-hidden backdrop-blur-sm'
 												style={{ marginTop: '-1px' }}
 											>
-												<div className="font-['Gilroy-Bold',sans-serif] h-[160px] leading-[0] not-italic overflow-clip relative text-[14px] font-bold text-black text-nowrap tracking-[0.2px] w-[280px] py-4 px-6">
+												<div className="font-gilroy font-bold h-[160px] leading-[0] not-italic overflow-clip relative text-[14px] font-bold text-black text-nowrap tracking-[0.2px] w-[280px] py-4 px-6">
 													{item.dropdownItems.map(
 														(dropdownItem, dropdownIndex) => (
 															<Link
@@ -358,7 +358,7 @@ export const Navbar = () => {
 					>
 						{/* Mobile Menu Header */}
 						<div className='flex items-center justify-between p-6 border-b border-white/10'>
-							<h2 className="font-['Gilroy-Bold',sans-serif] text-white text-lg font-bold">
+							<h2 className="font-gilroy font-bold text-white text-lg font-bold">
 								Menu
 							</h2>
 							<button
@@ -381,7 +381,7 @@ export const Navbar = () => {
 										<Link
 											to={item.to}
 											onClick={closeMobileMenu}
-											className={`block font-['Gilroy-Bold',sans-serif] text-[14px] font-bold tracking-[0.4px] py-3 px-4 rounded-lg transition-colors duration-200 ${
+											className={`block font-gilroy font-bold text-[14px] font-bold tracking-[0.4px] py-3 px-4 rounded-lg transition-colors duration-200 ${
 												isActive
 													? 'bg-[#009444]/20 text-[#009444]'
 													: 'text-white hover:bg-[#009444]/20 hover:text-[#009444]'
@@ -401,7 +401,7 @@ export const Navbar = () => {
 															key={dropdownItem.label}
 															to={dropdownItem.to}
 															onClick={closeMobileMenu}
-															className={`block font-['Gilroy-Bold',sans-serif] text-[12px] font-medium py-2 px-4 rounded-md transition-colors duration-200 ${
+															className={`block font-gilroy font-bold text-[12px] font-medium py-2 px-4 rounded-md transition-colors duration-200 ${
 																isDropdownActive
 																	? 'bg-[#009444]/10 text-[#009444]'
 																	: 'text-white/80 hover:bg-[#009444]/10 hover:text-[#009444]'

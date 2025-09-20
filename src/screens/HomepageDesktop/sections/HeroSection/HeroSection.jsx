@@ -26,7 +26,7 @@ export const HeroSection = () => {
 						</span>
 					</p>
 
-					<h1 className="mt-6 text-white font-[900] text-[clamp(80px,8vw,120px)] leading-[0.9] [font-family:'Morganite',Helvetica]">
+					<h1 className="mt-6 text-white font-morganite font-black text-[clamp(80px,8vw,120px)] leading-[0.9]">
 						WHERE GOLF
 						<br />
 						JUST GOT AN

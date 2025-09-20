@@ -21,9 +21,10 @@ const ArrowRight = ({ className = 'w-6 h-6' }) => (
 
 export const NewToGolfSection = () => {
 	return (
-		<div className='relative w-full bg-[#102121] py-16'>
+		// Clip overflowing decorative shapes so they don't create horizontal scroll
+		<div className='relative w-full bg-[#102121] py-16 overflow-hidden'>
 			{/* Content wrapper */}
-			<div className='relative max-w-[1360px] mx-auto px-4'>
+			<div className='relative max-w-[1360px] mx-auto px-4 '>
 				<div className='bg-[#0c1a1a] rounded-[30px] h-[280px] flex items-center justify-between px-12 relative overflow-hidden'>
 					{/* Left side - title */}
 					<div className='flex-1 max-w-[600px]'>
@@ -63,8 +64,10 @@ export const NewToGolfSection = () => {
 				{/* Decorative shape outside the rounded container (bottom-right) */}
 				<img
 					src={'/shape14-2.svg'}
-					alt='decorative shape'
-					className='absolute right-[-480px] -bottom-[380px] w-[900px] h-[600px] opacity-80 pointer-events-none select-none '
+					alt=""
+					aria-hidden="true"
+					className='absolute right-[-480px] -bottom-[380px] w-[900px] h-[600px] opacity-80 pointer-events-none select-none max-w-none'
+					style={{ transform: 'translateZ(0)' }}
 				/>
 			</div>
 		</div>

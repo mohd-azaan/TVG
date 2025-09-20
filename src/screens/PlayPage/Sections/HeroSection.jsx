@@ -29,7 +29,7 @@ export const HeroSection = () => {
 				<div className='w-full lg:w-[55%] lg:pr-12'>
 					<div className='flex flex-col lg:mt-6'>
 						{/* Main Heading - Matching homepage hero title2 (110px) */}
-						<h1 className='-translate-y-4 lg:-translate-y-6 font-morganite text-[clamp(80px,10vw,120px)] font-[900] uppercase leading-[0.88] tracking-[2.2px] mb-2 mt-0'>
+						<h1 className='-translate-y-4 lg:-translate-y-6 font-morganite text-[clamp(80px,10vw,120px)] font-black uppercase leading-[0.88] tracking-[2.2px] mb-2 mt-0'>
 							YOUR GAME, YOUR
 							<br />
 							PACE, YOUR GREENS
@@ -41,7 +41,7 @@ export const HeroSection = () => {
 						</p>
 
 						{/* Description Text - wider and smaller */}
-						<div className='font-TVG-typography-hero-text font-[number:var(--TVG-typography-hero-text-font-weight)] text-[22px] leading-7 text-white space-y-4 max-w-[600px] mb-0 mt-4 lg:mt-6'>
+						<div className='font-tvg-hero-text font-medium text-[22px] leading-7 text-white space-y-4 max-w-[600px] mb-0 mt-4 lg:mt-6'>
 							<p>The ultimate golf and social experience, only in Riyadh.</p>
 							<p>
 								At The Virtual Greens, playing golf doesn't mean dressing up or

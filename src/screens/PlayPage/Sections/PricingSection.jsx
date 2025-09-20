@@ -27,14 +27,14 @@ export const PricingSection = () => {
 			<div className='relative max-w-[1920px] mx-auto'>
 				{/* Section title */}
 				<div className='absolute top-[120px] left-1/2 transform -translate-x-1/2 text-center'>
-					<h2 className='font-TVG-typography-h2 font-[number:var(--TVG-typography-h2-font-weight)] text-[96px] leading-[100px] tracking-[2px] text-black [font-style:var(--TVG-typography-h2-font-style)] uppercase'>
+					<h2 className='font-morganite font-black text-[96px] leading-[100px] tracking-[2px] text-black uppercase'>
 						Pricing
 					</h2>
 				</div>
 
 				{/* Description text */}
 				<div className='absolute top-[200px] left-1/2 transform -translate-x-1/2 w-[655px] text-center'>
-					<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[18px] leading-[28px] tracking-[0.1px] text-[#757575] [font-style:var(--TVG-typography-default-font-style)]'>
+					<p className='font-gilroy font-medium text-[18px] leading-[28px] tracking-[0.1px] text-[#757575]'>
 						Prices are per hour, per bay, and per person. Each bay can
 						accommodate a maximum of 6 players, and you can hit unlimited golf
 						balls during your time with us.
@@ -51,7 +51,7 @@ export const PricingSection = () => {
 								: 'bg-transparent border-[#d1d1d1] text-[#757575] hover:bg-gray-50'
 						}`}
 					>
-						<span className='font-TVG-typography-default font-[500] text-[16px] leading-[20px] tracking-[0.3px] text-center whitespace-nowrap'>
+						<span className='font-gilroy font-medium text-[16px] leading-[20px] tracking-[0.3px] text-center whitespace-nowrap'>
 							WEEK DAYS, Sun – Thu (until 4pm)
 						</span>
 					</button>
@@ -63,7 +63,7 @@ export const PricingSection = () => {
 								: 'bg-transparent border-[#d1d1d1] text-[#757575] hover:bg-gray-50'
 						}`}
 					>
-						<span className='font-TVG-typography-default font-[500] text-[16px] leading-[20px] tracking-[0.3px] text-center whitespace-nowrap'>
+						<span className='font-gilroy font-medium text-[16px] leading-[20px] tracking-[0.3px] text-center whitespace-nowrap'>
 							WEEKEND, Thu (after 4pm) - Sat
 						</span>
 					</button>
@@ -83,10 +83,10 @@ export const PricingSection = () => {
 								} w-full h-[120px] rounded-tl-[30px] rounded-tr-[30px] flex items-center justify-center px-[20px]`}
 							>
 								<div className='text-center text-white'>
-									<h3 className='font-TVG-typography-footer-title font-[700] text-[28px] leading-[34px] tracking-[0.5px] uppercase mb-1'>
+									<h3 className='font-gilroy font-bold text-[28px] leading-[34px] tracking-[0.5px] uppercase mb-1'>
 										{bay.type}
 									</h3>
-									<p className='font-TVG-typography-footer-menu font-[400] text-[16px] leading-[20px] tracking-[0.2px] opacity-90'>
+									<p className='font-gilroy font-normal text-[16px] leading-[20px] tracking-[0.2px] opacity-90'>
 										({bay.location})
 									</p>
 								</div>
@@ -104,7 +104,7 @@ export const PricingSection = () => {
 												className='w-full h-full object-contain'
 											/>
 										</div>
-										<div className='font-TVG-typography-counter-number font-[number:var(--TVG-typography-counter-number-font-weight)] text-[120px] leading-[100px] tracking-[1.8px] text-black [font-style:var(--TVG-typography-counter-number-font-style)] uppercase'>
+										<div className='font-morganite font-black text-[120px] leading-[100px] tracking-[1.8px] text-black uppercase'>
 											{bay.price}
 										</div>
 									</div>
@@ -112,7 +112,7 @@ export const PricingSection = () => {
 
 								{/* Per hour text */}
 								<div className='absolute top-[180px] left-1/2 transform -translate-x-1/2 text-center'>
-									<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[16px] leading-[24px] tracking-[0.2px] text-black [font-style:var(--TVG-typography-default-font-style)] whitespace-nowrap'>
+									<p className='font-gilroy font-medium text-[16px] leading-[24px] tracking-[0.2px] text-black whitespace-nowrap'>
 										/hour/bay/person
 									</p>
 								</div>
@@ -125,7 +125,7 @@ export const PricingSection = () => {
 										rel='noopener noreferrer'
 										className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-[28px] py-[10px] inline-flex items-center gap-2'
 									>
-										<span className='font-TVG-typography-button font-[600] text-[14px] leading-[18px] tracking-[0.8px] text-white uppercase text-center whitespace-nowrap'>
+										<span className='font-gilroy font-semibold text-[14px] leading-[18px] tracking-[0.8px] text-white uppercase text-center whitespace-nowrap'>
 											Book a Bay
 										</span>
 										<div className='w-5 h-5'>
@@ -170,13 +170,13 @@ export const PricingSection = () => {
 									className='w-full h-full object-contain'
 								/>
 							</div>
-							<span className='font-TVG-typography-footer-title font-[700] text-[42px] leading-[48px] tracking-[0.5px] text-black uppercase'>
+							<span className='font-gilroy font-bold text-[42px] leading-[48px] tracking-[0.5px] text-black uppercase'>
 								25
 							</span>
 						</div>
 
 						{/* Text */}
-						<p className='font-TVG-typography-default font-[400] text-[16px] leading-[24px] tracking-[0.1px] text-[#757575]'>
+						<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-[#757575]'>
 							One-time registration fee for first-time players
 						</p>
 					</div>
@@ -185,10 +185,10 @@ export const PricingSection = () => {
 				{/* VAT disclaimer */}
 				<div className='absolute top-[1010px] left-1/2 transform -translate-x-1/2 text-center'>
 					<div className='flex items-center gap-2'>
-						<span className='font-TVG-typography-footer-title font-[700] text-[16px] leading-[20px] tracking-[0.5px] text-black uppercase'>
+						<span className='font-gilroy font-bold text-[16px] leading-[20px] tracking-[0.5px] text-black uppercase'>
 							NOTE
 						</span>
-						<span className='font-TVG-typography-default font-[400] text-[16px] leading-[20px] tracking-[0.1px] text-[#757575]'>
+						<span className='font-gilroy font-normal text-[16px] leading-[20px] tracking-[0.1px] text-[#757575]'>
 							The prices are exclusive of 15% VAT + 3% transaction surcharge
 						</span>
 					</div>
@@ -199,10 +199,10 @@ export const PricingSection = () => {
 			<div className='block lg:hidden px-4 sm:px-6 py-16'>
 				<div className='space-y-12 max-w-[600px] mx-auto'>
 					<div className='text-center space-y-6'>
-						<h2 className='font-TVG-typography-h2 font-[number:var(--TVG-typography-h2-font-weight)] text-[clamp(32px,8vw,96px)] leading-[1.1] tracking-[var(--TVG-typography-h2-letter-spacing)] text-black [font-style:var(--TVG-typography-h2-font-style)] uppercase'>
+						<h2 className='font-morganite font-black text-[clamp(32px,8vw,96px)] leading-[1.1] tracking-[2px] text-black uppercase'>
 							Pricing
 						</h2>
-						<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-[#757575] [font-style:var(--TVG-typography-default-font-style)]'>
+						<p className='font-gilroy font-medium text-[18px] leading-[28px] tracking-[0.1px] text-[#757575]'>
 							Prices are per hour, per bay, and per person. Each bay can
 							accommodate a maximum of 6 players, and you can hit unlimited golf
 							balls during your time with us.
@@ -219,7 +219,7 @@ export const PricingSection = () => {
 									: 'bg-transparent border-[lightgrey] text-[#757575]'
 							}`}
 						>
-							<span className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[16px] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] [font-style:var(--TVG-typography-default-font-style)] text-center'>
+							<span className='font-gilroy font-medium text-[16px] leading-[24px] tracking-[0.1px] text-center'>
 								WEEK DAYS, Sun – Thu (until 4pm)
 							</span>
 						</button>
@@ -231,7 +231,7 @@ export const PricingSection = () => {
 									: 'bg-transparent border-[lightgrey] text-[#757575]'
 							}`}
 						>
-							<span className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[16px] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] [font-style:var(--TVG-typography-default-font-style)] text-center'>
+							<span className='font-gilroy font-medium text-[16px] leading-[24px] tracking-[0.1px] text-center'>
 								WEEKEND, Thu (after 4pm) - Sat
 							</span>
 						</button>
@@ -250,10 +250,10 @@ export const PricingSection = () => {
 										index === 1 ? 'bg-[#0b5b2f]' : 'bg-[#009444]'
 									} p-6 text-center text-white`}
 								>
-									<h3 className='font-TVG-typography-footer-title font-[700] text-[24px] leading-normal tracking-[var(--TVG-typography-footer-title-letter-spacing)] [font-style:var(--TVG-typography-footer-title-font-style)] uppercase'>
+									<h3 className='font-gilroy font-bold text-[24px] leading-normal tracking-[0.5px] uppercase'>
 										{bay.type}
 									</h3>
-									<p className='font-TVG-typography-footer-menu font-[number:var(--TVG-typography-footer-menu-font-weight)] text-[16px] leading-[24px] tracking-[var(--TVG-typography-footer-menu-letter-spacing)] [font-style:var(--TVG-typography-footer-menu-font-style)] capitalize opacity-90'>
+									<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.2px] capitalize opacity-90'>
 										({bay.location})
 									</p>
 								</div>
@@ -269,12 +269,12 @@ export const PricingSection = () => {
 												className='w-full h-full object-contain'
 											/>
 										</div>
-										<span className='font-TVG-typography-counter-number font-[number:var(--TVG-typography-counter-number-font-weight)] text-[clamp(48px,12vw,96px)] leading-[1] tracking-[2.4px] text-black [font-style:var(--TVG-typography-counter-number-font-style)] uppercase'>
+										<span className='font-morganite font-black text-[clamp(48px,12vw,96px)] leading-[1] tracking-[2.4px] text-black uppercase'>
 											{bay.price}
 										</span>
 									</div>
 
-									<p className='font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[18px] leading-[var(--TVG-typography-default-line-height)] tracking-[var(--TVG-typography-default-letter-spacing)] text-black [font-style:var(--TVG-typography-default-font-style)]'>
+									<p className='font-gilroy font-medium text-[18px] leading-[28px] tracking-[0.1px] text-black'>
 										/hour/bay/person
 									</p>
 
@@ -284,7 +284,7 @@ export const PricingSection = () => {
 										rel='noopener noreferrer'
 										className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-6 py-2 inline-flex items-center gap-2 mx-auto'
 									>
-										<span className='font-TVG-typography-button font-[number:var(--TVG-typography-button-font-weight)] text-[16px] leading-[var(--TVG-typography-button-line-height)] tracking-[var(--TVG-typography-button-letter-spacing)] text-white [font-style:var(--TVG-typography-button-font-style)] uppercase'>
+										<span className='font-gilroy font-semibold text-[16px] leading-[24px] tracking-[0.8px] text-white uppercase'>
 											Book a Bay
 										</span>
 										<div className='w-5 h-5'>

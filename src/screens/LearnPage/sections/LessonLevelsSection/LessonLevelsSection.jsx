@@ -42,12 +42,12 @@ const Level = ({ level, isOpen, onToggle }) => {
                 onClick={onToggle}
             >
                 <div className="flex items-center">
-                    <h3 className={`font-['Gilroy-Bold',_sans-serif] text-2xl uppercase ${isOpen ? 'text-white' : 'text-black'}`}>{level.title}</h3>
+                    <h3 className={`font-gilroy font-bold text-2xl uppercase ${isOpen ? 'text-white' : 'text-black'}`}>{level.title}</h3>
                     <div className={`ml-4 ${isOpen ? 'text-white' : 'text-gray-500'}`}>
                         {isOpen ? <ChevronUp /> : <ChevronDown />}
                     </div>
                 </div>
-                <span className={`font-['Gilroy-Bold',_sans-serif] text-xl uppercase ${isOpen ? 'text-white' : 'text-[#009444]'}`}>{level.levelNumber}</span>
+                <span className={`font-gilroy font-bold text-xl uppercase ${isOpen ? 'text-white' : 'text-[#009444]'}`}>{level.levelNumber}</span>
             </button>
             {isOpen && (
                 <div className="bg-[#f6f6f6] p-8 rounded-b-3xl">
@@ -56,18 +56,18 @@ const Level = ({ level, isOpen, onToggle }) => {
                             <img src={level.image} alt={level.title} className="rounded-3xl" />
                         </div>
                         <div className="w-2/3">
-                            <p className="font-['Gilroy-Medium',_sans-serif] text-lg text-[#757575] mb-6">{level.description}</p>
+                            <p className="font-gilroy font-medium text-lg text-[#757575] mb-6">{level.description}</p>
                             <ul className="space-y-4">
                                 {level.features.map((feature, index) => (
                                     <li key={index} className="flex items-start">
                                         <div className="w-8 h-8 mr-4">
                                             <GolfIcon />
                                         </div>
-                                        <span className="font-['Gilroy-Medium',_sans-serif] text-lg text-[#757575]">{feature}</span>
+                                        <span className="font-gilroy font-medium text-lg text-[#757575]">{feature}</span>
                                     </li>
                                 ))}
                             </ul>
-                            <p className="font-['Gilroy-Medium',_sans-serif] text-lg text-[#757575] mt-6">{level.conclusion}</p>
+                            <p className="font-gilroy font-medium text-lg text-[#757575] mt-6">{level.conclusion}</p>
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ export const LessonLevelsSection = () => {
     return (
         <div className="bg-white py-24">
             <div className="text-center mb-16">
-                <h2 className="font-['Morganite-ExtraBold',_sans-serif] text-8xl text-black uppercase tracking-wider">Lesson Levels and Journey</h2>
+                <h2 className="font-morganite font-extrabold text-8xl text-black uppercase tracking-wider">Lesson Levels and Journey</h2>
             </div>
             <div className="max-w-7xl mx-auto px-4">
                 {levels.map((level) => (

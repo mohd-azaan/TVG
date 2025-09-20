@@ -63,7 +63,7 @@ export const ComparisonTableSection = () => {
     return (
         <section className="bg-white py-24">
             <div className="max-w-[1360px] mx-auto px-4">
-                <h2 className="font-TVG-typography-h2 font-[800] text-[96px] text-black uppercase tracking-wider text-center mb-12">Which Tier Fits You Best?</h2>
+                <h2 className="font-morganite font-black text-[96px] text-black uppercase tracking-wider text-center mb-12">Which Tier Fits You Best?</h2>
                 
                 <div className="relative">
                     <div className="flex justify-end mb-[-2px]">
@@ -75,11 +75,20 @@ export const ComparisonTableSection = () => {
                         <table className="w-full text-left border-collapse">
                             <thead className="sticky top-0 bg-white z-10">
                                 <tr>
-                                    <th className="font-TVG-typography-tagline font-bold text-xl text-black uppercase p-4 border-b-2 border-green-700 w-[320px]">Membership</th>
+                                    <th className="font-TVG-typography-tagline font-bold text-xl text-black uppercase p-4 w-[320px]">Membership</th>
                                     {tiers.map(tier => (
-                                        <th key={tier.key} className={`font-TVG-typography-tagline font-bold text-xl uppercase p-4 border-b-2 border-green-700 w-[260px] text-center ${tier.type === 'individual' ? 'text-green-700' : 'text-green-900'}`}>
+                                        <th key={tier.key} className={`font-TVG-typography-tagline font-bold text-xl uppercase p-4 w-[260px] text-center ${tier.type === 'individual' ? 'text-green-700' : 'text-green-900'}`}>
                                             {tier.label}
                                         </th>
+                                    ))}
+                                </tr>
+                            </thead>
+                            {/* Sticky border line that remains when header scrolls away */}
+                            <thead className="sticky top-0 z-20">
+                                <tr>
+                                    <th className="h-0 p-0 border-b-2 border-green-700 w-[320px]"></th>
+                                    {tiers.map(tier => (
+                                        <th key={`border-${tier.key}`} className="h-0 p-0 border-b-2 border-green-700 w-[260px]"></th>
                                     ))}
                                 </tr>
                             </thead>
@@ -105,7 +114,7 @@ export const ComparisonTableSection = () => {
                                 <tr className="bg-white">
                                     <td className="font-TVG-typography-tagline font-bold text-xl text-black p-4 border-t-2 border-green-700">12-Month Membership</td>
                                     {prices.map((price, i) => (
-                                        <td key={i} className="font-[gilroy] font-bold text-2xl text-green-700 p-4 border-t-2 border-green-700 text-center">
+                                        <td key={i} className="font-gilroy font-bold text-2xl text-green-700 p-4 border-t-2 border-green-700 text-center">
                                             <div className="flex items-center justify-center">
                                                 <img src={SAUDI_RIYAL} alt="SAR" className="w-5 h-5 mr-1" />
                                                 {price}
@@ -121,31 +130,31 @@ export const ComparisonTableSection = () => {
                 <div className="max-w-[1360px] mx-auto mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="bg-[#f6f6f6] p-8 rounded-3xl flex items-center">
                         <div className="text-center w-1/3">
-                            <p className="font-TVG-typography-h1 text-9xl text-[#009444]">96</p>
-                            <p className="font-TVG-typography-h3 font-bold text-2xl text-[#009444] uppercase">Members</p>
+                            <p className="font-morganite font-black text-[96px] leading-[90px] text-[#009444]">96</p>
+                            <p className="font-gilroy font-semibold text-[20px] text-[#009444] uppercase tracking-[0.44px]">Members</p>
                         </div>
                         <div className="w-2/3 pl-4">
-                            <p className="font-TVG-typography-h3 font-bold text-2xl text-black uppercase mb-2">96 Members per year</p>
-                            <p className="font-TVG-typography-default text-lg text-black">Individual memberships are capped at <span className="font-TVG-typography-h3 font-bold">96</span> per year.</p>
+                            <p className="font-gilroy font-bold text-[28px] leading-[40px] text-black uppercase mb-2">96 Members per year</p>
+                            <p className="font-gilroy text-[20px] leading-[28px] text-black">Individual memberships are capped at <span className="font-gilroy font-bold">96</span> per year.</p>
                         </div>
                     </div>
                     <div className="bg-[#f6f6f6] p-8 rounded-3xl">
-                        <h3 className="font-TVG-typography-h3 font-bold text-2xl text-black uppercase mb-4">Discounted Membership</h3>
-                        <p className="font-TVG-typography-default text-lg text-black mb-4">Additional family members enjoy discounted membership rates:</p>
+                        <h3 className="font-gilroy font-bold text-[28px] text-black uppercase mb-4">Discounted Membership</h3>
+                        <p className="font-gilroy text-[20px] text-black mb-4">Additional family members enjoy discounted membership rates:</p>
                         <ul className="space-y-2">
-                            <li className="flex items-center font-TVG-typography-default text-lg text-black"><span className="text-green-700 mr-2">●</span>Spouse (1st Year - continues) <span className="font-TVG-typography-h4 ml-1">No fees</span></li>
-                            <li className="flex items-center font-TVG-typography-default text-lg text-black"><span className="text-green-700 mr-2">●</span>2nd family member <img src={SAUDI_RIYAL} alt="SAR" className="w-4 h-4 mx-1" /> <span className="font-TVG-typography-h4">10,000</span></li>
-                            <li className="flex items-center font-TVG-typography-default text-lg text-black"><span className="text-green-700 mr-2">●</span>3rd family member onwards <img src={SAUDI_RIYAL} alt="SAR" className="w-4 h-4 mx-1" /> <span className="font-TVG-typography-h4">5,000</span></li>
+                            <li className="flex items-center font-gilroy text-[20px] text-black"><span className="text-green-700 mr-2">●</span>Spouse (1st Year - continues) <span className="font-gilroy font-semibold ml-1">No fees</span></li>
+                            <li className="flex items-center font-gilroy text-[20px] text-black"><span className="text-green-700 mr-2">●</span>2nd family member <img src={SAUDI_RIYAL} alt="SAR" className="w-4 h-4 mx-1" /> <span className="font-gilroy font-semibold">10,000</span></li>
+                            <li className="flex items-center font-gilroy text-[20px] text-black"><span className="text-green-700 mr-2">●</span>3rd family member onwards <img src={SAUDI_RIYAL} alt="SAR" className="w-4 h-4 mx-1" /> <span className="font-gilroy font-semibold">5,000</span></li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="bg-[#f6f6f6] rounded-3xl mt-8 max-w-[1360px] mx-auto p-8 flex items-center justify-between">
                     <div>
-                        <h3 className="font-TVG-typography-h3 font-bold text-2xl text-black uppercase">Not sure which is right for you?</h3>
-                        <p className="font-TVG-typography-default text-lg text-black mt-2">Talk to our team — we’ll match your membership to your play style.</p>
+                        <h3 className="font-gilroy font-bold text-[28px] leading-[40px] text-black uppercase">Not sure which is right for you?</h3>
+                        <p className="font-gilroy text-[20px] leading-[28px] text-black mt-2">Talk to our team — we’ll match your membership to your play style.</p>
                     </div>
-                    <button className="bg-[#009444] text-white px-6 py-3 rounded-full font-TVG-typography-button text-lg uppercase flex items-center">
+                    <button className="bg-[#009444] text-white px-6 py-3 rounded-full font-gilroy text-lg uppercase flex items-center font-semibold">
                         Talk to our team
                         <img src="/arrow-right.svg" alt="arrow" className="w-6 h-6 ml-2" />
                     </button>

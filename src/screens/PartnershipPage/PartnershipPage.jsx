@@ -6,6 +6,7 @@
 import React from 'react';
 import '../../styleguide.css';
 import './PartnershipPage.css';
+import { SEOHead } from '../../components/SEO/SEOHead';
 import { HeroSection } from './sections/HeroSection';
 import { WhyPartnerSection } from './sections/WhyPartnerSection';
 import { GrowthSection } from './sections/GrowthSection';
@@ -13,6 +14,13 @@ import { GrowthSection } from './sections/GrowthSection';
 export const PartnershipPage = () => {
 	return (
 		<div className='partnership-page w-full bg-white'>
+			<SEOHead
+				title="Golf Simulator Partnership Opportunities | Business Investment TVG"
+				description="Partner with The Virtual Greens for golf simulator business opportunities. Franchise options, investment opportunities, and growth potential in Saudi Arabia's golf industry."
+				canonicalUrl="/partnership"
+				ogImage="/saudi-vision-2030-logo.svg"
+				keywords="golf simulator franchise, business partnership Saudi Arabia, golf industry investment, TVG partnership, franchise opportunities, golf business growth"
+			/>
 			{/* Hero Section - "Partner with The Virtual Greens" */}
 			<HeroSection />
 

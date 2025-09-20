@@ -1,32 +1,45 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HomepageDesktop } from './screens/HomepageDesktop/HomepageDesktop';
-import AboutPage from './screens/AboutPage/AboutPage';
-import OurStoryPage from './screens/OurStoryPage/OurStoryPage';
-import PlayPage from './screens/PlayPage/PlayPage';
-import LearnPage from './screens/LearnPage/LearnPage';
-import MembershipPage from './screens/MembershipPage/MembershipPage';
-import LeaguesPage from './screens/LeaguesPage/LeaguesPage';
-import EventsPage from './screens/EventsPage/EventsPage';
-import RegistrationPage from './screens/RegistrationPage/RegistrationPage';
-import SimulatorPage from './screens/SimulatorPage/SimulatorPage';
-import PartnershipPage from './screens/PartnershipPage/PartnershipPage';
-import ContactPage from './screens/ContactPage/ContactPage';
-import FAQPage from './screens/FAQPage/FAQPage';
 import { MainLayout } from './layouts/MainLayout';
+
+// Lazy load all page components for code splitting
+const HomepageDesktop = React.lazy(() => import('./screens/HomepageDesktop/HomepageDesktop').then(module => ({ default: module.HomepageDesktop })));
+const AboutPage = React.lazy(() => import('./screens/AboutPage/AboutPage'));
+const OurStoryPage = React.lazy(() => import('./screens/OurStoryPage/OurStoryPage'));
+const PlayPage = React.lazy(() => import('./screens/PlayPage/PlayPage').then(module => ({ default: module.PlayPage })));
+const LearnPage = React.lazy(() => import('./screens/LearnPage/LearnPage'));
+const MembershipPage = React.lazy(() => import('./screens/MembershipPage/MembershipPage').then(module => ({ default: module.MembershipPage })));
+const LeaguesPage = React.lazy(() => import('./screens/LeaguesPage/LeaguesPage'));
+const EventsPage = React.lazy(() => import('./screens/EventsPage/EventsPage').then(module => ({ default: module.EventsPage })));
+const RegistrationPage = React.lazy(() => import('./screens/RegistrationPage/RegistrationPage').then(module => ({ default: module.RegistrationPage })));
+const SimulatorPage = React.lazy(() => import('./screens/SimulatorPage/SimulatorPage').then(module => ({ default: module.SimulatorPage })));
+const PartnershipPage = React.lazy(() => import('./screens/PartnershipPage/PartnershipPage').then(module => ({ default: module.PartnershipPage })));
+const ContactPage = React.lazy(() => import('./screens/ContactPage/ContactPage').then(module => ({ default: module.ContactPage })));
+const FAQPage = React.lazy(() => import('./screens/FAQPage/FAQPage').then(module => ({ default: module.FAQPage })));
+
+// Loading component for Suspense fallback
+const LoadingSpinner = () => (
+	<div className="flex items-center justify-center min-h-screen bg-[#102121]">
+		<div className="text-center">
+			<div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#009444] mx-auto mb-4"></div>
+			<p className="text-white text-lg font-medium">Loading...</p>
+		</div>
+	</div>
+);
 
 export const App = () => {
 	return (
 		<Router>
-			<Routes>
-				<Route
-					path='/about'
-					element={
-						<MainLayout>
-							<AboutPage />
-						</MainLayout>
-					}
-				/>
+			<Suspense fallback={<LoadingSpinner />}>
+				<Routes>
+					<Route
+						path='/about'
+						element={
+							<MainLayout>
+								<AboutPage />
+							</MainLayout>
+						}
+					/>
 				<Route
 					path='/our-story'
 					element={
@@ -131,7 +144,8 @@ export const App = () => {
 						</MainLayout>
 					}
 				/>
-			</Routes>
+				</Routes>
+			</Suspense>
 		</Router>
 	);
 };

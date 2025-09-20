@@ -82,7 +82,7 @@ export const PlayYourWaySection = () => {
 
 					<Button className='bg-[#009444] hover:bg-[#007a37] text-white rounded-full px-8 py-4 h-auto inline-flex items-center gap-3 text-lg font-semibold tracking-wide transition-colors duration-200'>
 						<span>EXPLORE OUR BAYS</span>
-						<img className='w-5 h-5' alt='Arrow right' src='/arrow-right.svg' />
+						<img className='w-5 h-5' alt='Arrow right' src='/arrow-right.svg' loading='lazy' decoding='async' width='20' height='20' />
 					</Button>
 				</div>
 
@@ -100,6 +100,10 @@ export const PlayYourWaySection = () => {
 										className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
 										alt='Play swing'
 										src={card.image}
+										loading='lazy'
+										decoding='async'
+										width='250'
+										height='250'
 									/>
 								</div>
 
@@ -138,6 +142,10 @@ export const PlayYourWaySection = () => {
 									className='w-12 sm:w-14 lg:w-16 h-12 sm:h-14 lg:h-16 mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300'
 									alt={category.alt}
 									src={category.icon}
+									loading='lazy'
+									decoding='async'
+									width='64'
+									height='64'
 								/>
 								<h4 className='text-lg sm:text-xl lg:text-2xl font-gilroy font-bold text-black leading-tight text-center px-2'>
 									{category.title}

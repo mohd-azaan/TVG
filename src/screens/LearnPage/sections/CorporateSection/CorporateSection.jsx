@@ -27,9 +27,9 @@ export const CorporateSection = () => {
                         <img src="/freepik__background__81702-1.png" alt="Corporate Event" className="rounded-3xl" />
                     </div>
                     <div className="w-[655px]">
-                        <h2 className="font-TVG-typography-h2 font-[800] text-[96px] leading-[90px] tracking-[1.92px] text-black uppercase">Corporate Programs</h2>
-                        <p className="font-TVG-typography-tagline font-[700] text-[22px] leading-[26px] tracking-[0.44px] text-[#009444] uppercase mt-4">Golf is a great team-building and well-being tool</p>
-                        <div className="font-TVG-typography-default font-[500] text-lg text-[#757575] mt-6 space-y-4">
+                        <h2 className="font-morganite font-black text-[96px] leading-[90px] tracking-[1.92px] text-black uppercase">Corporate Programs</h2>
+                        <p className="font-gilroy font-bold text-[22px] leading-[26px] tracking-[0.44px] text-[#009444] uppercase mt-4">Golf is a great team-building and well-being tool</p>
+                        <div className="font-gilroy font-medium text-lg text-[#757575] mt-6 space-y-4">
                             <p>The Virtual Greens recognizes the importance of employee wellbeing and offers various initiatives to help companies support their employees.</p>
                             <p>We offer company individual or group golf lessons and beginners programmes that remove the barriers of traditional corporate golf membership and make the sport more accessible.</p>
                         </div>

@@ -5,6 +5,7 @@
 
 import React from 'react';
 import '../../styleguide.css';
+import { SEOHead } from '../../components/SEO/SEOHead';
 import { HeroSection } from './sections/HeroSection';
 import { LeaderboardSection } from './sections/LeaderboardSection';
 import { WhatToExpectSection } from './sections/WhatToExpectSection';
@@ -12,6 +13,13 @@ import { WhatToExpectSection } from './sections/WhatToExpectSection';
 const LeaguesPage = () => {
 	return (
 		<div className='leagues-page w-full bg-white relative'>
+			<SEOHead
+				title="Golf Leagues & Tournaments Riyadh | Join TVG Golf League"
+				description="Join competitive golf leagues and tournaments at TVG Riyadh. Weekly competitions, leaderboards, prizes, and social golf events. All skill levels welcome."
+				canonicalUrl="/leagues"
+				ogImage="/group.png"
+				keywords="golf leagues Riyadh, golf tournaments Saudi Arabia, competitive golf, golf leaderboard, social golf events, weekly golf competitions"
+			/>
 			{/* Hero Section - Main leagues introduction with call to action */}
 			<HeroSection />
 

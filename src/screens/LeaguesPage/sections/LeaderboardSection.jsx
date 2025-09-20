@@ -22,7 +22,7 @@ export const LeaderboardSection = () => {
     return (
         <section className="bg-white py-24">
             <div className="max-w-[1360px] mx-auto px-4">
-                <h2 className="font-TVG-typography-h2 font-[800] text-[96px] text-black uppercase tracking-wider text-center mb-12">2025 Leaderboard</h2>
+                <h2 className="font-morganite font-black text-[96px] text-black uppercase tracking-wider text-center mb-12">2025 Leaderboard</h2>
                 <div className="overflow-x-auto">
                     <table className="w-full text-left border-collapse">
                         <thead className="sticky top-0 bg-white z-10">

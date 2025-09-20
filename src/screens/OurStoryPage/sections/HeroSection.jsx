@@ -36,7 +36,7 @@ export const HeroSection = () => {
 
 				{/* Subtitle positioned exactly like Figma */}
 				<div className='absolute top-[340px] left-[280px] w-[800px]'>
-					<p className='font-TVG-typography-hero-text font-[number:var(--TVG-typography-hero-text-font-weight)] text-[length:var(--TVG-typography-hero-text-font-size)] leading-[var(--TVG-typography-hero-text-line-height)] tracking-[var(--TVG-typography-hero-text-letter-spacing)] text-[#dedede] [font-style:var(--TVG-typography-hero-text-font-style)]'>
+					<p className='font-tvg-hero-text font-medium text-[24px] leading-[32px] tracking-[0.5px] text-[#dedede]'>
 						GOLF AND A BIT OF HISTORY YOU WOULD NOT LEAST EXPECT IT
 					</p>
 				</div>
@@ -51,7 +51,7 @@ export const HeroSection = () => {
 					</h1>
 
 					<div className='max-w-[600px] mx-auto'>
-						<p className='font-TVG-typography-hero-text font-[number:var(--TVG-typography-hero-text-font-weight)] text-[length:var(--TVG-typography-hero-text-font-size)] leading-[var(--TVG-typography-hero-text-line-height)] tracking-[var(--TVG-typography-hero-text-letter-spacing)] text-[#dedede] [font-style:var(--TVG-typography-hero-text-font-style)]'>
+						<p className='font-tvg-hero-text font-medium text-[24px] leading-[32px] tracking-[0.5px] text-[#dedede]'>
 							GOLF AND A BIT OF HISTORY YOU WOULD NOT LEAST EXPECT IT
 						</p>
 					</div>

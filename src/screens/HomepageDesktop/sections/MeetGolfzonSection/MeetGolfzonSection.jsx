@@ -22,6 +22,10 @@ export const MeetGolfzonSection = () => {
 							className='w-full h-auto object-cover duration-300'
 							alt='Indoor golf'
 							src='/indoor-golf-1.png'
+							loading='lazy'
+							decoding='async'
+							width='600'
+							height='400'
 						/>
 					</div>
 
@@ -48,6 +52,10 @@ export const MeetGolfzonSection = () => {
 										className='w-6 sm:w-7 lg:w-8 h-6 sm:h-7 lg:h-8 flex-shrink-0'
 										alt='Sports golf'
 										src='/smash-it.svg'
+										loading='lazy'
+										decoding='async'
+										width='32'
+										height='32'
 									/>
 									<div className='text-base sm:text-lg lg:text-xl font-medium text-[#757575] leading-relaxed'>
 										{feature}

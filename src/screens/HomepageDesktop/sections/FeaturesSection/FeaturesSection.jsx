@@ -158,7 +158,7 @@ export const FeaturesSection = () => {
 								}`}
 							>
 								<div
-									className={`font-TVG-typography-side-menu-item font-[number:var(--TVG-typography-side-menu-item-font-weight)] text-[length:var(--TVG-typography-side-menu-item-font-size)] tracking-[var(--TVG-typography-side-menu-item-letter-spacing)] leading-[var(--TVG-typography-side-menu-item-line-height)] [font-style:var(--TVG-typography-side-menu-item-font-style)] ${
+									className={`font-gilroy font-medium text-[14px] tracking-[0.8px] leading-[18px] ${
 										item.isActive ? 'text-[#aeea00]' : 'text-white'
 									}`}
 								>
@@ -199,10 +199,10 @@ export const FeaturesSection = () => {
 
 				{/* Counter Component */}
 				<div className='flex flex-col items-center gap-[5px] w-[200px]'>
-					<div className='font-TVG-typography-counter-number font-[number:var(--TVG-typography-counter-number-font-weight)] text-[#aeea00] text-[length:var(--TVG-typography-counter-number-font-size)] text-center tracking-[var(--TVG-typography-counter-number-letter-spacing)] leading-[var(--TVG-typography-counter-number-line-height)] [font-style:var(--TVG-typography-counter-number-font-style)]'>
+					<div className='font-morganite font-black text-[#aeea00] text-[120px] text-center tracking-[1.8px] leading-[100px]'>
 						76+
 					</div>
-					<div className='font-TVG-typography-counter-text font-[number:var(--TVG-typography-counter-text-font-weight)] text-white text-[length:var(--TVG-typography-counter-text-font-size)] text-center tracking-[var(--TVG-typography-counter-text-letter-spacing)] leading-[var(--TVG-typography-counter-text-line-height)] [font-style:var(--TVG-typography-counter-text-font-style)]'>
+					<div className='font-gilroy font-bold text-white text-[17px] text-center tracking-[0.5px] leading-[22px]'>
 						Active Members
 					</div>
 				</div>
@@ -227,7 +227,7 @@ export const FeaturesSection = () => {
 								<div className='absolute bottom-[77px] left-[41px] w-[362px] font-bold text-black text-[28px] tracking-[0] leading-[normal]'>
 									{card.title}
 								</div>
-								<div className='absolute bottom-[18px] left-[43px] w-[322px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[length:var(--TVG-typography-default-font-size)] tracking-[var(--TVG-typography-default-letter-spacing)] leading-[var(--TVG-typography-default-line-height)] [font-style:var(--TVG-typography-default-font-style)] text-black'>
+								<div className='absolute bottom-[18px] left-[43px] w-[322px] font-gilroy font-medium text-[18px] tracking-[0.1px] leading-[28px] text-black'>
 									{card.description}
 								</div>
 							</div>
@@ -246,10 +246,10 @@ export const FeaturesSection = () => {
 										alt='Advanced simulators'
 										src={slide.image}
 									/>
-									<div className='absolute bottom-[28px] left-0 font-TVG-typography-tagline font-[number:var(--TVG-typography-tagline-font-weight)] text-[#009444] text-[length:var(--TVG-typography-tagline-font-size)] tracking-[var(--TVG-typography-tagline-letter-spacing)] leading-[var(--TVG-typography-tagline-line-height)] [font-style:var(--TVG-typography-tagline-font-style)]'>
+									<div className='absolute bottom-[28px] left-0 font-gilroy font-bold text-[#009444] text-[22px] tracking-[0.44px] leading-[26px]'>
 										{slide.title}
 									</div>
-									<div className='absolute bottom-0 left-0 w-[615px] font-TVG-typography-default font-[number:var(--TVG-typography-default-font-weight)] text-[#757575] text-[length:var(--TVG-typography-default-font-size)] tracking-[var(--TVG-typography-default-letter-spacing)] leading-[var(--TVG-typography-default-line-height)] [font-style:var(--TVG-typography-default-font-style)]'>
+									<div className='absolute bottom-0 left-0 w-[615px] font-gilroy font-medium text-[#757575] text-[18px] tracking-[0.1px] leading-[28px]'>
 										{slide.description}
 									</div>
 								</div>
@@ -300,7 +300,7 @@ export const FeaturesSection = () => {
 								key={index}
 								className='flex flex-col items-center justify-center gap-2.5 relative'
 							>
-								<div className='font-TVG-typography-TVG-typography-TVG-typography-top-menu-item font-[number:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-weight)] text-white text-[length:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-size)] tracking-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-letter-spacing)] leading-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-line-height)] [font-style:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-style)]'>
+								<div className='font-gilroy font-medium text-white text-[14px] tracking-[0.8px] leading-[18px]'>
 									{item.text}
 								</div>
 								{item.hasDropdown && (
@@ -336,7 +336,7 @@ export const FeaturesSection = () => {
 							className='flex flex-col items-center justify-center gap-2.5'
 						>
 							<div
-								className={`font-TVG-typography-TVG-typography-TVG-typography-top-menu-item font-[number:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-weight)] text-[length:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-size)] tracking-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-letter-spacing)] leading-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-line-height)] [font-style:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-style)] ${
+								className={`font-gilroy font-medium text-[14px] tracking-[0.8px] leading-[18px] ${
 									item.isActive ? 'text-[#28f699]' : 'text-white'
 								}`}
 							>
@@ -356,14 +356,14 @@ export const FeaturesSection = () => {
 					<CardContent className='p-5'>
 						<div className='space-y-5'>
 							<div className='flex items-center gap-2'>
-								<div className='font-TVG-typography-TVG-typography-TVG-typography-top-menu-item font-[number:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-weight)] text-white text-[length:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-size)] tracking-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-letter-spacing)] leading-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-line-height)] [font-style:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-style)]'>
+								<div className='font-gilroy font-medium text-white text-[14px] tracking-[0.8px] leading-[18px]'>
 									LESONS
 								</div>
 								<ChevronDownIcon className='w-5 h-5' />
 							</div>
 
 							<div className='flex items-center gap-2'>
-								<div className='font-TVG-typography-TVG-typography-TVG-typography-top-menu-item font-[number:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-weight)] text-[#28f699] text-[length:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-size)] tracking-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-letter-spacing)] leading-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-line-height)] [font-style:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-style)]'>
+								<div className='font-gilroy font-medium text-[#28f699] text-[14px] tracking-[0.8px] leading-[18px]'>
 									LESONS
 								</div>
 								<ChevronDownIcon className='w-5 h-5' />
@@ -373,7 +373,7 @@ export const FeaturesSection = () => {
 								{dropdownMenuItems.map((menuItem, index) => (
 									<div
 										key={index}
-										className='font-TVG-typography-TVG-typography-TVG-typography-top-menu-item font-[number:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-weight)] text-black text-[length:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-size)] tracking-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-letter-spacing)] leading-[var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-line-height)] [font-style:var(--TVG-typography-TVG-typography-TVG-typography-top-menu-item-font-style)] mb-[38px]'
+										className='font-gilroy font-medium text-black text-[14px] tracking-[0.8px] leading-[18px] mb-[38px]'
 									>
 										{menuItem}
 									</div>

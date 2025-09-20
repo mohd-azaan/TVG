@@ -6,6 +6,7 @@
 import React from 'react';
 import '../../styleguide.css';
 import './AboutPage.css';
+import { SEOHead } from '../../components/SEO/SEOHead';
 import { Hero } from './Sections/Hero';
 import { VisionMissionSection } from './Sections/VisionMissionSection';
 import { WorldClassTechSection } from './Sections/WorldClassTechSection';
@@ -16,6 +17,13 @@ import FeaturesSection from './Sections/FeaturesSection';
 export const AboutPage = () => {
 	return (
 		<div className='about-page w-full'>
+			<SEOHead
+				title="About TVG - Premier Golf Simulator Lounge | The Virtual Greens"
+				description="Discover The Virtual Greens story. Riyadh's premier indoor golf destination featuring cutting-edge Golfzon technology, world-class amenities, and Vision 2030 alignment."
+				canonicalUrl="/about"
+				ogImage="/assets/figma/features-image.png"
+				keywords="about TVG, golf simulator lounge Riyadh, Golfzon technology, Vision 2030, indoor golf Saudi Arabia, world class golf facility"
+			/>
 			{/* Hero Section - "Where Golf People Belong" */}
 			<Hero />
 

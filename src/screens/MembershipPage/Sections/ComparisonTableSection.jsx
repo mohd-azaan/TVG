@@ -3,7 +3,7 @@
 // Exact layout matching "WHICH TIER FITS YOU BEST?" comparison table with all 24 features
 // RELEVANT FILES: MembershipPage.jsx, styleguide.css, tailwind.config.js
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const ICON_CLOSE = '/assets/close-small-24dp.svg';
 const ICON_INFO = '/assets/info-icon.svg';
@@ -59,6 +59,35 @@ const Tooltip = ({ content, show }) => (
 export const ComparisonTableSection = () => {
     const [hoveredRow, setHoveredRow] = useState(null);
     const [activeTooltip, setActiveTooltip] = useState(null);
+    const [isHeaderSticky, setIsHeaderSticky] = useState(true);
+
+    const lastRowRef = useRef(null);
+
+    useEffect(() => {
+        const lastRowElement = lastRowRef.current;
+        if (!lastRowElement) return;
+
+        // Observer to detect when the last row reaches the top (header should unstick)
+        const lastRowObserver = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && entry.boundingClientRect.top <= 60) {
+                    setIsHeaderSticky(false);
+                } else {
+                    setIsHeaderSticky(true);
+                }
+            },
+            {
+                threshold: 0,
+                rootMargin: '-60px 0px 0px 0px' // Account for header height
+            }
+        );
+
+        lastRowObserver.observe(lastRowElement);
+
+        return () => {
+            lastRowObserver.disconnect();
+        };
+    }, []);
 
     return (
         <section className="bg-white py-24">
@@ -71,27 +100,29 @@ export const ComparisonTableSection = () => {
                             Corporate
                         </div>
                     </div>
+
+                    {/* Separate header div - independent of table */}
+                    <div className={`${isHeaderSticky ? 'sticky top-0' : 'relative'} bg-white z-20 border-b-2 border-green-700`}>
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-left border-collapse">
+                                <thead>
+                                    <tr>
+                                        <th className="font-TVG-typography-tagline font-bold text-xl text-black uppercase p-4 w-[320px]">
+                                            Membership
+                                        </th>
+                                        {tiers.map(tier => (
+                                            <th key={tier.key} className={`font-TVG-typography-tagline font-bold text-xl uppercase p-4 w-[260px] text-center ${tier.type === 'individual' ? 'text-green-700' : 'text-green-900'}`}>
+                                                {tier.label}
+                                            </th>
+                                        ))}
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+
                     <div className="overflow-x-auto">
                         <table className="w-full text-left border-collapse">
-                            <thead className="sticky top-0 bg-white z-10">
-                                <tr>
-                                    <th className="font-TVG-typography-tagline font-bold text-xl text-black uppercase p-4 w-[320px]">Membership</th>
-                                    {tiers.map(tier => (
-                                        <th key={tier.key} className={`font-TVG-typography-tagline font-bold text-xl uppercase p-4 w-[260px] text-center ${tier.type === 'individual' ? 'text-green-700' : 'text-green-900'}`}>
-                                            {tier.label}
-                                        </th>
-                                    ))}
-                                </tr>
-                            </thead>
-                            {/* Sticky border line that remains when header scrolls away */}
-                            <thead className="sticky top-0 z-20">
-                                <tr>
-                                    <th className="h-0 p-0 border-b-2 border-green-700 w-[320px]"></th>
-                                    {tiers.map(tier => (
-                                        <th key={`border-${tier.key}`} className="h-0 p-0 border-b-2 border-green-700 w-[260px]"></th>
-                                    ))}
-                                </tr>
-                            </thead>
                             <tbody>
                                 {features.map((feature, index) => (
                                     <tr key={feature.id} onMouseEnter={() => setHoveredRow(index)} onMouseLeave={() => setHoveredRow(null)} className={`${hoveredRow === index ? 'bg-gray-50' : ''}`}>
@@ -111,7 +142,7 @@ export const ComparisonTableSection = () => {
                                         ))}
                                     </tr>
                                 ))}
-                                <tr className="bg-white">
+                                <tr ref={lastRowRef} className="bg-white">
                                     <td className="font-TVG-typography-tagline font-bold text-xl text-black p-4 border-t-2 border-green-700">12-Month Membership</td>
                                     {prices.map((price, i) => (
                                         <td key={i} className="font-gilroy font-bold text-2xl text-green-700 p-4 border-t-2 border-green-700 text-center">

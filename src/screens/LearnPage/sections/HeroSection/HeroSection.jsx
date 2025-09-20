@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import HeroImage from './HeroImage';
 
 export const HeroSection = () => {
 	return (
@@ -8,7 +9,7 @@ export const HeroSection = () => {
 			{/* Content Wrapper */}
 			<div className='relative z-10 mx-auto flex max-w-[1440px] items-center px-8 pt-20 lg:px-16 lg:pt-24 h-full'>
 				{/* Left Column: Text content */}
-				<div className='w-full lg:w-[55%] lg:pr-12'>
+				<div className='w-full lg:w-1/2 lg:pr-16'>
 					<div className='flex flex-col lg:mt-6'>
 						{/* Main Heading - Matching homepage hero title2 (110px) */}
 						<h1 className='-translate-y-4 lg:-translate-y-6 font-morganite text-[clamp(80px,10vw,120px)] font-[900] uppercase leading-[0.88] tracking-[2.2px] mb-2 mt-0'>
@@ -23,7 +24,7 @@ export const HeroSection = () => {
 						</p>
 
 						{/* Description Text - wider and smaller */}
-						<div className='font-TVG-typography-hero-text font-medium text-[22px] leading-7 text-white space-y-4 max-w-[600px] mb-0 mt-4 lg:mt-6'>
+						<div className='font-gilroy  text-[22px] leading-7 text-white space-y-4 max-w-[600px] mb-0 mt-4 lg:mt-6'>
 							<p>
 								It doesn’t matter if you're a complete beginner or chasing a
 								lower handicap; this is your space to grow.
@@ -44,12 +45,8 @@ export const HeroSection = () => {
 				</div>
 
 				{/* Right Column: Image - Adjusted height */}
-				<div className='hidden lg:flex lg:-translate-y-[48px]  justify-center'>
-					<img
-						className='w-[90%] max-w-[1000px] h-auto max-h-[580px] rounded-[30px] object-contain'
-						src='/learn-hero-training.png'
-						alt='Man playing on an indoor golf simulator with motion trails'
-					/>
+				<div className='hidden lg:flex lg:w-1/2 lg:pl-16 lg:-translate-y-[48px] justify-center'>
+					<HeroImage />
 				</div>
 			</div>
 

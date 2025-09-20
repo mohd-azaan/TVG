@@ -31,7 +31,7 @@ export const Hero = () => {
 			{/* Content wrapper */}
 			<div className='relative z-10 mx-auto max-w-[1440px] px-8 lg:px-16 h-full pt-20 lg:pt-24'>
 				{/* Title column (stays in flow) */}
-				<div className='w-full lg:w-[50%] lg:pr-12'>
+				<div className='w-full lg:w-[50%] lg:pr-12 lg:pl-8'>
 					<h1 className='font-morganite text-[clamp(80px,10vw,120px)] font-[900] uppercase leading-[0.88] tracking-[2.2px] mb-6 mt-6 lg:mt-10'>
 						{title}
 					</h1>
@@ -60,14 +60,8 @@ export const Hero = () => {
 			{/* Description placed over the green area */}
 			<div className='absolute left-0 top-[50%] z-20 w-full flex justify-start'>
 				<div className='mx-auto px-8 lg:px-16 w-full max-w-[1440px]'>
-					<div className='w-full lg:w-[50%] lg:pr-12'>
-						<div
-							className='fon font-gilroy font-normal text-[18px] lg:text-[22px] leading-7 text-white space-y-4 max-w-[600px] py-8 lg:py-12'
-							style={{
-								fontFamily:
-									'Gilroy, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial',
-							}}
-						>
+					<div className='w-full lg:w-[50%] lg:pr-12 lg:pl-8'>
+						<div className='font-gilroy  text-[18px] lg:text-[22px] leading-7 text-white space-y-4 max-w-[600px] py-8 lg:py-12'>
 							{description}
 						</div>
 					</div>

@@ -41,7 +41,7 @@ export const HeroSection = () => {
 						</p>
 
 						{/* Description Text - wider and smaller */}
-						<div className='font-tvg-hero-text font-medium text-[22px] leading-7 text-white space-y-4 max-w-[600px] mb-0 mt-4 lg:mt-6'>
+						<div className='font-gilroy text-[22px] leading-7 text-white space-y-4 max-w-[600px] mb-0 mt-4 lg:mt-6'>
 							<p>The ultimate golf and social experience, only in Riyadh.</p>
 							<p>
 								At The Virtual Greens, playing golf doesn't mean dressing up or
@@ -58,7 +58,7 @@ export const HeroSection = () => {
 							href='https://widget.servmeco.com/?oid=1662'
 							target='_blank'
 							rel='noopener noreferrer'
-							className='inline-flex w-fit items-center gap-3 rounded-full bg-[#009444] px-6 py-2 mt-6 text-center text-[18px] font-gilroy font-medium uppercase leading-[40px] tracking-wide transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:brightness-105 focus:outline-none focus:ring-4 focus:ring-[#0b6e38]/30'
+							className='inline-flex w-fit items-center gap-2 rounded-full bg-[#009444] px-4 py-1.5 mt-6 text-center text-[16px] font-gilroy font-medium uppercase leading-[28px] tracking-wide transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:brightness-105 focus:outline-none focus:ring-4 focus:ring-[#0b6e38]/30'
 						>
 							<span>BOOK YOU BAY</span>
 							<ArrowIcon />

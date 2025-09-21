@@ -33,7 +33,7 @@ export const HeroSection = () => {
 						UPGRADE
 					</h1>
 
-					<p className='mt-2 text-[#d8d8d8] text-[19px] leading-6 lg:max-w-[405px] md:max-w-[320px] sm:max-w-[300px] font-TVG-typography-hero-text font-[number:var(--TVG-typography-hero-text-font-weight)]'>
+					<p className='mt-2 text-[#d8d8d8] text-[19px] leading-6 lg:max-w-[420px] md:max-w-[320px] sm:max-w-[300px] font-TVG-typography-hero-text font-[number:var(--TVG-typography-hero-text-font-weight)]'>
 						Riyadh&apos;s first indoor golf simulator lounge isn&apos;t just
 						about perfecting your swing. It&apos;s your new go-to for play,
 						practice, party, and everything in between. We&apos;ve blended

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '../../../../components/ui/button';
 import { Card, CardContent } from '../../../../components/ui/card';
 
@@ -80,10 +81,20 @@ export const PlayYourWaySection = () => {
 						</p>
 					</div>
 
-					<Button className='bg-[#009444] hover:bg-[#007a37] text-white rounded-full px-8 py-4 h-auto inline-flex items-center gap-3 text-lg font-semibold tracking-wide transition-colors duration-200'>
-						<span>EXPLORE OUR BAYS</span>
-						<img className='w-5 h-5' alt='Arrow right' src='/arrow-right.svg' loading='lazy' decoding='async' width='20' height='20' />
-					</Button>
+					<Link to='/play' className='inline-block'>
+						<Button className='bg-[#009444] hover:bg-[#007a37] text-white rounded-full px-8 py-4 h-auto inline-flex items-center gap-3 text-lg font-semibold tracking-wide transition-colors duration-200'>
+							<span>EXPLORE OUR BAYS</span>
+							<img
+								className='w-5 h-5'
+								alt='Arrow right'
+								src='/arrow-right.svg'
+								loading='lazy'
+								decoding='async'
+								width='20'
+								height='20'
+							/>
+						</Button>
+					</Link>
 				</div>
 
 				{/* Feature Cards */}

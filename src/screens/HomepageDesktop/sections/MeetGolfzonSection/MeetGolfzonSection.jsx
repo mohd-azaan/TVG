@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from 'lucide-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '../../../../components/ui/button';
 import { Card, CardContent } from '../../../../components/ui/card';
 
@@ -64,10 +65,12 @@ export const MeetGolfzonSection = () => {
 							))}
 						</div>
 
-						<Button className='inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#009444] hover:bg-[#007a3a] rounded-full h-auto text-lg font-semibold tracking-wide transition-colors duration-200'>
-							<span className='text-white'>LEARN ABOUT OUR TECH</span>
-							<ArrowRightIcon className='w-5 h-5 text-white' />
-						</Button>
+						<Link to='/simulator' className='inline-block'>
+							<Button className='inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#009444] hover:bg-[#007a3a] rounded-full h-auto text-lg font-semibold tracking-wide transition-colors duration-200'>
+								<span className='text-white'>LEARN ABOUT OUR TECH</span>
+								<ArrowRightIcon className='w-5 h-5 text-white' />
+							</Button>
+						</Link>
 					</div>
 				</div>
 			</div>

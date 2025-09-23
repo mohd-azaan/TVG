@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from 'lucide-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '../../../../components/ui/button';
 import { Card, CardContent } from '../../../../components/ui/card';
 
@@ -77,12 +78,14 @@ export const ServicesSection = () => {
 								<ArrowRightIcon className='w-5 h-5' />
 							</a>
 
-							<Button
-								variant='outline'
-								className='border-2 border-black text-black hover:bg-gray-50 rounded-full px-8 py-4 h-auto text-lg font-semibold tracking-wide transition-colors duration-200'
-							>
-								LEARN ABOUT LESSONS
-							</Button>
+							<Link to='/learn' className='inline-block'>
+								<Button
+									variant='outline'
+									className='border-2 border-black text-black hover:bg-gray-50 rounded-full px-8 py-4 h-auto text-lg font-semibold tracking-wide transition-colors duration-200'
+								>
+									LEARN ABOUT LESSONS
+								</Button>
+							</Link>
 						</div>
 					</div>
 				</div>

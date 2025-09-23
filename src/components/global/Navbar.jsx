@@ -23,14 +23,14 @@ function TopNavItem({ children, to = '#', status = 'Default' }) {
 		>
 			<span
 				className={`font-gilroy font-semibold text-[10px] sm:text-[12px] lg:text-[13px] text-nowrap tracking-[0.4px] transition-colors duration-200 ${
-					isActive ? 'text-[#009444]' : 'text-white group-hover:text-[#009444]'
+					isActive ? 'text-[#28F699]' : 'text-white group-hover:text-[#28F699]'
 				}`}
 			>
 				{children}
 			</span>
 			<div
 				className={`absolute h-0.5 inset-x-0 bottom-[-26px] mx-auto w-[30px] transition-colors duration-200 ${
-					isActive ? 'bg-[#009444]' : 'bg-transparent group-hover:bg-[#009444]'
+					isActive ? 'bg-[#28F699]' : 'bg-transparent group-hover:bg-[#28F699]'
 				}`}
 			/>
 		</Link>
@@ -201,7 +201,7 @@ export const Navbar = () => {
 						onMouseEnter={handleMoreMouseEnter}
 						onMouseLeave={handleMoreMouseLeave}
 					>
-						<button className='flex items-center gap-1 h-full px-2 font-gilroy justify-center not-italic text-[9px] sm:text-[11px] lg:text-[13px] font-semibold text-nowrap text-white tracking-[0.4px] group-hover:text-[#009444] transition-colors duration-200'>
+						<button className='flex items-center gap-1 h-full px-2 font-gilroy justify-center not-italic text-[9px] sm:text-[11px] lg:text-[13px] font-semibold text-nowrap text-white tracking-[0.4px] group-hover:text-[#28F699] transition-colors duration-200'>
 							<span className='leading-[44px] whitespace-pre block'>MORE</span>
 							<span className='inline-flex w-4 h-4 items-center justify-center'>
 								<ChevronDown size='24' />
@@ -211,7 +211,7 @@ export const Navbar = () => {
 						{/* More dropdown content */}
 						{isMoreDropdownOpen && (
 							<div className='absolute left-1/2 -translate-x-1/2 top-[50px] sm:top-[60px] lg:top-[68px] w-[280px] z-20'>
-								<div className='h-1 bg-[#009444] rounded-t-[20px] w-full' />
+								<div className='h-1 bg-[#28F699] rounded-t-[20px] w-full' />
 								<div
 									className='bg-white rounded-b-[20px] shadow-2xl border border-gray-200 overflow-hidden backdrop-blur-sm'
 									style={{ marginTop: '-1px' }}
@@ -228,8 +228,8 @@ export const Navbar = () => {
 													to={item.to}
 													className={`absolute flex flex-col justify-center left-[24px] translate-y-[-50%] transition-colors duration-200 cursor-pointer py-3 text-left ${
 														isActive
-															? 'text-[#009444] font-semibold'
-															: 'hover:text-[#009444] font-semibold'
+															? 'text-[#28F699] font-semibold'
+															: 'hover:text-[#28F699] font-semibold'
 													}`}
 													style={{ top: `${30 + index * 36}px` }}
 												>
@@ -277,7 +277,7 @@ export const Navbar = () => {
 								>
 									<Link
 										to={item.to}
-										className={`flex items-center gap-1 h-full px-2 font-gilroy font-semibold justify-center not-italic text-[10px] sm:text-[12px] lg:text-[13px] text-nowrap text-white tracking-[0.4px] group-hover:text-[#009444] transition-colors duration-200 z-10`}
+										className={`flex items-center gap-1 h-full px-2 font-gilroy font-semibold justify-center not-italic text-[10px] sm:text-[12px] lg:text-[13px] text-nowrap text-white tracking-[0.4px] group-hover:text-[#28F699] transition-colors duration-200 z-10`}
 										onKeyDown={handleKeyDown}
 										aria-expanded={isLearnDropdownOpen}
 										aria-haspopup='true'
@@ -290,14 +290,6 @@ export const Navbar = () => {
 											<ChevronDown size='24' />
 										</span>
 									</Link>
-									{/* underline centered under this menu item */}
-									<div
-										className={`absolute h-0.5 inset-x-0 bottom-0 mx-auto w-[30px] transition-colors duration-200 ${
-											isTopActive
-												? 'bg-[#009444]'
-												: 'bg-transparent group-hover:bg-[#009444]'
-										}`}
-									/>
 									{isLearnDropdownOpen && (
 										<div className='absolute left-[100px] -translate-x-1/2 top-[50px] sm:top-[60px] lg:top-[68px] w-[200px] z-20'>
 											{/* green top border to match design */}
@@ -312,7 +304,7 @@ export const Navbar = () => {
 															<Link
 																key={dropdownItem.label}
 																to={dropdownItem.to}
-																className='absolute flex flex-col justify-center left-[24px] translate-y-[-50%] hover:text-[#009444] transition-colors duration-200 cursor-pointer py-2 text-left font-semibold'
+																className='absolute flex flex-col justify-center left-[24px] translate-y-[-50%] transition-colors duration-200 cursor-pointer py-2 text-left font-semibold'
 																style={{ top: `${25 + dropdownIndex * 30}px` }}
 															>
 																<p className='leading-[26px] text-nowrap whitespace-pre font-bold text-[13px]'>
@@ -388,8 +380,8 @@ export const Navbar = () => {
 											onClick={closeMobileMenu}
 											className={`block font-gilroy font-semibold text-[14px]  tracking-[0.4px] py-3 px-4 rounded-lg transition-colors duration-200 ${
 												isActive
-													? 'bg-[#009444]/20 text-[#009444]'
-													: 'text-white hover:bg-[#009444]/20 hover:text-[#009444]'
+													? 'bg-[#28F699]/20 text-[#28F699]'
+													: 'text-white hover:bg-[#28F699]/20 hover:text-[#28F699]'
 											}`}
 										>
 											{item.label}
@@ -408,8 +400,8 @@ export const Navbar = () => {
 															onClick={closeMobileMenu}
 															className={`block font-gilroy font-semibold text-[12px]  py-2 px-4 rounded-md transition-colors duration-200 ${
 																isDropdownActive
-																	? 'bg-[#009444]/10 text-[#009444]'
-																	: 'text-white/80 hover:bg-[#009444]/10 hover:text-[#009444]'
+																	? 'bg-[#28F699]/10 text-[#28F699]'
+																	: 'text-white/80 hover:bg-[#28F699]/10 hover:text-[#28F699]'
 															}`}
 														>
 															{dropdownItem.label}

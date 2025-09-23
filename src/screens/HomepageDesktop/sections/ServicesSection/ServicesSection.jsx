@@ -41,19 +41,18 @@ const serviceCards = [
 export const ServicesSection = () => {
 	return (
 		<section className='w-full py-6 sm:py-10 lg:py-12 xl:py-18 bg-white'>
-			<div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl'>
+			<div className='relative max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10'>
 				{/* Header Section */}
-				<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16 sm:mb-20 lg:mb-24'>
+				<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16 sm:mb-20 lg:mb-24 lg:ml-[12vw] md:ml-[8vw]'>
 					<div className='space-y-6 sm:space-y-8'>
 						<div className='space-y-2 sm:space-y-4'>
-							<h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[92px] font-black leading-tight sm:leading-[0.9] lg:leading-[85px] tracking-wide'>
-								<span className='text-black'>
-									WE'RE NOT JUST ABOUT GOLF
-									<br />
+							<h2 className='text-black font-morganite font-black text-[clamp(56px,6.5vw,96px)] leading-[0.95] tracking-[0.02em]'>
+								<span className='block'>WE'RE NOT JUST ABOUT GOLF</span>
+								<span className='text-[#006f33] block'>
+									WE'RE ABOUT GOOD TIMES
 								</span>
-								<span className='text-[#006f33]'>WE'RE ABOUT GOOD TIMES</span>
 							</h2>
-							<p className='text-lg sm:text-xl lg:text-[22px] font-bold text-[#009444] leading-relaxed tracking-wide -mt-2'>
+							<p className='text-[16px] sm:text-[18px] lg:text-[20px] font-bold text-[#009444] leading-relaxed tracking-wide -mt-2'>
 								A PLACE FOR THE GAME. A SPACE FOR EVERYONE
 							</p>
 						</div>

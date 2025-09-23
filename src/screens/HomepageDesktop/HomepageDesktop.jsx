@@ -19,85 +19,85 @@ export const HomepageDesktop = () => {
 	return (
 		<div className='bg-white w-full min-h-screen relative'>
 			<SEOHead
-				title="The Virtual Greens - Indoor Golf Simulator Lounge in Riyadh"
+				title='The Virtual Greens - Indoor Golf Simulator Lounge in Riyadh'
 				description="Experience Riyadh's premier indoor golf simulator lounge. Cutting-edge Golfzon TwoVisionNX technology, professional coaching, and premium dining in a relaxed social atmosphere."
-				canonicalUrl="/"
-				ogImage="/hero.png"
-				keywords="indoor golf simulator Riyadh, golf simulator lounge, Golfzon technology, golf coaching Riyadh, virtual golf Saudi Arabia"
+				canonicalUrl='/'
+				ogImage='/hero.png'
+				keywords='indoor golf simulator Riyadh, golf simulator lounge, Golfzon technology, golf coaching Riyadh, virtual golf Saudi Arabia'
 			/>
 
 			<JsonLd
 				item={{
-					"@context": "https://schema.org",
-					"@type": "Organization",
-					"name": "The Virtual Greens",
-					"url": "https://www.thevirtualgreens.com",
-					"logo": "https://www.thevirtualgreens.com/tvg-logo.svg",
-					"description": "Riyadh's premier indoor golf simulator lounge featuring cutting-edge Golfzon TwoVisionNX technology, professional coaching, and premium dining experiences.",
-					"foundingDate": "2024",
-					"address": {
-						"@type": "PostalAddress",
-						"addressCountry": "SA",
-						"addressLocality": "Riyadh",
-						"addressRegion": "Riyadh Province"
+					'@context': 'https://schema.org',
+					'@type': 'Organization',
+					name: 'The Virtual Greens',
+					url: 'https://www.thevirtualgreens.com',
+					logo: 'https://www.thevirtualgreens.com/tvg-logo.svg',
+					description:
+						"Riyadh's premier indoor golf simulator lounge featuring cutting-edge Golfzon TwoVisionNX technology, professional coaching, and premium dining experiences.",
+					foundingDate: '2024',
+					address: {
+						'@type': 'PostalAddress',
+						addressCountry: 'SA',
+						addressLocality: 'Riyadh',
+						addressRegion: 'Riyadh Province',
 					},
-					"contactPoint": {
-						"@type": "ContactPoint",
-						"contactType": "customer service",
-						"telephone": "+966-XXX-XXX-XXXX",
-						"email": "info@thevirtualgreens.com"
+					contactPoint: {
+						'@type': 'ContactPoint',
+						contactType: 'customer service',
+						telephone: '+966-XXX-XXX-XXXX',
+						email: 'info@thevirtualgreens.com',
 					},
-					"sameAs": [
-						"https://www.instagram.com/thevirtualgreens",
-						"https://www.youtube.com/@thevirtualgreens",
-						"https://www.tiktok.com/@thevirtualgreens"
-					]
+					sameAs: [
+						'https://www.instagram.com/thevirtualgreens',
+						'https://www.youtube.com/@thevirtualgreens',
+						'https://www.tiktok.com/@thevirtualgreens',
+					],
 				}}
 			/>
 
 			<JsonLd
 				item={{
-					"@context": "https://schema.org",
-					"@type": "LocalBusiness",
-					"@id": "https://www.thevirtualgreens.com/#localbusiness",
-					"name": "The Virtual Greens",
-					"description": "Indoor golf simulator lounge with Golfzon TwoVisionNX technology, professional golf coaching, leagues, and premium dining.",
-					"url": "https://www.thevirtualgreens.com",
-					"telephone": "+966-XXX-XXX-XXXX",
-					"email": "info@thevirtualgreens.com",
-					"address": {
-						"@type": "PostalAddress",
-						"addressCountry": "SA",
-						"addressLocality": "Riyadh",
-						"addressRegion": "Riyadh Province"
+					'@context': 'https://schema.org',
+					'@type': 'LocalBusiness',
+					'@id': 'https://www.thevirtualgreens.com/#localbusiness',
+					name: 'The Virtual Greens',
+					description:
+						'Indoor golf simulator lounge with Golfzon TwoVisionNX technology, professional golf coaching, leagues, and premium dining.',
+					url: 'https://www.thevirtualgreens.com',
+					telephone: '+966-XXX-XXX-XXXX',
+					email: 'info@thevirtualgreens.com',
+					address: {
+						'@type': 'PostalAddress',
+						addressCountry: 'SA',
+						addressLocality: 'Riyadh',
+						addressRegion: 'Riyadh Province',
 					},
-					"geo": {
-						"@type": "GeoCoordinates",
-						"latitude": "24.7136",
-						"longitude": "46.6753"
+					geo: {
+						'@type': 'GeoCoordinates',
+						latitude: '24.7136',
+						longitude: '46.6753',
 					},
-					"openingHours": [
-						"Mo-Su 09:00-23:00"
+					openingHours: ['Mo-Su 09:00-23:00'],
+					priceRange: '$$',
+					servedCuisine: 'International',
+					amenityFeature: [
+						{
+							'@type': 'LocationFeatureSpecification',
+							name: 'Indoor Golf Simulators',
+							value: true,
+						},
+						{
+							'@type': 'LocationFeatureSpecification',
+							name: 'Golf Coaching',
+							value: true,
+						},
+						{
+							'@type': 'LocationFeatureSpecification',
+							name: 'Restaurant',
+							value: true,
+						},
 					],
-					"priceRange": "$$",
-					"servedCuisine": "International",
-					"amenityFeature": [
-						{
-							"@type": "LocationFeatureSpecification",
-							"name": "Indoor Golf Simulators",
-							"value": true
-						},
-						{
-							"@type": "LocationFeatureSpecification",
-							"name": "Golf Coaching",
-							"value": true
-						},
-						{
-							"@type": "LocationFeatureSpecification",
-							"name": "Restaurant",
-							"value": true
-						}
-					]
 				}}
 			/>
 			<div className='w-full flex flex-col'>
@@ -113,33 +113,37 @@ export const HomepageDesktop = () => {
 
 			{/* Membership Promo Card */}
 			{showPromoCard && (
-				<Card className='fixed w-[320px] sm:w-[380px] h-auto top-32 sm:top-[125px] right-4 sm:right-8 lg:right-[50px] xl:right-[100px] bg-white/75 rounded-[30px] border border-solid border-[#9d9d9d] shadow-xl backdrop-blur-sm z-40 hover:bg-white/85 transition-all duration-200'>
-					<CardContent className='p-6 sm:p-8 relative'>
+				<Card className='fixed w-[220px] sm:w-[300px] min-h-[140px] h-auto top-20 sm:top-[120px] right-4 sm:right-8 lg:right-[50px] xl:right-[100px] bg-white rounded-[20px] border border-solid border-[#e6e6e6] shadow-lg z-60 hover:shadow-xl transition-all duration-200 opacity-80 hover:opacity-100'>
+					<CardContent className='p-3 sm:p-5 relative overflow-visible'>
 						<Button
 							variant='ghost'
 							size='sm'
-							className='absolute -top-2 -right-2 w-8 h-8 bg-white/75 rounded-full border border-solid border-[#666] p-0 hover:bg-white shadow-md transition-all duration-200'
+							className='absolute -top-3 -right-3 w-7 h-7 bg-white rounded-full border border-solid border-[#000000] p-0 hover:bg-white shadow-md transition-all duration-200 flex items-center justify-center'
 							onClick={() => setShowPromoCard(false)}
 						>
-							<XIcon className='w-5 h-5' />
+							<XIcon className='w-6 h-6 text-black/100' strokeWidth={3} />
 						</Button>
 
-						<div className='space-y-4 sm:space-y-6'>
-							<div className='text-lg sm:text-xl font-bold leading-tight'>
-								<span className='text-[#009444]'>ONLY </span>
-								<span className='text-black text-2xl sm:text-3xl'>96</span>
-								<span className='text-[#009444]'> MEMBERSHIPS AVAILABLE</span>
+						<div className='space-y-3'>
+							<div className='-mt-2 text-sm sm:text-base font-bold leading-tight flex items-baseline gap-1 whitespace-nowrap'>
+								<span className='text-[#009444]'>ONLY</span>
+								<span className='text-black text-xl sm:text-2xl font-extrabold'>
+									96
+								</span>
+								<span className='text-[#009444]'>MEMBERSHIPS AVAILABLE</span>
 							</div>
 
-							<p className='text-sm sm:text-base font-medium text-black leading-relaxed'>
+							<p className='text-[20px] sm:text-[16px] font-gilroy font-medium text-black/90 leading-relaxed'>
 								First-year members unlock a +1 partner. Full benefits included
 							</p>
 
-							<Button className='w-full bg-[#009444] rounded-full px-6 py-3 h-auto hover:bg-[#007a3a] transition-colors duration-200'>
-								<div className='text-white text-sm sm:text-base font-semibold text-center tracking-wide'>
-									CLAIM YOUR SPOT
-								</div>
-							</Button>
+							<div className='flex justify-start'>
+								<Button className='w-[160px] sm:w-[160px] bg-[#009444] rounded-full px-4 py-2 h-auto hover:bg-[#007a3a] transition-colors duration-200'>
+									<div className='text-white text-sm sm:text-sm font-gilroy font-regular text-left tracking-wide'>
+										CLAIM YOUR SPOT
+									</div>
+								</Button>
+							</div>
 						</div>
 					</CardContent>
 				</Card>

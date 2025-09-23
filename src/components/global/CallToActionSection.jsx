@@ -16,16 +16,18 @@ export const CallToActionSection = () => {
 					>
 						READY TO VISIT?
 					</h2>
-					<Link
-						to='/contact'
-						aria-label='Plan your visit - Contact page'
+					<a
+						href='https://widget.servmeco.com/?oid=1662'
+						target='_blank'
+						rel='noopener noreferrer'
+						aria-label='Plan your visit - booking widget'
 						className='gap-3 px-6 py-3 bg-[#009444] hover:bg-[#007a3a] rounded-full text-white inline-flex items-center transition-colors duration-200'
 					>
 						<span className='whitespace-nowrap font-gilroy font-semibold text-[18px] leading-[40px]'>
 							PLAN YOUR VISIT
 						</span>
 						<ArrowRightIcon className='w-5 h-5' />
-					</Link>
+					</a>
 				</div>
 			</header>
 		</section>

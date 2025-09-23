@@ -37,8 +37,8 @@ export const GolfzonInfoSection = () => {
 										href='https://widget.servmeco.com/?oid=1662'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='bg-[#009444] rounded-[50px] px-[30px] py-[7px] inline-flex items-center gap-[10px] font-gilroy font-semibold text-[18px] text-white uppercase leading-[40px]'>
-									
+										className='bg-[#009444] rounded-[50px] px-[30px] py-[7px] inline-flex items-center gap-[10px] font-gilroy font-semibold text-[18px] text-white uppercase leading-[40px]'
+									>
 										Book a Bay
 										<img
 											src='/arrow-right.svg'
@@ -93,7 +93,12 @@ export const GolfzonInfoSection = () => {
 
 					{/* Mobile CTA Button */}
 					<div className='pt-4'>
-						<button className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-[24px] py-[10px] flex items-center gap-2 mx-auto'>
+						<a
+							href='https://widget.servmeco.com/?oid=1662'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-[24px] py-[10px] flex items-center gap-2 mx-auto'
+						>
 							<span className='font-gilroy font-semibold text-[16px] leading-[20px] text-white uppercase'>
 								Book a Bay
 							</span>
@@ -104,7 +109,7 @@ export const GolfzonInfoSection = () => {
 									className='w-full h-full object-contain'
 								/>
 							</div>
-						</button>
+						</a>
 					</div>
 				</div>
 			</div>

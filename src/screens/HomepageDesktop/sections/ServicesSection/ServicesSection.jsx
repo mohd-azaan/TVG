@@ -33,7 +33,7 @@ const serviceCards = [
 		image: '/advanced-simulators-1-1.png',
 	},
 	{
-		title: 'SIMULATOR OWNERSHIP/RENTAL',
+		title: 'SIMULATOR OWNERSHIP/\nRENTAL',
 		description: 'Take the game to your space',
 		image: '/advanced-simulators-1-5.png',
 	},
@@ -41,7 +41,7 @@ const serviceCards = [
 
 export const ServicesSection = () => {
 	return (
-		<section className='w-full py-6 sm:py-10 lg:py-4 xl:py-18 bg-white'>
+		<section className='w-full pt-6 sm:pt-10 lg:pt-4 xl:pt-18 pb-32 bg-white'>
 			<div className='relative max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10'>
 				{/* Header Section */}
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16 sm:mb-20 lg:mb-24s lg:ml-[12vw] md:ml-[8vw]'>
@@ -59,8 +59,8 @@ export const ServicesSection = () => {
 						</div>
 					</div>
 
-					<div className='space-y-6 sm:space-y-8 flex flex-col justify-center'>
-						<p className='text-base sm:text-lg lg:text-xl font-medium text-[#757575] leading-relaxed'>
+					<div className='space-y-6 sm:space-y-8 flex flex-col justify-center lg:mr-[12vw] md:mr-[8vw] max-w-xl'>
+						<p className='text-[16px] font-medium text-[#757575] leading-relaxed'>
 							At The Virtual Greens, the experience is what matters most. It's
 							golf, but not like you've seen it before. We've taken the country
 							club perks, stripped away the stiff vibe, and built a space where
@@ -72,16 +72,16 @@ export const ServicesSection = () => {
 								href='https://widget.servmeco.com/?oid=1662'
 								target='_blank'
 								rel='noopener noreferrer'
-								className='bg-[#009444] hover:bg-[#007a3a] text-white rounded-full px-8 py-4 h-auto text-lg font-semibold tracking-wide inline-flex items-center gap-3 transition-colors duration-200'
+								className='bg-[#009444] hover:bg-[#007a3a] text-white rounded-full px-6 py-3 h-auto text-sm font-semibold tracking-wide inline-flex items-center gap-2 transition-colors duration-200'
 							>
 								BOOK A BAY
-								<ArrowRightIcon className='w-5 h-5' />
+								<ArrowRightIcon className='w-4 h-4' />
 							</a>
 
 							<Link to='/learn' className='inline-block'>
 								<Button
 									variant='outline'
-									className='border-2 border-black text-black hover:bg-gray-50 rounded-full px-8 py-4 h-auto text-lg font-semibold tracking-wide transition-colors duration-200'
+									className='border-2 border-black text-black hover:bg-gray-50 rounded-full px-6 py-3 h-auto text-sm font-semibold tracking-wide transition-colors duration-200'
 								>
 									LEARN ABOUT LESSONS
 								</Button>
@@ -91,11 +91,11 @@ export const ServicesSection = () => {
 				</div>
 
 				{/* Service Cards Grid - Exact Figma Design */}
-				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-10'>
+				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-10 lg:ml-[12vw] md:ml-[8vw] lg:mr-[12vw] md:mr-[8vw]'>
 					{serviceCards.map((service, index) => (
 						<Card
 							key={`service-${index}`}
-							className='bg-[#F6F6F6] border-0 rounded-[20px] overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group'
+							className='bg-[#F6F6F6] hover:bg-[#74FFA7] border-0 rounded-[20px] overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group'
 						>
 							<div className='space-y-4 p-0'>
 								{/* Image Container - Dark placeholder exactly like Figma */}
@@ -109,28 +109,10 @@ export const ServicesSection = () => {
 
 								{/* Content Container */}
 								<CardContent className='px-10 pb-10 pt-2 space-y-3'>
-									<h3
-										className='text-black leading-tight'
-										style={{
-											fontFamily: "'Gilroy', Helvetica, sans-serif",
-											fontSize: '24px',
-											fontWeight: '700',
-											letterSpacing: '0px',
-											lineHeight: 'normal',
-										}}
-									>
+									<h3 className='text-black leading-tight font-gilroy font-bold text-[21px]'>
 										{service.title}
 									</h3>
-									<p
-										className='text-[#757575] leading-relaxed'
-										style={{
-											fontFamily: "'Gilroy', Helvetica, sans-serif",
-											fontSize: '18px',
-											fontWeight: '500',
-											letterSpacing: '0px',
-											lineHeight: '26px',
-										}}
-									>
+									<p className='text-[#757575] group-hover:text-[#009444] font-gilroy font-medium text-[16px] leading-[26px] transition-colors duration-300'>
 										{service.description}
 									</p>
 								</CardContent>

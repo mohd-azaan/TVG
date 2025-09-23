@@ -82,6 +82,7 @@ function HamburgerIcon({ isOpen, onClick }) {
 }
 
 export const Navbar = () => {
+	const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
 	const [isLearnDropdownOpen, setIsLearnDropdownOpen] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [isMoreDropdownOpen, setIsMoreDropdownOpen] = useState(false);
@@ -92,16 +93,23 @@ export const Navbar = () => {
 	const navigate = useNavigate();
 
 	const menuItems = [
-		{ label: 'ABOUT', hasDropdown: false, to: '/about' },
+		{
+			label: 'ABOUT',
+			hasDropdown: true,
+			to: '/about',
+			dropdownItems: [
+				{ label: 'Our Story', to: '/our-story' },
+			],
+		},
 		{ label: 'PLAY', hasDropdown: false, to: '/play' },
 		{
 			label: 'LEARN',
 			hasDropdown: true,
 			to: '/learn',
 			dropdownItems: [
-				{ label: 'Coaching Levels', to: '/coaching-levels' },
-				{ label: 'Meet the Coach', to: '/meet-coach' },
-				{ label: 'Corporate Programs', to: '/corporate-programs' },
+				{ label: 'Coaching Levels', to: '/learn' },
+				{ label: 'Meet the Coach', to: '/learn' },
+				{ label: 'Corporate Programs', to: '/learn' },
 			],
 		},
 		{ label: 'MEMBERSHIP', hasDropdown: false, to: '/membership' },
@@ -123,13 +131,25 @@ export const Navbar = () => {
 		}
 	};
 
-	const handleMouseEnter = () => setIsLearnDropdownOpen(true);
-	const handleMouseLeave = () => setIsLearnDropdownOpen(false);
+	const handleAboutMouseEnter = () => setIsAboutDropdownOpen(true);
+	const handleAboutMouseLeave = () => setIsAboutDropdownOpen(false);
+
+	const handleLearnMouseEnter = () => setIsLearnDropdownOpen(true);
+	const handleLearnMouseLeave = () => setIsLearnDropdownOpen(false);
 
 	const handleMoreMouseEnter = () => setIsMoreDropdownOpen(true);
 	const handleMoreMouseLeave = () => setIsMoreDropdownOpen(false);
 
-	const handleKeyDown = (event) => {
+	const handleAboutKeyDown = (event) => {
+		if (event.key === 'Enter' || event.key === ' ') {
+			event.preventDefault();
+			setIsAboutDropdownOpen(!isAboutDropdownOpen);
+		} else if (event.key === 'Escape') {
+			setIsAboutDropdownOpen(false);
+		}
+	};
+
+	const handleLearnKeyDown = (event) => {
 		if (event.key === 'Enter' || event.key === ' ') {
 			event.preventDefault();
 			setIsLearnDropdownOpen(!isLearnDropdownOpen);
@@ -256,6 +276,14 @@ export const Navbar = () => {
 							<p className='whitespace-pre'>BOOK NOW</p>
 						</div>
 					</a>
+
+					{/* Language Button */}
+					<button className='border border-white/30 h-7 sm:h-8 overflow-clip relative rounded-[50px] shrink-0 w-[70px] sm:w-[80px] hover:bg-white/10 transition-colors duration-200 cursor-pointer flex items-center justify-center gap-1'>
+						<svg className='w-3 h-3 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+							<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129' />
+						</svg>
+						<span className='font-gilroy font-medium text-[9px] sm:text-[10px] text-white'>عربي</span>
+					</button>
 				</div>
 			</div>
 
@@ -267,6 +295,13 @@ export const Navbar = () => {
 							const isTopActive =
 								location.pathname === item.to ||
 								(item.to !== '/' && location.pathname.startsWith(item.to));
+							const isAbout = item.label === 'ABOUT';
+							const isLearn = item.label === 'LEARN';
+							const isDropdownOpen = isAbout ? isAboutDropdownOpen : isLearnDropdownOpen;
+							const handleMouseEnter = isAbout ? handleAboutMouseEnter : handleLearnMouseEnter;
+							const handleMouseLeave = isAbout ? handleAboutMouseLeave : handleLearnMouseLeave;
+							const handleKeyDown = isAbout ? handleAboutKeyDown : handleLearnKeyDown;
+
 							return (
 								<div
 									key={item.label}
@@ -279,7 +314,7 @@ export const Navbar = () => {
 										to={item.to}
 										className={`flex items-center gap-1 h-full px-2 font-gilroy font-semibold justify-center not-italic text-[10px] sm:text-[12px] lg:text-[13px] text-nowrap text-white tracking-[0.4px] group-hover:text-[#28F699] transition-colors duration-200 z-10`}
 										onKeyDown={handleKeyDown}
-										aria-expanded={isLearnDropdownOpen}
+										aria-expanded={isDropdownOpen}
 										aria-haspopup='true'
 										aria-label={`${item.label} menu`}
 									>
@@ -290,15 +325,15 @@ export const Navbar = () => {
 											<ChevronDown size='24' />
 										</span>
 									</Link>
-									{isLearnDropdownOpen && (
-										<div className='absolute left-[100px] -translate-x-1/2 top-[50px] sm:top-[60px] lg:top-[68px] w-[200px] z-20'>
+									{isDropdownOpen && (
+										<div className={`absolute left-0 top-[50px] sm:top-[60px] lg:top-[68px] z-20 ${isAbout ? 'w-[150px]' : 'w-[200px]'}`}>
 											{/* green top border to match design */}
 											<div className='h-1 bg-[#009444] rounded-t-[20px] w-full' />
 											<div
 												className='bg-white rounded-b-[20px] shadow-2xl border border-gray-200 overflow-hidden backdrop-blur-sm'
 												style={{ marginTop: '-1px' }}
 											>
-												<div className='font-gilroy h-[120px] leading-[0] not-italic overflow-clip relative text-[13px] font-semibold text-black text-nowrap tracking-[0.2px] w-[200px] py-4 px-6'>
+												<div className={`font-gilroy leading-[0] not-italic overflow-clip relative text-[13px] font-semibold text-black text-nowrap tracking-[0.2px] px-6 ${isAbout ? 'h-[50px] w-[150px] py-3' : 'h-[120px] w-[200px] py-4'}`}>
 													{item.dropdownItems.map(
 														(dropdownItem, dropdownIndex) => (
 															<Link
@@ -339,6 +374,14 @@ export const Navbar = () => {
 							<p className='whitespace-pre'>BOOK NOW</p>
 						</div>
 					</a>
+
+					{/* Language Button */}
+					<button className='border border-white/30 h-8 sm:h-9 lg:h-9 overflow-clip relative rounded-[50px] shrink-0 w-[80px] sm:w-[90px] lg:w-[90px] hover:bg-white/10 transition-colors duration-200 cursor-pointer flex items-center justify-center gap-1'>
+						<svg className='w-4 h-4 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+							<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129' />
+						</svg>
+						<span className='font-gilroy font-medium text-[10px] sm:text-[11px] lg:text-[12px] text-white'>عربي</span>
+					</button>
 				</div>
 			</div>
 
@@ -414,8 +457,8 @@ export const Navbar = () => {
 								);
 							})}
 
-							{/* Mobile Book Now Button */}
-							<div className='pt-4 border-t border-white/10'>
+							{/* Mobile Book Now and Arabic Buttons */}
+							<div className='pt-4 border-t border-white/10 space-y-3'>
 								<a
 									href='https://widget.servmeco.com/?oid=1662'
 									target='_blank'
@@ -429,6 +472,15 @@ export const Navbar = () => {
 										</p>
 									</div>
 								</a>
+								<button
+									onClick={closeMobileMenu}
+									className='border border-white/30 h-12 overflow-clip relative rounded-[50px] w-full hover:bg-white/10 transition-colors duration-200 cursor-pointer flex items-center justify-center gap-3'
+								>
+									<svg className='w-6 h-6 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+										<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129' />
+									</svg>
+									<span className='font-gilroy font-medium text-[16px] text-white'>عربي</span>
+								</button>
 							</div>
 						</div>
 					</div>

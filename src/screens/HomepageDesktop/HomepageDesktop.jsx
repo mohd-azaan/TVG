@@ -113,7 +113,7 @@ export const HomepageDesktop = () => {
 
 			{/* Membership Promo Card */}
 			{showPromoCard && (
-				<Card className='fixed w-[220px] sm:w-[300px] min-h-[140px] h-auto top-20 sm:top-[120px] right-4 sm:right-8 lg:right-[50px] xl:right-[100px] bg-white rounded-[20px] border border-solid border-[#e6e6e6] shadow-lg z-60 hover:shadow-xl transition-all duration-200 opacity-80 hover:opacity-100'>
+				<Card className='fixed w-[220px] sm:w-[300px] min-h-[140px] h-auto top-20 sm:top-[120px] right-4 sm:right-8 lg:right-[50px] xl:right-[100px] bg-white rounded-[20px] border border-solid border-[#e6e6e6] shadow-lg z-60 hover:shadow-xl transition-all duration-200 opacity-60 hover:opacity-100'>
 					<CardContent className='p-3 sm:p-5 relative overflow-visible'>
 						<Button
 							variant='ghost'

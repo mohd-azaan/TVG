@@ -1,5 +1,5 @@
 import { XIcon } from 'lucide-react';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { JsonLd } from 'react-schemaorg';
 import { Organization, LocalBusiness } from 'schema-dts';
 import { Button } from '../../components/ui/button';
@@ -15,6 +15,30 @@ import { StatisticsSection } from './sections/StatisticsSection/StatisticsSectio
 
 export const HomepageDesktop = () => {
 	const [showPromoCard, setShowPromoCard] = useState(true);
+	const [progress, setProgress] = useState(0);
+
+	useEffect(() => {
+		if (showPromoCard) {
+			const timer = setTimeout(() => {
+				setShowPromoCard(false);
+			}, 10000);
+
+			const progressInterval = setInterval(() => {
+				setProgress((prev) => {
+					if (prev >= 100) {
+						clearInterval(progressInterval);
+						return 100;
+					}
+					return prev + 1;
+				});
+			}, 100);
+
+			return () => {
+				clearTimeout(timer);
+				clearInterval(progressInterval);
+			};
+		}
+	}, [showPromoCard]);
 
 	return (
 		<div className='bg-white w-full min-h-screen relative'>
@@ -113,32 +137,38 @@ export const HomepageDesktop = () => {
 
 			{/* Membership Promo Card */}
 			{showPromoCard && (
-				<Card className='fixed w-[220px] sm:w-[300px] min-h-[140px] h-auto top-15 sm:top-[105px] right-4 sm:right-8 lg:right-[50px] xl:right-[100px] bg-white rounded-[20px] border border-solid border-[#e6e6e6] shadow-lg z-60 hover:shadow-xl transition-all duration-200 opacity-60 hover:opacity-100'>
+				<Card className='fixed w-[220px] sm:w-[300px] min-h-[140px] h-auto top-15 sm:top-[105px] right-4 sm:right-8 lg:right-[50px] xl:right-[100px] bg-white rounded-[20px] border border-solid border-[#e6e6e6] shadow-lg z-60 hover:shadow-xl transition-all duration-200 opacity-60 hover:opacity-100 overflow-visible'>
 					<CardContent className='p-3 sm:p-5 relative overflow-visible'>
 						<Button
 							variant='ghost'
 							size='sm'
-							className='absolute -top-3 -right-3 w-7 h-7 bg-white rounded-full border border-solid border-[#000000] p-0 hover:bg-white shadow-md transition-all duration-200 flex items-center justify-center'
+							className='absolute -top-3 -right-3 w-7 h-7 bg-white rounded-full border border-solid border-[#000000] p-0 hover:bg-white shadow-md transition-all duration-200 flex items-center justify-center z-70'
 							onClick={() => setShowPromoCard(false)}
 						>
 							<XIcon className='w-6 h-6 text-black/100' strokeWidth={3} />
 						</Button>
 
 						<div className='space-y-3'>
-							<div className='-mt-2 text-sm sm:text-base font-bold leading-tight flex items-baseline gap-1 whitespace-nowrap'>
-								<span className='text-[#009444]'>ONLY</span>
-								<span className='text-black text-xl sm:text-2xl font-extrabold'>
-									96
-								</span>
-								<span className='text-[#009444]'>MEMBERSHIPS AVAILABLE</span>
+							<div className='-mt-2 text-sm sm:text-base font-bold leading-tight flex flex-col gap-1'>
+								<div className='flex items-baseline gap-1 whitespace-nowrap'>
+									<span className='text-[#009444]'>ONLY</span>
+									<span className='text-black text-xl sm:text-2xl font-extrabold'>
+										96
+									</span>
+									<span className='text-[#009444]'>MEMBERSHIP SLOTS</span>
+								</div>
+								<div className='text-[#009444] text-sm'>PER YEAR</div>
 							</div>
 
 							<p className='text-[20px] sm:text-[16px] font-gilroy font-medium text-black/90 leading-relaxed'>
-								First-year members unlock a +1 partner. Full benefits included
+								Members enjoy off-operating hour access
 							</p>
 
 							<div className='flex justify-start'>
-								<Button className='w-[160px] sm:w-[160px] bg-[#009444] rounded-full px-4 py-2 h-auto hover:bg-[#007a3a] transition-colors duration-200'>
+								<Button
+									aria-label='Claim your membership spot'
+									className='w-[160px] sm:w-[160px] bg-[#009444] rounded-full px-4 py-2 h-auto hover:bg-[#007a3a] transition-colors duration-200'
+								>
 									<div className='text-white text-sm sm:text-sm font-gilroy font-regular text-left tracking-wide'>
 										CLAIM YOUR SPOT
 									</div>
@@ -146,6 +176,17 @@ export const HomepageDesktop = () => {
 							</div>
 						</div>
 					</CardContent>
+
+					{/* Progress bar */}
+					<div
+						className='absolute bottom-2 left-0 w-full h-1 bg-gray-200 rounded-full overflow-hidden mx-3'
+						style={{ width: 'calc(100% - 24px)' }}
+					>
+						<div
+							className='h-full bg-[#009444] transition-all duration-100 ease-linear'
+							style={{ width: `${progress}%` }}
+						/>
+					</div>
 				</Card>
 			)}
 		</div>

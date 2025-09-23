@@ -54,27 +54,23 @@ const playerCategories = [
 
 export const PlayYourWaySection = () => {
 	return (
-		<section className='w-full bg-white py-16 sm:py-20 lg:py-24 xl:py-32'>
-			<div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl'>
+		<section className='w-full bg-white py-20 lg:py-30'>
+			<div className='relative max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10'>
 				{/* Header */}
-				<div className='text-center mb-12 sm:mb-16 lg:mb-20'>
-					<h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] font-black text-black leading-tight sm:leading-[0.9] lg:leading-[90px] tracking-wide mb-4 sm:mb-6'>
+				<div className='text-center mb-16 sm:mb-20 lg:mb-24'>
+					<h2 className='text-black font-morganite font-black text-[clamp(38px,5.2vw,78px)] leading-[0.92] tracking-[0.02em] mb-4'>
 						GOLF YOUR WAY
 					</h2>
-
-					<div className='text-lg sm:text-xl lg:text-[22px] font-bold text-[#009444] leading-relaxed tracking-wide mb-6 sm:mb-8'>
+					<p className='text-[18px] sm:text-[14px] lg:text-[18px] font-bold text-[#009444] leading-tight tracking-wide mb-4 sm:mb-6 -mt-2'>
 						GOLF YOUR BALL EXACTLY HOW YOU WANT
-					</div>
+					</p>
 
-					<div className='max-w-4xl mx-auto mb-8 sm:mb-12'>
-						<p className='text-base sm:text-lg lg:text-xl font-medium text-[#757575] leading-relaxed'>
+					<div className='max-w-xl mx-auto mb-6 sm:mb-8'>
+						<p className='text-[16px] font-medium text-[#757575] leading-relaxed'>
 							You don&apos;t need to know the difference between a draw and a
 							fade to have fun here. But if you do, you&apos;ll love it even
-							more.
-							<br />
-							<br />
-							Here, you can crush drives, battle friends in party games, or beat
-							your personal best. We have a game mode for everyone. Our
+							more. Here, you can crush drives, battle friends in party games,
+							or beat your personal best. We have a game mode for everyone. Our
 							simulators give you access to 250+ courses around the world and
 							feedback on every shot. We&apos;re talking ball speed, spin rate,
 							launch angle, club path, and way more.
@@ -82,50 +78,46 @@ export const PlayYourWaySection = () => {
 					</div>
 
 					<Link to='/play' className='inline-block'>
-						<Button className='bg-[#009444] hover:bg-[#007a37] text-white rounded-full px-8 py-4 h-auto inline-flex items-center gap-3 text-lg font-semibold tracking-wide transition-colors duration-200'>
-							<span>EXPLORE OUR BAYS</span>
+						<Button className='bg-[#009444] hover:bg-[#007a3a] text-white rounded-full px-6 py-3 h-auto inline-flex items-center gap-2 text-sm font-semibold tracking-wide transition-colors duration-200'>
+							EXPLORE OUR BAYS
 							<img
-								className='w-5 h-5'
+								className='w-4 h-4'
 								alt='Arrow right'
 								src='/arrow-right.svg'
 								loading='lazy'
 								decoding='async'
-								width='20'
-								height='20'
+								width='16'
+								height='16'
 							/>
 						</Button>
 					</Link>
 				</div>
 
 				{/* Feature Cards */}
-				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mb-16 sm:mb-20 lg:mb-24'>
+				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-10 mb-12 sm:mb-16 lg:mb-20 lg:ml-[12vw] md:ml-[8vw] lg:mr-[12vw] md:mr-[8vw]'>
 					{featureCards.map((card, index) => (
 						<Card
 							key={index}
-							className={`${card.bgColor} rounded-[30px] border-0 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 group`}
+							className='bg-[#F6F6F6] hover:bg-[#74FFA7] border-0 rounded-[20px] overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group'
 						>
-							<div className='flex flex-col'>
-								{/* Square Image Section */}
-								<div className='w-full h-[250px] sm:h-[250px] lg:h-[250px] rounded-t-[30px] overflow-hidden'>
+							<div className='space-y-4 p-0'>
+								{/* Image Container */}
+								<div className='w-full h-[300px] bg-[#3A3A3A] rounded-[20px] overflow-hidden'>
 									<img
-										className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+										className='w-full h-full object-cover'
 										alt='Play swing'
 										src={card.image}
 										loading='lazy'
 										decoding='async'
-										width='250'
-										height='250'
 									/>
 								</div>
 
-								{/* Content Section */}
-								<CardContent className='p-4 sm:p-5 lg:p-6 space-y-2 sm:space-y-3'>
-									<h3 className='text-xl sm:text-2xl lg:text-[28px] font-gilroy font-bold text-black leading-tight'>
+								{/* Content Container */}
+								<CardContent className='px-10 pb-10 pt-2 space-y-3'>
+									<h3 className='text-black leading-tight font-gilroy font-bold text-[21px]'>
 										{card.title}
 									</h3>
-									<p
-										className={`text-sm sm:text-base lg:text-lg font-medium ${card.textColor} leading-relaxed`}
-									>
+									<p className='text-[#757575] group-hover:text-[#009444] font-gilroy font-medium text-[16px] leading-[26px] transition-colors duration-300'>
 										{card.description}
 									</p>
 								</CardContent>
@@ -136,27 +128,27 @@ export const PlayYourWaySection = () => {
 
 				{/* Something for Everyone Section */}
 				<div className='text-center mb-12 sm:mb-16'>
-					<h3 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] font-black text-black leading-tight sm:leading-[0.9] lg:leading-[90px] tracking-wide'>
+					<h3 className='text-black font-morganite font-black text-[clamp(38px,5.2vw,78px)] leading-[0.92] tracking-[0.02em]'>
 						SOMETHING FOR EVERYONE
 					</h3>
 				</div>
 
 				{/* Player Categories */}
-				<div className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8'>
+				<div className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-5xl mx-auto'>
 					{playerCategories.map((category, index) => (
 						<Card
 							key={index}
-							className='bg-gradient-to-br from-gray-100 to-gray-200 rounded-[30px] border-0 h-[160px] sm:h-[180px] lg:h-[200px] cursor-pointer hover:scale-105 transition-all duration-300 hover:shadow-lg group'
+							className='bg-[#F6F6F6] rounded-[20px] border-0 h-[120px] sm:h-[140px] lg:h-[160px]'
 						>
 							<CardContent className='p-0 h-full relative flex flex-col items-center justify-center'>
 								<img
-									className='w-12 sm:w-14 lg:w-16 h-12 sm:h-14 lg:h-16 mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300'
+									className='w-8 sm:w-10 lg:w-12 h-8 sm:h-10 lg:h-12 mb-2 sm:mb-3'
 									alt={category.alt}
 									src={category.icon}
 									loading='lazy'
 									decoding='async'
-									width='64'
-									height='64'
+									width='48'
+									height='48'
 								/>
 								<h4 className='text-lg sm:text-xl lg:text-2xl font-gilroy font-bold text-black leading-tight text-center px-2'>
 									{category.title}

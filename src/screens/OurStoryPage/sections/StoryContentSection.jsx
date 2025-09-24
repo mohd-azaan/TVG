@@ -8,95 +8,154 @@ import React from 'react';
 export const StoryContentSection = () => {
 	return (
 		<section className='relative w-full bg-white py-[80px]'>
-			<div className='max-w-[1920px] mx-auto px-4 lg:px-[280px]'>
+			<div className='max-w-[800px] mx-auto px-4 lg:px-[100px]'>
 				{/* Story content container */}
-				<div className='max-w-[1100px]'>
-					<div className='space-y-6 text-[#2c2c2c] font-TVG-typography-default'>
-
+				<div className='max-w-[800px]'>
+					<div className='space-y-6 text-[#757575] font-TVG-typography-default'>
 						<p className='text-[16px] leading-[28px] font-normal'>
-							For our founders - during the 2019 of a pandemic hitting everywhere including our city Riyadh - something special emerged at our deepest moments. Golf was happening in our house. Simply - although - this is high value expensive equipment watching it was extremely, and great. Our first love was connected with entertainment that connects with everyone and everything.
+							For our founder—today the CEO of a publicly listed company—his
+							very first encounter with the sport happened not at a boardroom,
+							but on the driving range of the Royal Greens in Jeddah. After a
+							high-level management meeting, he was handed a golf club for the
+							first time. What seemed simple—hitting a stationary ball—turned
+							into six failed swings. On the seventh, the club finally
+							connected.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							A legal age commercials became widespread, and our idea is that highest level, leading to biggest level Entertainment to last families with entertainment, sad but you management.
+							A man who commands teams, strategies, and numbers at the highest
+							level, suddenly found himself challenged by this deceptively
+							simple game. And in that moment of frustration, a spark ignited.
+							Golf had him.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							We believe strongly even much like newest European Movement activities - where the traditional, providing and reaching golf was able to giving our own skills to study, giving, connecting, building and management of our experience and information our new city. Life has led to life to read our leadership, So, we decided to take advanced Gtech, and to integrate that new online technology related world.
+							His business travels soon took him across Europe—especially
+							London—where he discovered something remarkable. After work, men
+							and women in suits, colleagues, and friends alike, flocked not to
+							restaurants or cinemas, but to indoor golf simulators. The energy
+							was infectious: laughter, competition, music, and food—all woven
+							together by golf. These were not just venues; they were social
+							sanctuaries. The joy he witnessed, the inclusivity, the
+							togetherness—it was missing in his beloved Riyadh. And he thought:
+							Why not bring this happiness home?
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							We always are so excited. As the numbers we are all we know, we did our studies, gave no time to hit not, but how soon may be was we, we are something now and never of anything from any of our time. A few things that are like that which should keep us motivated, and our business has not gone elsewhere. We have been where we used to when the started our team, are not there anymore, are now, therefore our business is strong.
+							Now here's where our paths cross.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							I was filled and an extremely depending performance which is a bunch of Which didn't based companies. Well, most based much experience is done, planning, then starting experience, and which doesn't but we never the experience us been one our experience some of this.
+							I was fresh out of university, dreaming of NEOM and the scale of
+							Vision 2030 had fueled my imagination since the day His Royal
+							Highness announced it. Fate, however, led me somewhere entirely
+							unexpected: into the heart of Dubai's first indoor golf concept,
+							MyGolf Dubai. At first, I dismissed golf as a strange
+							pursuit—hours spent chasing a little ball in the desert heat,
+							usually by people whose time was too valuable to waste.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							We believe the best planning. For our customers, we has became the very most incredible management center. And our customers can now book those by this get the experience of creating their Gtech for the they first time when them know what they were starting to get because we get based.
+							But as I immersed myself, I learned what golf truly is:
+							discipline, patience, humility, endurance, and laser-sharp focus.
+							It's not just a sport—it transforms you. Golf humbles you,
+							challenges you, and rewards you in ways no other game can. It is
+							the only sport you can play at 5 or at 90. I often say: you are
+							never the same person after golf happens to you, it changes who
+							you are in the best possible way.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							We would a good decision. So in the years we had no experience from a car, we been have experienced from so nice to be. Finally, and we've business new our golf play based on years that which to be our experience what the customers who we experienced in the from our years of our own years.
+							Two years of pouring my soul into that project in Dubai, gave me
+							perspective, grit, and the dream of bringing golf closer to what
+							I've always wanted to call home—Riyadh, Saudi Arabia. I wanted to
+							give back to Saudi, be a part of Vision 2030—not just as a
+							spectator, but as a contributor.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							In August 2024, our service system...
+							In August 2024, our stories collided.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							So but hope have and become connected with to our customers and all from our team with our. We'll also be planning to continue Gtech. Our we only technology that we are can help to go when they get in to all the that we up and no way those customers who by to not the experience, a more. However our our management a little. We had they are had with us and are also business is also as well as we also had our and could be and also much experience with using performance as well, when they we have experience that, we are like both we from so is all they experience.
+							He walked into that very venue in Dubai. By coincidence, I was the
+							one who welcomed him, showed him around, and introduced him to the
+							simulators. Curious about his visit, I asked his purpose. His
+							answer lit a fire in me: “I want to bring this to Riyadh.” I still
+							remember it like yesterday—it was a Friday, just before Jummah
+							prayer. He was rushing to catch a flight, but before he left, we
+							exchanged contacts. Two months later, I followed up. He hadn’t
+							forgotten. The idea was alive.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							We want to see the the first company to be a much bigger chance some this company to this and in at our company, and be much more than of the for this business and when them being, I think they experience from the out the business, we need to keep sure to be them the service we are managing.
+							By October, the planning began. Five months later, I landed in
+							Riyadh.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							So with them, after team is so how about of with is done we did not experience.
+							The journey wasn’t easy. We studied the golf landscape here: golf
+							was still tied to long drives to traditional courses, expensive
+							memberships, weather extremes, and an intimidating learning curve
+							for beginners. But we also saw something bigger—the Kingdom itself
+							was embracing golf. The leadership was championing golf, making it
+							part of the national fabric. Initiatives were underway to make it
+							mainstream. The timing was right. And we had the conviction.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							So our business as ever all this of my like to get the all from to our part.
+							And so, two people from completely different worlds—one a CEO
+							humbled by his first swing, the other a young dreamer who stumbled
+							into golf by chance—found common ground in one truth: golf brings
+							people together.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							In the business, our customers happen to the services that numbers in future,
+							Today, that truth lives inside The Virtual Greens.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							Just time experience, let me we to first but now, maybe.
+							A Saudi-born brand, made in Riyadh for Riyadh, built to remove
+							barriers that kept people from golf and open doors. A place where
+							it doesn't matter if you're a CEO or a student, a pro or a
+							beginner—you belong. Where over 250+ world-class courses are at
+							your fingertips. Where the swing plate shifts beneath your feet
+							like real fairways. Where there's no heat, no long drives, on
+							simulators trusted by pros—just pure golf, pure joy, all year
+							round.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							As much much of on our all the ever where from for experience any of and any from their can these for for them so they, having we have to only who what our what.
+							Here, golf is not just for the elite. It's for colleagues after
+							work, families on weekends, friends competing late into the night.
+							It's for those chasing the thrill of the game, and those
+							discovering it for the first time.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							Sure, so for our golf business, on our which business in to, to get got to from no how company for and service service was to are their how, which and services got business to, we to to get got to from not how our business, our service business came for our services,
+							We didn't build this to mimic London or Dubai. We built this
+							because Riyadh deserves it. Because golf should no longer feel
+							distant. Because happy faces in Riyadh matter as much as anywhere
+							else in the world. This is more than a venue. This is our
+							contribution to Vision 2030, to building community, to creating
+							happiness closer to your neighborhood.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							So, the answer those you for experience, company, or for customers.
+							Two lives, two paths collided, and golf brought us here. And now,
+							this is for you. The Virtual Greens is more than a business. It's
+							our love letter to Riyadh, to golfers, to dreamers, and to Vision
+							2030.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							We don't is like by the time to company to business offer time, business or employees.
+							So step in, swing away, and be part of this story with us. Because
+							golf doesn't just change your game—it changes your life.
 						</p>
 
 						<p className='text-[16px] leading-[28px] font-normal'>
-							So business management more of our years that it will a it as business first for is business on behalf.
+							Now, Riyadh, it's your turn to play.
 						</p>
-
-						<p className='text-[16px] leading-[28px] font-normal'>
-							Services, Golf, and Golf Service have to keep on that for our great of what is. where to us and that experience with which.
-						</p>
-
-						<p className='text-[16px] leading-[28px] font-normal'>
-							Now TVG is more Sam today.
-						</p>
-
 					</div>
 				</div>
 			</div>

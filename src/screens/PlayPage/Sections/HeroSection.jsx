@@ -39,7 +39,7 @@ export const HeroSection = () => {
 				{/* Image: absolutely positioned on large screens so it doesn't affect title layout */}
 				<div className='lg:absolute lg:top-0 lg:right-0 lg:bottom-0 lg:w-1/2 hidden lg:flex justify-center items-start lg:pt-44 pointer-events-none'>
 					{/* cropped fixed-size wrapper */}
-					<div className='w-[85%] lg:w-[550px] lg:h-[370px] overflow-hidden rounded-[30px] lg:mr-36'>
+					<div className='w-[70%] lg:w-[510px] lg:h-[370px] overflow-hidden rounded-[30px] lg:mr-[190px]'>
 						<img
 							src='/play-bg.png'
 							alt='Man playing on an indoor golf simulator with motion trails'

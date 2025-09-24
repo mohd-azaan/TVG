@@ -10,31 +10,31 @@ export const PricingSection = () => {
 
 	const pricing = {
 		weekdays: [
-			{ type: 'Standard Bay', location: 'Mezzanine Floor', price: 180 },
-			{ type: 'Semi-Private Bay', location: 'Ground Floor', price: 250 },
-			{ type: 'VIP Bay', location: 'Ground Floor', price: 500 },
+			{ type: 'Standard Bay', location: 'Mezzanine Floor', price: 199 },
+			{ type: 'Semi-Private Bay', location: 'Ground Floor', price: 299 },
+			{ type: 'VIP Bay', location: 'Ground Floor', price: 599 },
 		],
 		weekends: [
-			{ type: 'Standard Bay', location: 'Mezzanine Floor', price: 220 },
-			{ type: 'Semi-Private Bay', location: 'Ground Floor', price: 250 },
-			{ type: 'VIP Bay', location: 'Ground Floor', price: 600 },
+			{ type: 'Standard Bay', location: 'Mezzanine Floor', price: 299 },
+			{ type: 'Semi-Private Bay', location: 'Ground Floor', price: 399 },
+			{ type: 'VIP Bay', location: 'Ground Floor', price: 799 },
 		],
 	};
 
 	return (
-		<section className='relative w-full min-h-[1238px] bg-white'>
+		<section className='relative w-full min-h-[1010px] bg-white'>
 			{/* Container positioned according to Figma */}
 			<div className='relative max-w-[1920px] mx-auto'>
 				{/* Section title */}
-				<div className='absolute top-[120px] left-1/2 transform -translate-x-1/2 text-center'>
-					<h2 className='font-morganite font-black text-[96px] leading-[100px] tracking-[2px] text-black uppercase'>
+				<div className='absolute top-[100px] left-1/2 transform -translate-x-1/2 text-center'>
+					<h2 className='font-morganite font-black text-[clamp(48px,6vw,72px)] leading-[0.95] tracking-[0.02em] text-black uppercase'>
 						Pricing
 					</h2>
 				</div>
 
 				{/* Description text */}
-				<div className='absolute top-[200px] left-1/2 transform -translate-x-1/2 w-[655px] text-center'>
-					<p className='font-gilroy font-medium text-[18px] leading-[28px] tracking-[0.1px] text-[#757575]'>
+				<div className='absolute top-[190px] left-1/2 transform -translate-x-1/2 w-[550px] text-center'>
+					<p className='font-gilroy font-normal text-[17px] leading-[26px] tracking-[0.1px] text-[#757575]'>
 						Prices are per hour, per bay, and per person. Each bay can
 						accommodate a maximum of 6 players, and you can hit unlimited golf
 						balls during your time with us.
@@ -70,89 +70,83 @@ export const PricingSection = () => {
 				</div>
 
 				{/* Pricing cards */}
-				<div className='absolute top-[390px] left-1/2 transform -translate-x-1/2 flex gap-[30px]'>
+				<div className='absolute top-[390px] left-1/2 transform -translate-x-1/2 flex gap-[25px]'>
 					{pricing[activeTab].map((bay, index) => (
 						<div
 							key={index}
-							className='w-[398px] h-[450px] relative bg-white rounded-[30px] shadow-[0_4px_20px_rgba(0,0,0,0.1)] overflow-hidden'
+							className='w-[340px] h-[330px] relative bg-white rounded-[30px] shadow-[0_4px_20px_rgba(0,0,0,0.1)] overflow-hidden'
 						>
 							{/* Header */}
 							<div
 								className={`${
 									index === 1 ? 'bg-[#0b5b2f]' : 'bg-[#009444]'
-								} w-full h-[120px] rounded-tl-[30px] rounded-tr-[30px] flex items-center justify-center px-[20px]`}
+								} w-full h-[100px] rounded-tl-[30px] rounded-tr-[30px] flex items-center justify-center px-[20px]`}
 							>
 								<div className='text-center text-white'>
-									<h3 className='font-gilroy font-bold text-[28px] leading-[34px] tracking-[0.5px] uppercase mb-1'>
+									<h3 className='font-gilroy font-bold text-[24px] leading-[28px] tracking-wide uppercase mb-1'>
 										{bay.type}
 									</h3>
-									<p className='font-gilroy font-normal text-[16px] leading-[20px] tracking-[0.2px] opacity-90'>
+									<p className='font-gilroy font-normal text-[14px] leading-[18px] tracking-wide opacity-90'>
 										({bay.location})
 									</p>
 								</div>
 							</div>
 
 							{/* Pricing content */}
-							<div className='bg-[#f6f6f6] w-full h-[330px] rounded-bl-[30px] rounded-br-[30px] relative'>
+							<div className='bg-[#f6f6f6] w-full h-[260px] rounded-bl-[30px] rounded-br-[30px] flex flex-col items-center justify-center'>
 								{/* Price display - centered, symbol left of number */}
-								<div className='absolute top-[50px] left-1/2 transform -translate-x-1/2 flex items-baseline justify-center'>
-									<div className='flex items-baseline gap-2'>
-										<div className='w-[32px] h-[32px] mb-2'>
-											<img
-												src={'/saudi-riyal.svg'}
-												alt='SAR'
-												className='w-full h-full object-contain'
-											/>
-										</div>
-										<div className='font-morganite font-black text-[120px] leading-[100px] tracking-[1.8px] text-black uppercase'>
-											{bay.price}
-										</div>
+								<div className='flex items-end justify-center gap-2 mb-3 mr-[40px]'>
+									<div className='w-[35px] h-[35px]'>
+										<img
+											src={'/saudi-riyal.svg'}
+											alt='SAR'
+											className='w-full h-full object-contain'
+										/>
+									</div>
+									<div className='font-morganite font-black text-[100px] leading-[70px] tracking-[1.3px] text-black uppercase'>
+										{bay.price}
 									</div>
 								</div>
 
 								{/* Per hour text */}
-								<div className='absolute top-[180px] left-1/2 transform -translate-x-1/2 text-center'>
-									<p className='font-gilroy font-medium text-[16px] leading-[24px] tracking-[0.2px] text-black whitespace-nowrap'>
-										/hour/bay/person
-									</p>
-								</div>
+								<p className='font-gilroy font-medium text-[14px] leading-[20px] tracking-[0.2px] text-black whitespace-nowrap mb-4'>
+									/bay/hour
+								</p>
 
 								{/* CTA Button */}
-								<div className='absolute top-[230px] left-1/2 transform -translate-x-1/2'>
-									<a
-										href='https://widget.servmeco.com/?oid=1662'
-										target='_blank'
-										rel='noopener noreferrer'
-										className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-[28px] py-[10px] inline-flex items-center gap-2'
-									>
-										<span className='font-gilroy font-semibold text-[14px] leading-[18px] tracking-[0.8px] text-white uppercase text-center whitespace-nowrap'>
-											Book a Bay
-										</span>
-										<div className='w-5 h-5'>
-											<svg
-												className='w-full h-full'
-												viewBox='0 0 24 24'
-												fill='none'
-												xmlns='http://www.w3.org/2000/svg'
-											>
-												<path
-													d='M5 12H19M19 12L12 5M19 12L12 19'
-													stroke='white'
-													strokeWidth='2'
-													strokeLinecap='round'
-													strokeLinejoin='round'
-												/>
-											</svg>
-										</div>
-									</a>
-								</div>
+								<a
+									href='https://widget.servmeco.com/?oid=1662'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-[24px] py-[8px] inline-flex items-center gap-2'
+								>
+									<span className='font-gilroy font-semibold text-[12px] leading-[16px] tracking-[0.8px] text-white uppercase text-center whitespace-nowrap'>
+										Book a Bay
+									</span>
+									<div className='w-5 h-5'>
+										<svg
+											className='w-full h-full'
+											viewBox='0 0 24 24'
+											fill='none'
+											xmlns='http://www.w3.org/2000/svg'
+										>
+											<path
+												d='M5 12H19M19 12L12 5M19 12L12 19'
+												stroke='white'
+												strokeWidth='2'
+												strokeLinecap='round'
+												strokeLinejoin='round'
+											/>
+										</svg>
+									</div>
+								</a>
 							</div>
 						</div>
 					))}
 				</div>
 
 				{/* Registration fee note */}
-				<div className='absolute top-[900px] left-1/2 transform -translate-x-1/2 bg-[#f6f6f6] rounded-[30px] w-[677px] h-[80px] flex items-center justify-center'>
+				<div className='absolute top-[750px] left-1/2 transform -translate-x-1/2 bg-[#f6f6f6] rounded-[30px] w-[677px] h-[80px] flex items-center justify-center'>
 					<div className='flex items-center gap-5'>
 						{/* Plus icon */}
 						<div className='bg-[#009444] w-12 h-12 rounded-full flex items-center justify-center'>
@@ -182,16 +176,15 @@ export const PricingSection = () => {
 					</div>
 				</div>
 
-				{/* VAT disclaimer */}
-				<div className='absolute top-[1010px] left-1/2 transform -translate-x-1/2 text-center'>
-					<div className='flex items-center gap-2'>
-						<span className='font-gilroy font-bold text-[16px] leading-[20px] tracking-[0.5px] text-black uppercase'>
-							NOTE
-						</span>
-						<span className='font-gilroy font-normal text-[16px] leading-[20px] tracking-[0.1px] text-[#757575]'>
-							The prices are exclusive of 15% VAT + 3% transaction surcharge
-						</span>
-					</div>
+				{/* Pricing notes */}
+				<div className='absolute top-[860px] left-1/2 transform -translate-x-1/2 text-center max-w-[600px]'>
+					<p className='font-gilroy font-semibold text-[14px] leading-[22px] tracking-[0.1px] text-[#757575]'>
+						<span className='font-bold text-black'>NOTE:</span> Prices are
+						inclusive of 15% VAT. Bay rental covers 1 player; extra players SAR
+						100 each (max 6 per simulator). Rental club set: SAR 30/set/hour.
+						VIP parking: SAR 30/spot/hour. Club rentals and VIP parking are
+						complimentary for members.
+					</p>
 				</div>
 			</div>
 
@@ -203,9 +196,9 @@ export const PricingSection = () => {
 							Pricing
 						</h2>
 						<p className='font-gilroy font-medium text-[18px] leading-[28px] tracking-[0.1px] text-[#757575]'>
-							Prices are per hour, per bay, and per person. Each bay can
-							accommodate a maximum of 6 players, and you can hit unlimited golf
-							balls during your time with us.
+							Bay rental covers 1 player; extra players SAR 100 each (max 6 per
+							simulator). Rental club set: SAR 30/set/hour. VIP parking: SAR
+							30/spot/hour.
 						</p>
 					</div>
 
@@ -275,7 +268,7 @@ export const PricingSection = () => {
 									</div>
 
 									<p className='font-gilroy font-medium text-[18px] leading-[28px] tracking-[0.1px] text-black'>
-										/hour/bay/person
+										/bay/hour
 									</p>
 
 									<a
@@ -329,9 +322,12 @@ export const PricingSection = () => {
 						<p className='text-sm text-[#757575]'>
 							One-time registration fee for first-time players
 						</p>
-						<p className='text-xs text-[#757575]'>
-							<strong>NOTE:</strong> The prices are exclusive of 15% VAT + 3%
-							transaction surcharge
+						<p className='font-medium text-sm text-[#757575] text-center'>
+							<span className='font-bold text-black'>NOTE:</span> Prices are
+							inclusive of 15% VAT. Bay rental covers 1 player; extra players
+							SAR 100 each (max 6 per simulator). Rental club set: SAR
+							30/set/hour. VIP parking: SAR 30/spot/hour. Club rentals and VIP
+							parking are complimentary for members.
 						</p>
 					</div>
 				</div>

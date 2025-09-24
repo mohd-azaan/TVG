@@ -8,9 +8,9 @@ import React from 'react';
 // Golf icon component — replaced with provided 30x30 SVG
 const GolfIcon = ({ className = '' }) => (
 	<svg
-		className={className || 'w-[30px] h-[30px]'}
-		width='30'
-		height='30'
+		className={className || 'w-[24px] h-[24px]'}
+		width='24'
+		height='24'
 		viewBox='0 0 30 30'
 		fill='none'
 		xmlns='http://www.w3.org/2000/svg'
@@ -66,17 +66,17 @@ export const BaySelectionSection = () => {
 
 	return (
 		// Clip large decorative background shapes so they don't add to page width
-		<section className='relative w-full min-h-[1420px] bg-[#102121] overflow-hidden'>
+		<section className='relative w-full min-h-[1200px] bg-[#102121] overflow-hidden'>
 			{/* Decorative background shape (increased size + rotated) */}
-			<div className='absolute top-[559px] left-[1020.86px] transform rotate-[20deg] pointer-events-none select-none'>
+			<div className='absolute top-[300px] left-[900.86px] transform rotate-[20deg] pointer-events-none select-none'>
 				<div
-					className='w-[2400px] h-[1800px] max-w-none'
+					className='w-[2400px] h-[2000px] max-w-none'
 					aria-hidden='true'
 					style={{
 						background: `url('/shape14-2.svg') no-repeat center`,
 						backgroundSize: 'contain',
 						mixBlendMode: 'screen',
-						transform: 'translateZ(0)'
+						transform: 'translateZ(0)',
 					}}
 				/>
 			</div>
@@ -85,68 +85,72 @@ export const BaySelectionSection = () => {
 			<div className='relative z-10 max-w-[1920px] mx-auto'>
 				{/* Section title */}
 				<div className='absolute top-[100px] left-1/2 transform -translate-x-1/2 w-[655px] text-center'>
-					<h2 className='font-morganite font-black text-[96px] leading-[90px] tracking-[1.92px] text-white uppercase'>
+					<h2 className='font-morganite font-black text-[clamp(48px,6vw,72px)] leading-[0.95] tracking-[0.02em] text-white uppercase'>
 						Choose Your Bay
 					</h2>
 				</div>
 
 				{/* Description text */}
-				<div className='absolute top-[190px] left-1/2 transform -translate-x-1/2 w-[655px] text-center'>
-					<p className='font-gilroy font-medium text-[20px] leading-[28px] tracking-[0.1px] text-[lightgrey]'>
+				<div className='absolute top-[190px] left-1/2 transform -translate-x-1/2 w-[550px] text-center'>
+					<p className='font-gilroy font-normal text-[17px] leading-[26px] tracking-[0.1px] text-[lightgrey]'>
 						Each bay is powered by Golfzon's cutting-edge technology, but the
 						vibe is up to you. Here's how to play it
 					</p>
 				</div>
 
 				{/* Bay cards grid */}
-				<div className='absolute top-[554px] left-1/2 transform -translate-x-1/2 flex gap-[50px]'>
-					{bayTypes.map((bay, index) => (
-						<div
-							key={index}
-							className='w-[420px] h-[746px] bg-[#0c1a1a] rounded-[30px] relative'
-						>
-							{/* Placeholder image at top */}
-							<div className='absolute top-[-241px] left-0 w-[420px] h-[356px] bg-[#081010] rounded-[30px] flex items-center justify-center'>
-								<div className='text-center text-white space-y-2'>
-									<div className='text-lg font-gilroy font-bold'>
-										{bay.title}
+				<div className='absolute top-[554px] left-1/2 transform -translate-x-1/2'>
+					<div className='flex gap-[30px] justify-center'>
+						{bayTypes.map((bay, index) => (
+							<div
+								key={index}
+								className='w-[320px] h-[580px] bg-[#0c1a1a] rounded-[30px] relative'
+							>
+								{/* Placeholder image at top */}
+								<div className='absolute top-[-200px] left-0 w-[320px] h-[300px] bg-[#081010] rounded-[30px] flex items-center justify-center'>
+									<div className='text-center text-white space-y-2'>
+										<div className='text-lg font-gilroy font-bold'>
+											{bay.title}
+										</div>
+										<div className='text-xs opacity-75'>
+											Simulator Bay Image
+										</div>
 									</div>
-									<div className='text-xs opacity-75'>Simulator Bay Image</div>
+								</div>
+
+								{/* Bay title */}
+								<div className='absolute top-[120px] left-[30px] w-[260px]'>
+									<h3 className='font-gilroy font-bold text-[22px] leading-normal tracking-wide text-white uppercase'>
+										{bay.title}
+									</h3>
+								</div>
+
+								{/* Location */}
+								<div className='absolute top-[150px] left-[30px] w-[260px]'>
+									<p className='font-gilroy font-semibold text-[14px] leading-normal tracking-wide text-white uppercase'>
+										{bay.location}
+									</p>
+								</div>
+
+								{/* Features list */}
+								<div className='absolute top-[185px] left-[30px] space-y-3'>
+									{bay.features.map((feature, featureIndex) => (
+										<div
+											key={featureIndex}
+											className='flex items-start gap-3 w-[260px]'
+										>
+											<div className='flex-shrink-0 w-[24px] h-[24px] text-[#d1d3d4] mt-[2px]'>
+												<GolfIcon className='w-[24px] h-[24px]' />
+											</div>
+											<p className='font-gilroy font-normal text-[16px] leading-[22px] tracking-[0.1px] text-[#d1d3d4] flex-1'>
+												{feature}
+											</p>
+										</div>
+									))}
 								</div>
 							</div>
-
-							{/* Bay title */}
-							<div className='absolute top-[154px] left-[41px] w-[362px]'>
-								<h3 className='font-gilroy font-bold text-[28px] leading-normal tracking-[var(--TVG-typography-h4-letter-spacing)] text-white [font-style:var(--TVG-typography-h4-font-style)] uppercase'>
-									{bay.title}
-								</h3>
-							</div>
-
-							{/* Location */}
-							<div className='absolute top-[187px] left-[41px] w-[362px]'>
-								<p className='font-gilroy font-normal text-[18px] leading-normal tracking-[0.2px] text-white uppercase'>
-									{bay.location}
-								</p>
-							</div>
-
-							{/* Features list */}
-							<div className='absolute top-[232px] left-[40px] space-y-4'>
-								{bay.features.map((feature, featureIndex) => (
-									<div
-										key={featureIndex}
-										className='flex items-start gap-4 w-[348px]'
-									>
-										<div className='flex-shrink-0 w-[30px] h-[30px] text-[#d1d3d4] mt-[2px]'>
-											<GolfIcon className='w-[30px] h-[30px]' />
-										</div>
-										<p className='font-gilroy font-medium text-[20px] leading-[28px] tracking-[0.1px] text-[#d1d3d4] flex-1'>
-											{feature}
-										</p>
-									</div>
-								))}
-							</div>
-						</div>
-					))}
+						))}
+					</div>
 				</div>
 			</div>
 

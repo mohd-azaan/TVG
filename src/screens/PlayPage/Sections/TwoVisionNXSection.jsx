@@ -40,109 +40,109 @@ export const TwoVisionNXSection = () => {
 	];
 
 	return (
-		<section className='relative w-full min-h-[2800px] bg-white overflow-hidden'>
+		<section className='relative w-full min-h-[2400px] bg-white overflow-hidden'>
 			{/* Container positioned according to Figma layout */}
-			<div className='relative max-w-[1920px] mx-auto'>
+			<div className='relative max-w-[1920px] mx-auto px-8'>
 				{/* Main title */}
-				<h2 className='absolute left-1/2 top-[130px] transform -translate-x-1/2 w-[655px] text-center font-morganite font-black text-[96px] leading-[90px] tracking-[1.92px] text-black uppercase'>
+				<h2 className='absolute left-1/2 top-[130px] transform -translate-x-1/2 w-[655px] text-center font-morganite font-black text-[clamp(64px,6vw,80px)] leading-[0.95] tracking-[0.02em] text-black uppercase'>
 					Meet TwoVisionNX
 				</h2>
 
 				{/* Green tagline */}
-				<p className='absolute left-1/2 top-[221px] transform -translate-x-1/2 w-[655px] text-center font-gilroy font-bold text-[22px] leading-[26px] tracking-[0.44px] text-[#009444] uppercase'>
+				<p className='absolute left-1/2 top-[210px] transform -translate-x-1/2 w-[655px] text-center font-gilroy font-bold text-[18px] leading-[22px] tracking-[0.3px] text-[#009444] uppercase'>
 					Our Most Advanced Simulator Yet
 				</p>
 
 				{/* Description text */}
-				<div className='absolute left-1/2 top-[283px] transform -translate-x-1/2 w-[655px]'>
-					<p className='font-gilroy font-medium text-[20px] leading-[28px] text-[#757575] text-center'>
+				<div className='absolute left-1/2 top-[260px] transform -translate-x-1/2 w-[655px]'>
+					<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-[#757575] text-center'>
 						At The Virtual Greens, we've teamed up with the best in the game, Golfzon TwoVisionNX. It's a global leader in simulation tech, trusted by top-tier tours across Asia (with multi-million dollar prize pools, by the way). And now, it's right here in Riyadh. We're bringing next-level realism to every round.
 					</p>
 				</div>
 
 				{/* Feature cards with exact Figma positioning */}
-				<div className='absolute top-[482px] left-1/2 transform -translate-x-1/2 w-[1360px]'>
+				<div className='absolute top-[380px] left-1/2 transform -translate-x-1/2 w-[1200px]'>
 					{/* Play the Legends */}
-					<div className='bg-[#f6f6f6] h-[430px] w-[1360px] rounded-[30px] relative'>
+					<div className='bg-[#f6f6f6] h-[380px] w-[1200px] rounded-[30px] relative'>
 						<img
 							src='/twovision-play-legends.png'
 							alt='Play the Legends interface'
-							className='absolute left-[675px] top-1/2 transform -translate-y-1/2 w-[655px] h-[368px] object-cover rounded-[30px]'
+							className='absolute left-[580px] top-1/2 transform -translate-y-1/2 w-[580px] h-[320px] object-cover rounded-[30px]'
 						/>
-						<div className='absolute left-[35px] top-[186px] w-[600px]'>
-							<p className='font-gilroy font-medium text-[20px] leading-[28px] text-[#757575]'>
+						<div className='absolute left-[35px] top-[160px] w-[520px]'>
+							<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-[#757575]'>
 								Over 275+ world-famous courses, perfectly recreated in stunning, 3D lifelike detail on Unreal 5 Engine: The most powerful real-time 3-d creation tool. Step into the iconic St. Andrews Old Course of Scotland or walk the Pebble Beach fairways of California without ever leaving the bay.
 							</p>
 						</div>
-						<h3 className='absolute left-[37px] top-[104px] w-[600px] font-morganite font-black text-[64px] leading-[60px] tracking-[1.28px] text-black uppercase'>
+						<h3 className='absolute left-[35px] top-[90px] w-[520px] font-morganite font-black text-[clamp(32px,4vw,48px)] leading-[0.95] tracking-[0.02em] text-black uppercase'>
 							Play the Legends
 						</h3>
 					</div>
 
 					{/* Dial In Your Game */}
-					<div className='bg-[#f6f6f6] h-[430px] w-[1360px] rounded-[30px] relative mt-[30px]'>
+					<div className='bg-[#f6f6f6] h-[380px] w-[1200px] rounded-[30px] relative mt-[25px]'>
 						<img
 							src='/twovision-dial-game.png'
 							alt='Dial In Your Game interface'
-							className='absolute left-[28px] top-1/2 transform -translate-y-1/2 w-[655px] h-[368px] object-cover rounded-[30px]'
+							className='absolute left-[28px] top-1/2 transform -translate-y-1/2 w-[580px] h-[320px] object-cover rounded-[30px]'
 						/>
-						<div className='absolute left-[718px] top-[214px] w-[600px]'>
-							<p className='font-gilroy font-medium text-[20px] leading-[28px] text-[#757575]'>
+						<div className='absolute left-[645px] top-[160px] w-[520px]'>
+							<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-[#757575]'>
 								With tools like slope indicators, heat maps, putting guides, and green grids, you'll have the data to make smarter swings and lower scores.
 							</p>
 						</div>
-						<h3 className='absolute left-[718px] top-[131px] w-[600px] font-morganite font-black text-[64px] leading-[60px] tracking-[1.28px] text-black uppercase'>
+						<h3 className='absolute left-[645px] top-[90px] w-[520px] font-morganite font-black text-[clamp(32px,4vw,48px)] leading-[0.95] tracking-[0.02em] text-black uppercase'>
 							Dial In Your Game
 						</h3>
 					</div>
 
 					{/* Total Customization */}
-					<div className='bg-[#f6f6f6] h-[430px] w-[1360px] rounded-[30px] relative mt-[30px]'>
+					<div className='bg-[#f6f6f6] h-[380px] w-[1200px] rounded-[30px] relative mt-[25px]'>
 						<img
 							src='/twovision-customization.png'
 							alt='Total Customization interface'
-							className='absolute left-[675px] top-1/2 transform -translate-y-1/2 w-[655px] h-[368px] object-cover rounded-[30px]'
+							className='absolute left-[580px] top-1/2 transform -translate-y-1/2 w-[580px] h-[320px] object-cover rounded-[30px]'
 						/>
-						<div className='absolute left-[35px] top-[228px] w-[600px]'>
-							<p className='font-gilroy font-medium text-[20px] leading-[28px] text-[#757575]'>
+						<div className='absolute left-[35px] top-[160px] w-[520px]'>
+							<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-[#757575]'>
 								Change the time of day, add a little fog, or clear the skies. Every round is yours to set, mood and all.
 							</p>
 						</div>
-						<h3 className='absolute left-[37px] top-[145px] w-[600px] font-morganite font-black text-[64px] leading-[60px] tracking-[1.28px] text-black uppercase'>
+						<h3 className='absolute left-[35px] top-[90px] w-[520px] font-morganite font-black text-[clamp(32px,4vw,48px)] leading-[0.95] tracking-[0.02em] text-black uppercase'>
 							Total Customization
 						</h3>
 					</div>
 
 					{/* Moving Swing Plate */}
-					<div className='bg-[#f6f6f6] h-[430px] w-[1360px] rounded-[30px] relative mt-[30px]'>
+					<div className='bg-[#f6f6f6] h-[380px] w-[1200px] rounded-[30px] relative mt-[25px]'>
 						<img
 							src='/twovision-swing-plate.png'
 							alt='Moving Swing Plate interface'
-							className='absolute left-[30px] top-1/2 transform -translate-y-1/2 w-[655px] h-[368px] object-cover rounded-[30px]'
+							className='absolute left-[28px] top-1/2 transform -translate-y-1/2 w-[580px] h-[320px] object-cover rounded-[30px]'
 						/>
-						<div className='absolute left-[718px] top-[214px] w-[600px]'>
-							<p className='font-gilroy font-medium text-[20px] leading-[28px] text-[#757575]'>
+						<div className='absolute left-[645px] top-[160px] w-[520px]'>
+							<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-[#757575]'>
 								The plate beneath your feet moves with the terrain, with over 24 different lie angles that simulate real-world slopes. Tell us if any other simulator can do that?
 							</p>
 						</div>
-						<h3 className='absolute left-[720px] top-[131px] w-[600px] font-morganite font-black text-[64px] leading-[60px] tracking-[1.28px] text-black uppercase'>
+						<h3 className='absolute left-[645px] top-[90px] w-[520px] font-morganite font-black text-[clamp(32px,4vw,48px)] leading-[0.95] tracking-[0.02em] text-black uppercase'>
 							Moving Swing Plate
 						</h3>
 					</div>
 
 					{/* Zero Latency */}
-					<div className='bg-[#f6f6f6] h-[430px] w-[1360px] rounded-[30px] relative mt-[30px]'>
+					<div className='bg-[#f6f6f6] h-[380px] w-[1200px] rounded-[30px] relative mt-[25px]'>
 						<img
 							src='/twovision-zero-latency.png'
 							alt='Zero Latency interface'
-							className='absolute left-[675px] top-1/2 transform -translate-y-1/2 w-[655px] h-[368px] object-cover rounded-[30px]'
+							className='absolute left-[580px] top-1/2 transform -translate-y-1/2 w-[580px] h-[320px] object-cover rounded-[30px]'
 						/>
-						<div className='absolute left-[35px] top-[214px] w-[600px]'>
-							<p className='font-gilroy font-medium text-[20px] leading-[28px] text-[#757575]'>
+						<div className='absolute left-[35px] top-[160px] w-[520px]'>
+							<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-[#757575]'>
 								You get instant feedback with zero lag between swing and stats. You'll know exactly how you hit it the second the club makes contact.
 							</p>
 						</div>
-						<h3 className='absolute left-[37px] top-[131px] w-[600px] font-morganite font-black text-[64px] leading-[60px] tracking-[1.28px] text-black uppercase'>
+						<h3 className='absolute left-[35px] top-[90px] w-[520px] font-morganite font-black text-[clamp(32px,4vw,48px)] leading-[0.95] tracking-[0.02em] text-black uppercase'>
 							Zero Latency
 						</h3>
 					</div>
@@ -151,24 +151,24 @@ export const TwoVisionNXSection = () => {
 
 			{/* Mobile responsive layout */}
 			<div className='block lg:hidden px-4 sm:px-6 py-16'>
-				<div className='space-y-12 max-w-[600px] mx-auto'>
+				<div className='space-y-8 max-w-[700px] mx-auto'>
 					{/* Title */}
 					<div className='text-center space-y-4'>
-						<h2 className='font-morganite font-black text-[clamp(40px,10vw,72px)] leading-[1.1] tracking-[1.2px] text-black uppercase'>
+						<h2 className='font-morganite font-black text-[clamp(32px,8vw,56px)] leading-[1.1] tracking-[0.02em] text-black uppercase'>
 							Meet TwoVisionNX
 						</h2>
-						<p className='font-gilroy font-bold text-[18px] leading-[22px] tracking-[0.3px] text-[#009444] uppercase'>
+						<p className='font-gilroy font-bold text-[16px] leading-[20px] tracking-[0.3px] text-[#009444] uppercase'>
 							Our Most Advanced Simulator Yet
 						</p>
-						<p className='font-gilroy font-medium text-[18px] leading-[26px] text-[#757575]'>
+						<p className='font-gilroy font-normal text-[14px] leading-[22px] tracking-[0.1px] text-[#757575] px-4'>
 							At The Virtual Greens, we've teamed up with the best in the game, Golfzon TwoVisionNX. It's a global leader in simulation tech, trusted by top-tier tours across Asia. And now, it's right here in Riyadh.
 						</p>
 					</div>
 
 					{/* Mobile feature cards */}
-					<div className='space-y-8'>
+					<div className='space-y-6'>
 						{features.map((feature, index) => (
-							<div key={index} className='bg-[#f6f6f6] rounded-[20px] p-6 space-y-6'>
+							<div key={index} className='bg-[#f6f6f6] rounded-[20px] p-6 space-y-4'>
 								{/* Mobile image */}
 								<div className='w-full aspect-[16/9]'>
 									<img
@@ -179,11 +179,11 @@ export const TwoVisionNXSection = () => {
 								</div>
 
 								{/* Mobile content */}
-								<div className='space-y-4'>
-									<h3 className='font-morganite font-black text-[clamp(24px,6vw,32px)] leading-[1.1] tracking-[0.8px] text-black uppercase'>
+								<div className='space-y-3'>
+									<h3 className='font-morganite font-black text-[clamp(20px,5vw,28px)] leading-[1.1] tracking-[0.02em] text-black uppercase'>
 										{feature.title}
 									</h3>
-									<p className='font-gilroy font-medium text-[18px] leading-[26px] text-[#757575]'>
+									<p className='font-gilroy font-normal text-[14px] leading-[22px] tracking-[0.1px] text-[#757575]'>
 										{feature.description}
 									</p>
 								</div>

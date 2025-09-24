@@ -26,16 +26,16 @@ export const WorldClassTechSection = () => {
 							</p>
 						</div>
 						<div className='mt-6 flex justify-start'>
-							<button className='bg-[#009444] hover:bg-opacity-90 transition-colors rounded-full px-6 py-2.5 flex items-center gap-3'>
-								<span className='font-gilroy font-medium text-[14px] text-white uppercase'>
+							<a href='/simulator' className='bg-[#009444] hover:bg-[#7ddb8a] transition-colors rounded-full px-6 py-2.5 flex items-center gap-3 group'>
+								<span className='font-gilroy font-medium text-[14px] text-white group-hover:text-black uppercase'>
 									Learn About Our Tech
 								</span>
 								<img
 									src='/arrow-right-figma.svg'
 									alt='Arrow right'
-									className='w-5 h-5 filter brightness-0 invert'
+									className='w-5 h-5 filter brightness-0 invert group-hover:brightness-100 group-hover:invert-0'
 								/>
-							</button>
+							</a>
 						</div>
 					</div>
 

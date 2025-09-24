@@ -7,105 +7,83 @@ import { useLocation } from 'react-router-dom';
 import { testimonialData } from '../../data/testimonials';
 
 export const TestimonialsSection = () => {
-  const location = useLocation();
-  
-  // Map route paths to testimonial data keys
-  const getPageKey = (pathname) => {
-    if (pathname === '/') return 'homepage';
-    if (pathname === '/about') return 'aboutPage';
-    if (pathname === '/our-story') return 'ourStoryPage';
-    if (pathname === '/play') return 'playPage';
-    if (pathname === '/learn') return 'learnPage';
-    if (pathname === '/membership') return 'membershipPage';
-    if (pathname === '/faq') return 'faqPage';
-    return 'homepage';
-  };
+	const location = useLocation();
 
-  const pageKey = getPageKey(location.pathname);
-  const testimonial = testimonialData[pageKey] || testimonialData.homepage;
+	// Map route paths to testimonial data keys
+	const getPageKey = (pathname) => {
+		if (pathname === '/') return 'homepage';
+		if (pathname === '/about') return 'aboutPage';
+		if (pathname === '/our-story') return 'ourStoryPage';
+		if (pathname === '/play') return 'playPage';
+		if (pathname === '/learn') return 'learnPage';
+		if (pathname === '/membership') return 'membershipPage';
+		if (pathname === '/faq') return 'faqPage';
+		return 'homepage';
+	};
 
-  return (
-    <section className='relative w-full h-[600px] overflow-hidden bg-[#102121] border-b-[70px] border-[#009444]'>
-      {/* Background with uniform dark green like target design */}
-      <div 
-        className='absolute inset-0 z-0'
-        style={{
-          background: '#102121'
-        }}
-      />
+	const pageKey = getPageKey(location.pathname);
+	const testimonial = testimonialData[pageKey] || testimonialData.homepage;
 
-      {/* Organic flowing accent lines - positioned to flow around the person like target design */}
-      <div className='absolute inset-0 overflow-hidden z-10'>
-        {/* Main flowing accent shape - positioned behind and around person */}
-       
-        
-        {/* Secondary accent shape for depth */}
-        <div className='absolute bottom-[-350px] left-[-300px] w-[1000px] h-[700px] '>
-          <img
-            className='w-full h-full object-contain'
-            alt='Secondary accent lines'
-            src='/shape14-2.svg'
-            style={{
-              transform: 'rotate(10deg) scale(0.7)'
-            }}
-          />
-        </div>
-      </div>
+	return (
+		<section className='relative w-full min-h-[340px] pt-4 pb-4 lg:pt-5 lg:pb-5 overflow-hidden bg-[#102121] border-b-[60px] border-[#009444]'>
+			{/* Background with uniform dark green like target design */}
+			<div
+				className='absolute inset-0 z-0'
+				style={{
+					background: '#102121',
+				}}
+			/>
 
-      {/* Main content container */}
-      <div className='relative w-full h-full max-w-[1920px] mx-auto z-20'>
-        {/* Person image - positioned exactly like Figma */}
-        <div className='absolute left-[320px] top-[60px] w-[300px] h-[480px] z-30'>
-          <img	
-            className='w-full h-full object-cover object-center'
-            alt='Golf Ambassador testimonial'
-            src='/chatgpt-image-aug-22--2025--09-37-50-pm-1-2.png'
-          />
-        </div>
+			{/* Organic flowing accent lines - positioned to flow around the person like target design */}
+			<div className='absolute inset-0 overflow-hidden z-10'>
+				{/* Main flowing accent shape - positioned behind and around person */}
 
-        {/* Testimonial content area - positioned exactly like Figma */}
-        <div className='absolute right-[20px] top-[80px] w-[900px] h-[540px] z-30'>
-          {/* Large quotation mark - positioned exactly like Figma */}
-          <div 
-            className='absolute top-[-100px] left-0 text-white text-[220px] leading-none font-black select-none z-40 rotate-180'
-            style={{
-              fontFamily: 'var(--TVG-typography-h1-font-family)',
-              fontWeight: '900'
-            }}
-          > 
-            "
-          </div>
+				{/* Secondary accent shape for depth */}
+				<div className='absolute bottom-[-350px] left-[-300px] w-[1000px] h-[700px] '>
+					<img
+						className='w-full h-full object-contain'
+						alt='Secondary accent lines'
+						src='/shape14-2.svg'
+						style={{
+							transform: 'rotate(10deg) scale(0.7)',
+						}}
+					/>
+				</div>
+			</div>
 
-          {/* Testimonial text - positioned exactly like Figma */}
-          <div className='absolute top-[100px] left-[80px] w-[580px] z-50'>
-            <p 
-              className='text-white leading-[32px] mb-8 text-[20px]'
-              style={{
-                fontFamily: 'var(--TVG-typography-default-font-family)',
-                fontWeight: '400',
-                letterSpacing: '0px'
-              }}
-            >
-              {testimonial.quote}
-            </p>
+			{/* Main content container */}
+			<div className='relative w-full h-[340px] max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 z-20'>
+				{/* Person image - positioned exactly like Figma */}
+				<div className='absolute left-[12vw] md:left-[8vw] lg:left-[250px] bottom-[-20px] w-[220px] h-[320px] z-30'>
+					<img
+						className='w-full h-full object-cover object-center'
+						alt='Golf Ambassador testimonial'
+						src='/chatgpt-image-aug-22--2025--09-37-50-pm-1-2.png'
+					/>
+				</div>
 
-            {/* Attribution - positioned exactly like Figma */}
-            <div 
-              className='text-[#7DDB8A] font-bold text-[22px] text-right'
-              style={{
-                fontFamily: 'var(--TVG-typography-tagline-font-family)',
-                fontWeight: 'var(--TVG-typography-tagline-font-weight)',
-                letterSpacing: 'var(--TVG-typography-tagline-letter-spacing)',
-                lineHeight: 'var(--TVG-typography-tagline-line-height)'
-              }}
-            >
-              {testimonial.authorTitle}, {testimonial.authorName}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+				{/* Testimonial content area - positioned exactly like Figma */}
+				<div className='absolute right-[15vw] md:right-[12vw] lg:right-[250px] top-[10px] w-[700px] h-[340px] z-30'>
+					{/* Large quotation mark - positioned exactly like Figma */}
+					<div className='absolute top-[-80px] left-[-70px] text-white text-[200px] leading-none font-morganite font-black select-none z-40 rotate-180'>
+						"
+					</div>
+
+					{/* Testimonial text - positioned exactly like Figma */}
+					<div className='absolute top-[70px] left-[10px] w-[570px] z-50'>
+						<p className='text-white leading-[28px] mb-4 text-[19px] font-normal  text-left font-gilroy'>
+							{testimonial.quote}
+						</p>
+
+						{/* Attribution - positioned exactly like Figma */}
+						<div className=' text-white font-medium text-[14px] sm:text-[12px] lg:text-[14px] text-right leading-tight tracking-wide font-gilroy left-1'>
+							{testimonial.authorTitle}, {testimonial.authorName}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
 };
 
 export default TestimonialsSection;

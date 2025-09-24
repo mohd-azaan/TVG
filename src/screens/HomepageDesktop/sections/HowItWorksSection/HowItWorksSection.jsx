@@ -47,8 +47,8 @@ const steps = [
 
 export const HowItWorksSection = () => {
 	return (
-		<section className='w-full bg-[#102121] py-16 sm:py-20 lg:py-24 relative overflow-hidden'>
-			<div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative'>
+		<section className='w-full bg-[#102121] py-20 lg:py-32 relative overflow-hidden'>
+			<div className='relative max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10'>
 				{/* Background Shape - positioned bottom right (smaller, behind content) */}
 				<img
 					className='absolute pointer-events-none right-[-200px] md:right-[-300px] lg:right-[-400px] xl:right-[-600px] bottom-[-300px] md:bottom-[-600px] lg:bottom-[-700px] z-0 opacity-100 w-[400px] sm:w-[520px] md:w-[660px] lg:w-[1200px] xl:w-[1280px] h-[400px] sm:h-[520px] md:h-[660px] lg:h-[1200px] xl:h-[1280px] translate-x-3 md:translate-x-6 translate-y-4 md:translate-y-8'
@@ -59,27 +59,27 @@ export const HowItWorksSection = () => {
 
 				<div className='relative z-10'>
 					{/* Header (two-column on large screens) */}
-					<header className='mb-12 sm:mb-16 lg:mb-20'>
+					<header className='mb-12 sm:mb-16 lg:mb-20 lg:ml-[12vw] md:ml-[8vw] lg:mr-[12vw] md:mr-[8vw]'>
 						<div className='grid grid-cols-1 xl:grid-cols-12 gap-6 lg:gap-8 xl:gap-6 items-start'>
 							{/* Left column: heading, CTA, copy */}
 							<div className='xl:col-span-6'>
 								<div className='max-w-4xl xl:max-w-none mx-auto xl:mx-0 text-center xl:text-left'>
-									<div className='text-lg sm:text-xl lg:text-[22px] font-bold text-[#7ddb8a] leading-relaxed tracking-wide mb-4 sm:mb-6'>
+									<div className='text-[18px] sm:text-[14px] lg:text-[18px] font-bold text-[#7ddb8a] leading-tight tracking-wide mb-2 sm:mb-4 -mt-2'>
 										NEW TO INDOOR GOLF?
 									</div>
 
-									<h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[70px] 2xl:text-[80px] font-black text-white leading-tight sm:leading-[0.9] lg:leading-[90px] tracking-wide mb-6 sm:mb-8'>
+									<h2 className='text-white font-morganite font-black text-[clamp(38px,5.2vw,78px)] leading-[0.92] tracking-[0.02em] mb-4'>
 										HERE'S HOW IT WORKS
 									</h2>
 								</div>
 
 								<div className='max-w-4xl xl:max-w-none mx-auto xl:mx-0 text-center xl:text-left'>
-									<p className='text-base sm:text-lg lg:text-xl font-medium text-[#d3d3d3] leading-relaxed'>
+									<p className='text-[16px] font-regular text-[#d3d3d3] leading-relaxed'>
 										We're here to make indoor golf your new favorite thing. No
 										gear? No clue? No problem. We're beginner-friendly and
 										tech-savvy, so that anyone can jump right in.
 									</p>
-									<p className='text-base sm:text-lg lg:text-xl font-medium text-[#d3d3d3] leading-relaxed mt-3'>
+									<p className='text-[16px] font-regular text-[#d3d3d3] leading-relaxed mt-3'>
 										Ready to roll? Here's the game plan:
 									</p>
 								</div>
@@ -88,11 +88,11 @@ export const HowItWorksSection = () => {
 										href='https://widget.servmeco.com/?oid=1662'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#009444] rounded-full h-auto hover:bg-[#007a3a] transition-colors duration-200 text-lg font-semibold tracking-wide'
+										className='inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#009444] rounded-full h-auto hover:bg-[#007a3a] transition-colors duration-200 text-sm font-semibold tracking-wide'
 									>
 										<span className='text-white'>BOOK A BAY</span>
 										<img
-											className='w-5 h-5'
+											className='w-4 h-4'
 											alt='Arrow right'
 											src='/arrow-right.svg'
 										/>
@@ -111,7 +111,7 @@ export const HowItWorksSection = () => {
 					</header>
 
 					{/* Steps Grid */}
-					<div className='grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-20 xl:gap-24 2xl:gap-28 max-w-7xl mx-auto relative'>
+					<div className='grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-20 xl:gap-24 2xl:gap-28 relative lg:ml-[12vw] md:ml-[8vw] lg:mr-[12vw] md:mr-[8vw]'>
 						{steps.map((step, index) => (
 							<div key={step.number} className='relative'>
 								{/* Large step number placed to the left, behind the top of the card */}
@@ -127,10 +127,10 @@ export const HowItWorksSection = () => {
 								</div>
 
 								<Card
-									className={`${step.bgClass} rounded-[24px] border-0 min-h-[160px] sm:min-h-[180px] md:min-h-[200px] lg:min-h-[220px] xl:min-h-[240px] relative overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 z-10`}
+									className={`${step.bgClass} rounded-[24px] border-0 min-h-[120px] sm:min-h-[140px] md:min-h-[160px] lg:min-h-[180px] xl:min-h-[200px] relative overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 z-10 max-w-none`}
 								>
-									<CardContent className='p-0 h-full relative z-20'>
-										<div className='absolute top-8 sm:top-10 md:top-12 left-6 sm:left-8 max-w-[280px] sm:max-w-[320px] md:max-w-[300px] lg:max-w-[380px] xl:max-w-[440px] pr-8 sm:pr-10 md:pr-12 lg:pr-14 xl:pr-16'>
+									<CardContent className='p-6 sm:p-8 h-full relative z-20 flex items-center'>
+										<div className='max-w-[350px] sm:max-w-[390px] md:max-w-[370px] lg:max-w-[450px] xl:max-w-[520px] pr-8 sm:pr-10 md:pr-12 lg:pr-14 xl:pr-16'>
 											<h3
 												className={`font-bold ${step.textClass} text-base sm:text-lg md:text-xl lg:text-[22px] xl:text-[24px] leading-tight mb-2 sm:mb-3 md:mb-4`}
 												style={{ fontFamily: 'Inter, Helvetica, sans-serif' }}
@@ -146,7 +146,7 @@ export const HowItWorksSection = () => {
 										</div>
 
 										<img
-											className='absolute w-10 sm:w-12 md:w-14 lg:w-16 h-10 sm:h-12 md:h-14 lg:h-16 top-12 sm:top-14 md:top-16 right-6 sm:right-8 group-hover:scale-110 transition-transform duration-300'
+											className='absolute w-8 sm:w-10 h-8 sm:h-10 top-6 sm:top-8 right-6 sm:right-8 group-hover:scale-110 transition-transform duration-300'
 											alt={step.title}
 											src={step.icon}
 										/>

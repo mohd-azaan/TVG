@@ -177,13 +177,9 @@ export const PricingSection = () => {
 				</div>
 
 				{/* Pricing notes */}
-				<div className='absolute top-[860px] left-1/2 transform -translate-x-1/2 text-center max-w-[600px]'>
-					<p className='font-gilroy font-semibold text-[14px] leading-[22px] tracking-[0.1px] text-[#757575]'>
-						<span className='font-bold text-black'>NOTE:</span> Prices are
-						inclusive of 15% VAT. Bay rental covers 1 player; extra players SAR
-						100 each (max 6 per simulator). Rental club set: SAR 30/set/hour.
-						VIP parking: SAR 30/spot/hour. Club rentals and VIP parking are
-						complimentary for members.
+				<div className='absolute top-[860px] left-1/2 transform -translate-x-1/2 text-center max-w-[900px] px-4'>
+					<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-[#757575]'>
+						<span className='font-bold text-black'>NOTE:</span> Prices are inclusive of 15% VAT. Bay rental covers 1 player; extra players SAR 100 each (max 6 per simulator). Rental club set: SAR 30/set/hour. VIP parking: SAR 30/spot/hour. Club rentals and VIP parking are complimentary for members.
 					</p>
 				</div>
 			</div>
@@ -322,12 +318,8 @@ export const PricingSection = () => {
 						<p className='text-sm text-[#757575]'>
 							One-time registration fee for first-time players
 						</p>
-						<p className='font-medium text-sm text-[#757575] text-center'>
-							<span className='font-bold text-black'>NOTE:</span> Prices are
-							inclusive of 15% VAT. Bay rental covers 1 player; extra players
-							SAR 100 each (max 6 per simulator). Rental club set: SAR
-							30/set/hour. VIP parking: SAR 30/spot/hour. Club rentals and VIP
-							parking are complimentary for members.
+						<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-[#757575] text-center px-4'>
+							<span className='font-bold text-black'>NOTE:</span> Prices are inclusive of 15% VAT. Bay rental covers 1 player; extra players SAR 100 each (max 6 per simulator). Rental club set: SAR 30/set/hour. VIP parking: SAR 30/spot/hour. Club rentals and VIP parking are complimentary for members.
 						</p>
 					</div>
 				</div>

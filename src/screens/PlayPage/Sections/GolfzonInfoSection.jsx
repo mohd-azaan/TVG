@@ -7,37 +7,36 @@ import React from 'react';
 
 export const GolfzonInfoSection = () => {
 	return (
-		<section className='relative w-full min-h-[600px] bg-[#102121] overflow-hidden'>
+		<section className='relative w-full min-h-[540px] bg-[#102121] overflow-hidden'>
 			<div className='hidden lg:block'>
-				<div className='bg-[#102121] relative w-full h-[686px]'>
-					<div className='absolute top-[159px] left-1/2 -translate-x-1/2 w-full max-w-[1360px] px-5'>
+				<div className='bg-[#102121] relative w-full h-[600px]'>
+					<div className='absolute top-[159px] left-1/2 -translate-x-1/2 w-full max-w-[1200px] px-12'>
 						<div className='flex justify-between items-start'>
-							<div className='w-[655px]'>
-								<h2 className='font-morganite font-black text-[96px] leading-[90px] tracking-[1.92px] text-white uppercase'>
+							<div className='w-[580px]'>
+								<h2 className='font-morganite font-black text-[clamp(64px,6vw,80px)] leading-[0.95] tracking-[0.02em] text-white uppercase'>
 									What is Golfzon?
 								</h2>
-								<p className='font-gilroy font-bold text-[22px] leading-[26px] tracking-[0.44px] text-[#7ddb8a] uppercase mt-[10px]'>
+								<p className='font-gilroy font-bold text-[18px] leading-[22px] tracking-[0.3px] text-[#7ddb8a] uppercase mt-[8px]'>
 									The World’s #1 Golf Simulator For a Reason
 								</p>
-								<div className='font-gilroy font-medium text-[20px] leading-[28px] text-[lightgrey] mt-[20px]'>
-									<p className='mb-0'>
-										The first time you try Golfzon, it’s hard to believe it’s
+								<div className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-[lightgrey] mt-[20px] space-y-4'>
+									<p>
+										The first time you try Golfzon, it's hard to believe it's
 										not the real thing. The visuals are jaw-dropping. The feel
 										is unbelievably accurate. And the gameplay is just
 										addictive.
 									</p>
-									<p className='mb-0'>&nbsp;</p>
 									<p>
-										One swing in, and you’ll wonder why you ever settled for
+										One swing in, and you'll wonder why you ever settled for
 										less.
 									</p>
 								</div>
-								<div className='mt-[40px]'>
+								<div className='mt-[24px]'>
 									<a
 										href='https://widget.servmeco.com/?oid=1662'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='bg-[#009444] rounded-[50px] px-[30px] py-[7px] inline-flex items-center gap-[10px] font-gilroy font-semibold text-[18px] text-white uppercase leading-[40px]'
+										className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-[24px] py-[8px] inline-flex items-center gap-2 font-gilroy font-semibold text-[14px] text-white uppercase'
 									>
 										Book a Bay
 										<img
@@ -49,7 +48,7 @@ export const GolfzonInfoSection = () => {
 								</div>
 							</div>
 							<div
-								className='w-[655px] h-[368px] rounded-[30px] bg-cover bg-center'
+								className='w-[550px] h-[300px] rounded-[30px] bg-cover bg-center'
 								style={{ backgroundImage: "url('/golfzon-screenshot.png')" }}
 							/>
 						</div>
@@ -59,13 +58,13 @@ export const GolfzonInfoSection = () => {
 
 			{/* Mobile responsive layout */}
 			<div className='block lg:hidden px-4 sm:px-6 py-16'>
-				<div className='space-y-8 max-w-[600px] mx-auto text-center'>
+				<div className='space-y-8 max-w-[700px] mx-auto text-center'>
 					{/* Title */}
 					<div>
-						<h2 className='font-morganite font-black text-[clamp(40px,10vw,72px)] leading-[1.1] tracking-[1.2px] text-white uppercase mb-4'>
+						<h2 className='font-morganite font-black text-[clamp(32px,8vw,56px)] leading-[1.1] tracking-[0.02em] text-white uppercase mb-3'>
 							What is Golfzon?
 						</h2>
-						<p className='font-gilroy font-bold text-[18px] leading-[22px] tracking-[0.3px] text-[#7ddb8a] uppercase'>
+						<p className='font-gilroy font-bold text-[16px] leading-[20px] tracking-[0.3px] text-[#7ddb8a] uppercase'>
 							The World's #1 Golf Simulator For a Reason
 						</p>
 					</div>
@@ -80,13 +79,13 @@ export const GolfzonInfoSection = () => {
 					</div>
 
 					{/* Mobile description */}
-					<div className='space-y-4'>
-						<p className='font-gilroy font-medium text-[18px] leading-[26px] text-[lightgrey]'>
+					<div className='space-y-4 px-4'>
+						<p className='font-gilroy font-normal text-[14px] leading-[22px] tracking-[0.1px] text-[lightgrey]'>
 							The first time you try Golfzon, it's hard to believe it's not the
 							real thing. The visuals are jaw-dropping. The feel is unbelievably
 							accurate. And the gameplay is just addictive.
 						</p>
-						<p className='font-gilroy font-medium text-[18px] leading-[26px] text-[lightgrey]'>
+						<p className='font-gilroy font-normal text-[14px] leading-[22px] tracking-[0.1px] text-[lightgrey]'>
 							One swing in, and you'll wonder why you ever settled for less.
 						</p>
 					</div>
@@ -97,9 +96,9 @@ export const GolfzonInfoSection = () => {
 							href='https://widget.servmeco.com/?oid=1662'
 							target='_blank'
 							rel='noopener noreferrer'
-							className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-[24px] py-[10px] flex items-center gap-2 mx-auto'
+							className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-[24px] py-[8px] inline-flex items-center gap-2 mx-auto'
 						>
-							<span className='font-gilroy font-semibold text-[16px] leading-[20px] text-white uppercase'>
+							<span className='font-gilroy font-semibold text-[14px] leading-[16px] tracking-[0.5px] text-white uppercase'>
 								Book a Bay
 							</span>
 							<div className='w-5 h-5'>

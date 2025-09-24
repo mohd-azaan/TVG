@@ -48,7 +48,7 @@ export const FooterSection = () => {
 								Stay in the loop on tournaments, events, and deals
 							</p>
 							<a
-								href='https://whatsapp.com/channel/0029VaAbc123XYZ456'
+								href='https://whatsapp.com/channel/0029VatRXC6IHphNepePyv20'
 								target='_blank'
 								rel='noopener noreferrer'
 								className='flex items-center justify-center gap-2 px-4 py-2 bg-transparent hover:bg-white/10 rounded-full border-2 border-white text-white transition-colors duration-200 w-full max-w-xs'

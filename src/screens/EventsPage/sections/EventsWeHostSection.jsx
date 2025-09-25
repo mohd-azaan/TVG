@@ -55,7 +55,7 @@ export const EventsWeHostSection = () => {
 					{/* Level 3: Content Container */}
 					<div className='max-w-[1200px] mx-auto text-center'>
 						{/* Section Title - Following design system standards */}
-						<h2 className='font-morganite font-black text-[clamp(64px,6vw,80px)] leading-[0.95] tracking-[0.02em] text-black uppercase mb-12'>
+						<h2 className='font-morganite font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[80px] leading-[0.95] tracking-[0.02em] text-black uppercase mb-12'>
 							Events We Host
 						</h2>
 

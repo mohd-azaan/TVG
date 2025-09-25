@@ -73,7 +73,7 @@ export const Corporate = () => {
 							{/* Right Column: Content */}
 							<div className='space-y-6'>
 								{/* Main Section Heading - Following design system standards */}
-								<h2 className='font-morganite font-black text-[clamp(64px,6vw,80px)] leading-[0.95] tracking-[0.02em] text-black uppercase'>
+								<h2 className='font-morganite font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[80px] leading-[0.95] tracking-[0.02em] text-black uppercase'>
 									Corporate Events That Don't Feel Like Work
 								</h2>
 

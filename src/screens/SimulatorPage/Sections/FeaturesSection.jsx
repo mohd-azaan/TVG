@@ -28,11 +28,11 @@ export const FeaturesSection = () => {
 	];
 
 	return (
-		<section className='w-full bg-[#f8f8f8] py-20 lg:py-28'>
+		<section className='w-full bg-[#F6F6F6] py-20 lg:py-24'>
 			<div className='max-w-[1200px] mx-auto px-8 lg:px-16'>
 				{/* Section Header */}
 				<div className='text-center mb-16 lg:mb-20'>
-					<h2 className='font-morganite font-bold text-[42px] sm:text-[48px] lg:text-[56px] xl:text-[64px] leading-[1.1] text-[#1a1a1a] tracking-[-1px] max-w-5xl mx-auto uppercase'>
+					<h2 className='font-morganite font-black text-[clamp(64px,6vw,80px)] leading-[1.1] text-[#1a1a1a] tracking-[1px] max-w-5xl mx-auto uppercase'>
 						THE MOST ADVANCED INDOOR
 						<br />
 						GOLF TECH ON THE PLANET
@@ -44,7 +44,7 @@ export const FeaturesSection = () => {
 					{features.map((feature, index) => (
 						<div
 							key={index}
-							className='bg-white rounded-[20px] p-6 lg:p-8 shadow-sm flex flex-col'
+							className='bg-[#EDEDED] rounded-[20px] p-6 lg:p-8 shadow-sm flex flex-col'
 						>
 							{/* Top block: icon + title - slightly reduced height to decrease card height */}
 							<div className='min-h-[72px] lg:min-h-[80px] flex flex-col items-start'>
@@ -63,7 +63,7 @@ export const FeaturesSection = () => {
 
 							{/* Description block - aligned start and separated */}
 							<div className='mt-3'>
-								<p className='font-gilroy text-[15px] lg:text-[16px] leading-[1.45] text-[#7b7b7b] max-w-[520px]'>
+								<p className='font-gilroy font-medium text-[15px] lg:text-[16px] leading-[1.45] text-[#7b7b7b] max-w-[520px]'>
 									{feature.description}
 								</p>
 							</div>

@@ -54,73 +54,98 @@ const ChildHatIcon = ({ className = 'w-12 h-12' }) => (
 
 export const LessonTypesSection = () => {
 	return (
-		<div className='relative w-full bg-[#102121] py-16 overflow-hidden'>
-			{/* Section title */}
-			<div className='text-center mb-16'>
-				<h2 className='font-morganite font-extrabold text-[96px] leading-[90px] text-white uppercase tracking-[1.92px]'>
-					Types of Lessons
-				</h2>
-			</div>
+		<section className='relative w-full bg-[#102121] overflow-hidden'>
+			{/* Level 1: Page Container */}
+			<div className='relative max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 py-16 lg:py-28'>
+				{/* Level 2: Universal Spacing Wrapper - MANDATORY FOR ALIGNMENT */}
+				<div className='lg:ml-[12vw] md:ml-[8vw] lg:mr-[12vw] md:mr-[8vw]'>
+					{/* Level 3: Content Container */}
+					<div className='max-w-[1200px] mx-auto'>
+						{/* Section title */}
+						<div className='text-center mb-16'>
+							<h2 className='font-morganite font-black text-[clamp(64px,6vw,80px)] leading-[0.95] tracking-[0.02em] text-white uppercase'>
+								Types of Lessons
+							</h2>
+						</div>
 
-			{/* Two lesson type cards - using absolute positioning structure */}
-			<div className='w-full relative flex items-center justify-center py-[38px] px-0 box-border gap-[50px] text-left text-xl text-lightgray font-gilroy-medium'>
-				{/* Adults Academy Card */}
-				<div className='w-[655px] relative rounded-[30px] bg-[#0c1a1a] h-[250px]'>
-					<div className='absolute top-[152px] left-[40px] w-[563px] h-[57px]'>
-						<div className='absolute top-[1px] left-[38px] leading-7 inline-block w-[525px] text-[rgba(209,211,212,0.85)]'>
-							One-on-one sessions. Flexible timing. Real results tracked in real
-							time.
+						{/* Two lesson type cards */}
+						<div className='flex flex-col lg:flex-row gap-4 items-center justify-center'>
+							{/* Adults Academy Card */}
+							<div className='w-full max-w-[700px] rounded-[30px] bg-[#0c1a1a] p-8 h-[170px] flex flex-col relative'>
+								{/* Top right icon */}
+								<div className='absolute top-6 right-6'>
+									<CrewIcon className='w-[40px] h-[40px]' />
+								</div>
+
+								{/* Header */}
+								<div className='mb-2'>
+									<h3 className='font-gilroy font-bold text-[20px] uppercase text-white'>
+										Adults Academy
+									</h3>
+								</div>
+
+								{/* Features list */}
+								<div className='space-y-1 flex-grow mt-4 pb-4'>
+									<div className='flex items-start gap-3'>
+										<GolfIcon className='w-[20px] h-[20px] flex-shrink-0' />
+										<p className='font-gilroy font-medium text-[16px] leading-[20px] tracking-[0.1px] text-[rgba(209,211,212,0.85)]'>
+											Start from scratch or sharpen your edge.
+										</p>
+									</div>
+									<div className='flex items-start gap-3'>
+										<GolfIcon className='w-[20px] h-[20px] flex-shrink-0' />
+										<p className='font-gilroy font-medium text-[16px] leading-[20px] tracking-[0.1px] text-[rgba(209,211,212,0.85)]'>
+											One-on-one sessions. Flexible timing. Real results tracked
+											in real time.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							{/* Juniors Academy Card */}
+							<div className='w-full max-w-[700px] rounded-[30px] bg-[#0c1a1a] p-8 h-[170px] flex flex-col relative'>
+								{/* Top right icon */}
+								<div className='absolute top-6 right-6'>
+									<ChildHatIcon className='w-[40px] h-[40px]' />
+								</div>
+
+								{/* Header */}
+								<div className='mb-2'>
+									<h3 className='font-gilroy font-bold text-[20px] uppercase text-white'>
+										Juniors Academy
+									</h3>
+								</div>
+
+								{/* Features list */}
+								<div className='space-y-1 flex-grow mt-4 pb-4'>
+									<div className='flex items-start gap-3'>
+										<GolfIcon className='w-[20px] h-[20px] flex-shrink-0' />
+										<p className='font-gilroy font-medium text-[16px] leading-[20px] tracking-[0.1px] text-[rgba(209,211,212,0.85)]'>
+											A safe, fun, and structured way to get kids into the game.
+										</p>
+									</div>
+									<div className='flex items-start gap-3'>
+										<GolfIcon className='w-[20px] h-[20px] flex-shrink-0' />
+										<p className='font-gilroy font-medium text-[16px] leading-[20px] tracking-[0.1px] text-[rgba(209,211,212,0.85)]'>
+											Our certified instructors know how to teach, encourage,
+											and inspire the next gen.
+										</p>
+									</div>
+								</div>
+							</div>
 						</div>
-						<GolfIcon className='absolute top-[0px] left-[0px] w-[30px] h-[30px]' />
-					</div>
-					<div className='absolute top-[116px] left-[40px] w-[563px] h-[30px]'>
-						<div className='absolute top-[1px] left-[38px] leading-7 inline-block w-[525px] text-[rgba(209,211,212,0.85)]'>
-							Start from scratch or sharpen your edge.
-						</div>
-						<GolfIcon className='absolute top-[0px] left-[0px] w-[30px] h-[30px]' />
-					</div>
-					<div className='absolute top-[56px] left-[41px] text-[28px] uppercase font-TVG-typography-tagline font-bold text-white inline-block w-[490px] h-[37px]'>
-						Adults Academy
-					</div>
-					{/* Decorative crew icon */}
-					<div className='absolute top-[56px] right-[40px] h-[37px] flex items-center'>
-						<CrewIcon className='w-[60px] h-[60px]' />
 					</div>
 				</div>
 
-				{/* Juniors Academy Card */}
-				<div className='w-[655px] relative rounded-[30px] bg-[#0c1a1a] h-[250px]'>
-					<div className='absolute top-[152px] left-[40px] w-[563px] h-[57px]'>
-						<div className='absolute top-[1px] left-[38px] leading-7 inline-block w-[525px] text-[rgba(209,211,212,0.85)]'>
-							Our certified instructors know how to teach, encourage, and
-							inspire the next gen.
-						</div>
-						<GolfIcon className='absolute top-[0px] left-[0px] w-[30px] h-[30px]' />
-					</div>
-					<div className='absolute top-[116px] left-[40px] w-[563px] h-[30px]'>
-						<div className='absolute top-[1px] left-[38px] leading-7 inline-block w-[525px] text-[rgba(209,211,212,0.85)]'>
-							A safe, fun, and structured way to get kids into the game.
-						</div>
-						<GolfIcon className='absolute top-[0px] left-[0px] w-[30px] h-[30px]' />
-					</div>
-					<div className='absolute top-[56px] left-[41px] text-[28px] uppercase font-TVG-typography-tagline font-bold text-white inline-block w-[490px] h-[37px]'>
-						Juniors Academy
-					</div>
-					{/* Decorative child hat icon */}
-					<div className='absolute top-[56px] right-[40px] h-[37px] flex items-center'>
-						<ChildHatIcon className='w-[60px] h-[60px]' />
-					</div>
+				{/* Decorative shape in bottom left corner */}
+				<div className='absolute bottom-[-350px] left-[-120px] w-[800px] h-[600px] opacity-90'>
+					<img
+						src='/shape14-2.svg'
+						alt='Decorative shape'
+						className='w-full h-full object-cover transform scale-x-[-1]'
+					/>
 				</div>
 			</div>
-
-			{/* Decorative shape in bottom left corner */}
-			<div className='absolute bottom-[-300px] left-[-120px] w-[800px] h-[600px] opacity-90'>
-				<img
-					src='/shape14-2.svg'
-					alt='Decorative shape'
-					className='w-full h-full object-cover transform scale-x-[-1]'
-				/>
-			</div>
-		</div>
+		</section>
 	);
 };

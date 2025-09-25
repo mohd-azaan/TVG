@@ -41,14 +41,19 @@ className='w-[85%] lg:w-[500px] lg:h-[420px] overflow-hidden rounded-[30px] lg:m
 
 ## 📝 TYPOGRAPHY HIERARCHY
 
-**Main Section Headings (H2):**
+**Main Section Headings (H2) - STANDARD:**
+```css
+className='font-morganite font-black text-[clamp(64px,6vw,80px)] leading-[0.95] tracking-[0.02em] text-white uppercase'
+```
+
+**Large Section Headings (H2 - Hero Size):**
 ```css
 className='font-morganite font-black text-[clamp(48px,6vw,72px)] leading-[0.95] tracking-[0.02em] text-white uppercase'
 ```
 
-**Reduced Section Headings (H2 - Compact):**
+**Compact Section Headings (H2 - Small):**
 ```css
-className='font-morganite font-black text-[clamp(64px,6vw,80px)] leading-[0.95] tracking-[0.02em] text-white uppercase'
+className='font-morganite font-black text-[clamp(40px,5vw,56px)] leading-[0.95] tracking-[0.02em] text-white uppercase'
 ```
 
 **Section Subheadings:**
@@ -61,19 +66,29 @@ className='font-gilroy font-bold text-[18px] leading-[22px] tracking-[0.3px] tex
 className='font-gilroy font-bold text-[16px] leading-[20px] tracking-[0.3px] text-[#7ddb8a] uppercase'
 ```
 
-**Body Text (Primary):**
+**Body Text (Primary) - STANDARD:**
+```css
+className='font-gilroy font-medium text-base leading-[24px] tracking-[0.1px] text-[rgba(209,211,212,0.85)]'
+```
+
+**Body Text (Secondary - Dark Backgrounds):**
+```css
+className='font-gilroy font-medium text-base leading-[22px] tracking-[0.1px] text-[#757575]'
+```
+
+**Body Text (Legacy):**
 ```css
 className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-[#757575]'
 ```
 
-**Body Text (Secondary):**
+**Body Text (Light Gray):**
 ```css
 className='font-gilroy font-normal text-[17px] leading-[26px] tracking-[0.1px] text-[lightgrey]'
 ```
 
 **Small Text:**
 ```css
-className='font-gilroy font-normal text-[14px] leading-[22px] tracking-[0.1px] text-[#757575]'
+className='font-gilroy font-medium text-sm leading-[20px] tracking-[0.1px] text-[rgba(209,211,212,0.85)]'
 ```
 
 **Note Text (with bold prefix):**
@@ -173,28 +188,38 @@ className='absolute top-[860px] left-1/2 transform -translate-x-1/2 text-center 
 className='grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center lg:ml-[12vw] md:ml-[8vw] lg:mr-[12vw] md:mr-[8vw]'
 ```
 
-### 🏗️ SECTION STRUCTURE HIERARCHY
+### 🏗️ SECTION STRUCTURE HIERARCHY - UPDATED STANDARD
 
-**Level 1: Page Container**
+**Level 1: Section Element**
 ```css
-className='relative max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10'
+className='relative w-full bg-[#102121] overflow-hidden'
+// Use semantic <section> element
 ```
 
-**Level 2: PlayPage Hero-Aligned Content Wrapper (MANDATORY)**
+**Level 2: Page Container with Padding**
+```css
+className='relative max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 py-16 lg:py-28'
+// Standard padding: py-16 lg:py-28
+// Reduced padding: py-16 lg:pt-28 lg:pb-16 (for tighter spacing)
+// Compact padding: py-12 lg:py-16 (for CTA sections)
+```
+
+**Level 3: Universal Spacing Wrapper - MANDATORY FOR ALIGNMENT**
 ```css
 className='lg:ml-[12vw] md:ml-[8vw] lg:mr-[12vw] md:mr-[8vw]'
 // This creates universal left/right spacing following PlayPage hero standard
+// CRITICAL: Every section must include this wrapper
 ```
 
-**Level 3: Content Container**
+**Level 4: Content Container**
 ```css
 className='max-w-[1200px] mx-auto'
-// OR other max-width containers within the aligned wrapper
+// Standard content width within aligned wrapper
 ```
 
-**Level 4: Actual Content**
+**Level 5: Actual Content**
 ```css
-// Typography, images, buttons, etc.
+// Typography, images, buttons, layout components, etc.
 ```
 
 ### ⚠️ ALIGNMENT ENFORCEMENT RULES
@@ -204,9 +229,101 @@ className='max-w-[1200px] mx-auto'
 3. **MAINTAIN consistent max-width hierarchy within aligned containers**
 4. **ENSURE mobile responsiveness preserves proportional alignment**
 
+## 📦 COMPONENT STANDARDS
+
+### 🎴 CARD COMPONENTS
+
+**Standard Section Cards:**
+```css
+className='w-full max-w-[700px] rounded-[30px] bg-[#0c1a1a] p-8 h-[170px] flex flex-col relative'
+```
+
+**Compact Cards:**
+```css
+className='w-full max-w-[600px] rounded-[30px] bg-[#0c1a1a] p-8 min-h-[120px] flex flex-col justify-between'
+```
+
+**Card Content Layout:**
+```css
+// Header with icon
+className='flex items-center justify-between mb-6'
+
+// Features list
+className='space-y-1 flex-grow'
+
+// Feature item
+className='flex items-start gap-3'
+```
+
+### 🎯 ACCORDION COMPONENTS
+
+**Accordion Container:**
+```css
+className='mb-4' // Individual accordion item
+```
+
+**Accordion Button (Closed):**
+```css
+className='w-full text-left p-4 rounded-t-3xl flex justify-between items-center bg-[#f6f6f6] rounded-b-3xl'
+```
+
+**Accordion Button (Open):**
+```css
+className='w-full text-left p-4 rounded-t-3xl flex justify-between items-center bg-[#009444]'
+```
+
+**Accordion Title:**
+```css
+className='font-gilroy font-bold text-lg uppercase text-black' // Closed
+className='font-gilroy font-bold text-lg uppercase text-white' // Open
+```
+
+**Accordion Content Panel:**
+```css
+className='bg-[#f6f6f6] p-6 rounded-b-3xl'
+```
+
+**Accordion Layout (Two-Column):**
+```css
+className='flex gap-6 items-start'
+
+// Image column
+className='w-[310px] flex-shrink-0'
+
+// Content column
+className='flex-1 max-w-[500px] ml-6'
+```
+
+### 🔍 ICON STANDARDS
+
+**Golf Icons (Standard):**
+```css
+className='w-5 h-5 flex-shrink-0 opacity-80'
+```
+
+**Golf Icons (Small):**
+```css
+className='w-4 h-4 flex-shrink-0 opacity-100'
+```
+
+**Decorative Icons (Large):**
+```css
+className='w-[40px] h-[40px] flex-shrink-0'
+```
+
+**Chevron Icons:**
+```css
+className='w-5 h-5'
+```
+
 ## 🔘 BUTTON STANDARDS
 
-**Primary CTA Buttons (Desktop):**
+**Primary CTA Buttons (UPDATED STANDARD):**
+```css
+className='bg-[#009444] hover:bg-[#007a3a] rounded-[50px] px-6 py-3 font-gilroy font-semibold text-base text-white uppercase inline-flex items-center gap-3 transition-colors'
+```
+
+**Legacy CTA Buttons (Desktop):**
 ```css
 className='bg-[#009444] hover:bg-[#007a38] transition-colors rounded-[50px] px-[24px] py-[8px] inline-flex items-center gap-2 font-gilroy font-semibold text-[14px] text-white uppercase'
 ```

@@ -84,12 +84,25 @@ className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] t
 
 ## 🎨 SECTION LAYOUT STANDARDS & ALIGNMENT
 
-### 🎯 CRITICAL ALIGNMENT PRINCIPLE
-**ALL SECTIONS ACROSS ALL PAGES MUST USE THE PLAYPAGE HERO ALIGNMENT STANDARD**
+### 🎯 CRITICAL ALIGNMENT PRINCIPLE - UNIVERSAL SPACING CONSISTENCY
+**ALL SECTIONS ACROSS ALL PAGES MUST USE IDENTICAL LEFT/RIGHT MARGIN ALIGNMENT**
 
-Every section on every page (HomePage, AboutPage, PlayPage, ContactPage, etc.) must use the PlayPage hero alignment pattern: `lg:ml-[12vw] md:ml-[8vw] lg:mr-[12vw] md:mr-[8vw]`. This ensures perfect visual consistency and proper alignment throughout the entire application.
+Every section on every page (HomePage, AboutPage, PlayPage, ContactPage, etc.) must use the **EXACT SAME** left and right margins as the hero section and footer. This creates a perfectly aligned vertical line from top to bottom of every page.
 
-**🚨 UNIVERSAL RULE**: The PlayPage hero section sets the alignment standard for the entire application. All other pages must conform to this pattern.
+**🚨 UNIVERSAL SPACING RULE**:
+- **Hero Section** sets the spacing standard: `lg:ml-[12vw] md:ml-[8vw]` (left) and `lg:mr-[12vw] md:mr-[8vw]` (right)
+- **ALL CONTENT SECTIONS** must follow this exact same spacing pattern
+- **Footer Section** must align perfectly with hero section margins
+- **NO SECTION** can break this alignment - every element must respect these boundaries
+
+### 🎯 MANDATORY ALIGNMENT PATTERN FOR ENTIRE WEBSITE
+**From Hero to Footer - Every Section Must Align:**
+```css
+// UNIVERSAL LEFT/RIGHT MARGINS - APPLY TO EVERY SECTION
+className='lg:ml-[12vw] md:ml-[8vw] lg:mr-[12vw] md:mr-[8vw]'
+```
+
+This creates invisible vertical guidelines that run from the very top hero section down to the footer, ensuring perfect visual consistency and professional layout throughout the entire website.
 
 ### 📐 UNIVERSAL ALIGNMENT STANDARD (PlayPage Pattern)
 

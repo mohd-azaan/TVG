@@ -7,16 +7,13 @@ import React from 'react';
 
 export const GolfzonNumbersSection = () => {
 	return (
-		<section className='relative w-full min-h-[600px] bg-[#102121] overflow-hidden'>
+		<section className='relative w-full min-h-[300px] bg-[#102121] overflow-hidden'>
 			{/* Level 1: Page Container */}
 			<div className='relative max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10'>
-
 				{/* Level 2: MANDATORY PlayPage Hero-Aligned Content Wrapper */}
 				<div className='lg:ml-[12vw] md:ml-[8vw] lg:mr-[12vw] md:mr-[8vw]'>
-
 					{/* Level 3: Content Container */}
 					<div className='max-w-[1360px] mx-auto py-20'>
-
 						{/* Level 4: Actual Content - Hidden on mobile */}
 						<div className='hidden lg:block'>
 							{/* Main title */}
@@ -27,87 +24,88 @@ export const GolfzonNumbersSection = () => {
 							</div>
 
 							{/* Statistics cards container with responsive centering */}
-							<div className='relative w-full max-w-[1200px] h-[520px] mb-[80px] mx-auto'>
+							<div className='relative w-full max-w-[1160px] h-[420px] mb-[30px] mx-auto'>
 								{/* #1 Card - Light Green */}
-								<div className='absolute left-0 top-0 w-[280px] h-[250px] bg-[#64ff8a] rounded-[30px] p-[20px] flex flex-col justify-between'>
+								<div className='absolute left-0 top-0 w-[260px] h-[200px] bg-[#64ff8a] rounded-[30px] p-[20px] flex flex-col justify-between'>
 									<p className='font-morganite font-black text-[clamp(48px,6vw,72px)] leading-[0.95] tracking-[0.02em] text-black uppercase'>
 										#1
 									</p>
-									<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-black'>
-										Largest Simulator Company by Market Cap, Revenue & Shots Tracked
+									<p className='font-gilroy font-semibold text-[16px] leading-[24px] tracking-[0.1px] text-black'>
+										Largest Simulator Company by Market Cap, Revenue & Shots
+										Tracked
 									</p>
 								</div>
 
 								{/* 100+ Million Card - Dark Green */}
-								<div className='absolute left-[300px] top-0 w-[320px] h-[250px] bg-[#006f33] rounded-[30px] p-[20px] flex flex-col justify-between'>
+								<div className='absolute left-[270px] top-0 w-[300px] h-[200px] bg-[#006f33] rounded-[30px] p-[20px] flex flex-col justify-between'>
 									<p className='font-morganite font-black text-[clamp(48px,6vw,72px)] leading-[0.95] tracking-[0.02em] text-white uppercase'>
 										100+ Million
 									</p>
-									<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-white'>
+									<p className='font-gilroy font-semibold text-[16px] leading-[24px] tracking-[0.1px] text-white'>
 										Rounds Played Annually
 									</p>
 								</div>
 
 								{/* 160K+ Card - Green */}
-								<div className='absolute left-[640px] top-0 w-[280px] h-[250px] bg-[#009444] rounded-[30px] p-[20px] flex flex-col justify-between'>
+								<div className='absolute left-[580px] top-0 w-[260px] h-[200px] bg-[#009444] rounded-[30px] p-[20px] flex flex-col justify-between'>
 									<p className='font-morganite font-black text-[clamp(48px,6vw,72px)] leading-[0.95] tracking-[0.02em] text-white uppercase'>
 										160K+
 									</p>
-									<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-white'>
+									<p className='font-gilroy font-semibold text-[16px] leading-[24px] tracking-[0.1px] text-white'>
 										Tournaments Hosted Annually
 									</p>
 								</div>
 
 								{/* 13,490K Card - Light Green */}
-								<div className='absolute left-[940px] top-0 w-[260px] h-[250px] bg-[#33a969] rounded-[30px] p-[20px] flex flex-col justify-between'>
+								<div className='absolute left-[850px] top-0 w-[200px] h-[200px] bg-[#33a969] rounded-[30px] p-[20px] flex flex-col justify-between'>
 									<p className='font-morganite font-black text-[clamp(48px,6vw,72px)] leading-[0.95] tracking-[0.02em] text-black uppercase'>
 										13,490K
 									</p>
-									<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-black'>
+									<p className='font-gilroy font-semibold text-[16px] leading-[24px] tracking-[0.1px] text-black'>
 										Locations Worldwide
 									</p>
 								</div>
 
 								{/* 8.5+ Billion Card - Dark Green */}
-								<div className='absolute left-0 top-[270px] w-[420px] h-[250px] bg-[#004a22] rounded-[30px] p-[20px] flex flex-col justify-between'>
+								<div className='absolute left-0 top-[210px] w-[380px] h-[200px] bg-[#004a22] rounded-[30px] p-[20px] flex flex-col justify-between'>
 									<p className='font-morganite font-black text-[clamp(48px,6vw,72px)] leading-[0.95] tracking-[0.02em] text-white uppercase'>
 										8.5+ Billion
 									</p>
-									<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-white'>
+									<p className='font-gilroy font-semibold text-[16px] leading-[24px] tracking-[0.1px] text-white'>
 										Shots Tracked Last Year
 									</p>
 								</div>
 
 								{/* 51K+ Card - Light Green */}
-								<div className='absolute left-[440px] top-[270px] w-[220px] h-[250px] bg-[#33a969] rounded-[30px] p-[20px] flex flex-col justify-between'>
+								<div className='absolute left-[390px] top-[210px] w-[200px] h-[200px] bg-[#33a969] rounded-[30px] p-[20px] flex flex-col justify-between'>
 									<p className='font-morganite font-black text-[clamp(48px,6vw,72px)] leading-[0.95] tracking-[0.02em] text-black uppercase'>
 										51K+
 									</p>
-									<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-black'>
+									<p className='font-gilroy font-semibold text-[16px] leading-[24px] tracking-[0.1px] text-black'>
 										Simulators in Operation
 									</p>
 								</div>
 
 								{/* 63 Card - Light Green */}
-								<div className='absolute left-[680px] top-[270px] w-[140px] h-[250px] bg-[#66bf8f] rounded-[30px] p-[20px] flex flex-col justify-between'>
+								<div className='absolute left-[600px] top-[210px] w-[130px] h-[200px] bg-[#66bf8f] rounded-[30px] p-[20px] flex flex-col justify-between'>
 									<p className='font-morganite font-black text-[clamp(48px,6vw,72px)] leading-[0.95] tracking-[0.02em] text-black uppercase'>
 										63
 									</p>
-									<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-black'>
+									<p className='font-gilroy font-semibold text-[16px] leading-[24px] tracking-[0.1px] text-black'>
 										Countries Served
 									</p>
 								</div>
 
 								{/* 6.2+ Million Card - Green */}
-								<div className='absolute left-[840px] top-[270px] w-[360px] h-[250px] bg-[#009444] rounded-[30px] p-[20px] flex flex-col justify-between'>
+								<div className='absolute left-[740px] top-[210px] w-[310px] h-[200px] bg-[#009444] rounded-[30px] p-[20px] flex flex-col justify-between'>
 									<p className='font-morganite font-black text-[clamp(48px,6vw,72px)] leading-[0.95] tracking-[0.02em] text-white uppercase'>
 										6.2+ Million
 									</p>
-									<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-white'>
+									<p className='font-gilroy font-semibold text-[16px] leading-[24px] tracking-[0.1px] text-white'>
 										Registered Users
 									</p>
 								</div>
-			</div>
+							</div>
 
 							{/* Bottom Line Section */}
 							<div className='w-full bg-[#0c1a1a] rounded-[30px] p-[50px] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8'>

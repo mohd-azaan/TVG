@@ -3,7 +3,6 @@
 // This component displays two lesson type cards with feature lists and decorative graphics
 // RELEVANT FILES: LearnPage.jsx, tailwind.config.js
 
-import React from 'react';
 
 // Golf icon (from sports_golf SVG)
 const GolfIcon = ({ className = 'w-8 h-8' }) => (

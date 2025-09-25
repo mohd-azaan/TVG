@@ -3,7 +3,6 @@
 // This component displays the leagues page layout with tournament leaderboard and league information
 // RELEVANT FILES: App.jsx, MainLayout.jsx, styleguide.css, HeroSection.jsx
 
-import React from 'react';
 import '../../styleguide.css';
 import { SEOHead } from '../../components/SEO/SEOHead';
 import { HeroSection } from './sections/HeroSection';

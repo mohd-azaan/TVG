@@ -21,21 +21,42 @@ const features = [
 
 export const WhatToExpectSection = () => {
     return (
-        <section className="bg-[#f6f6f6] py-24">
-            <div className="max-w-[1360px] mx-auto px-4 flex items-center gap-16">
-                <div className="w-1/2">
-                    <img src="/indoor-golf 1.png" alt="Indoor golf setup" className="rounded-3xl" />
-                </div>
-                <div className="w-1/2">
-                    <h2 className="font-morganite font-black text-[96px] text-black uppercase leading-none mb-4">What to Expect</h2>
-                    <p className="font-TVG-typography-tagline font-bold text-2xl text-green-700 uppercase mb-8">Stay Tuned...</p>
-                    <div className="space-y-2">
-                        {features.map((feature, index) => (
-                            <div key={index} className="flex items-start gap-4">
-                                <GolfIcon />
-                                <p className="font-TVG-typography-default text-lg text-gray-600">{feature}</p>
+        <section className="relative w-full bg-[#f6f6f6] overflow-hidden">
+            <div className="relative max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 py-16 lg:py-28">
+                <div className="lg:ml-[12vw] md:ml-[8vw] lg:mr-[12vw] md:mr-[8vw]">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+                        <div className="w-full">
+                            <img src="/indoor-golf 1.png" alt="Indoor golf setup" className="w-full aspect-[16/9] object-cover rounded-[30px] shadow-xl lg:w-[655px] lg:h-[400px] lg:aspect-auto" />
+                        </div>
+                        <div className="space-y-6">
+                            <h2 className="font-morganite font-black text-[clamp(48px,6vw,80px)] leading-[0.95] tracking-[0.02em] text-black uppercase">What to Expect</h2>
+                            <p className="font-gilroy font-bold text-[18px] leading-[22px] tracking-[0.3px] text-[#009444] uppercase">Stay Tuned...</p>
+                            <div className="space-y-2">
+                                {features.map((feature, index) => (
+                                    <div key={index} className="flex items-start gap-3">
+                                        <GolfIcon />
+                                        <p className="font-gilroy font-medium text-base leading-[24px] tracking-[0.1px] text-[#757575]">{feature}</p>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
+                        </div>
+                    </div>
+
+                    {/* Mobile Layout */}
+                    <div className="block lg:hidden px-4 sm:px-6 py-16">
+                        <div className="space-y-8 max-w-[700px] mx-auto text-center">
+                            <h2 className="font-morganite font-black text-[clamp(32px,8vw,56px)] leading-[1.1] tracking-[0.02em] text-black uppercase">What to Expect</h2>
+                            <img src="/indoor-golf 1.png" alt="Indoor golf setup" className="w-full aspect-[16/9] object-cover rounded-[20px] shadow-xl" />
+                            <p className="font-gilroy font-bold text-[16px] leading-[20px] tracking-[0.3px] text-[#009444] uppercase">Stay Tuned...</p>
+                            <div className="space-y-4 px-4">
+                                {features.map((feature, index) => (
+                                    <div key={index} className="flex items-start gap-3">
+                                        <GolfIcon />
+                                        <p className="font-gilroy font-medium text-[14px] leading-[22px] tracking-[0.1px] text-[#757575] text-left">{feature}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -43,48 +43,52 @@ export const HeroSection = ({
 	);
 
 	return (
-		// Main container matching the exact layout from the image
-		<div className='relative w-full h-[100vh] bg-[#102121] text-white overflow-hidden'>
-			{/* Content Wrapper - Full height layout with navbar offset */}
-			<div className='relative z-10 mx-auto flex max-w-[1440px] items-center px-8 lg:px-16 h-full pt-20 lg:pt-24'>
-				{/* Left Column: Text content */}
-				<div className='w-full lg:w-[50%] lg:pr-12'>
+		// Main container following TVG Design System hero standards
+		<section className='relative w-full h-[100vh] lg:h-[120vh] bg-[#102121] text-white overflow-hidden'>
+			{/* Content Wrapper - Following design system standards */}
+			<div className='relative z-10 mx-auto max-w-[1920px] px-4 sm:px-6 lg:px-10 h-full pt-28 lg:pt-36 pb-8 lg:pb-12'>
+				{/* Content Positioning - Following hero standards */}
+				<div className='w-full lg:w-[50%] lg:pr-12 lg:ml-[12vw] md:ml-[8vw] max-w-[520px] lg:max-w-[560px]'>
 					<div className='flex flex-col'>
-						{/* Main Title - stays in dark section */}
-						{TitleComponent}
+						{/* Main Title - Following design system hero title standards */}
+						{title && (
+							<h1 className='font-morganite text-[clamp(72px,8vw,112px)] font-[900] uppercase leading-[0.90] tracking-[0.02em] lg:tracking-[0.03em] mb-2 mt-2 lg:mt-4'>
+								{title}
+							</h1>
+						)}
 
-						{/* Subtitle - positioned to overlap green section */}
+						{/* Subtitle - Following design system hero subtitle standards */}
 						{subtitle && (
-							<p className='relative z-20 font-gilroy font-bold text-[15px] sm:text-[18px] lg:text-[20px] uppercase tracking-[1.10px] leading-[1.2] text-[#7ddb8a] mb-6 -translate-y-2 lg:-translate-y-4'>
+							<p className='font-gilroy font-bold text-[18px] text-[#7ddb8a] uppercase tracking-wide mb-2'>
 								{subtitle}
 							</p>
 						)}
 
-						{/* Description Text - in green section area */}
+						{/* Description Text - Following design system hero body text standards */}
 						{description && (
-							<div className='relative z-20 font-TVG-typography-hero-text font-[number:var(--TVG-typography-hero-text-font-weight)] text-[18px] lg:text-[22px] leading-7 text-white space-y-4 max-w-[600px] mb-6'>
+							<div className='font-gilroy font-normal text-[18px] leading-6 text-white space-y-4 max-w-[510px] py-8 lg:py-12'>
 								{description}
 							</div>
 						)}
 
-						{/* CTA Buttons */}
+						{/* CTA Buttons - Following design system hero CTA standards */}
 						{(ctaText && ctaLink) || (secondaryCtaText && secondaryCtaLink) ? (
-							<div className='relative z-20 flex flex-col sm:flex-row gap-4'>
+							<div className='flex flex-col sm:flex-row gap-4'>
 								{ctaText && ctaLink && (
 									<Link
 										to={ctaLink}
-										className='inline-flex w-fit items-center gap-3 rounded-full bg-[#009444] px-6 py-2 text-center text-[16px] lg:text-[18px] font-gilroy font-medium uppercase leading-[40px] tracking-wide text-white transition-colors duration-200 ease-out hover:bg-white/20 focus:outline-none'
+										className='bg-[#009444] hover:bg-[#7ddb8a] transition-colors rounded-full px-6 py-2.5 flex items-center gap-3 group w-fit'
 									>
-										<span>{ctaText}</span>
+										<span className='font-gilroy font-medium text-[14px] text-white group-hover:text-black uppercase'>{ctaText}</span>
 										<ArrowIcon />
 									</Link>
 								)}
 								{secondaryCtaText && secondaryCtaLink && (
 									<Link
 										to={secondaryCtaLink}
-										className='inline-flex w-fit items-center gap-3 rounded-full border-2 border-white bg-transparent px-6 py-2 text-center text-[16px] lg:text-[18px] font-gilroy font-medium uppercase leading-[40px] tracking-wide text-white transition-colors duration-200 ease-out hover:bg-white/20 focus:outline-none'
+										className='border-2 border-white bg-transparent hover:bg-white/20 transition-colors rounded-full px-6 py-2.5 flex items-center gap-3 group w-fit'
 									>
-										<span>{secondaryCtaText}</span>
+										<span className='font-gilroy font-medium text-[14px] text-white uppercase'>{secondaryCtaText}</span>
 									</Link>
 								)}
 							</div>
@@ -92,24 +96,24 @@ export const HeroSection = ({
 					</div>
 				</div>
 
-				{/* Right Column: Image */}
+				{/* Right Column: Image - Following design system hero image standards */}
 				{imageUrl && (
-					<div className='hidden lg:flex lg:w-[50%] justify-center items-center'>
+					<div className='absolute top-[50%] right-0 lg:right-[8vw] transform -translate-y-1/2 hidden lg:block'>
 						<img
-							className='w-[90%] max-w-[900px] h-auto max-h-[480px] rounded-[30px] object-contain'
+							className='w-[85%] lg:w-[500px] lg:h-[420px] overflow-hidden rounded-[30px] lg:mr-36'
 							src={imageUrl}
 							alt='Hero image'
 							fetchPriority='high'
 							decoding='async'
-							width='900'
-							height='480'
+							width='500'
+							height='420'
 						/>
 					</div>
 				)}
 			</div>
 
-			{/* Green Background Section - positioned to start around subtitle area */}
-			<div className='absolute bottom-0 left-0 w-full h-[45%] bg-[#006F33] z-0'></div>
+			{/* Green Background Section */}
+			<div className='absolute top-[55%] left-0 w-full h-[70vh] bg-[#006F33]'></div>
 
 			{/* Decorative SVG bottom-right */}
 			<img
@@ -121,6 +125,6 @@ export const HeroSection = ({
 				width='1800'
 				height='800'
 			/>
-		</div>
+		</section>
 	);
 };

@@ -112,12 +112,12 @@ export const PackagesSection = () => {
 					<div className='max-w-[1200px] mx-auto'>
 						{/* Title section - "Our Coaching Approach" heading */}
 						<div className='text-center mb-16'>
-							<h2 className='font-morganite font-black text-[clamp(64px,6vw,80px)] leading-[0.95] tracking-[0.02em] text-black uppercase mb-6'>
+							<h2 className='font-morganite font-black text-[clamp(64px,6vw,80px)] leading-[0.95] tracking-[0.02em] text-black uppercase mb-4'>
 								OUR COACHING APPROACH
 							</h2>
 							<p className='font-gilroy font-bold text-[18px] leading-[22px] tracking-[0.3px] text-[#009444] uppercase max-w-[655px] mx-auto'>
-								NO TWO SWINGS ARE THE SAME. SO LET'S PUT A GAME PLAN TOGETHER
-								THAT'S JUST FOR YOU
+								NO TWO SWINGS ARE THE SAME. <br />
+								SO LET'S PUT A GAME PLAN TOGETHER THAT'S JUST FOR YOU
 							</p>
 						</div>
 
@@ -195,11 +195,11 @@ export const PackagesSection = () => {
 									<div className='text-center py-4'>
 										<div className='flex items-baseline justify-center gap-1'>
 											<SaudiRiyalSymbol className='w-[36px] h-[36px] text-black' />
-											<span className='font-morganite text-[90px] md:text-[100px] leading-[0.75] text-black tracking-wide font-bold'>
-												400+
+											<span className='font-morganite text-[90px] md:text-[100px] leading-[0.75] text-black tracking-[1px] font-bold'>
+												499
 											</span>
 											<span className='font-TVG-typography-default text-[16px] md:text-[18px] text-black/80'>
-												/person
+												/adult
 											</span>
 										</div>
 									</div>
@@ -231,7 +231,7 @@ export const PackagesSection = () => {
 														60-Minute
 													</span>
 													<span className='text-xl flex items-center gap-1 font-bold'>
-														<SaudiRiyalSymbol className='w-5 h-5' /> 500
+														<SaudiRiyalSymbol className='w-5 h-5' /> 499
 													</span>
 												</div>
 												<div className='flex items-center justify-between'>
@@ -239,7 +239,7 @@ export const PackagesSection = () => {
 														5-lesson Package
 													</span>
 													<span className='text-xl flex items-center gap-1 font-bold'>
-														<SaudiRiyalSymbol className='w-5 h-5' /> 2,400
+														<SaudiRiyalSymbol className='w-5 h-5' /> 2,375
 													</span>
 												</div>
 												<div className='flex items-center justify-between'>
@@ -262,7 +262,7 @@ export const PackagesSection = () => {
 														60-Minute
 													</span>
 													<span className='text-xl flex items-center gap-1 font-bold'>
-														<SaudiRiyalSymbol className='w-5 h-5' /> 400
+														<SaudiRiyalSymbol className='w-5 h-5' /> 349
 													</span>
 												</div>
 												<div className='flex items-center justify-between'>
@@ -270,7 +270,7 @@ export const PackagesSection = () => {
 														5-Lesson Package
 													</span>
 													<span className='text-xl flex items-center gap-1 font-bold'>
-														<SaudiRiyalSymbol className='w-5 h-5' /> 1,900
+														<SaudiRiyalSymbol className='w-5 h-5' /> 1,625
 													</span>
 												</div>
 												<div className='flex items-center justify-between'>
@@ -278,7 +278,7 @@ export const PackagesSection = () => {
 														10-Lesson Package
 													</span>
 													<span className='text-xl flex items-center gap-1 font-bold'>
-														<SaudiRiyalSymbol className='w-5 h-5' /> 3,500
+														<SaudiRiyalSymbol className='w-5 h-5' /> 3,000
 													</span>
 												</div>
 											</div>
@@ -310,11 +310,11 @@ export const PackagesSection = () => {
 									<div className='text-center py-4'>
 										<div className='flex items-baseline justify-center gap-1'>
 											<SaudiRiyalSymbol className='w-[36px] h-[36px] text-black' />
-											<span className='font-morganite text-[90px] md:text-[100px] leading-[0.75] text-black tracking-tight font-bold'>
-												180
+											<span className='font-morganite text-[90px] md:text-[100px] leading-[0.75] text-black tracking-[1px] font-bold'>
+												199
 											</span>
 											<span className='font-TVG-typography-default text-[16px] md:text-[18px] text-black/80'>
-												/person
+												/hour
 											</span>
 										</div>
 									</div>
@@ -344,10 +344,16 @@ export const PackagesSection = () => {
 													With coach
 												</span>
 												<span className='text-xl flex items-center gap-1 text-black font-bold'>
-													+ <SaudiRiyalSymbol className='w-5 h-5' /> 250
-													<span className='text-lg font-normal text-black/70'>
-														/hour
+													<SaudiRiyalSymbol className='w-5 h-5' /> 250
+													<span className='text-sm font-normal text-black/70'>
+														first hour
 													</span>
+												</span>
+											</div>
+											<div className='flex items-center justify-center mt-2'>
+												<span className='text-sm font-normal text-black/60'>
+													<SaudiRiyalSymbol className='w-4 h-4 inline' />{' '}
+													100/hour additional
 												</span>
 											</div>
 										</div>
@@ -368,23 +374,11 @@ export const PackagesSection = () => {
 							</div>
 						</div>
 
-						{/* Footer notes */}
-						<div className='text-center space-y-2 mb-16'>
-							<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-[#757575]'>
-								Your session data, videos, and notes are emailed to you after
-								each lesson
-							</p>
-							<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-[#757575]'>
-								<span className='font-bold text-black'>NOTE:</span> The prices
-								are exclusive of 15% VAT
-							</p>
-						</div>
-
 						{/* Leagues banner */}
-						<div className='w-full'>
+						<div className='w-full mb-16'>
 							<div className='w-full relative rounded-[30px] bg-[#e8e8e8] h-[190px] overflow-hidden'>
 								{/* Left green section with LEAGUES text and trophy icon */}
-								<div className='absolute top-0 left-0 rounded-tl-[30px] rounded-tr-none rounded-br-none rounded-bl-[30px] bg-[#009444] w-[250px] h-full flex flex-col items-center justify-center'>
+								<div className='absolute top-0 left-0 rounded-tl-[30px] rounded-tr-none rounded-br-none rounded-bl-[30px] bg-[#003318] w-[250px] h-full flex flex-col items-center justify-center'>
 									<TrophyIcon className='w-[45px] h-[45px] text-white mb-3' />
 									<div className='text-white font-morganite text-[60px] md:text-[60px] lg:text-[85px] font-black uppercase tracking-[0.02em] leading-[0.95] text-center'>
 										LEAGUES
@@ -402,7 +396,7 @@ export const PackagesSection = () => {
 									</p>
 
 									<Button
-										to='/contact'
+										to='/leagues'
 										className='bg-[#009444] hover:bg-[#007a3a] rounded-[50px] py-2.5 px-6 text-white text-[13px] font-semibold uppercase tracking-wide w-max flex items-center gap-2 transition-colors duration-300 no-underline'
 									>
 										EXPLORE LEAGUES
@@ -410,6 +404,19 @@ export const PackagesSection = () => {
 									</Button>
 								</div>
 							</div>
+						</div>
+
+						{/* Footer notes */}
+						<div className='text-center space-y-2 mb-16'>
+							<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-[#757575]'>
+								<span className='font-bold text-black'>NOTE:</span> The prices
+								are exclusive of 15% VAT
+							</p>
+							<p className='font-gilroy font-normal text-[16px] leading-[24px] tracking-[0.1px] text-[#757575]'>
+								Your session data and videos will be available to you on your
+								Golfzon account. While your key notes, takeaways and next steps
+								will be emailed to you right after each session.
+							</p>
 						</div>
 					</div>
 				</div>

@@ -74,7 +74,7 @@ export const FooterSection = () => {
 							<FooterLink to='/about'>About us</FooterLink>
 							<FooterLink to='/simulator'>Own/Rent simulators</FooterLink>
 							<FooterLink to='/partnership'>Partner with us</FooterLink>
-							<FooterLink to='/faq'>Terms & Conditions</FooterLink>
+							<FooterLink to='/faq'>FAQs</FooterLink>
 							<FooterLink to='/contact'>Contact us</FooterLink>
 						</div>
 					</div>

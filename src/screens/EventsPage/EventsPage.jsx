@@ -7,7 +7,9 @@ import '../../styleguide.css';
 import { SEOHead } from '../../components/SEO/SEOHead';
 import { EventsWeHostSection } from './sections/EventsWeHostSection';
 import { HeroSection } from './sections/HeroSection';
+import { PlanYourEventSection } from './sections/PlanYourEventSection';
 import { VenueSection } from './sections/VenueSection';
+import { WhatsIncludedSection } from './sections/WhatsIncludedSection';
 import Corporate from '../../components/Events/Corporate';
 
 export const EventsPage = () => {
@@ -26,6 +28,12 @@ export const EventsPage = () => {
 			{/* Corporate events section */}
 			<EventsWeHostSection />
 			<Corporate />
+
+			{/* What's Included Section */}
+			<WhatsIncludedSection />
+
+			{/* Plan Your Event CTA Section */}
+			<PlanYourEventSection />
 		</div>
 	);
 };

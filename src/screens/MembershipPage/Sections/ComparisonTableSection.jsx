@@ -333,6 +333,30 @@ export const ComparisonTableSection = () => {
 								</table>
 							</div>
 						</div>
+						<div className='flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mt-12 mb-8'>
+							{/* Note */}
+							<div className='flex-1'>
+								<p className='font-gilroy font-normal text-[14px] leading-[20px] tracking-[0.1px] text-black'>
+									<span className='font-bold'>NOTE:</span> The finalized
+									Membership benefits will be shared to populate in this table.
+								</p>
+							</div>
+
+							{/* CTA Button */}
+							<div className='flex-shrink-0'>
+								<a
+									href='/registration'
+									className='bg-[#009444] hover:bg-[#007a3a] rounded-[50px] px-6 py-3 font-gilroy font-semibold text-[14px] text-white uppercase inline-flex items-center gap-2 transition-colors'
+								>
+									JOIN MEMBERSHIP
+									<img
+										src='/arrow-right.svg'
+										alt='arrow'
+										className='w-[20px] h-[20px]'
+									/>
+								</a>
+							</div>
+						</div>
 
 						<div className='grid grid-cols-1 md:grid-cols-2 gap-12 mt-16 items-stretch'>
 							<div className='w-full rounded-[30px] bg-[#f6f6f6] p-8 flex items-center min-h-[150px]'>
@@ -414,15 +438,20 @@ export const ComparisonTableSection = () => {
 									style.
 								</p>
 							</div>
-							<button className='bg-[#009444] hover:bg-[#007a3a] rounded-[50px] px-5 py-2.5 font-gilroy font-semibold text-[14px] text-white uppercase inline-flex items-center gap-2 transition-colors flex-shrink-0'>
+							<a
+								href='/contact'
+								className='bg-[#009444] hover:bg-[#007a3a] rounded-[50px] px-5 py-2.5 font-gilroy font-semibold text-[14px] text-white uppercase inline-flex items-center gap-2 transition-colors flex-shrink-0'
+							>
 								Talk to our team
 								<img
 									src='/arrow-right.svg'
 									alt='arrow'
 									className='w-[20px] h-[20px]'
 								/>
-							</button>
+							</a>
 						</div>
+
+						{/* Membership Benefits Note and CTA */}
 
 						<div className='mt-8 text-center'>
 							<p className='font-gilroy font-normal text-[14px] leading-[20px] tracking-[0.1px] text-[#757575]'>

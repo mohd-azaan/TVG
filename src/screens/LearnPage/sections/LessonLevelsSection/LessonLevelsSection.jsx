@@ -45,7 +45,7 @@ const Level = ({ level, isOpen, onToggle }) => {
 			>
 				<div className='flex items-center'>
 					<h3
-						className={`font-gilroy font-bold text-lg uppercase ${
+						className={`opacity-55 font-gilroy font-bold text-lg uppercase ${
 							isOpen ? 'text-white' : 'text-black'
 						}`}
 					>

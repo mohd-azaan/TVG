@@ -30,9 +30,14 @@ export const VenueSection = () => {
 						<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center'>
 							{/* Left Column: Content */}
 							<div className='space-y-6'>
+								{/* Section Label */}
+								<p className='font-gilroy font-bold text-[18px] text-[#7ddb8a] uppercase tracking-wide mb-4'>
+									A VENUE THAT FITS
+								</p>
+
 								{/* Main Section Heading - Following design system standards */}
 								<h2 className='font-morganite font-black text-[clamp(64px,6vw,80px)] leading-[0.95] tracking-[0.02em] text-white uppercase'>
-									A Venue That Fits Any Vibe
+									ANY VIBE
 								</h2>
 
 								{/* Section Subheadings - Following design system standards */}
@@ -58,7 +63,7 @@ export const VenueSection = () => {
 								{/* CTA Button */}
 								<div className='pt-4'>
 									<Link
-										to='#'
+										to='/events-registration'
 										className='bg-[#009444] hover:bg-[#007a3a] rounded-[50px] px-6 py-2.5 font-gilroy font-semibold text-[14px] text-white uppercase inline-flex items-center gap-2 transition-colors w-fit'
 									>
 										<span>PLAN YOUR EVENT</span>

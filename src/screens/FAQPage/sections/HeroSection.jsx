@@ -8,55 +8,65 @@ import React from 'react';
 
 export const HeroSection = () => {
 	return (
-		<section className='relative w-full h-[591px] bg-[#0c1a1a] overflow-hidden'>
-			{/* Green curved bottom section */}
-			<div className='absolute bottom-0 left-0 w-full h-[335px] bg-[#009444] rounded-tl-[30px]' />
-
-			{/* Decorative background shape - positioned exactly like Figma */}
-			<div className='absolute top-[431.5px] left-[341.98px] opacity-30'>
-				<div
-					className='w-[2102px] h-[1454px] transform rotate-[348.049deg] origin-center'
-					style={{
-						background: `url('/shape14-2.svg') no-repeat center`,
-						backgroundSize: 'contain',
-						mixBlendMode: 'screen'
-					}}
-				/>
-			</div>
-
-			{/* Main content container */}
-			<div className='relative z-10 max-w-[1920px] mx-auto'>
-				{/* Content positioned with absolute positioning to match Figma exactly */}
-				<div className='absolute top-[237px] left-[280px] w-[655px]'>
-					{/* Main title */}
-					<h1 className='font-morganite font-extrabold text-[160px] leading-[148px] text-white uppercase tracking-[3.2px] mb-6'>
-						Frequently Asked Questions
+		<section className='relative w-full h-[100vh] lg:h-[120vh] bg-[#102121] text-white overflow-hidden'>
+			{/* Content Wrapper - Following design system standards */}
+			<div className='relative z-10 mx-auto max-w-[1920px] px-4 sm:px-6 lg:px-10 h-full pt-28 lg:pt-36 pb-8 lg:pb-12'>
+				{/* Content Positioning - Following hero standards */}
+				<div className='w-full lg:w-[50%] lg:pr-12 lg:ml-[12vw] md:ml-[8vw] max-w-[520px] lg:max-w-[560px]'>
+					{/* Main Title - Following design system hero title standards */}
+					<h1 className='font-morganite text-[clamp(72px,8vw,112px)] font-[900] uppercase leading-[0.90] tracking-[0.02em] lg:tracking-[0.03em] mb-2 mt-2 lg:mt-4'>
+						FREQUENTLY ASKED <br /> QUESTIONS
 					</h1>
-				</div>
 
-				{/* Subtitle positioned exactly like Figma */}
-				<div className='absolute top-[357px] left-[843px] w-[800px]'>
-					<p className='font-tvg-hero-text font-medium text-[24px] leading-[32px] tracking-[0.5px] text-[#dedede]'>
-						Most answers can be found below, but if you still have a question, our team is just a message away.
+					{/* Subtitle - Following design system hero subtitle standards */}
+					<p className='font-gilroy font-bold text-[18px] text-[#7ddb8a] uppercase tracking-wide mb-2'>
+						WE'RE HERE TO HELP
 					</p>
-				</div>
-			</div>
 
-			{/* Responsive adjustments for smaller screens */}
-			<div className='block lg:hidden relative z-10 px-4 sm:px-6 pt-24 pb-16'>
-				{/* Mobile layout */}
-				<div className='space-y-8 text-center'>
-					<h1 className='font-morganite font-extrabold text-[clamp(48px,10vw,120px)] leading-[1.1] tracking-[2px] text-white uppercase'>
-						Frequently Asked Questions
-					</h1>
-
-					<div className='max-w-[600px] mx-auto'>
-						<p className='font-tvg-hero-text font-medium text-[24px] leading-[32px] tracking-[0.5px] text-[#dedede]'>
-							Most answers can be found below, but if you still have a question, our team is just a message away.
-						</p>
+					{/* Description Text - Following design system hero body text standards */}
+					<div className='font-gilroy font-normal text-[18px] leading-6 text-white space-y-4 max-w-[510px] py-8 lg:py-12'>
+						<p>Most answers can be found below, but if you still have a question, our team is just a message away.</p>
 					</div>
+
+					{/* CTA Button - Following design system hero CTA standards */}
+					<a
+						href="#contact"
+						className='bg-[#009444] hover:bg-[#7ddb8a] transition-colors rounded-full px-6 py-2.5 flex items-center gap-3 group w-fit'
+					>
+						<span className='font-gilroy font-medium text-[14px] text-white group-hover:text-black uppercase'>
+							CONTACT US
+						</span>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							className='h-6 w-6'
+							fill='none'
+							viewBox='0 0 24 24'
+							stroke='currentColor'
+							strokeWidth={2}
+						>
+							<path
+								strokeLinecap='round'
+								strokeLinejoin='round'
+								d='M13 7l5 5m0 0l-5 5m5-5H6'
+							/>
+						</svg>
+					</a>
 				</div>
 			</div>
+
+			{/* Green Background Section */}
+			<div className='absolute top-[55%] left-0 w-full h-[70vh] bg-[#006F33]'></div>
+
+			{/* Decorative SVG bottom-right */}
+			<img
+				alt='decorative green waves'
+				src='/shape14-2.svg'
+				className='pointer-events-none absolute right-[-420px] bottom-[-220px] w-[1100px] opacity-95 lg:right-[-620px] lg:bottom-[-520px] lg:w-[1800px] mix-blend-screen z-0'
+				fetchPriority='high'
+				decoding='async'
+				width='1800'
+				height='800'
+			/>
 		</section>
 	);
 };

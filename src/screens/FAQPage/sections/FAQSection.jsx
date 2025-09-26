@@ -159,18 +159,21 @@ export const FAQSection = () => {
 	];
 
 	return (
-		<section className='relative w-full bg-white py-[80px]'>
-			<div className='max-w-[1920px] mx-auto px-4 lg:px-[280px]'>
-				{/* Two column layout matching Figma exactly */}
-				<div className='grid grid-cols-1 lg:grid-cols-2 gap-[120px]'>
-					{/* Left Column - General FAQs */}
-					<div className='w-full max-w-[580px]'>
-						{/* Category Title */}
-						<div className='mb-[16px]'>
-							<h2 className='font-morganite font-extrabold text-[48px] leading-[44px] text-[#009444] uppercase tracking-[0.96px]'>
-								General FAQs
-							</h2>
-						</div>
+		<section className='relative w-full bg-white py-20 lg:py-24 overflow-hidden'>
+			<div className='relative max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10'>
+				{/* Universal Spacing Wrapper */}
+				<div className='lg:ml-[12vw] md:ml-[8vw] lg:mr-[12vw] md:mr-[8vw]'>
+					<div className='max-w-[1200px] mx-auto'>
+						{/* Two column layout */}
+						<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16'>
+							{/* Left Column - General FAQs */}
+							<div className='w-full'>
+								{/* Category Title */}
+								<div className='mb-8'>
+									<h2 className='font-morganite font-black text-[clamp(40px,5vw,56px)] leading-[0.95] tracking-[0.02em] text-[#009444] uppercase'>
+										General FAQs
+									</h2>
+								</div>
 
 						{/* FAQ Items */}
 						<div className='space-y-0'>
@@ -350,6 +353,8 @@ export const FAQSection = () => {
 								</div>
 							</div>
 						))}
+					</div>
+						</div>
 					</div>
 				</div>
 			</div>

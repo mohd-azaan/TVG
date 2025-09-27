@@ -4,7 +4,7 @@ import { HeroImage } from './HeroImage';
 
 export const HeroSection = () => {
 	return (
-		<section className='relative w-full h-[99vh] lg:h-[110vh] bg-[#102121] text-white overflow-hidden'>
+		<section className='relative w-full h-[100vh] lg:h-[100vh] bg-[#102121] text-white overflow-hidden'>
 			{/* Content Wrapper - Following design system standards */}
 			<div className='relative z-10 mx-auto max-w-[1920px] px-4 sm:px-6 lg:px-10 h-full pt-28 lg:pt-36 pb-8 lg:pb-12'>
 				{/* Dark Background Text - "BECAUSE GOLF IS BETTER" - Aligned with image */}

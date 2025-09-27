@@ -6,7 +6,7 @@ Apply these exact design standards across all sections for consistent typography
 
 **Section Container:**
 ```css
-className='relative w-full h-[100vh] lg:h-[120vh] bg-[#102121] text-white overflow-hidden'
+className='relative w-full h-[100vh] lg:h-[100vh] bg-[#102121] text-white overflow-hidden'
 ```
 
 **Content Wrapper:**

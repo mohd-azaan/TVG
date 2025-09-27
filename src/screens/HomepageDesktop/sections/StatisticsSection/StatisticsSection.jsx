@@ -32,6 +32,8 @@ export const StatisticsSection = () => {
 			text: 'In Prizes Distributed',
 			hasPlus: false,
 			hasSuffix: 'K',
+			// Marks this stat as an amount that should show the Saudi riyal symbol to the left
+			showRiyal: true,
 		},
 	];
 
@@ -73,6 +75,17 @@ export const StatisticsSection = () => {
 									</span>
 								)}
 
+								{/* Inline Saudi riyal symbol when needed */}
+								{stat.showRiyal && (
+									<img
+										alt='SAR'
+										src='/saudi-riyal-symbol-2-1-1.svg'
+										className='inline-block w-[50px] h-[50px] mr-0.5 relative '
+										loading='lazy'
+										decoding='async'
+									/>
+								)}
+
 								{/* Main number */}
 								<span>{stat.number}</span>
 								{/* Plus symbol */}
@@ -98,16 +111,7 @@ export const StatisticsSection = () => {
 					))}
 				</div>
 
-				{/* Saudi Riyal Symbol */}
-				<img
-					className='absolute w-10 h-10 top-[215px] right-[350px] z-10'
-					alt='Saudi riyal symbol'
-					src='/saudi-riyal-symbol-2-1-1.svg'
-					loading='lazy'
-					decoding='async'
-					width='24'
-					height='24'
-				/>
+				{/* (inline riyal symbol rendered per-stat) */}
 			</div>
 		</section>
 	);

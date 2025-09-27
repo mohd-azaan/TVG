@@ -21,7 +21,7 @@ const ArrowIcon = () => (
 
 export const HeroSection = () => {
 	return (
-		<section className='relative w-full h-[120vh] bg-[#102121] text-white overflow-hidden'>
+		<section className='relative w-full h-[100vh] bg-[#102121] text-white overflow-hidden'>
 			{/* Content wrapper */}
 			<div className='relative z-10 mx-auto max-w-[1920px] px-4 sm:px-6 lg:px-10 h-full pt-32 lg:pt-36 pb-8 lg:pb-12'>
 				{/* Title column (stays in flow) */}

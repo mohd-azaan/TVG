@@ -44,7 +44,7 @@ export const HeroSection = ({
 
 	return (
 		// Main container following TVG Design System hero standards
-		<section className='relative w-full h-[100vh] lg:h-[120vh] bg-[#102121] text-white overflow-hidden'>
+		<section className='relative w-full h-[100vh] lg:h-[100vh] bg-[#102121] text-white overflow-hidden'>
 			{/* Content Wrapper - Following design system standards */}
 			<div className='relative z-10 mx-auto max-w-[1920px] px-4 sm:px-6 lg:px-10 h-full pt-28 lg:pt-36 pb-8 lg:pb-12'>
 				{/* Content Positioning - Following hero standards */}
